@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conservation — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+
+<style>
+dl.myth-list dt{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  color:var(--bordeaux);
+  margin-top:1rem;
+}
+dl.myth-list dd{
+  font-family:'Inter',sans-serif;
+  font-size:0.92rem;
+  line-height:1.55;
+  color:var(--ink-soft);
+  margin:0.2rem 0 0 0;
+  padding-left:1.2rem;
+  border-left:2px solid var(--gold);
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+    <a href="conservation.html" class="sidebar-link current"><span class="num">VII.</span>Conservation</a>
+    <a href="conservation.html#sec-7-1" class="sidebar-sub"><span class="num">7.1</span>Quatre variables</a>
+    <a href="conservation.html#sec-7-2" class="sidebar-sub"><span class="num">7.2</span>Tableau de référence</a>
+    <a href="conservation.html#sec-7-3" class="sidebar-sub"><span class="num">7.3</span>Viandes</a>
+    <a href="conservation.html#sec-7-4" class="sidebar-sub"><span class="num">7.4</span>Poissons</a>
+    <a href="conservation.html#sec-7-5" class="sidebar-sub"><span class="num">7.5</span>Œufs</a>
+    <a href="conservation.html#sec-7-6" class="sidebar-sub"><span class="num">7.6</span>Produits laitiers</a>
+    <a href="conservation.html#sec-7-7" class="sidebar-sub"><span class="num">7.7</span>Légumes</a>
+    <a href="conservation.html#sec-7-8" class="sidebar-sub"><span class="num">7.8</span>Fruits</a>
+    <a href="conservation.html#sec-7-9" class="sidebar-sub"><span class="num">7.9</span>Herbes &amp; épices</a>
+    <a href="conservation.html#sec-7-10" class="sidebar-sub"><span class="num">7.10</span>Pain, céréales</a>
+    <a href="conservation.html#sec-7-11" class="sidebar-sub"><span class="num">7.11</span>Restes cuits</a>
+    <a href="conservation.html#sec-7-12" class="sidebar-sub"><span class="num">7.12</span>Techniques longues</a>
+    <a href="conservation.html#sec-7-13" class="sidebar-sub"><span class="num">7.13</span>Altération &amp; sécurité</a>
+    <a href="conservation.html#sec-7-14" class="sidebar-sub"><span class="num">7.14</span>Mythes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Conservation</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Chapitre septième</div>
+  <h1>La <em>conservation</em> des produits</h1>
+  <p class="subtitle">Températures, humidités, durées — méthodes usuelles et optimales par famille, plus techniques de longue conservation</p>
+</div>
+
+
+  <p class="lead">Conserver un produit, c'est ralentir le travail des trois agents qui le détruisent&nbsp;: les <strong>enzymes endogènes</strong> (qui continuent à fonctionner après la récolte ou l'abattage), les <strong>micro-organismes</strong> (bactéries, levures, moisissures) et l'<strong>oxydation chimique</strong> de l'air et de la lumière. Toute méthode de conservation joue sur quatre variables&nbsp;: température, humidité, oxygène, lumière. À chaque famille de produits, son protocole — courant et optimal.</p>
+
+  <h3 id="sec-7-1"><span class="h3-num">7.1</span>Les quatre variables qui gouvernent la conservation</h3>
+
+  <p><strong>Température.</strong> C'est la variable reine. Chaque baisse de 10&nbsp;°C divise par 2 à 3 l'activité enzymatique et la vitesse de multiplication bactérienne. La zone de danger universellement admise est <strong>4 à 60&nbsp;°C</strong>&nbsp;: en dessous, le froid ralentit&nbsp;; au-dessus, la chaleur tue (à partir de 65&nbsp;°C les bactéries sont inactivées). Un aliment dans la zone 4-60&nbsp;°C doit y rester moins de quatre heures cumulées.</p>
+
+  <p><strong>Humidité relative.</strong> Le froid d'un frigo standard est très sec (30-50% HR), ce qui dessèche les fruits, légumes et fromages. À l'inverse, un excès d'humidité (90%+) favorise la moisissure. Chaque produit a son optimum&nbsp;: 90-95% HR pour les légumes-feuilles, 70-80% pour les fromages affinés, 50-60% pour les fruits secs.</p>
+
+  <p><strong>Oxygène.</strong> Responsable de l'oxydation (rancissement des graisses, brunissement des chairs et des fruits coupés). Trois moyens de le limiter&nbsp;: contact direct avec une matière grasse (confit, huile), enveloppement étanche (film, sous-vide) ou substitution par un autre gaz (atmosphère modifiée des barquettes industrielles, azote dans les bocaux de café).</p>
+
+  <p><strong>Lumière.</strong> Les UV dégradent en quelques jours la chlorophylle, les caroténoïdes, les arômes volatils et les vitamines. Les huiles vierges, les épices et les vins se conservent à l'obscurité ou dans des contenants opaques.</p>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>La règle des 2 heures + 4 heures.</strong> Un produit qui sort du froid (frigo, congélateur) peut rester 2 heures à température ambiante sans risque sanitaire&nbsp;; au-delà, on entre dans la zone de prolifération. <strong>Total cumulé maximum dans la zone de danger&nbsp;: 4 heures sur la vie entière du produit</strong> (préparation + service + restes). Au-delà, on jette — la cuisson ne suffit plus à éliminer les toxines déjà formées (notamment <em>Staphylococcus aureus</em>, qui produit une toxine thermostable).</p>
+  </div>
+
+  <h3 id="sec-7-2"><span class="h3-num">7.2</span>Tableau de référence — températures de conservation</h3>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Zone</th><th>Température</th><th>Humidité (HR)</th><th>Pour quoi ?</th></tr></thead>
+    <tbody>
+      <tr><td><b>Congélateur domestique</b></td><td>-18&nbsp;°C</td><td>~50%</td><td>Viandes, poissons, fruits/légumes blanchis, plats préparés, pain. Durée 1 à 12 mois selon produit.</td></tr>
+      <tr><td><b>Congélation pro (surgélation)</b></td><td>-30 à -40&nbsp;°C</td><td>~50%</td><td>Cellule de surgélation rapide — cristaux d'eau plus petits, qualité préservée. Idéal pour poisson cru destiné à sashimi.</td></tr>
+      <tr><td><b>Zone très froide du frigo</b> (étage du bas, contre la paroi froide)</td><td>0 à 4&nbsp;°C</td><td>~50%</td><td>Viandes crues, volailles, poissons, charcuterie ouverte, plats préparés. La zone la plus stricte.</td></tr>
+      <tr><td><b>Zone fraîche</b> (milieu du frigo)</td><td>4 à 6&nbsp;°C</td><td>~50%</td><td>Produits laitiers, œufs (en France, mais voir §7.5), restes cuits.</td></tr>
+      <tr><td><b>Bac à légumes</b> (porte du bac fermée)</td><td>6 à 10&nbsp;°C</td><td>85-95%</td><td>Légumes-feuilles, herbes fraîches, salades, choux. Garder l'humidité élevée.</td></tr>
+      <tr><td><b>Porte du frigo</b></td><td>8 à 12&nbsp;°C</td><td>~40%</td><td>Beurre, sauces fermées, condiments, vins ouverts — zone moins froide à cause des ouvertures fréquentes.</td></tr>
+      <tr><td><b>Cellier / cave fraîche</b></td><td>10 à 15&nbsp;°C</td><td>70-85%</td><td>Pommes, poires, racines, tubercules (pommes de terre, carottes, betteraves), oignons, ail, courges, vins.</td></tr>
+      <tr><td><b>Pièce sèche et fraîche</b> (placard à l'abri)</td><td>15 à 20&nbsp;°C</td><td>40-55%</td><td>Céréales sèches, légumineuses, pâtes, riz, farines, épices, miel, huiles, fruits secs (au frigo en été).</td></tr>
+      <tr><td><b>Cave d'affinage fromages</b></td><td>8 à 14&nbsp;°C selon famille</td><td>85-95%</td><td>Affinage actif des fromages — pas du stockage, de la maturation.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Cartographier son frigo.</strong> La température varie de 4 à 5&nbsp;°C entre le bas (le plus froid, contre la paroi du fond) et la porte (jusqu'à 10&nbsp;°C). Un thermomètre de frigo (5-15&nbsp;€) posé pendant 24 h dans chaque zone permet de placer chaque produit à sa juste hauteur. Les viandes et poissons descendent toujours au plus froid&nbsp;; les beurres et œufs montent à la porte.</p>
+  </div>
+
+  <h3 id="sec-7-3"><span class="h3-num">7.3</span>Viandes</h3>
+
+  <p class="family-intro">Les viandes rouges (bœuf, agneau, gibier) tolèrent mieux la maturation que les viandes blanches (porc, veau, volaille). Le poulet entier cru est la denrée la plus risquée d'un frigo — toujours dans un récipient hermétique au plus froid, jamais à proximité d'autres produits.</p>
+
+  <h4>Viandes crues</h4>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Méthode usuelle</th><th>Durée usuelle</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Bœuf — pièce entière (rosbif, côte)</td><td>Frigo, film alimentaire</td><td>3-5 jours</td><td>Sous-vide, frigo 0-2&nbsp;°C&nbsp;; ou maturation à sec sur grille, 1-3&nbsp;°C, 80% HR</td><td>15-30 jours (sous-vide) / 21-60 jours (dry-aging)</td></tr>
+      <tr><td>Bœuf — steak ou tranche</td><td>Frigo, film, sur assiette</td><td>2-3 jours</td><td>Sous-vide salé léger, 0-2&nbsp;°C</td><td>7-10 jours</td></tr>
+      <tr><td>Bœuf haché</td><td>Frigo, dans son emballage</td><td><strong>24 h max</strong></td><td>Hacher à la minute soi-même au gros couteau, cuisson immédiate</td><td>Cuit le jour même</td></tr>
+      <tr><td>Veau</td><td>Frigo, film</td><td>2-3 jours</td><td>Sous-vide</td><td>5-7 jours</td></tr>
+      <tr><td>Agneau</td><td>Frigo, film</td><td>3-4 jours</td><td>Sous-vide ou marinade huile-herbes au frigo</td><td>7-10 jours</td></tr>
+      <tr><td>Porc</td><td>Frigo, film</td><td>3-4 jours</td><td>Sous-vide, salé léger</td><td>10-14 jours</td></tr>
+      <tr><td>Volaille entière</td><td>Frigo, dans un plat couvert</td><td>2 jours</td><td>Saumure sèche (sel sur la peau), à découvert au frigo</td><td>3-4 jours (peau se déshydrate, sera plus croustillante)</td></tr>
+      <tr><td>Volaille découpée</td><td>Frigo, film</td><td>1-2 jours</td><td>Saumure sèche puis sous-vide</td><td>5-7 jours</td></tr>
+      <tr><td>Abats (foie, rognon)</td><td>Frigo, sur papier absorbant</td><td><strong>24 h max</strong></td><td>Cuisson le jour même, ou congélation immédiate sous vide</td><td>Cuit le jour même</td></tr>
+      <tr><td>Charcuterie tranchée (emballée)</td><td>Frigo, emballage fermé</td><td>5-7 jours fermé / 3 jours ouvert</td><td>Sous-vide, frigo 2-4&nbsp;°C</td><td>10-14 jours</td></tr>
+      <tr><td>Jambon sec entier</td><td>Pièce sèche 12-18&nbsp;°C, à l'abri</td><td>6 mois entamé</td><td>Cave à 10-14&nbsp;°C, 70-75% HR, suspendu</td><td>12-18 mois</td></tr>
+      <tr><td>Saucisson sec</td><td>Pièce sèche</td><td>2-3 mois</td><td>Cellier 14-16&nbsp;°C, suspendu</td><td>4-6 mois</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Viandes cuites</h4>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Méthode usuelle</th><th>Durée</th><th>Méthode optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Rôti, gigot, daube, blanquette</td><td>Frigo, dans un récipient hermétique, refroidi en moins de 2 h</td><td>3-4 jours</td><td>Sous-vide après refroidissement, frigo. Réchauffe à 65&nbsp;°C bain-marie 20 min, jamais micro-ondes.</td></tr>
+      <tr><td>Volaille cuite</td><td>Frigo, désossée, dans un bouillon léger</td><td>2-3 jours</td><td>Sous-vide froid, ou démoulée et baignant dans un fond.</td></tr>
+      <tr><td>Viande hachée cuite (sauce bolognaise)</td><td>Frigo, hermétique</td><td>2-3 jours</td><td>Congélation en portions individuelles, plat à plat (-18&nbsp;°C, 2-3 mois).</td></tr>
+      <tr><td>Restes en sauce</td><td>Frigo, hermétique</td><td>3 jours</td><td>Bocaux stérilisés (90&nbsp;°C, 30 min de bain-marie) — tient 6-12 mois.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Viandes congelées</h4>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Durée -18&nbsp;°C</th><th>Conditionnement optimal</th></tr></thead>
+    <tbody>
+      <tr><td>Bœuf, agneau, gibier (pièce entière)</td><td>10-12 mois</td><td>Sous-vide, congélation rapide à plat sur plaque</td></tr>
+      <tr><td>Porc, veau (pièce entière)</td><td>6-8 mois</td><td>Idem</td></tr>
+      <tr><td>Viande hachée crue</td><td>3-4 mois</td><td>En portions de 100-200 g, sous-vide ou film + sac congélation</td></tr>
+      <tr><td>Volaille entière</td><td>10-12 mois</td><td>Sac congélation épais, air chassé</td></tr>
+      <tr><td>Volaille découpée</td><td>6-9 mois</td><td>En portions individuelles sous vide</td></tr>
+      <tr><td>Charcuterie cuite (jambon)</td><td>1-2 mois</td><td>À éviter — la texture s'altère. Préférer la consommation rapide.</td></tr>
+      <tr><td>Plats cuisinés à base de viande</td><td>2-3 mois</td><td>Portions individuelles, sous-vide ou bocaux stérilisés</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Décongeler une viande à température ambiante.</strong> La surface entre rapidement en zone de danger pendant que le cœur reste glacé. Toujours décongeler au frigo (12-24 h selon taille), au micro-ondes en mode décongélation suivi d'une cuisson immédiate, ou à l'eau froide changée toutes les 30 min. <strong>Ne jamais recongeler une viande crue décongelée</strong> — la cuisson, puis la recongélation, est en revanche autorisée.</p>
+  </div>
+
+  <h3 id="sec-7-4"><span class="h3-num">7.4</span>Poissons et fruits de mer</h3>
+
+  <p class="family-intro">Le poisson est la denrée la plus fragile&nbsp;: ses enzymes de dégradation continuent à -2&nbsp;°C et même à -10&nbsp;°C. Sa durée de fraîcheur se compte en heures et non en jours. La règle pro&nbsp;: <strong>servi sous 48 h après pêche en chair non maturée, sous 7 jours après pêche en chair maturée</strong> (technique japonaise du <em>kaminari-zukuri</em>, encore peu pratiquée en Occident).</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Méthode usuelle</th><th>Durée</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Poisson entier frais (sole, bar)</td><td>Frigo, posé sur glace, vidé</td><td>24-36 h</td><td>Frigo 0-1&nbsp;°C, posé sur glace pilée renouvelée, vidé et essuyé</td><td>3-4 jours</td></tr>
+      <tr><td>Filet de poisson cru</td><td>Frigo sur assiette, sur papier absorbant</td><td>24 h</td><td>Sous-vide, frigo 0-1&nbsp;°C ; ou ikejime à la pêche (technique japonaise)</td><td>3-7 jours</td></tr>
+      <tr><td>Poisson destiné au sashimi/tartare</td><td>—</td><td>—</td><td>Congélation -20&nbsp;°C 24 h (kill anisakis) puis décongélation au frigo</td><td>Cru le jour même de décongélation</td></tr>
+      <tr><td>Crustacés vivants (homard, langoustines)</td><td>Frigo dans un linge humide, dans une boîte ajourée</td><td>12-24 h</td><td>Cuisson immédiate, ou tenue à 4&nbsp;°C dans l'eau de mer reconstituée (35 g sel/L)</td><td>Cuit le jour même</td></tr>
+      <tr><td>Crevettes crues</td><td>Frigo, sur glace</td><td>24 h</td><td>Congélation à -25&nbsp;°C dans saumure légère</td><td>3 mois congelé</td></tr>
+      <tr><td>Coquillages vivants (huîtres, moules)</td><td>Frigo, à plat, recouverts d'un linge humide</td><td>3-5 jours (huîtres) / 24 h (moules)</td><td>Bourriche d'origine, dans un bac à 4-7&nbsp;°C</td><td>10 jours (huîtres) / 36 h (moules)</td></tr>
+      <tr><td>Poisson fumé (saumon, hareng)</td><td>Frigo, emballage fermé</td><td>5-7 jours fermé / 3 jours ouvert</td><td>Sous-vide, frigo 2-4&nbsp;°C</td><td>14 jours</td></tr>
+      <tr><td>Poisson cuit (filet, dos)</td><td>Frigo, hermétique</td><td>2 jours</td><td>Réchauffe en douceur (bain-marie, vapeur)</td><td>2 jours</td></tr>
+      <tr><td>Poisson cru — congélation</td><td>Sac congélation à plat</td><td>2-3 mois</td><td>Sous-vide, congélation -30&nbsp;°C</td><td>6 mois</td></tr>
+      <tr><td>Poisson gras (saumon, maquereau) — congélation</td><td>—</td><td>—</td><td>Sous-vide, -30&nbsp;°C (les graisses oxydent vite à -18&nbsp;°C)</td><td>3 mois max</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Le test du poisson frais.</strong> Œil bombé et brillant (jamais creusé), branchies rouge vif (et non brunes), peau humide et brillante (jamais sèche ni terne), chair ferme qui rebondit sous le doigt, odeur d'iode et de mer (jamais d'ammoniaque). Au-delà du moindre soupçon — odeur, mucus jaunâtre, ventre mou — on jette ou on cuit immédiatement.</p>
+  </div>
+
+  <h3 id="sec-7-5"><span class="h3-num">7.5</span>Œufs</h3>
+
+  <p>Les œufs sont l'aliment <strong>le plus polémique</strong> en matière de conservation. En France et en Europe, on les conserve à température ambiante (les œufs ne sont pas lavés industriellement, leur cuticule naturelle les protège). Aux États-Unis et en Asie, ils sont lavés et donc systématiquement réfrigérés. Une fois sortis du froid, on n'y retourne pas&nbsp;: la condensation favorise la pénétration des bactéries à travers la coquille.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Conservation</th><th>Durée</th></tr></thead>
+    <tbody>
+      <tr><td>Œuf entier coquille (Europe, non lavé)</td><td>Pièce fraîche 15-20&nbsp;°C, à l'abri de la lumière, pointe vers le bas</td><td>3-4 semaines (DCR sur la boîte)</td></tr>
+      <tr><td>Œuf entier coquille (déjà au frigo, ou US/Asie)</td><td>Frigo 4-6&nbsp;°C, dans sa boîte d'origine</td><td>4-5 semaines</td></tr>
+      <tr><td>Blanc d'œuf cru</td><td>Frigo, dans un bocal hermétique</td><td>4 jours frigo / 1 an congélateur (en bac à glaçons)</td></tr>
+      <tr><td>Jaune d'œuf cru</td><td>Frigo, recouvert d'un film au contact, ou dans un peu d'eau froide</td><td>2 jours max</td></tr>
+      <tr><td>Œuf dur en coquille</td><td>Frigo</td><td>1 semaine</td></tr>
+      <tr><td>Œuf dur écalé</td><td>Frigo, dans de l'eau froide changée tous les jours</td><td>3-4 jours</td></tr>
+      <tr><td>Œufs brouillés / omelette cuite</td><td>Frigo, hermétique</td><td>2 jours</td></tr>
+      <tr><td>Œuf au plat</td><td>—</td><td>À ne pas conserver (texture détruite)</td></tr>
+      <tr><td>Mayonnaise maison</td><td>Frigo</td><td>24-48 h max (œuf cru)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Tester un œuf à l'eau.</strong> Plonger l'œuf dans un verre d'eau froide. <strong>S'il coule à plat et reste au fond</strong>&nbsp;: très frais (moins de 7 jours). <strong>Il se redresse pointe vers le bas</strong>&nbsp;: 1 à 2 semaines, parfait pour les œufs durs (s'écale facilement). <strong>Il flotte</strong>&nbsp;: à jeter — la chambre d'air a pris trop d'ampleur, l'œuf est gâté.</p>
+  </div>
+
+  <h3 id="sec-7-6"><span class="h3-num">7.6</span>Produits laitiers</h3>
+
+  <p class="family-intro">Le lait pasteurisé peut être conservé jusqu'à <strong>une semaine après ouverture</strong> si on le maintient à 4&nbsp;°C, mais sa durée chute à 48 h dans un frigo mal réglé (8&nbsp;°C). Le lait cru se conserve 48-72 h à 4&nbsp;°C. Les fromages, eux, sont des aliments <em>vivants</em>&nbsp;: ils ne se conservent pas — ils <em>maturent</em>.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Méthode usuelle</th><th>Durée usuelle</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Lait UHT (fermé)</td><td>Placard</td><td>2-3 mois</td><td>—</td><td>3 mois (DLUO)</td></tr>
+      <tr><td>Lait UHT (ouvert)</td><td>Frigo, bouchon fermé</td><td>5-7 jours</td><td>Frigo zone très froide 2-4&nbsp;°C</td><td>7-10 jours</td></tr>
+      <tr><td>Lait pasteurisé / micro-filtré</td><td>Frigo, bouchon fermé</td><td>3-5 jours</td><td>—</td><td>5-7 jours</td></tr>
+      <tr><td>Lait cru</td><td>Frigo zone très froide</td><td>48 h max</td><td>—</td><td>72 h</td></tr>
+      <tr><td>Crème fraîche épaisse</td><td>Frigo</td><td>5-7 jours après ouverture</td><td>Frigo 2-4&nbsp;°C, recouverte d'un film au contact</td><td>10 jours</td></tr>
+      <tr><td>Crème liquide UHT (ouverte)</td><td>Frigo</td><td>5-7 jours</td><td>—</td><td>7-10 jours</td></tr>
+      <tr><td>Yaourt nature (ouvert)</td><td>Frigo</td><td>5-7 jours</td><td>—</td><td>—</td></tr>
+      <tr><td>Yaourts (DLC dépassée)</td><td>—</td><td>—</td><td>Goûter — comestibles jusqu'à 3 semaines après DLC s'ils sont restés au froid</td><td>—</td></tr>
+      <tr><td>Beurre doux</td><td>Frigo, emballage d'origine</td><td>2-3 semaines</td><td>Au congélateur en pains de 250 g</td><td>6-9 mois</td></tr>
+      <tr><td>Beurre demi-sel</td><td>Frigo</td><td>3-4 semaines</td><td>—</td><td>1-2 mois</td></tr>
+      <tr><td>Beurre clarifié (ghee)</td><td>Placard, bocal hermétique</td><td>3-6 mois</td><td>Frigo</td><td>1 an</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Fromages par famille</h4>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Famille</th><th>Exemples</th><th>Méthode</th><th>Durée</th></tr></thead>
+    <tbody>
+      <tr><td><b>Pâte molle à croûte fleurie</b></td><td>Camembert, brie, chaource</td><td>Bac à fromages 8-12&nbsp;°C, emballage de fromager (papier ciré + papier sulfurisé)</td><td>1-2 semaines après achat — affine continuellement</td></tr>
+      <tr><td><b>Pâte molle à croûte lavée</b></td><td>Munster, époisses, livarot, maroilles</td><td>Cloche en verre au frigo, ou bac dédié — odeur très diffusive</td><td>1-2 semaines</td></tr>
+      <tr><td><b>Pâte pressée non cuite</b></td><td>Reblochon, tomme, saint-nectaire, raclette</td><td>Bac à fromages, papier de fromager</td><td>2-3 semaines</td></tr>
+      <tr><td><b>Pâte pressée cuite</b></td><td>Comté, beaufort, gruyère, parmesan</td><td>Bac, recouvert d'un linge humide, ou papier paraffiné</td><td>1-2 mois (jeunes) / 2-3 mois (vieux)</td></tr>
+      <tr><td><b>Persillée (bleu)</b></td><td>Roquefort, bleu d'Auvergne, fourme, stilton</td><td>Papier alu côté brillant à l'intérieur (le bleu déteste l'air libre)</td><td>2-3 semaines</td></tr>
+      <tr><td><b>Frais</b></td><td>Faisselle, brousse, chèvre frais, ricotta</td><td>Frigo, dans son sérum ou pot d'origine</td><td>3-5 jours</td></tr>
+      <tr><td><b>Chèvre affiné</b></td><td>Crottin, sainte-maure, picodon</td><td>Bac à fromages</td><td>2-3 semaines (sec-sec se conserve plusieurs mois)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>L'emballage de fromager.</strong> Le papier ciré-paraffiné laisse respirer le fromage sans le dessécher. Le film plastique étouffe et fait suer — à proscrire au-delà de 24 h. Si l'on n'a pas de papier de fromager, un papier sulfurisé + une boîte hermétique (légèrement entrouverte) approche le résultat. La cloche en verre dédiée fromages est l'idéal d'un frigo bien équipé&nbsp;: l'odeur reste contenue, l'humidité est gérée.</p>
+  </div>
+
+  <h3 id="sec-7-7"><span class="h3-num">7.7</span>Légumes</h3>
+
+  <p class="family-intro">Les légumes sont vivants après la récolte. Ils respirent (consomment l'oxygène, produisent du CO₂ et de l'éthylène), transpirent (perdent de l'eau), continuent à mûrir ou à monter en graine. Trois familles, trois protocoles&nbsp;: ceux qui veulent du froid humide (feuilles), ceux qui veulent du frais sec (racines, bulbes), ceux qui se gâtent vite (champignons, asperges, herbes).</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Famille</th><th>Méthode usuelle</th><th>Durée</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td><b>Salades, épinards</b></td><td>Bac à légumes, sac plastique</td><td>3-5 jours</td><td>Lavées, essorées, en boîte hermétique avec papier absorbant changé chaque jour</td><td>7-10 jours</td></tr>
+      <tr><td><b>Choux pommés</b></td><td>Bac à légumes</td><td>1 semaine</td><td>Cellier 5-10&nbsp;°C, non emballé</td><td>2-3 semaines</td></tr>
+      <tr><td><b>Brocoli, chou-fleur</b></td><td>Bac à légumes, dans un sac perforé</td><td>4-5 jours</td><td>Tête en bas dans un verre d'eau au frigo</td><td>7-10 jours</td></tr>
+      <tr><td><b>Carottes, navets, panais</b></td><td>Bac à légumes, fanes coupées</td><td>2-3 semaines</td><td>Cellier 5-12&nbsp;°C dans le sable, ou frigo dans une boîte avec un linge humide</td><td>1-3 mois</td></tr>
+      <tr><td><b>Pommes de terre</b></td><td>Cellier obscur 5-12&nbsp;°C, dans un sac papier ou cagette</td><td>2-3 mois</td><td>Cellier 4-8&nbsp;°C, ventilation, à l'obscurité totale (les UV verdissent la peau = solanine toxique)</td><td>4-6 mois</td></tr>
+      <tr><td><b>Oignons, ail</b></td><td>Cellier, à l'air libre, en cagette ou tresse</td><td>2-4 mois</td><td>Pièce sèche 10-15&nbsp;°C, suspendus en tresse</td><td>6 mois</td></tr>
+      <tr><td><b>Tomates</b></td><td><strong>À température ambiante</strong>, à plat, sans contact entre les fruits</td><td>3-7 jours selon maturité</td><td>Idem — <strong>jamais au frigo</strong> (les arômes volatils sont détruits dès 7&nbsp;°C)</td><td>7-10 jours</td></tr>
+      <tr><td><b>Aubergines, courgettes</b></td><td>Bac à légumes</td><td>5-7 jours</td><td>Pièce fraîche 10-12&nbsp;°C (boudent le froid à 4&nbsp;°C)</td><td>1 semaine</td></tr>
+      <tr><td><b>Poivrons</b></td><td>Bac à légumes</td><td>1 semaine</td><td>Idem</td><td>1-2 semaines</td></tr>
+      <tr><td><b>Courges (potimarron, butternut)</b></td><td>Cellier, à plat, queue intacte</td><td>2-4 mois</td><td>Pièce fraîche 10-15&nbsp;°C, à l'obscurité</td><td>6 mois</td></tr>
+      <tr><td><b>Champignons frais (Paris)</b></td><td>Frigo, sac papier (jamais plastique)</td><td>3-5 jours</td><td>Boîte hermétique avec papier absorbant, frigo 2-4&nbsp;°C</td><td>5-7 jours</td></tr>
+      <tr><td><b>Cèpes, girolles, morilles fraîches</b></td><td>Frigo, sac papier, brosse à sec</td><td>2-3 jours</td><td>Séchage à 30-40&nbsp;°C 12-24 h (déshydrateur)</td><td>1 an séchés</td></tr>
+      <tr><td><b>Asperges</b></td><td>Frigo, debout dans un verre d'eau, recouvertes d'un linge</td><td>3-4 jours</td><td>Idem — la fraîcheur baisse de moitié par jour, à manger vite</td><td>4-5 jours</td></tr>
+      <tr><td><b>Artichauts</b></td><td>Frigo, debout dans un verre d'eau</td><td>4-5 jours</td><td>Idem</td><td>1 semaine</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Mettre les tomates, l'avocat, l'oignon et la pomme de terre au frigo.</strong> Quatre erreurs courantes&nbsp;: la <em>tomate</em> perd ses arômes volatils et sa texture sous 7&nbsp;°C&nbsp;; l'<em>avocat</em> arrête sa maturation et ne mûrit plus jamais (à mettre au frigo seulement une fois mûr)&nbsp;; l'<em>oignon</em> ramollit et germe dans l'humidité du frigo&nbsp;; la <em>pomme de terre</em> transforme son amidon en sucres réducteurs qui caramélisent dangereusement à la cuisson (acrylamide).</p>
+  </div>
+
+  <h3 id="sec-7-8"><span class="h3-num">7.8</span>Fruits</h3>
+
+  <p class="family-intro">Les fruits se classent en deux familles&nbsp;: <strong>climactériques</strong> (banane, pomme, poire, avocat, pêche, abricot, kiwi, mangue, tomate, melon) — ils continuent à mûrir après la récolte sous l'action de l'éthylène qu'ils produisent eux-mêmes&nbsp;; et <strong>non climactériques</strong> (agrumes, raisin, cerise, fraise, framboise, ananas, litchi) — cueillis mûrs, ils ne mûriront plus, seuls se ramollissent et pourrissent.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Fruit</th><th>Maturation</th><th>Méthode usuelle</th><th>Durée</th><th>Astuce optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Pommes</td><td>Climactérique</td><td>Cellier, à plat, sans contact</td><td>1-3 mois</td><td>Cellier 1-4&nbsp;°C, 90% HR (chambre froide&nbsp;: 6 mois)</td></tr>
+      <tr><td>Poires</td><td>Climactérique</td><td>Cellier puis 2-3 j ambiant pour finir mûrir</td><td>2-4 semaines</td><td>Récolter encore dures, mûrir à 18&nbsp;°C 5 jours puis frigo</td></tr>
+      <tr><td>Bananes</td><td>Climactérique</td><td>Suspendues à l'air libre</td><td>3-7 jours</td><td>Mûres&nbsp;: peler et congeler en rondelles pour smoothies</td></tr>
+      <tr><td>Avocats</td><td>Climactérique</td><td>Mûrir à l'air libre, puis frigo une fois mûr</td><td>2-4 jours mûr</td><td>Accélérer mûrissement&nbsp;: dans un sac papier avec une pomme</td></tr>
+      <tr><td>Pêches, abricots, prunes</td><td>Climactériques</td><td>À T° ambiante pour mûrir, puis frigo</td><td>2-3 jours mûrs</td><td>Cueillir mûrs et consommer dans la semaine</td></tr>
+      <tr><td>Kiwis, mangues</td><td>Climactériques</td><td>Ambiant pour mûrir, frigo une fois mûr</td><td>1 semaine</td><td>Au papier avec une banane pour accélérer</td></tr>
+      <tr><td>Melons</td><td>Climactérique</td><td>Ambiant, puis frigo entier non coupé</td><td>1 semaine mûr</td><td>Découpé&nbsp;: frigo, 24-48 h max (perd vite ses arômes)</td></tr>
+      <tr><td>Agrumes (citron, orange, pamplemousse)</td><td>Non climactériques</td><td>Coupe à fruits à l'air libre, ou bac à légumes</td><td>2-3 semaines</td><td>Frigo bac à légumes — tient 1 mois</td></tr>
+      <tr><td>Raisin</td><td>Non climactérique</td><td>Frigo, dans un sac perforé, non lavé</td><td>5-7 jours</td><td>Sur un papier dans une boîte ouverte au frigo</td></tr>
+      <tr><td>Cerises</td><td>Non climactérique</td><td>Frigo, sac perforé, non lavées</td><td>3-5 jours</td><td>Dans une boîte avec papier absorbant</td></tr>
+      <tr><td>Fraises, framboises, mûres</td><td>Non climactériques</td><td>Frigo, dans la barquette d'origine, non lavées</td><td>1-2 jours</td><td>Trempage rapide vinaigre 1:10 + séchage = +3 jours</td></tr>
+      <tr><td>Ananas</td><td>Non climactérique</td><td>Ambiant tête en bas (pour répartir les sucres) 48 h puis frigo</td><td>3-5 jours entier mûr</td><td>Découpé&nbsp;: hermétique au frigo 3 jours</td></tr>
+      <tr><td>Fruits secs (abricots, figues, dattes)</td><td>—</td><td>Placard, bocal hermétique</td><td>6 mois</td><td>Bocal verre, à l'obscurité — jusqu'à 1 an</td></tr>
+      <tr><td>Noix, noisettes, amandes en coque</td><td>—</td><td>Placard sec</td><td>6-12 mois</td><td>Au congélateur (les huiles oxydent)&nbsp;: 2 ans</td></tr>
+      <tr><td>Noix décortiquées</td><td>—</td><td>Bocal hermétique, frais et sec</td><td>3-4 mois</td><td>Au frigo ou congélateur (3 mois / 1 an)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Le sac papier brun et la pomme.</strong> Mettre dans un sac papier un fruit climactérique pas mûr (pêche dure, avocat, kiwi) avec une pomme ou une banane mûre. L'éthylène émis par le fruit mûr accélère la maturation du voisin. À l'inverse, isoler les fruits mûrs des légumes-feuilles dans un frigo&nbsp;: l'éthylène fait jaunir et flétrir laitues, brocolis et herbes en 24 h.</p>
+  </div>
+
+  <h3 id="sec-7-9"><span class="h3-num">7.9</span>Herbes fraîches &amp; épices</h3>
+
+  <p class="family-intro">Les herbes fraîches perdent leur parfum en 48 h posées à plat dans un frigo&nbsp;: leurs huiles essentielles sont volatiles et fragiles. Trois techniques de longue conservation&nbsp;: en bouquet dans un verre d'eau (comme un bouquet de fleurs), enroulées dans un papier humide, ou congelées dans de l'huile (en glaçons).</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Herbe</th><th>Méthode usuelle</th><th>Durée</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td><b>Persil, coriandre, cerfeuil</b> (à tiges fines)</td><td>Frigo, dans un sac perforé</td><td>3-5 jours</td><td>Pieds dans un verre d'eau au frigo, sac plastique en cloche</td><td>2 semaines</td></tr>
+      <tr><td><b>Basilic</b></td><td>Pieds dans un verre d'eau à T° ambiante</td><td>5-7 jours</td><td>Pas de frigo (noircit en dessous de 10&nbsp;°C)&nbsp;; ou pesto + huile en bocal</td><td>5 jours frais / 2 mois pesto</td></tr>
+      <tr><td><b>Menthe</b></td><td>Frigo, sac perforé</td><td>4-5 jours</td><td>Verre d'eau au frigo</td><td>1-2 semaines</td></tr>
+      <tr><td><b>Ciboulette</b></td><td>Frigo, enroulée dans un papier humide</td><td>4-5 jours</td><td>Ciselée et congelée à plat puis stockée en sac congélation</td><td>3 mois</td></tr>
+      <tr><td><b>Aneth, estragon</b></td><td>Frigo, sac perforé</td><td>3-5 jours</td><td>Verre d'eau au frigo, recouvert</td><td>1 semaine</td></tr>
+      <tr><td><b>Thym, romarin, sauge</b> (à tige ligneuse)</td><td>Frigo, dans un linge sec</td><td>1-2 semaines</td><td>Congelé en branche entière dans un sac, ou séché en bouquet à l'air libre</td><td>6 mois</td></tr>
+      <tr><td><b>Laurier</b></td><td>Séché à l'air libre (suspendu en bouquet 2-3 semaines)</td><td>—</td><td>Stocké en bocal opaque hermétique</td><td>1-2 ans</td></tr>
+      <tr><td><b>Toutes herbes — version « huile congelée »</b></td><td>—</td><td>—</td><td>Hacher, remplir un bac à glaçons aux 3/4, couvrir d'huile d'olive, congeler</td><td>6 mois</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Épices et aromates secs</h4>
+
+  <p>Les épices vivent leur deuxième vie après la récolte. Leurs huiles essentielles sont volatiles ; chaque mois à la lumière, à la chaleur ou à l'humidité, elles perdent 5-10% de leur potentiel aromatique. Acheter petites quantités et entières quand c'est possible.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Type</th><th>Conservation</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Épices entières (poivre, cumin graine, cardamome…)</td><td>Bocal opaque hermétique, placard frais et sec, à l'abri de la lumière</td><td>2-3 ans</td></tr>
+      <tr><td>Épices moulues</td><td>Idem</td><td>6-12 mois (au-delà&nbsp;: poudre grise sans arôme)</td></tr>
+      <tr><td>Vanille (gousse)</td><td>Bocal hermétique, à l'obscurité&nbsp;; ne pas mettre au frigo (cristallise)</td><td>2 ans</td></tr>
+      <tr><td>Safran (pistils)</td><td>Bocal hermétique opaque, dans une boîte (très photo-sensible)</td><td>2-3 ans</td></tr>
+      <tr><td>Piment d'Espelette / paprika</td><td>Frigo bocal hermétique (couleur sinon vire au brun)</td><td>1 an au frigo / 6 mois ambiant</td></tr>
+      <tr><td>Curcuma, gingembre frais</td><td>Frigo bac à légumes, ou congélateur entier (à râper congelé)</td><td>3 semaines frigo / 6 mois congélateur</td></tr>
+      <tr><td>Sel, sucre</td><td>Bocal sec</td><td>Indéfini</td></tr>
+      <tr><td>Levure boulanger sèche</td><td>Bocal sec, frais</td><td>2 ans fermé / 6 mois ouvert</td></tr>
+      <tr><td>Levure boulanger fraîche</td><td>Frigo, dans son emballage</td><td>2 semaines / congelée 3 mois</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-7-10"><span class="h3-num">7.10</span>Pain, céréales, légumineuses</h3>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Méthode usuelle</th><th>Durée usuelle</th><th>Méthode optimale</th><th>Durée optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Pain au levain</td><td>Boîte à pain ou linge propre</td><td>3-5 jours</td><td>Tranché, congelé, en sac congélation — toaster sans décongélation</td><td>3 mois</td></tr>
+      <tr><td>Baguette (sur levure)</td><td>Sac papier</td><td>1 jour</td><td>Congeler dès le jour même</td><td>1 mois</td></tr>
+      <tr><td>Pain de mie</td><td>Emballage d'origine</td><td>1 semaine</td><td>Congelé</td><td>3 mois</td></tr>
+      <tr><td>Brioche, pain au lait</td><td>Sac papier</td><td>2-3 jours</td><td>Congelé en tranches</td><td>2 mois</td></tr>
+      <tr><td>Chapelure maison</td><td>Bocal hermétique sec</td><td>1 mois</td><td>Congelée</td><td>6 mois</td></tr>
+      <tr><td>Riz, quinoa, blé secs</td><td>Bocal hermétique frais et sec</td><td>1-2 ans</td><td>Frigo en zone humide</td><td>2-3 ans</td></tr>
+      <tr><td>Riz cuit</td><td>Frigo, refroidi vite, hermétique</td><td><strong>24 h max</strong> (toxine de <em>Bacillus cereus</em>)</td><td>Congélation immédiate</td><td>2 mois</td></tr>
+      <tr><td>Pâtes sèches</td><td>Bocal hermétique</td><td>2 ans</td><td>—</td><td>—</td></tr>
+      <tr><td>Farine blanche</td><td>Bocal hermétique sec</td><td>6-12 mois</td><td>Frigo (insectes, oxydation)</td><td>1 an</td></tr>
+      <tr><td>Farine complète</td><td>Frigo ou bocal frais</td><td>3-6 mois</td><td>Frigo ou congélateur (l'huile du germe rancit)</td><td>1 an</td></tr>
+      <tr><td>Légumineuses sèches (lentilles, pois chiches)</td><td>Bocal hermétique frais</td><td>1 an pleins arômes / 2-3 ans encore comestibles</td><td>—</td><td>—</td></tr>
+      <tr><td>Légumineuses cuites</td><td>Frigo, hermétique</td><td>3-4 jours</td><td>Congélation en portions</td><td>3 mois</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-7-11"><span class="h3-num">7.11</span>Restes cuits &amp; batch cooking</h3>
+
+  <p>Cuire en grande quantité une fois pour manger plusieurs fois, c'est le <em>batch cooking</em>. Sa réussite tient à <strong>deux étapes critiques</strong>&nbsp;: le refroidissement rapide (de 65 à 10&nbsp;°C en moins de 2 heures, pour traverser la zone de danger au plus vite) et le conditionnement individuel (portions hermétiques, étiquetées avec date).</p>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>La cellule de refroidissement rapide.</strong> En cuisine pro, l'équipement de refroidissement rapide descend un plat de 65 à 10&nbsp;°C en 90 min&nbsp;: c'est la norme HACCP. À la maison, on s'en approche avec trois gestes&nbsp;: transvaser dans un récipient peu profond (gain de surface), poser dans un bain de glace, remuer toutes les 5 min. Un litre de sauce passe ainsi de 80 à 15&nbsp;°C en 30 min sans peine.</p>
+  </div>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Plat</th><th>Frigo (4&nbsp;°C)</th><th>Congélateur (-18&nbsp;°C)</th><th>Réchauffe optimale</th></tr></thead>
+    <tbody>
+      <tr><td>Soupes, veloutés</td><td>3-4 jours</td><td>3 mois (en portions)</td><td>Casserole douce, ou bain-marie 65-70&nbsp;°C</td></tr>
+      <tr><td>Bouillons clarifiés</td><td>4-5 jours</td><td>6 mois</td><td>Frémir 1-2 min avant service</td></tr>
+      <tr><td>Sauces (béarnaise, hollandaise)</td><td>24 h max</td><td>Ne pas congeler (émulsion casse)</td><td>Bain-marie 50-60&nbsp;°C</td></tr>
+      <tr><td>Sauces tomate, fonds bruns</td><td>5-7 jours</td><td>6 mois</td><td>Casserole douce</td></tr>
+      <tr><td>Daubes, civets, ragoûts</td><td>3-4 jours (s'améliorent en 24-48 h)</td><td>3 mois</td><td>Casserole, à couvert, 80-90&nbsp;°C 20 min</td></tr>
+      <tr><td>Risotto cuit</td><td><strong>24 h max</strong> (texture)</td><td>1 mois</td><td>Avec un peu de bouillon, en casserole</td></tr>
+      <tr><td>Pâtes cuites</td><td>2-3 jours, dans un peu de sauce ou d'eau</td><td>2 mois</td><td>Plongées 30 sec eau bouillante</td></tr>
+      <tr><td>Légumes rôtis</td><td>3 jours</td><td>2 mois</td><td>Four 180&nbsp;°C 5-10 min</td></tr>
+      <tr><td>Légumes vapeur</td><td>2 jours</td><td>—</td><td>Vapeur 3 min</td></tr>
+      <tr><td>Riz pilaf cuit</td><td><strong>24 h max</strong></td><td>2 mois</td><td>Au four ou vapeur quelques min</td></tr>
+      <tr><td>Gratins</td><td>3 jours</td><td>2 mois</td><td>Four 180&nbsp;°C 20-30 min sous papier alu</td></tr>
+      <tr><td>Tartes, quiches</td><td>2-3 jours</td><td>1 mois</td><td>Four 160&nbsp;°C 10-15 min</td></tr>
+      <tr><td>Mousses, crèmes</td><td>2-3 jours</td><td>Ne pas congeler (texture)</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-7-12"><span class="h3-num">7.12</span>Techniques de longue conservation</h3>
+
+  <p>Au-delà du frigo et du congélateur, l'humanité a développé six grandes techniques pour conserver un produit au-delà de l'année, sans perdre sa valeur nutritionnelle. Trois jouent sur la déshydratation (séchage, salaison, sucre)&nbsp;; trois sur la modification du milieu (lacto-fermentation, sous-vide, confit).</p>
+
+  <h4>Séchage</h4>
+  <p>Retirer l'eau libre du produit jusqu'à descendre l'<strong>activité de l'eau (Aw)</strong> sous 0,85, seuil sous lequel les bactéries pathogènes ne se développent plus. À la maison&nbsp;: déshydrateur (40-65&nbsp;°C selon produit), four entrouvert (60&nbsp;°C, 6-12 h), suspension à l'air libre (herbes, piments, charcuteries).</p>
+  <p><em>Produits adaptés</em>&nbsp;: tomates, herbes, champignons, fruits (abricots, pommes, figues), viandes (jerky, bresaola, bacon, jambon), poissons (bottarga, morue). <em>Durée</em>&nbsp;: 6 mois à 2 ans selon Aw final.</p>
+
+  <h4>Salaison</h4>
+  <p>Le sel extrait l'eau (osmose), tue les bactéries (Aw effondré) et fixe la couleur (le nitrate transforme la myoglobine en nitroso-myochrome stable). Sel sec frotté ou salaison humide (saumure). Indispensable à&nbsp;: jambon sec, lardons, bresaola, gravlax (saumon mariné sel-sucre-aneth), morue salée, anchois au sel.</p>
+  <p><em>Durée</em>&nbsp;: 6 mois à 3 ans. <em>Principe</em>&nbsp;: 3% de sel minimum, idéalement 3-6%, repos au froid 1-15 jours selon épaisseur.</p>
+
+  <h4>Fumage</h4>
+  <p>Le bois en combustion lente libère des phénols antibactériens (qui parfument et conservent) et des particules qui forment une croûte protectrice. <em>Fumage à froid</em>&nbsp;: 20-30&nbsp;°C, plusieurs heures à jours — saumon fumé, magret séché-fumé, fromages. <em>Fumage à chaud</em>&nbsp;: 60-90&nbsp;°C, cuit en même temps qu'il fume — maquereau, hareng, poulet.</p>
+  <p><em>Durée</em>&nbsp;: 2-4 semaines au frigo après fumage&nbsp;; 6 mois sous vide.</p>
+
+  <h4>Lacto-fermentation</h4>
+  <p>Les <em>Lactobacillus</em>, bactéries naturellement présentes sur les légumes, transforment les sucres en acide lactique en milieu anaérobie. L'acidité descend à pH 3,5-4 et tue toute autre bactérie. C'est la technique de la choucroute, du kimchi, des cornichons traditionnels (sans vinaigre), du kéfir, du miso.</p>
+  <p><em>Principe</em>&nbsp;: légumes + saumure 2-3% sel, bocal fermé, 18-22&nbsp;°C 5-15 jours, puis frigo. <em>Durée au frigo</em>&nbsp;: 6 mois à 1 an. <em>Avantage</em>&nbsp;: augmente la biodisponibilité des nutriments et apporte des probiotiques.</p>
+
+  <h4>Sous-vide</h4>
+  <p>L'air retiré, l'oxydation s'arrête. Combiné au froid, la durée de conservation est multipliée par 3 à 5. <em>Cru</em>&nbsp;: viandes 10-30 jours frigo, poissons 5-10 jours. <em>Cuit</em> (sous-vide pasteurisé)&nbsp;: 21-45 jours frigo selon T°/durée de cuisson. Investissement&nbsp;: sous-videuse à cloche (200-400&nbsp;€) ou aspirateur de sachets (60-150&nbsp;€).</p>
+
+  <h4>Confit (graisse, sucre)</h4>
+  <p>Submerger un produit cuit dans sa graisse de cuisson (canard, oie, porc, ail) ou dans du sirop concentré (fruits confits, confitures à 65% sucre). La graisse ou le sucre coupe le produit de l'oxygène, et les bactéries ne se développent pas dans un milieu très gras (Aw bas) ni très sucré.</p>
+  <p><em>Confit de canard</em>&nbsp;: cuit 2-3 h dans sa graisse à 85&nbsp;°C, puis stocké recouvert au frais. <em>Durée</em>&nbsp;: 6 mois à 1 an cave fraîche.</p>
+
+  <h4>Stérilisation en bocaux</h4>
+  <p>Bocaux remplis chauds, fermés, puis stérilisés au bain-marie ou à l'autoclave (100&nbsp;°C 30-90 min, voire 116&nbsp;°C en autoclave pour les produits peu acides). Les bocaux passent à 100&nbsp;°C, tuent toutes les bactéries et leurs spores, et créent un vide naturel à refroidissement (couvercle bombé vers l'intérieur).</p>
+  <p><em>Produits adaptés</em>&nbsp;: fruits, légumes, sauces tomates, soupes, daubes en bocaux, terrines, rillettes. <em>Durée</em>&nbsp;: 1-3 ans. <em>Attention</em>&nbsp;: pour les produits peu acides (légumes, viandes), l'autoclave est obligatoire pour éliminer le risque de <em>Clostridium botulinum</em>.</p>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Le botulisme — l'erreur qui tue.</strong> <em>Clostridium botulinum</em> survit en milieu peu acide (pH > 4,5), sans oxygène et à température fraîche. Ses spores germent et produisent une neurotoxine mortelle. <strong>Trois règles absolues</strong>&nbsp;: (1) acidifier (vinaigre, citron) tout bocal de légumes ou de viande&nbsp;; (2) toujours faire bouillir 10 min minimum avant consommation un produit en bocal artisanal&nbsp;; (3) pour la stérilisation longue conservation, utiliser un autoclave (116&nbsp;°C) — pas un simple bain-marie — pour les produits peu acides.</p>
+  </div>
+
+  <h3 id="sec-7-13"><span class="h3-num">7.13</span>Signes d'altération &amp; sécurité</h3>
+
+  <p>Un produit peut être altéré sans paraître l'être, et inversement. Cinq signes qui doivent déclencher l'alarme, par ordre de gravité&nbsp;:</p>
+
+  <ol>
+    <li><strong>Odeur anormale</strong> — la plus fiable. Une viande qui pique le nez (ammoniaque, soufre), un poisson qui sent l'iode tournée, un lait qui aigrit, un fromage qui sent l'ammoniaque au cœur (et non en croûte) — on jette.</li>
+    <li><strong>Gaz, gonflement</strong> — bocal qui &laquo;&nbsp;clique&nbsp;&raquo; au déclipsage, paquet sous vide ballonné, couvercle de yaourt qui se bombe. <strong>Danger maximal</strong>&nbsp;: présence probable de <em>C. botulinum</em>. À jeter sans goûter ni ouvrir près du nez.</li>
+    <li><strong>Couleur</strong> — bœuf qui vire au gris-vert, poulet qui rosit à la rupture, légume qui brunit en cœur, moisissure verte ou noire (sur fromage&nbsp;: si pâte molle, on jette&nbsp;; si pâte dure, on coupe 1 cm autour).</li>
+    <li><strong>Texture</strong> — chair qui se délite, fromage qui &laquo;&nbsp;coule&nbsp;&raquo; au-delà de la croûte, légume mou et baveux, pain mou et collant (sale).</li>
+    <li><strong>Mucus, dépôts</strong> — viande gluante, poisson au mucus jaunâtre, surface de fromage qui bave anormalement.</li>
+  </ol>
+
+  <p><strong>Le réflexe d'or</strong>&nbsp;: dans le doute, on ne goûte pas — la dose toxique de plusieurs micro-organismes ou toxines est inférieure à la dose perceptible au goût. <em>Staphylococcus aureus</em> et <em>Clostridium botulinum</em> produisent leurs toxines avant que le produit n'ait l'air gâté. Pour <em>Salmonella</em>, <em>Listeria</em> ou <em>E. coli</em>, le produit peut paraître irréprochable.</p>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Étiqueter, dater, faire tourner.</strong> Trois habitudes pro qui changent tout&nbsp;: (1) un rouleau d'étiquettes blanches et un stylo près du frigo, on date l'entrée de tout&nbsp;; (2) règle <em>FIFO</em> (<em>First In, First Out</em>)&nbsp;: ce qui est entré en premier sort en premier — on pousse au fond les nouveaux arrivants&nbsp;; (3) un &laquo;&nbsp;jour vide-frigo&nbsp;&raquo; par semaine, sans rien acheter, pour épuiser les restes et garder la rotation. Réduit le gaspillage de 30-40% selon l'ADEME.</p>
+  </div>
+
+  <h3 id="sec-7-14"><span class="h3-num">7.14</span>Mythes et idées reçues</h3>
+
+  <dl class="myth-list">
+    <dt><strong>&laquo;&nbsp;On ne recongèle jamais.&nbsp;&raquo;</strong></dt>
+    <dd>Faux quand intermédiaire. <strong>Cru → décongelé → cuit → recongelé</strong> est parfaitement autorisé. <strong>Cru → décongelé → recongelé cru</strong> est interdit (multiplication bactérienne pendant la décongélation).</dd>
+    <dt><strong>&laquo;&nbsp;Le frigo arrête la croissance bactérienne.&nbsp;&raquo;</strong></dt>
+    <dd>Faux. Il la ralentit. <em>Listeria</em>, en particulier, se multiplie à 4&nbsp;°C et même à 0&nbsp;°C — d'où sa dangerosité particulière sur les fromages au lait cru, charcuteries crues, saumon fumé, plats préparés. Le froid ralentit, ne stérilise pas.</dd>
+    <dt><strong>&laquo;&nbsp;Si ça sent pas mauvais, c'est bon.&nbsp;&raquo;</strong></dt>
+    <dd>Faux. Les pathogènes les plus dangereux (botulisme, listeria, salmonelle, staphylocoque) sont inodores et invisibles. La date limite et la traçabilité priment sur les sens.</dd>
+    <dt><strong>&laquo;&nbsp;DLC et DDM, c'est pareil.&nbsp;&raquo;</strong></dt>
+    <dd>Faux. <strong>DLC</strong> (date limite de consommation, &laquo;&nbsp;à consommer jusqu'au&nbsp;&raquo;)&nbsp;: produits frais à risque sanitaire — viande, poisson, charcuterie, plats préparés. Après, on jette. <strong>DDM</strong> (date de durabilité minimale, &laquo;&nbsp;à consommer de préférence avant&nbsp;&raquo;)&nbsp;: indication de qualité, pas de sécurité — pâtes, riz, conserves, café, biscuits, fromages affinés. Après, le produit est moins bon mais comestible (parfois pendant des années).</dd>
+    <dt><strong>&laquo;&nbsp;Refroidir une marmite à l'air libre.&nbsp;&raquo;</strong></dt>
+    <dd>Erreur classique. Une cocotte de 4 L laissée sur le piano met 6-8 h à descendre à 10&nbsp;°C, soit deux fois la fenêtre de sécurité. Toujours transvaser en surfaces peu profondes, ou plonger en bain-marie glacé en remuant.</dd>
+  </dl>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>L'eau libre (Aw) — la métrique reine.</strong> L'activité de l'eau (<em>water activity</em>, notée Aw) mesure l'eau <em>disponible</em> pour les micro-organismes, pas l'eau totale. Aw = 1 pour de l'eau pure, 0 pour un solide totalement sec. Les bactéries ont besoin d'Aw > 0,90 pour se développer&nbsp;; les levures > 0,80&nbsp;; les moisissures > 0,70. Toutes les techniques de longue conservation (séchage, salaison, sucre, confit) visent à abaisser Aw sous 0,85 — et chaque cuisinier qui rate une rillette ou un jambon devrait s'acheter un Aw-mètre (40-80&nbsp;€) avant d'acheter un nouveau couteau.</p>
+  </div>
+
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="legumes.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Légumes — protocoles</span>
+  </a>
+  <a class="pager-link next" href="biblio.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Bibliographie &amp; ressources</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+<script src="assets/toc.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
