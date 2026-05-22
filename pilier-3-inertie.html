@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilier III — Inertie thermique — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link current"><span class="num">III.</span>Inertie thermique</a>
+    <a href="pilier-3-inertie.html#sec-3-1" class="sidebar-sub"><span class="num">3.1</span>Préchauffer la matière</a>
+    <a href="pilier-3-inertie.html#sec-3-2" class="sidebar-sub"><span class="num">3.2</span>Choix des matériaux</a>
+    <a href="pilier-3-inertie.html#sec-3-3" class="sidebar-sub"><span class="num">3.3</span>Masse thermique</a>
+    <a href="pilier-3-inertie.html#sec-3-4" class="sidebar-sub"><span class="num">3.4</span>Cuisson à four éteint</a>
+    <a href="pilier-3-inertie.html#sec-3-5" class="sidebar-sub"><span class="num">3.5</span>Repos sous cloche</a>
+    <a href="pilier-3-inertie.html#sec-3-6" class="sidebar-sub"><span class="num">3.6</span>Carry-over cooking</a>
+    <a href="pilier-3-inertie.html#sec-3-7" class="sidebar-sub"><span class="num">3.7</span>Saisie en poêle</a>
+    <a href="pilier-3-inertie.html#sec-3-8" class="sidebar-sub"><span class="num">3.8</span>Tempérer la viande</a>
+    <a href="pilier-3-inertie.html#sec-3-9" class="sidebar-sub"><span class="num">3.9</span>Choc thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Pilier III — Inertie thermique</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Pilier troisième</div>
+  <h1>L'<em>inertie</em> thermique</h1>
+  <p class="subtitle">Matériaux, masse thermique, carry-over, repos — la chaleur qui travaille seule</p>
+</div>
+
+<p class="lead">L'inertie thermique, c'est la <strong>capacité d'un corps à stocker et restituer la chaleur</strong>. Sous-estimer ce paramètre, c'est rater 70&nbsp;% des cuissons.</p>
+
+  <div class="chapter-toc">
+    <strong>Sommaire du chapitre</strong>
+    3.1 Préchauffer la matière · 3.2 Matériaux et propriétés · 3.3 Masse thermique · 3.4 Cuisson à four éteint · 3.5 Repos sous cloche · 3.6 Carry-over cooking · 3.7 Saisie en poêle chaude · 3.8 Tempérage · 3.9 Choc thermique
+  </div>
+
+  <h3 id="sec-3-1"><span class="h3-num">3.1</span>Préchauffer la matière — pierre à pizza, plaque en fonte, cocotte</h3>
+  <p>Un four à 250&nbsp;°C ne fait pas une pizza croustillante. Une <strong>pierre à pizza préchauffée 45 min</strong> à 250&nbsp;°C, oui. La masse de la pierre stocke des centaines de joules qui se transfèrent <em>en quelques secondes</em> à la pâte — créant un choc thermique qui boursoufle la pâte et caramélise le fond. C'est l'effet &laquo;&nbsp;four à bois napolitain&nbsp;&raquo; version maison.</p>
+  <p>Pareil pour&nbsp;: la cocotte en fonte préchauffée à blanc avant le pain → effet four à pain. La plaque en fonte préchauffée à 300&nbsp;°C avant la saisie d'un steak. La poêle en acier qui doit fumer légèrement avant l'huile.</p>
+
+  <h3 id="sec-3-2"><span class="h3-num">3.2</span>Choix des matériaux — propriétés thermiques</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Matériau</th><th>Conductivité (W/m·K)</th><th>Masse / inertie</th><th>Idéal pour</th></tr></thead>
+    <tbody>
+    <tr><td><b>Cuivre</b></td><td>400</td><td>Faible</td><td>Sauces, sabayons, confitures, saisies courtes</td></tr>
+    <tr><td><b>Aluminium</b></td><td>205</td><td>Faible</td><td>Friture, casseroles légères (souvent en couche tri-ply)</td></tr>
+    <tr><td><b>Fer / fonte</b></td><td>~80</td><td>Très élevée</td><td>Mijotage, pain en cocotte, pierre à pizza</td></tr>
+    <tr><td><b>Acier carbone</b></td><td>~50</td><td>Moyenne</td><td>Crêpes, omelettes, saisie steak, wok</td></tr>
+    <tr><td><b>Inox</b> (304, 316)</td><td>15-20</td><td>Moyenne</td><td>Multicouche (Cristel, All-Clad)</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Source&nbsp;: <a href="https://www.samaterials.fr/blog/thermal-conductivity-of-common-materials.html" target="_blank">Stanford Advanced Materials</a>.</p>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Batterie minimale d'un cuisinier sérieux&nbsp;:</strong> cocotte en fonte émaillée 24-28 cm (Le Creuset, Staub, Invicta), poêle acier carbone 26-28 cm (De Buyer Mineral B), casserole inox tri-ply 18 cm avec fond cuivre/aluminium, plaque en fonte ou inox épais pour le four.</p>
+  </div>
+
+  <h3 id="sec-3-3"><span class="h3-num">3.3</span>Masse thermique et son rôle</h3>
+  <p>Une poêle <strong>légère</strong> (aluminium fin, antiadhésive bas de gamme) perd 50&nbsp;°C dès qu'on y jette un steak froid → la viande baigne dans son eau, ne saisit pas, devient grise. Une poêle <strong>lourde</strong> (acier 3 mm, fonte) perd 10-15&nbsp;°C max → la croûte se forme en 30 secondes.</p>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Le calcul.</strong> Saisir un steak de 250 g froid (4&nbsp;°C) jusqu'à 100&nbsp;°C en surface absorbe environ 84 kJ. Une poêle en fonte de 2 kg peut céder ces 84 kJ en perdant seulement ~15&nbsp;°C. Une poêle de 600 g perdrait 50&nbsp;°C — d'où la &laquo;&nbsp;fuite&nbsp;&raquo; de la cuisson.</p>
+  </div>
+
+  <h3 id="sec-3-4"><span class="h3-num">3.4</span>Cuisson à four éteint — la chaleur résiduelle</h3>
+  <p>Technique pour gros rôtis et cuissons délicates (cheesecake, pavlova, mousses)&nbsp;:</p>
+  <ul>
+    <li>Cuire jusqu'à 5-10&nbsp;°C en dessous de la cible.</li>
+    <li>Éteindre, <strong>laisser la porte fermée</strong> 15-30 min.</li>
+    <li>L'inertie du four (briques, sole, parois) termine la cuisson en douceur.</li>
+  </ul>
+
+  <h3 id="sec-3-5"><span class="h3-num">3.5</span>Repos sous cloche / aluminium</h3>
+  <ul>
+    <li><strong>Aluminium</strong> en tente (pas hermétique) — limite le refroidissement, garde la croûte.</li>
+    <li><strong>Cloche</strong> en verre ou métal — standard pro pour pièces entières.</li>
+    <li><strong>Glacière isolée</strong> (BBQ américain) — brisket, prime rib XXL&nbsp;: 1-2 h sans perte sensible.</li>
+  </ul>
+
+  <h3 id="sec-3-6"><span class="h3-num">3.6</span>Carry-over cooking — la cuisson résiduelle quantifiée</h3>
+  <p>Quand vous retirez une pièce de viande du feu, sa surface est très chaude (150-180&nbsp;°C), son cœur moins. La chaleur continue de migrer du chaud vers le froid&nbsp;: <strong>le cœur continue de chauffer pendant 5 à 20 minutes</strong>.</p>
+  <p>Le guide officiel <strong>ThermoWorks</strong> recommande de retirer la viande à des températures &laquo;&nbsp;3 à 10&nbsp;°F en dessous&nbsp;&raquo; de la cible, soit ≈ <strong>1,7 à 5,6&nbsp;°C</strong>. Le Steak Temperature Guide ajoute &laquo;&nbsp;jusqu'à 10 ou même 15&nbsp;°F (≈ 5,6 à 8,3&nbsp;°C), selon la taille de la pièce&nbsp;&raquo;.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce</th><th>Cuisson</th><th>Gain au repos</th></tr></thead>
+    <tbody>
+    <tr><td>Steak 2 cm, poêle haute T°</td><td>poêle</td><td>+1,7-3&nbsp;°C</td></tr>
+    <tr><td>Filet de porc</td><td>four 200&nbsp;°C</td><td>+3-5&nbsp;°C</td></tr>
+    <tr><td>Poulet entier</td><td>four 200&nbsp;°C</td><td>+3-5&nbsp;°C (sur le blanc)</td></tr>
+    <tr><td>Rôti de bœuf 1,5 kg</td><td>four 200&nbsp;°C</td><td>+5-6&nbsp;°C</td></tr>
+    <tr><td>Prime rib 3 kg</td><td>four 130&nbsp;°C</td><td>+3-5&nbsp;°C</td></tr>
+    <tr><td>Prime rib 3 kg</td><td>four 230&nbsp;°C</td><td>+6-8&nbsp;°C</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <blockquote>
+    The extent of afterheating depends on the meat's weight, shape, and center temperature, and the cooking temperature, and can range from a negligible few degrees in a thin cut to 20&nbsp;°F in a large roast.
+    <cite>Harold McGee, <em>On Food and Cooking</em></cite>
+  </blockquote>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>La règle du chef</strong>&nbsp;: sortez votre viande <strong>~2&nbsp;°C en dessous</strong> de la cible pour un steak fin, <strong>~5&nbsp;°C en dessous</strong> pour un rôti, <strong>~8&nbsp;°C en dessous</strong> pour une grosse pièce à four chaud.</p>
+  </div>
+
+  <h3 id="sec-3-7"><span class="h3-num">3.7</span>Saisie en poêle bien chaude</h3>
+  <p>Une poêle &laquo;&nbsp;tiède&nbsp;&raquo; qui monte avec la viande dedans = la viande sue, surface plafonnée à 100&nbsp;°C = <strong>pas de Maillard</strong>, gris-blanc, sans goût.</p>
+  <p>Une poêle <strong>fumante</strong> (huile à son point de fumée, 180-220&nbsp;°C) = choc thermique sur 1 mm de viande = Maillard instantanée, croûte en 30 secondes.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Huile / graisse</th><th>Point de fumée</th><th>Usage saisie</th></tr></thead>
+    <tbody>
+    <tr><td>Beurre</td><td>120-150&nbsp;°C</td><td>Non (brûle) sauf clarifié</td></tr>
+    <tr><td>Beurre clarifié / ghee</td><td>~250&nbsp;°C</td><td>Excellent</td></tr>
+    <tr><td>Huile d'olive vierge</td><td>~190&nbsp;°C</td><td>Limite</td></tr>
+    <tr><td>Huile de tournesol</td><td>~225&nbsp;°C</td><td>Bon</td></tr>
+    <tr><td>Huile de pépins de raisin</td><td>~250&nbsp;°C</td><td>Excellent</td></tr>
+    <tr><td>Huile d'arachide</td><td>~230&nbsp;°C</td><td>Très bon (friture)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-3-8"><span class="h3-num">3.8</span>Tempérer la viande — sortir du frigo avant cuisson</h3>
+  <p><strong>Le mythe</strong>&nbsp;: &laquo;&nbsp;la viande doit être à température ambiante au cœur&nbsp;&raquo;. Mesures réelles&nbsp;: un steak épais sorti 1 h à 20&nbsp;°C n'a gagné que ~3-5&nbsp;°C au cœur. L'écart cœur/croûte reste massif.</p>
+  <p><strong>Les vraies raisons</strong> (Kenji López-Alt, <em>The Food Lab</em>)&nbsp;:</p>
+  <ol>
+    <li>La <strong>surface</strong> sèche pendant le tempérage (peau de poulet à découvert) → Maillard améliorée.</li>
+    <li>La cuisson est plus <strong>prévisible</strong>&nbsp;: départ standardisé à ~15-20&nbsp;°C en surface.</li>
+    <li>Une viande tirée du frigo refroidit instantanément l'huile chaude → splash, perte de température.</li>
+  </ol>
+
+  <blockquote>
+    Je sors les steaks du réfrigérateur jusqu'à une heure avant la cuisson, de sorte que lorsqu'ils sont cuits, l'extérieur de la viande ne brûle pas et l'intérieur n'est pas froid.
+    <cite>J. Kenji López-Alt, ancien directeur culinaire de Serious Eats</cite>
+  </blockquote>
+
+  <p><strong>Durées indicatives</strong>&nbsp;:</p>
+  <ul>
+    <li>Steak 1-2 cm&nbsp;: 20-30 min</li>
+    <li>Steak épais 4 cm, magret&nbsp;: 45-60 min</li>
+    <li>Rôti 1 kg&nbsp;: 1-2 h</li>
+    <li>Volaille entière&nbsp;: 1 h</li>
+  </ul>
+
+  <h3 id="sec-3-9"><span class="h3-num">3.9</span>Le choc thermique et ses effets</h3>
+  <p><strong>Utile</strong> sur&nbsp;: saisie d'un steak (croûte instantanée), arrêt de cuisson des légumes verts par bain glacé (préserve chlorophylle, croquant), pierre à pizza (cuisson en 2 min).</p>
+  <p><strong>Nuisible</strong> sur&nbsp;: œufs à la coque (coquille fendue), soufflés et meringues (effondrement), poissons fragiles (peau qui se rétracte), Pyrex chaud sur surface froide (explosion).</p>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="pilier-2-humidite.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Pilier II — Humidité</span>
+  </a>
+  <a class="pager-link next" href="epices.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Épices — la grammaire</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

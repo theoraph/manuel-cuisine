@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilier I — Température — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link current"><span class="num">I.</span>Température</a>
+    <a href="pilier-1-temperature.html#sec-1-1" class="sidebar-sub"><span class="num">1.1</span>Le thermomètre sonde</a>
+    <a href="pilier-1-temperature.html#sec-1-2" class="sidebar-sub"><span class="num">1.2</span>Températures à cœur</a>
+    <a href="pilier-1-temperature.html#sec-1-3" class="sidebar-sub"><span class="num">1.3</span>Poissons & fruits de mer</a>
+    <a href="pilier-1-temperature.html#sec-1-4" class="sidebar-sub"><span class="num">1.4</span>Basse température / sous-vide</a>
+    <a href="pilier-1-temperature.html#sec-1-5" class="sidebar-sub"><span class="num">1.5</span>Reverse sear</a>
+    <a href="pilier-1-temperature.html#sec-1-6" class="sidebar-sub"><span class="num">1.6</span>Maillard vs caramélisation</a>
+    <a href="pilier-1-temperature.html#sec-1-7" class="sidebar-sub"><span class="num">1.7</span>Coagulation & amidon</a>
+    <a href="pilier-1-temperature.html#sec-1-8" class="sidebar-sub"><span class="num">1.8</span>Calibrage du thermomètre</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Pilier I — Température</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Pilier premier</div>
+  <h1>La maîtrise de la <em>température</em></h1>
+  <p class="subtitle">Thermomètre, sous-vide, Maillard, coagulation — les leviers fondamentaux de la cuisson</p>
+</div>
+
+<div class="chapter-toc">
+    <strong>Sommaire du chapitre</strong>
+    1.1 Le thermomètre sonde · 1.2 Températures à cœur des viandes · 1.3 Poissons et fruits de mer · 1.4 Cuisson basse température et sous-vide · 1.5 Le reverse sear · 1.6 Maillard vs caramélisation · 1.7 Coagulation et gélatinisation · 1.8 Calibrage du thermomètre
+  </div>
+
+  <h3 id="sec-1-1"><span class="h3-num">1.1</span>Le thermomètre sonde&nbsp;: votre meilleur allié</h3>
+  <p>Avant toute chose&nbsp;: <strong>achetez un thermomètre sonde</strong>. Pas un thermomètre de four à pince, pas une supposition basée sur la pression du doigt — un véritable thermomètre sonde de précision. Quatre types principaux&nbsp;:</p>
+  <ul>
+    <li><strong>Sonde instantanée à cœur</strong> (Thermapen ONE, ThermoPro TP-19)&nbsp;: 2-3 secondes, précision ±0,5&nbsp;°C. L'outil du quotidien.</li>
+    <li><strong>Sonde déportée filaire</strong>&nbsp;: câble résistant à la chaleur, lecture déportée hors du four. Idéale pour les rôtis longs.</li>
+    <li><strong>Sonde connectée sans fil</strong> (Meater, Meat°it 3)&nbsp;: transmission Bluetooth/WiFi vers smartphone, prédiction de fin de cuisson.</li>
+    <li><strong>Thermomètre infrarouge (pyromètre)</strong>&nbsp;: mesure la <em>surface</em> seulement (poêle, huile, pierre à pizza). Pas pour le cœur.</li>
+  </ul>
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Placez la pointe au <strong>centre géométrique</strong> de la partie la plus épaisse, sans toucher l'os (qui chauffe différemment) ni la graisse. Pour une volaille, sondez la cuisse <em>et</em> le filet — les deux doivent atteindre 74&nbsp;°C.</p>
+  </div>
+
+  <h3 id="sec-1-2"><span class="h3-num">1.2</span>Températures à cœur — tableau de référence</h3>
+  <p>Valeurs <strong>à atteindre à cœur</strong>, avant tenir compte du carry-over (retirer 3 à 8&nbsp;°C plus tôt selon l'épaisseur et le four — voir Pilier&nbsp;III). Sources croisées&nbsp;: <a href="https://chefsimon.com/articles/pratique-temperatures-de-cuisson-a-coeur" target="_blank">Chef Simon</a>, <a href="https://www.electrolux.fr/contentassets/88fe4f71fcbe4320a151efa659d08229/tableau-des-temperatures-a-coeur-sonde-de-cuisson.pdf" target="_blank">Electrolux (PDF)</a>, <a href="https://www.bloc-notes-culinaire.com/2019/10/temperature-de-cuisson-a-coeur-viandes-poissons.html" target="_blank">Bloc-Notes Culinaire</a>.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Viande</th><th>Bleu</th><th>Saignant</th><th>À point</th><th>Bien cuit</th></tr></thead>
+    <tbody>
+    <tr><td><b>Bœuf</b> (filet, faux-filet, rumsteak, côte)</td><td>49-52&nbsp;°C</td><td>53-57&nbsp;°C</td><td>58-63&nbsp;°C</td><td>+65&nbsp;°C</td></tr>
+    <tr><td><b>Veau</b></td><td>—</td><td>54-57&nbsp;°C</td><td>59-61&nbsp;°C</td><td>65&nbsp;°C</td></tr>
+    <tr><td><b>Agneau / gigot</b></td><td>50-52&nbsp;°C</td><td>54-56&nbsp;°C</td><td>59-61&nbsp;°C</td><td>65&nbsp;°C</td></tr>
+    <tr><td><b>Porc</b> (filet, rôti)</td><td>—</td><td>—</td><td>62-65&nbsp;°C</td><td>70-72&nbsp;°C</td></tr>
+    <tr><td><b>Volaille</b> (filet)</td><td>—</td><td>—</td><td>—</td><td><b>74&nbsp;°C minimum</b></td></tr>
+    <tr><td><b>Volaille</b> (cuisse, entière)</td><td>—</td><td>—</td><td>—</td><td>82&nbsp;°C</td></tr>
+    <tr><td><b>Magret de canard</b></td><td>—</td><td>54-57&nbsp;°C</td><td>58-62&nbsp;°C</td><td>—</td></tr>
+    <tr><td><b>Gibier</b> (chevreuil, sanglier — élevage)</td><td>—</td><td>54-58&nbsp;°C</td><td>60-63&nbsp;°C</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p>Cuire la volaille &laquo;&nbsp;saignante&nbsp;&raquo;. La salmonelle et le <em>Campylobacter</em> exigent 74&nbsp;°C à cœur (recommandation FAO/OMS). Aucune exception sur les pièces non transformées.</p>
+  </div>
+
+  <h3 id="sec-1-3"><span class="h3-num">1.3</span>Poissons et fruits de mer</h3>
+  <p>Les protéines du poisson (myosine principalement) coagulent dès 40-45&nbsp;°C et durcissent au-delà de 60&nbsp;°C. Ne dépassez jamais 55&nbsp;°C pour un poisson &laquo;&nbsp;nacré&nbsp;&raquo; en sous-vide.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Mi-cuit / nacré</th><th>À point</th><th>Bien cuit</th></tr></thead>
+    <tbody>
+    <tr><td>Saumon, truite</td><td>38-46&nbsp;°C</td><td>49-52&nbsp;°C</td><td>58&nbsp;°C</td></tr>
+    <tr><td>Thon</td><td>38-43&nbsp;°C (bleu/saignant)</td><td>49&nbsp;°C</td><td>déconseillé (sec)</td></tr>
+    <tr><td>Cabillaud, lieu, lotte</td><td>52&nbsp;°C</td><td>55&nbsp;°C</td><td>60&nbsp;°C</td></tr>
+    <tr><td>Bar, dorade, turbot</td><td>50-52&nbsp;°C</td><td>55-58&nbsp;°C</td><td>60&nbsp;°C</td></tr>
+    <tr><td>Homard, langouste (queue)</td><td>52&nbsp;°C (poché)</td><td>55&nbsp;°C</td><td>—</td></tr>
+    <tr><td>Saint-Jacques</td><td>47-50&nbsp;°C (rosée)</td><td>55&nbsp;°C</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Références&nbsp;: <a href="https://sousvideconsulting.fr/infos-sous-vide/tableau-temperatures-temps-cuisson" target="_blank">Sous-Vide Consulting</a>, <a href="https://www.bloc-notes-culinaire.com/2019/10/temperature-de-cuisson-a-coeur-viandes-poissons.html" target="_blank">Bloc-Notes Culinaire</a>.</p>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour éviter l'<strong>albumine blanche</strong> qui suinte sur le saumon en sous-vide&nbsp;: saumure pendant 10 minutes dans une solution à 10&nbsp;% de sel avant la mise sous vide. La pellicule disparaît.</p>
+  </div>
+
+  <h3 id="sec-1-4"><span class="h3-num">1.4</span>Cuisson basse température et sous-vide</h3>
+  <p>La cuisson à juste température est une <strong>invention française</strong> dont les bases scientifiques modernes ont été posées par <strong>Bruno Goussault</strong> — décrit par Wikipédia comme &laquo;&nbsp;scientifique, économiste, inventeur et chef français&nbsp;&raquo;, né en 1942. Lors d'un colloque international à Strasbourg en 1974, il présenta une étude pionnière sur l'épaule de bœuf cuite sous-vide démontrant que la méthode étendait la durée de conservation à 60 jours. À la même époque, le chef <strong>Georges Pralus</strong>, travaillant pour les frères Troisgros, mettait au point la cuisson sous-vide du foie gras et obtenait une réduction des pertes de poids massive (de l'ordre de 50&nbsp;% à 5&nbsp;%). La conjonction de ces deux découvertes — la science de Goussault et la pratique de Pralus — fonde la cuisine sous-vide moderne.</p>
+
+  <blockquote>
+    J'ai appris aux chefs à mesurer la température pour maîtriser leur cuisson. Avant, on ne mettait pas de thermomètre dans l'eau. Les chefs inséraient des aiguilles dans la viande. S'ils se brûlaient avec, ils disaient que c'était cuit.
+    <cite>Bruno Goussault, <a href="https://lecourrier.vn/bruno-goussault-un-chiantifique-gardien-de-la-cuisine-sous-vide/1277757.html" target="_blank">Le Courrier du Vietnam</a></cite>
+  </blockquote>
+
+  <p><strong>Trois grandes méthodes</strong> (<a href="https://www.ecole-des-papilles.fr/wp-content/uploads/2015/04/222-224-cuisson-basse-temperature-coulomb.pdf" target="_blank">École des Papilles, PDF</a>)&nbsp;:</p>
+  <ol>
+    <li><strong>Basse/basse</strong> (60-68&nbsp;°C, plusieurs heures) — viandes tendres, poissons. Impossible de surcuire.</li>
+    <li><strong>Haute/basse</strong> (ambiance 80-85&nbsp;°C, cœur 55-65&nbsp;°C) — coagulation rapide des poissons et œufs.</li>
+    <li><strong>Haute/haute</strong> (85-95&nbsp;°C, plusieurs heures) — viandes coriaces (joues, jarrets), légumes (cellulose).</li>
+  </ol>
+
+  <h4>Couples temps/température de référence</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce</th><th>Température</th><th>Durée</th></tr></thead>
+    <tbody>
+    <tr><td>Bavette, onglet, entrecôte (2&nbsp;cm)</td><td>54&nbsp;°C</td><td>1&nbsp;h</td></tr>
+    <tr><td>Filet de bœuf entier</td><td>54&nbsp;°C</td><td>2-3&nbsp;h</td></tr>
+    <tr><td>Joue de bœuf, paleron</td><td>72-74&nbsp;°C</td><td>24-36&nbsp;h</td></tr>
+    <tr><td>Magret de canard</td><td>57&nbsp;°C</td><td>1&nbsp;h&nbsp;30</td></tr>
+    <tr><td>Cuisse de canard confite (texture)</td><td>76-80&nbsp;°C</td><td>12-24&nbsp;h</td></tr>
+    <tr><td>Suprême de volaille</td><td>62-64&nbsp;°C</td><td>45&nbsp;min - 1&nbsp;h</td></tr>
+    <tr><td>Œuf parfait (Hervé This)</td><td>63,2&nbsp;°C</td><td>45&nbsp;min</td></tr>
+    <tr><td>Saumon (rosé)</td><td>46-49&nbsp;°C</td><td>30&nbsp;min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Sécurité — la règle des 52&nbsp;°C.</strong> Selon Bruno Goussault (<a href="https://hospitalityinsights.ehl.edu/sous-vide-cooking-temperature" target="_blank">EHL Hospitality Insights</a>), le seuil de 52&nbsp;°C est le point de départ de la destruction des formes végétatives des bactéries pathogènes. En dessous, la cuisson <strong>n'assainit pas</strong>. Au-dessus, la durée nécessaire dépend du couple temps/température (pasteurisation logarithmique). Référence académique gratuite&nbsp;: <a href="https://douglasbaldwin.com/sous-vide.html" target="_blank">Douglas Baldwin, A Practical Guide to Sous Vide Cooking</a>.</p>
+  </div>
+
+  <h3 id="sec-1-5"><span class="h3-num">1.5</span>Le reverse sear — la méthode Kenji</h3>
+  <p>Inventée et popularisée par <strong>J. Kenji López-Alt</strong> (<a href="https://www.seriouseats.com/reverse-seared-steak-recipe" target="_blank">Serious Eats</a>), la saisie inversée renverse l'ordre classique&nbsp;: on cuit d'abord <em>doucement au four</em>, on saisit <em>ensuite</em> à feu très vif. Résultat&nbsp;: une cuisson rose <strong>d'une oreille à l'autre</strong>, sans bande grise.</p>
+
+  <h4>Protocole (pour une pièce de 4 cm d'épaisseur minimum)</h4>
+  <ol>
+    <li>Saler généreusement la veille (saumure sèche), laisser à découvert au frigo.</li>
+    <li>Sortir du frigo 30-60 min avant cuisson.</li>
+    <li>Four à 95-135&nbsp;°C (200-275&nbsp;°F), grille sur lèchefrite.</li>
+    <li>Sonder en continu jusqu'à <strong>49&nbsp;°C (rare), 54&nbsp;°C (medium-rare), 57&nbsp;°C (medium)</strong>.</li>
+    <li>Sortir, laisser reposer 5 min (l'inertie est minime à basse température).</li>
+    <li>Saisir 45 sec par face dans une poêle en fonte ou acier carbone <strong>fumante</strong> (huile haut point de fumée + beurre arrosé).</li>
+    <li>Servir immédiatement — pas besoin d'un second repos.</li>
+  </ol>
+
+  <blockquote>
+    By starting steaks in a low-temperature oven, you wind up with almost no overcooked meat whatsoever. Juicier results are your reward.
+    <cite>J. Kenji López-Alt, <a href="https://www.seriouseats.com/reverse-seared-steak-recipe" target="_blank">Serious Eats</a></cite>
+  </blockquote>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Le reverse sear ne fonctionne que sur des pièces <strong>épaisses</strong> (≥&nbsp;4&nbsp;cm). Pour un steak de 1,5&nbsp;cm, la saisie classique en poêle brûlante reste supérieure&nbsp;: le contraste croûte/cœur exige une montée rapide.</p>
+  </div>
+
+  <h3 id="sec-1-6"><span class="h3-num">1.6</span>Réaction de Maillard vs caramélisation</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Critère</th><th>Réaction de Maillard</th><th>Caramélisation</th></tr></thead>
+    <tbody>
+    <tr><td>Réactifs</td><td>Sucres réducteurs + <b>acides aminés</b> (protéines)</td><td>Sucres simples seuls</td></tr>
+    <tr><td>Démarrage</td><td>Lente dès 90&nbsp;°C, sensible vers 115&nbsp;°C, <b>rapide de 140 à 165&nbsp;°C</b></td><td>110-180&nbsp;°C selon le sucre</td></tr>
+    <tr><td>Plafond</td><td>180&nbsp;°C (au-delà&nbsp;: pyrolyse, amertume)</td><td>180&nbsp;°C (caramel noir, brûlé)</td></tr>
+    <tr><td>Produits typiques</td><td>Croûte de steak, pain, café, bière</td><td>Caramel, oignons confits, crème brûlée</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>Source&nbsp;: <a href="https://en.wikipedia.org/wiki/Maillard_reaction" target="_blank">Wikipédia sur la réaction de Maillard</a> (&laquo;&nbsp;the reaction is a form of non-enzymatic browning which typically proceeds rapidly from around 140 to 165&nbsp;°C&nbsp;&raquo;).</p>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi Maillard s'arrête à 100&nbsp;°C&nbsp;?</strong> Parce que l'eau bout. Tant que la surface contient de l'eau libre, sa température plafonne à 100&nbsp;°C — il n'y aura <strong>pas</strong> de Maillard. C'est pourquoi on <strong>sèche</strong> systématiquement une viande au papier absorbant avant de la saisir. C'est aussi pourquoi un poulet bouilli n'est jamais doré. Source&nbsp;: <a href="https://www.alimentarium.org/en/fact-sheet/maillard-reaction" target="_blank">Alimentarium</a>.</p>
+  </div>
+
+  <blockquote>
+    The important thing about the Maillard reaction isn't the color, it's the flavors and aromas. Indeed, it should be called &laquo;&nbsp;the flavor reaction&nbsp;&raquo;, not the &laquo;&nbsp;browning reaction&nbsp;&raquo;.
+    <cite>Nathan Myhrvold, <a href="https://modernistcuisine.com/mc/the-maillard-reaction/" target="_blank">Modernist Cuisine</a></cite>
+  </blockquote>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour booster Maillard&nbsp;: milieu <strong>alcalin</strong> (pincée de bicarbonate sur l'oignon, sur la peau du poulet)&nbsp;; surface <strong>sèche</strong> (essuyer, voire dessécher 12&nbsp;h à découvert au frigo)&nbsp;; matière grasse à <strong>haut point de fumée</strong> (huile de pépin de raisin, arachide, beurre clarifié).</p>
+  </div>
+
+  <h3 id="sec-1-7"><span class="h3-num">1.7</span>Coagulation des protéines et gélatinisation de l'amidon</h3>
+
+  <h4>L'œuf selon Hervé This</h4>
+  <p>Le physico-chimiste <strong>Hervé This</strong> (INRAE, AgroParisTech, co-fondateur de la gastronomie moléculaire avec Nicholas Kurti en 1988) a popularisé la <strong>cuisson à 65&nbsp;°C</strong> de l'œuf, ou &laquo;&nbsp;œuf parfait&nbsp;&raquo;&nbsp;:</p>
+  <ul>
+    <li><strong>62&nbsp;°C</strong>&nbsp;: première famille de protéines du blanc coagule (gel à peine laiteux, presque liquide).</li>
+    <li><strong>65&nbsp;°C</strong>&nbsp;: deuxième famille — gel plus opaque, légèrement plus solide.</li>
+    <li><strong>68&nbsp;°C</strong>&nbsp;: troisième gel — blanc ferme et blanc.</li>
+    <li><strong>100&nbsp;°C</strong>&nbsp;: empilement total — texture caoutchouteuse de l'œuf dur.</li>
+  </ul>
+  <p>L'œuf parfait du CREA est cuit <strong>45 minutes à 63,2&nbsp;°C</strong>. Voir le billet original&nbsp;: <a href="https://hervethis.blogspot.com/2021/08/la-cuisson-des-oeufs-parfaits.html" target="_blank">hervethis.blogspot.com</a>.</p>
+
+  <h4>Les protéines de la viande</h4>
+  <ul>
+    <li><strong>40-50&nbsp;°C</strong>&nbsp;: la myosine commence à se dénaturer.</li>
+    <li><strong>55-60&nbsp;°C</strong>&nbsp;: actine et myosine coagulent — saignant à point.</li>
+    <li><strong>60-65&nbsp;°C</strong>&nbsp;: contraction maximale, expulsion des sucs.</li>
+    <li><strong>65-70&nbsp;°C</strong>&nbsp;: dénaturation du collagène — sec si court, fondant si long (transformation en gélatine, 2-8&nbsp;h selon le morceau).</li>
+  </ul>
+
+  <h4>Gélatinisation de l'amidon</h4>
+  <p>L'amidon, insoluble à froid, gonfle, éclate et libère ses molécules dans l'eau autour d'une température dite &laquo;&nbsp;de gélatinisation&nbsp;&raquo;, spécifique à chaque source (<a href="https://www.processalimentaire.com/ingredients/texturants-les-caracteristiques-des-sources-d-amidons" target="_blank">Process Alimentaire</a>)&nbsp;:</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Amidon</th><th>Température de gélatinisation</th><th>Usage</th></tr></thead>
+    <tbody>
+    <tr><td>Pomme de terre</td><td>56-66&nbsp;°C</td><td>Purée, gnocchi</td></tr>
+    <tr><td>Blé</td><td>59-64&nbsp;°C / gélification ~85&nbsp;°C</td><td>Béchamel, pâtes</td></tr>
+    <tr><td>Maïs (fécule)</td><td>70-75&nbsp;°C</td><td>Sauces, crèmes</td></tr>
+    <tr><td>Riz</td><td>75-82&nbsp;°C</td><td>Risotto, riz au lait</td></tr>
+    <tr><td>Manioc (tapioca)</td><td>71-72&nbsp;°C</td><td>Texture brillante et souple</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour une <strong>béchamel sans grumeaux</strong>&nbsp;: mélangez le lait <em>froid</em> dans le roux <em>chaud</em> (ou l'inverse). Si l'amidon dépasse sa température de gélatinisation avant d'être dispersé, les premiers grains éclatent et collent les autres en grumeaux.</p>
+  </div>
+
+  <h3 id="sec-1-8"><span class="h3-num">1.8</span>Calibrage du thermomètre</h3>
+  <p>Un thermomètre non calibré peut dériver de 2-5&nbsp;°C. <strong>Vérifiez-le tous les 6 mois</strong> selon deux méthodes officielles&nbsp;:</p>
+  <ol>
+    <li><strong>Point de glace (0&nbsp;°C)</strong>&nbsp;: remplissez un grand verre de glace pilée fine, ajoutez 5-10&nbsp;cl d'eau froide, mélangez 1-2 minutes. Plongez la sonde au centre. Doit lire <strong>0&nbsp;°C ±1&nbsp;°C</strong>.</li>
+    <li><strong>Point d'ébullition (100&nbsp;°C)</strong>&nbsp;: portez de l'eau à pleine ébullition. Plongez la sonde dans la <em>vapeur</em> juste au-dessus. Doit lire <strong>100&nbsp;°C ±1&nbsp;°C</strong> au niveau de la mer. La température baisse de ~1&nbsp;°C par 300&nbsp;m d'altitude.</li>
+  </ol>
+  <p>Si l'écart dépasse 1&nbsp;°C&nbsp;: ajustement (vis sur les modèles à cadran, bouton &laquo;&nbsp;reset&nbsp;&raquo; sur les numériques) ou remplacement.</p>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="index.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Manuel — Accueil</span>
+  </a>
+  <a class="pager-link next" href="pilier-2-humidite.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Pilier II — Humidité</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

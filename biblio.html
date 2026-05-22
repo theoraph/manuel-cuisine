@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bibliographie & ressources — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link current"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Bibliographie & ressources</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Pour aller plus loin</div>
+  <h1><em>Bibliographie</em> &amp; ressources de référence</h1>
+  <p class="subtitle">Livres, sites, chaînes, plan d'action, budget équipement, épicerie</p>
+</div>
+
+<div class="biblio-grid">
+
+    <div class="biblio-block">
+      <h4>Livres incontournables</h4>
+      <ul>
+        <li><strong>Harold McGee</strong>, <em>On Food and Cooking — The Science and Lore of the Kitchen</em> (2004). Bible scientifique du cuisinier, traduit en français sous <em>Les secrets de la cuisine</em>.</li>
+        <li><strong>J. Kenji López-Alt</strong>, <em>The Food Lab — Better Home Cooking Through Science</em> (W.W. Norton, 2015).</li>
+        <li><strong>Nathan Myhrvold</strong>, <em>Modernist Cuisine — The Art and Science of Cooking</em> (Taschen, 6 vol., 2011).</li>
+        <li><strong>Bruno Goussault</strong>, <em>La cuisson à juste température</em> (Hachette Pratique, 2025).</li>
+        <li><strong>Hervé This</strong>, <em>Casseroles et éprouvettes</em>, <em>Les secrets de la casserole</em>.</li>
+        <li><strong>Pierre Hermé</strong>, <em>Larousse du chocolat</em>.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Épices &amp; aromates</h4>
+      <ul>
+        <li><strong>Olivier Roellinger</strong>, <em>Pour une cuisine de plein air</em> et <em>Le livre des épices</em> (Flammarion) — référence francophone.</li>
+        <li><strong>Niki Segnit</strong>, <em>Le répertoire des saveurs</em> (Marabout) — accords et anti-accords, mémoire encyclopédique.</li>
+        <li><strong>Lior Lev Sercarz</strong>, <em>The Spice Companion</em> (Clarkson Potter) — 102 épices, fiches techniques.</li>
+        <li><strong>Caz Hildebrand</strong>, <em>Herbarium</em> et <em>Spicerack</em> (Thames &amp; Hudson) — illustré.</li>
+        <li><strong>K.T. Achaya</strong>, <em>Indian Food: A Historical Companion</em> (Oxford) — origines indiennes.</li>
+        <li><strong>Yotam Ottolenghi</strong>, <em>Jérusalem</em>, <em>Simple</em> — usage contemporain des épices du Levant.</li>
+        <li><strong>Madhur Jaffrey</strong>, <em>An Invitation to Indian Cooking</em> — bible du tarka.</li>
+        <li><strong>Fuchsia Dunlop</strong>, <em>Land of Plenty</em> — Sichuan, poivre et piment.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Sites francophones</h4>
+      <ul>
+        <li><a href="https://chefsimon.com/" target="_blank">Chef Simon</a> — Bertrand Simon.</li>
+        <li><a href="https://hervethis.blogspot.com/" target="_blank">Le blog d'Hervé This</a>.</li>
+        <li><a href="https://www.bloc-notes-culinaire.com/" target="_blank">Bloc-Notes Culinaire</a>.</li>
+        <li><a href="https://www.cuisinebassetemperature.com/" target="_blank">cuisinebassetemperature.com</a>.</li>
+        <li><a href="https://www.61degres.com/" target="_blank">61° Degrés</a>.</li>
+        <li><a href="https://www.papillesetpupilles.fr/" target="_blank">Papilles et Pupilles</a>.</li>
+        <li><a href="https://jepensedoncjecuis.com/" target="_blank">Je pense donc je cuis</a>.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Sites internationaux</h4>
+      <ul>
+        <li><a href="https://www.seriouseats.com/" target="_blank">Serious Eats</a> (Kenji López-Alt).</li>
+        <li><a href="https://www.chefsteps.com/" target="_blank">ChefSteps</a>.</li>
+        <li><a href="https://modernistcuisine.com/" target="_blank">Modernist Cuisine</a>.</li>
+        <li><a href="https://douglasbaldwin.com/sous-vide.html" target="_blank">Douglas Baldwin, A Practical Guide to Sous Vide Cooking</a> — référence académique gratuite.</li>
+        <li><a href="https://blog.thermoworks.com/" target="_blank">ThermoWorks Blog</a>.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Chaînes YouTube</h4>
+      <ul>
+        <li><strong>J. Kenji López-Alt</strong> — démos en cuisine domestique.</li>
+        <li><strong>ChefSteps</strong> — visuel impeccable, ton pédagogique.</li>
+        <li><strong>Le Cordon Bleu</strong>.</li>
+        <li><strong>French Cooking Academy</strong> (Stephane Gass).</li>
+        <li><strong>Alain Ducasse Édition</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Plan d'action 4 semaines</h4>
+      <ul>
+        <li><strong>S1</strong>&nbsp;: calibrer le thermomètre&nbsp;; cuire un steak en mesurant cœur, croûte, poêle.</li>
+        <li><strong>S2</strong>&nbsp;: tester reverse sear vs saisie classique sur la même pièce, comparer.</li>
+        <li><strong>S3</strong>&nbsp;: pain en cocotte (Jim Lahey), poisson en croûte de sel, œufs à 63&nbsp;°C.</li>
+        <li><strong>S4</strong>&nbsp;: braiser une joue de bœuf 6 h, tenir un carnet de cuissons.</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Budget équipement (~300-350 €)</h4>
+      <ul>
+        <li>Thermomètre sonde Thermapen ONE ou ThermoPro TP-19H&nbsp;: 50-130 €.</li>
+        <li>Cocotte en fonte émaillée 24-28 cm&nbsp;: 50-250 €.</li>
+        <li>Poêle acier carbone De Buyer Mineral B 28 cm&nbsp;: ~50 €.</li>
+        <li>Pierre à pizza ou plaque en acier épais&nbsp;: 30-50 €.</li>
+        <li>Étape suivante&nbsp;: thermoplongeur sous-vide (~150 €) + sous-videuse (~60 €).</li>
+      </ul>
+    </div>
+
+    <div class="biblio-block">
+      <h4>Épicerie de référence</h4>
+      <ul>
+        <li><strong>Épices Roellinger</strong> (Cancale, Saint-Malo, Paris) — grands crus de poivre, vanille, safran, mélanges signés.</li>
+        <li><strong>Goumanyat &amp; son royaume</strong> (Paris 3<sup>e</sup>) — Jean-Marie Thiercelin, safran et épices rares.</li>
+        <li><strong>Terre Exotique</strong> — sourcing chez les producteurs, IGP/AOP.</li>
+        <li><strong>Thiercelin 1809</strong> — maison historique du safran à Paris.</li>
+        <li><strong>Diaspora Co.</strong> (USA) — épices indiennes sourcées en direct, fraîcheur garantie.</li>
+        <li><strong>La Boîte</strong> (NYC, Lior Lev Sercarz) — mélanges numérotés.</li>
+      </ul>
+    </div>
+
+  </div>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="legumes.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Légumes — protocoles</span>
+  </a>
+  <span></span>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

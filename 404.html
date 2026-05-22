@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page introuvable — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+
+<style>
+.error-page{
+  min-height:calc(100vh - 130px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem 1.5rem;
+  text-align:center;
+}
+.error-card{
+  max-width:560px;
+  padding:3rem 2.5rem;
+}
+.error-code{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:8rem;
+  font-weight:500;
+  line-height:1;
+  color:var(--gold);
+  opacity:0.85;
+  margin-bottom:0.4rem;
+  letter-spacing:-0.04em;
+}
+.error-card h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;
+  font-weight:500;
+  color:var(--bordeaux);
+  margin-bottom:0.6rem;
+  line-height:1.15;
+}
+.error-card h1 em{font-style:italic;color:var(--gold)}
+.error-card p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;
+  color:var(--ink-soft);
+  line-height:1.55;
+  margin-bottom:1.8rem;
+}
+.error-actions{
+  display:flex;
+  gap:0.8rem;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:1.5rem;
+}
+.error-btn{
+  display:inline-block;
+  padding:0.7rem 1.4rem;
+  font-family:'Inter',sans-serif;
+  font-size:0.85rem;
+  letter-spacing:0.06em;
+  text-decoration:none;
+  border-radius:2px;
+  transition:transform 0.15s,box-shadow 0.15s;
+}
+.error-btn.primary{background:var(--bordeaux);color:var(--cream)}
+.error-btn.primary:hover{background:var(--bordeaux-dark);transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,21,21,0.18)}
+.error-btn.secondary{background:transparent;color:var(--bordeaux);border:1px solid var(--bordeaux)}
+.error-btn.secondary:hover{background:rgba(184,137,58,0.08);transform:translateY(-1px)}
+.error-ornament{
+  margin:1.8rem auto 0;
+  width:80px;
+  height:3px;
+  background:var(--gold);
+}
+@media (max-width:600px){
+  .error-code{font-size:6rem}
+  .error-card h1{font-size:1.8rem}
+  .error-card{padding:2rem 1.4rem}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+</header>
+
+<div class="error-page">
+  <div class="error-card">
+    <div class="error-code">404</div>
+    <h1>La <em>recette</em> est introuvable</h1>
+    <p>Cette page n'existe pas — peut-être un lien périmé, une URL mal recopiée, ou un chapitre qui n'a pas encore été écrit. Retour aux fondamentaux&nbsp;:</p>
+    <div class="error-ornament"></div>
+    <div class="error-actions">
+      <a class="error-btn primary" href="index.html">Retour à l'accueil</a>
+      <a class="error-btn secondary" href="biblio.html">Voir la bibliographie</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function () {});
+  });
+}
+</script>
+
+</body>
+</html>

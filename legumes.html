@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Légumes — protocoles — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link current"><span class="num">VI.</span>Légumes</a>
+    <a href="legumes.html#sec-5-1" class="sidebar-sub"><span class="num">5.1</span>Trois principes</a>
+    <a href="legumes.html#sec-5-2" class="sidebar-sub"><span class="num">5.2</span>Sept méthodes</a>
+    <a href="legumes.html#sec-5-3" class="sidebar-sub"><span class="num">5.3</span>Légumes verts</a>
+    <a href="legumes.html#sec-5-4" class="sidebar-sub"><span class="num">5.4</span>Crucifères</a>
+    <a href="legumes.html#sec-5-5" class="sidebar-sub"><span class="num">5.5</span>Racines & tubercules</a>
+    <a href="legumes.html#sec-5-6" class="sidebar-sub"><span class="num">5.6</span>Cucurbitacées</a>
+    <a href="legumes.html#sec-5-7" class="sidebar-sub"><span class="num">5.7</span>Légumes-fruits</a>
+    <a href="legumes.html#sec-5-8" class="sidebar-sub"><span class="num">5.8</span>Alliacées</a>
+    <a href="legumes.html#sec-5-9" class="sidebar-sub"><span class="num">5.9</span>Champignons</a>
+    <a href="legumes.html#sec-5-10" class="sidebar-sub"><span class="num">5.10</span>Asperges, artichauts…</a>
+    <a href="legumes.html#sec-5-11" class="sidebar-sub"><span class="num">5.11</span>Légumineuses sèches</a>
+    <a href="legumes.html#sec-5-12" class="sidebar-sub"><span class="num">5.12</span>Synthèse</a>
+    <a href="legumes.html#sec-5-13" class="sidebar-sub"><span class="num">5.13</span>Braisage & glaçage</a>
+    <a href="legumes.html#sec-5-14" class="sidebar-sub"><span class="num">5.14</span>Bouillons & fonds</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Légumes — protocoles</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Chapitre sixième</div>
+  <h1>Les <em>légumes</em> — protocoles par famille</h1>
+  <p class="subtitle">Cellulose, pectine, chlorophylle — sept méthodes, dix familles, bouillons et fonds</p>
+</div>
+
+<p class="lead">Cuire un légume "à son maximum", c'est l'amener à la texture juste en préservant — ou en transformant — sa couleur, ses arômes et ses nutriments. Contrairement à la viande, le légume n'a pas une cible de température à cœur ; il a une <strong>texture</strong> à viser, et chaque famille obéit à ses propres règles physico-chimiques.</p>
+
+  <div class="chapter-toc">
+    <strong>Sommaire du chapitre</strong>
+    5.1 Trois principes physico-chimiques · 5.2 Les sept méthodes principales · 5.3 Légumes verts · 5.4 Crucifères · 5.5 Légumes-racines &amp; tubercules · 5.6 Cucurbitacées · 5.7 Légumes-fruits · 5.8 Alliacées · 5.9 Champignons · 5.10 Asperges, artichauts, fenouil, endives · 5.11 Légumineuses sèches · 5.12 Synthèse — quelle méthode pour quel résultat ?
+  </div>
+
+  <h3 id="sec-5-1"><span class="h3-num">5.1</span>Trois principes physico-chimiques</h3>
+  <ol>
+    <li><strong>Ramollir la cellulose et la pectine</strong> — c'est ce qui transforme un légume cru croquant en légume tendre. Le seuil opérationnel se situe vers <strong>85 °C</strong> : en dessous, presque rien ne bouge ; au-dessus, la dégradation est rapide. C'est exactement l'inverse du collagène de la viande, qui exige plus de 65 °C pendant <em>des heures</em> pour fondre.</li>
+    <li><strong>Préserver ou transformer les pigments</strong> — la chlorophylle (vert) est stable jusqu'à 80 °C puis vire à l'olive au-delà, d'où le blanchiment court + bain glacé. Les caroténoïdes (orange) sont très stables et <strong>liposolubles</strong>, donc à libérer avec du gras. Les anthocyanes (rouge/violet/bleu) virent au bleu en milieu basique (bicarbonate) et restent rouges en milieu acide (vinaigre, citron) — d'où le chou rouge cuit au vinaigre.</li>
+    <li><strong>Concentrer ou diluer les sucres et arômes</strong> — la chaleur sèche (four à 200 °C) concentre les sucres par évaporation et déclenche caramélisation + Maillard (légume rôti, doré, sucré). La chaleur humide (eau bouillante) dilue ces mêmes sucres dans le bouillon. Choisir l'une ou l'autre selon le résultat recherché.</li>
+  </ol>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Cellulose ou pectine ? La vraie chimie du légume qui ramollit.</strong> "Ramollir la cellulose" est un raccourci pratique mais imprécis. La cellulose stricto sensu — long polymère de glucose, équivalent végétal du collagène — ne se dissout <em>pas</em> dans l'eau bouillante, même après des heures. Ce qui ramollit vraiment, c'est la <strong>pectine</strong>, le "ciment" qui colle les cellules entre elles (la lamelle moyenne). À partir de 85 °C, une réaction dite de <em>β-élimination</em> rompt les chaînes de pectine et les cellules <strong>se détachent les unes des autres</strong>. Le légume n'a pas "fondu" : il est passé d'un mur de briques cimentées à un tas de billes détachées.</p>
+    <p>Conséquences pratiques : (1) l'<strong>acidité</strong> (vinaigre, citron, tomate, vin) <em>ralentit</em> la β-élimination — d'où des courgettes encore fermes après 1 h de ratatouille bien faite ; (2) le <strong>bicarbonate</strong> l'<em>accélère</em> — d'où la demi-cuillère à café dans l'eau des pois chiches pour le houmous crémeux ; (3) le <strong>calcium</strong> (eau dure, chlorure de calcium des cornichons industriels) renforce la pectine par pontage — d'où le croquant des conserves longue durée. À l'inverse exact du collagène animal (chaleur modérée pendant des heures), la pectine demande haute température (≥ 85 °C) mais peu de temps (5 à 45 min selon le légume).</p>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi saler l'eau de cuisson des légumes ?</strong> Trois raisons : (1) l'eau salée bout très légèrement plus chaud (effet ébullioscopique négligeable, ~0,2 °C), mais surtout (2) elle <strong>ralentit la diffusion</strong> des sels minéraux et des sucres du légume vers l'eau (osmose équilibrée — moins de fuite vers le bouillon), et (3) elle assaisonne en profondeur. Pour les légumes verts : <strong>15-30 g/L</strong> ("comme l'eau de mer"). Pour la pomme de terre destinée à la purée : 10-15 g/L. Pour les légumineuses : <strong>jamais en début de cuisson</strong> (la peau durcit) — saler à mi-cuisson ou 15 min avant la fin.</p>
+  </div>
+
+  <h3 id="sec-5-2"><span class="h3-num">5.2</span>Les sept méthodes principales</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Méthode</th><th>Principe</th><th>Idéale pour</th></tr></thead>
+    <tbody>
+      <tr><td><b>Blanchir à l'anglaise</b></td><td>Eau très salée + forte ébullition, plongée courte, bain glacé immédiat.</td><td>Légumes verts (haricots, brocoli, asperges, petits pois, blettes).</td></tr>
+      <tr><td><b>Vapeur</b></td><td>100 °C max, pas de contact avec l'eau, perte minimale de nutriments hydrosolubles.</td><td>Pomme de terre vapeur, brocoli "à la maison", artichaut, poisson.</td></tr>
+      <tr><td><b>Rôtir au four</b></td><td>Four sec à 200-220 °C, huile + sel ; caramélisation des sucres et début de Maillard.</td><td>Crucifères, racines, courges, tomates, poivrons, cucurbitacées.</td></tr>
+      <tr><td><b>Suer / étuver</b></td><td>Feu doux dans gras + couvercle, sans coloration : libère l'eau du légume, concentre la saveur.</td><td>Alliacées, fenouil, blanc de poireau, base de soupes et sauces.</td></tr>
+      <tr><td><b>Confire</b></td><td>Huile ou graisse à 80-90 °C pendant 30 min à plusieurs heures.</td><td>Ail, oignons, tomates cerises, courgettes, échalotes.</td></tr>
+      <tr><td><b>Braiser / glacer</b></td><td>Mi-immergé dans bouillon + beurre + sucre (option), réduction sirupeuse.</td><td>Carotte, navet, endive, fenouil, oignon grelot, choux braisés.</td></tr>
+      <tr><td><b>Griller / poêler à sec</b></td><td>Poêle ou plancha très chaude, surface en contact direct avec le métal.</td><td>Aubergine, courgette, asperge, chou pointu coupé, champignon.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-5-3"><span class="h3-num">5.3</span>Légumes verts</h3>
+  <p class="family-intro">Le geste fondamental : <strong>blanchiment à l'anglaise</strong> + <strong>bain glacé immédiat</strong>. L'eau bouillonnante salée à 15-30 g/L est l'arme universelle ; le choc froid fixe la chlorophylle. Mode "stop and go" : on prépare les légumes à l'avance, on les réchauffe à la commande au beurre noisette ou dans un peu d'eau de cuisson.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode principale</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Haricots verts fins</td><td>Eau bouillante salée + bain glacé</td><td>4-5 min</td><td>Couvercle ouvert (la chlorophylle préfère l'air), forte ébullition.</td></tr>
+      <tr><td>Haricots verts gros / coco plats</td><td>Eau bouillante salée</td><td>7-9 min</td><td>Tester en pliant : il doit casser net.</td></tr>
+      <tr><td>Petits pois frais</td><td>Eau bouillante salée</td><td>1-2 min</td><td>Idem pour les fèves épluchées (1 min seulement).</td></tr>
+      <tr><td>Asperges vertes — eau ou four</td><td>Eau bouillante salée à plat, ou rôties</td><td>3-5 min eau, ou 220 °C / 10-12 min four</td><td>Casser à la main : la fibre se rompt à la zone tendre.</td></tr>
+      <tr><td>Asperges vertes — poêle directe</td><td>Poêle large bien chaude + beurre ou huile d'olive, en une seule couche</td><td>4-6 min en remuant régulièrement</td><td>Croquantes, début de Maillard sur la pointe, pas de dilution des sucres.</td></tr>
+      <tr><td>Asperges vertes — méthode Passard</td><td>Poêle large + beurre + 2-3 c. à s. d'eau + sel, couvercle, feu moyen</td><td>5-7 min</td><td>L'eau s'évapore, le beurre nappe : effet vapeur-poêlé, pointes intactes.</td></tr>
+      <tr><td>Asperges vertes — plancha / poêle striée</td><td>Asperges huilées sur surface fumante</td><td>2 min/face</td><td>Marquage net, finition fleur de sel + zeste citron ou parmesan.</td></tr>
+      <tr><td>Brocoli (fleurettes)</td><td>Vapeur ou eau bouillante salée</td><td>3-4 min</td><td>Pour effet rôti : four 220 °C, 18-22 min, huile + sel, plaque chaude.</td></tr>
+      <tr><td>Épinards</td><td>Poêle vive + un peu d'eau ou vapeur</td><td>30 s - 1 min</td><td>Flétrissement immédiat ; essorer fort sinon noyé dans l'eau.</td></tr>
+      <tr><td>Blettes (vert)</td><td>Eau bouillante salée</td><td>2-3 min</td><td>Les côtes blanches à part : 8-12 min, plus longues.</td></tr>
+      <tr><td>Chou frisé (kale), chou cavalier</td><td>Sauté à feu vif après pré-vapeur, ou rôti en chips</td><td>Vapeur 3 min + sauté 2 min, ou four 180 °C 8-10 min huilé</td><td>Masser à l'huile + sel avant pour assouplir les fibres.</td></tr>
+      <tr><td>Petits pois mange-tout</td><td>Eau bouillante très brève + bain glacé, ou sauté wok</td><td>1-2 min eau, 2-3 min wok</td><td>Conserver le croquant impérativement.</td></tr>
+      <tr><td>Brocolinis, fleurettes de chou-fleur jeune</td><td>Vapeur ou poêle vive</td><td>3-4 min</td><td>Possibilité de griller au chalumeau pour finition fumée.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Bain glacé efficace</strong> : 50/50 eau + glace, le légume <em>doit</em> être totalement recouvert. Égoutter dès que froid (1-2 min) — sinon le légume <em>boit</em> l'eau et devient mou. Sécher sur torchon avant stockage frigo, dans un récipient hermétique, jusqu'à 48 h.</p>
+  </div>
+
+  <h3 id="sec-5-4"><span class="h3-num">5.4</span>Crucifères — la révolution du rôti</h3>
+  <p class="family-intro">Bouillis, le brocoli, le chou-fleur et les choux de Bruxelles libèrent leurs composés soufrés (glucosinolates) et deviennent fades, "scolaires" et malodorants. <strong>Rôtis à 220 °C</strong>, ces mêmes légumes développent Maillard, caramélisation et arôme de noisette grillée. Le rôti haute température a reconquis ces légumes auprès du grand public dans les années 2010.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode privilégiée</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Chou-fleur (fleurettes)</td><td>Four 220 °C, huile + sel, plaque préchauffée</td><td>25-30 min</td><td>Retourner à mi-cuisson, ajouter cumin/curcuma 5 min avant la fin.</td></tr>
+      <tr><td>Chou-fleur entier rôti (style Ottolenghi)</td><td>Vapeur 15 min puis four 220 °C, badigeonné beurre + épices</td><td>15 + 25 min</td><td>Sert un plat unique avec sauce tahini ou anchois.</td></tr>
+      <tr><td>Brocoli (fleurettes)</td><td>Four 220 °C, huile + sel</td><td>18-22 min</td><td>Caramélisation préférée à la vapeur pour la profondeur de saveur.</td></tr>
+      <tr><td>Choux de Bruxelles</td><td>Coupés en deux, face plate sur plaque chaude, four 220 °C</td><td>20-25 min</td><td>Finition vinaigre balsamique + miel ou jus de citron + parmesan.</td></tr>
+      <tr><td>Chou pointu / chou cabus</td><td>Quartiers, poêle fumante face coupée puis four 200 °C</td><td>5 min poêle + 10-15 min four</td><td>Style "wedge", proche de la viande grillée. Excellent en plat principal.</td></tr>
+      <tr><td>Chou rouge braisé</td><td>Cocotte basse + vinaigre + sucre + pommes + cannelle</td><td>1 h - 1 h 30</td><td>L'acide fixe la couleur rouge (anthocyanes).</td></tr>
+      <tr><td>Chou vert frisé (cuisiné)</td><td>Eau bouillante salée brève + braisage avec lard</td><td>3 min eau + 30-40 min braise</td><td>Base de potées et garbures.</td></tr>
+      <tr><td>Chou-rave</td><td>Cru en rémoulade, ou rôti en cubes 200 °C 25 min</td><td>—</td><td>Peau épaisse à éplucher avec un couteau, pas un économe.</td></tr>
+      <tr><td>Romanesco</td><td>Identique au chou-fleur, mais plus fragile</td><td>20-25 min four 220 °C</td><td>Préserver les pyramides intactes pour l'effet visuel.</td></tr>
+      <tr><td>Pak choï, bok choï</td><td>Sauté wok vif + ail + sauce soja</td><td>3-4 min</td><td>Tiges d'abord, feuilles 1 min en fin.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Pour des crucifères vraiment dorés au four</strong> : (1) plaque <em>déjà chaude</em> dans le four pendant le préchauffage, (2) légumes <em>bien secs</em> avant huilage, (3) <strong>ne pas surcharger la plaque</strong> (espace entre les morceaux, sinon vapeur = ramolli au lieu de doré), (4) ne pas remuer pendant les 12 premières minutes — laisser la croûte se former.</p>
+  </div>
+
+  <h3 id="sec-5-5"><span class="h3-num">5.5</span>Légumes-racines & tubercules</h3>
+  <p class="family-intro">Riches en amidon et en sucres, ils s'épanouissent au four. La cuisson humide est réservée aux purées et aux glaçages à blanc. Pour la pomme de terre, le choix de la variété conditionne tout : chair ferme (Charlotte, Ratte, Amandine) pour vapeur et sauté, farineuse (Bintje, Agria, Manon) pour purées et frites.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Pomme de terre vapeur (rattes, grenailles)</td><td>Vapeur 100 °C, peau brossée</td><td>18-25 min</td><td>Tester à la pointe du couteau : doit traverser sans résistance.</td></tr>
+      <tr><td>Pomme de terre en robe des champs</td><td>Four 200 °C, percées, sel sur peau</td><td>1 h - 1 h 15 pour 300 g</td><td>Chair fondante, peau croustillante. Idéal Bintje ou patate douce.</td></tr>
+      <tr><td>Pommes de terre rôties "Kenji"</td><td>Pré-bouillies 10 min (eau salée + ½ c.c. bicarbonate), secouées, puis four 200 °C avec graisse</td><td>10 + 45 min</td><td>Les secousses effritent la surface et créent un croustillant maximal.</td></tr>
+      <tr><td>Frites maison double cuisson</td><td>Bain 1 à 130 °C puis bain 2 à 180 °C</td><td>8-10 min + 3-5 min</td><td>Variété Bintje / Agria. Égoutter et saler à la sortie du 2<sup>e</sup> bain.</td></tr>
+      <tr><td>Purée mousseline (Robuchon)</td><td>Eau froide salée → frémissement</td><td>20-25 min</td><td>Écraser <em>tiède</em>, ajouter beurre + lait chaud (250 g beurre / kg pour Robuchon).</td></tr>
+      <tr><td>Gratin dauphinois</td><td>Four 150 °C, crème + ail, lamelles non rincées</td><td>1 h 30</td><td>L'amidon non rincé épaissit naturellement la crème.</td></tr>
+      <tr><td>Pommes Anna / pommes Maxim's</td><td>Four 180 °C dans moule beurré, lamelles fines pressées</td><td>45-60 min</td><td>Sert démoulée, dorée, croustillante.</td></tr>
+      <tr><td>Carottes glacées à brun</td><td>Casserole : carottes + eau à mi-hauteur + beurre + pincée de sucre, sans couvercle</td><td>15-20 min</td><td>L'eau s'évapore, le sucre caramélise, les carottes deviennent brillantes.</td></tr>
+      <tr><td>Carottes glacées à blanc</td><td>Identique mais sans coloration finale, cuisson stoppée avant caramélisation</td><td>10-12 min</td><td>Avec cartouche en papier sulfurisé.</td></tr>
+      <tr><td>Carottes / panais rôtis</td><td>Four 200 °C, huile + sel + thym</td><td>30-40 min</td><td>Couper en bâtonnets ou en quartiers uniformes.</td></tr>
+      <tr><td>Betteraves entières au four</td><td>Four 180 °C, papillote alu ou croûte de sel</td><td>1 h - 1 h 30 selon taille</td><td>La peau se retire à la main une fois cuite, gants utiles.</td></tr>
+      <tr><td>Céleri-rave rôti / fondant</td><td>Four 200 °C en pavés, ou entier sous croûte de sel</td><td>40-50 min cubes / 2 h entier</td><td>Affinité forte avec noisette, beurre brun, truffe.</td></tr>
+      <tr><td>Navets / radis glacés au beurre</td><td>Casserole, beurre + bouillon + sucre, frémissement</td><td>20-25 min</td><td>Cartouche papier sulfurisé, glaçage final à sirop.</td></tr>
+      <tr><td>Topinambour rôti</td><td>Four 200 °C, en lamelles ou cubes</td><td>25-35 min</td><td>Aussi excellent en velouté ; brossage suffit (pas de pelage).</td></tr>
+      <tr><td>Patate douce au four</td><td>Four 200 °C, percée, peau lavée</td><td>45-60 min entière, 25-30 min en cubes</td><td>À 160 °C lentement : chair plus sucrée (alpha-amylase active 60-75 °C).</td></tr>
+      <tr><td>Salsifis</td><td>Eau citronnée bouillante puis poêlé au beurre</td><td>15-20 min eau + 5 min poêle</td><td>Tremper dans eau citronnée après pelage (oxydation).</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Le secret des frites belges.</strong> La double cuisson n'est pas un caprice mais une nécessité. Le premier bain à 130 °C <strong>cuit la pomme de terre à cœur</strong> sans dorer la surface. Le repos (10-30 min) permet à la vapeur résiduelle de s'évacuer et à une fine croûte d'amidon de se former en surface. Le second bain à 180 °C <strong>vitrifie cette croûte</strong> en quelques minutes : croustillant audible, intérieur fondant. Tradition confirmée par Hervé This et <em>Modernist Cuisine</em>.</p>
+  </div>
+
+  <h3 id="sec-5-6"><span class="h3-num">5.6</span>Cucurbitacées</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Butternut / potimarron en cubes</td><td>Four 200 °C, huile + sel</td><td>30-40 min</td><td>Peau du potimarron comestible ; celle du butternut non.</td></tr>
+      <tr><td>Courge entière (potiron, musquée)</td><td>Four 200 °C coupée en deux, face vers le haut, beurre + miel</td><td>45-60 min selon taille</td><td>Récupérer la chair à la cuillère pour soupe ou risotto.</td></tr>
+      <tr><td>Courge spaghetti</td><td>Four 200 °C entière percée, ou en deux face coupée vers le bas</td><td>40-50 min entière, 30-40 min en deux</td><td>Détacher les fibres à la fourchette une fois tiède.</td></tr>
+      <tr><td>Courgette poêlée</td><td>Poêle 180 °C, en rondelles épaisses</td><td>5-7 min, légèrement caramélisée</td><td>Ne pas couvrir = pas de vapeur = pas de mou.</td></tr>
+      <tr><td>Courgette confite</td><td>Four 130 °C entière huilée, ou en cocotte</td><td>1 h - 1 h 30</td><td>Texture fondante presque crémeuse, à servir tiède en mezzé.</td></tr>
+      <tr><td>Courgette grillée (plancha)</td><td>Plancha ou poêle striée fumante, lamelles 5 mm</td><td>1-2 min/face</td><td>Marquage rapide, finition huile d'olive + menthe.</td></tr>
+      <tr><td>Concombre cuit</td><td>Sué au beurre, feu doux + couvercle</td><td>8-10 min</td><td>Tradition russe et anglaise victorienne, en accompagnement de poisson.</td></tr>
+      <tr><td>Pâtisson, courge à cou tors</td><td>Four 200 °C en quartiers</td><td>25-30 min</td><td>Variétés anciennes plus aqueuses, baisser le four si rendu d'eau important.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-5-7"><span class="h3-num">5.7</span>Légumes-fruits (tomate, aubergine, poivron)</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Tomates rôties lentes (semi-confites)</td><td>Four 110-120 °C, coupées en deux + huile + sel + sucre + thym</td><td>2-3 h</td><td>Concentration des sucres et glutamates ; se congèlent très bien.</td></tr>
+      <tr><td>Tomates farcies</td><td>Four 180 °C</td><td>40-50 min</td><td>Vider, saler intérieur, retourner 30 min pour évacuer l'eau avant farce.</td></tr>
+      <tr><td>Sauce tomate (style Marcella Hazan)</td><td>Casserole basse, frémissement doux : tomates + beurre + oignon coupé en deux</td><td>45 min - 1 h 30</td><td>Réduction lente, retirer l'oignon en fin, ne pas remuer constamment.</td></tr>
+      <tr><td>Coulis / sauce rapide</td><td>Casserole feu vif</td><td>15-25 min</td><td>Tomates pelées, ail, basilic ; émulsionner à l'huile d'olive en fin.</td></tr>
+      <tr><td>Aubergine entière au four</td><td>Four 220 °C ou flamme directe, percée plusieurs fois</td><td>30-40 min</td><td>Chair fondante pour <em>baba ghanouj</em>. Peau noircie = parfum de fumée.</td></tr>
+      <tr><td>Aubergine en tranches</td><td>Dégorger sel 30 min, presser, poêle vive + huile</td><td>3-4 min/face</td><td>L'huile pénètre moins après dégorgement (cellules pré-comprimées).</td></tr>
+      <tr><td>Aubergine en cubes rôtis</td><td>Four 220 °C, généreusement huilés</td><td>25-30 min</td><td>Croustillant dehors, crémeux dedans.</td></tr>
+      <tr><td>Caviar d'aubergine</td><td>Aubergine entière brûlée puis chair récupérée + ail + jus de citron + tahini</td><td>40 min cuisson + assemblage</td><td>Style libanais (<em>baba ghanouj</em>) ou provençal selon les épices.</td></tr>
+      <tr><td>Poivrons grillés-pelés</td><td>Four 220 °C ou flamme directe jusqu'à peau noire</td><td>20-25 min</td><td>Sac hermétique 10 min après, la peau se retire seule.</td></tr>
+      <tr><td>Poivrons farcis</td><td>Four 180 °C</td><td>40-50 min</td><td>Pré-blanchir 5 min pour une chair plus fondante en fin.</td></tr>
+      <tr><td>Ratatouille (cuisson séparée style Lucien Vanel)</td><td>Chaque légume rissolé séparément puis assemblé</td><td>15 min/légume + 30 min assemblage</td><td>Aubergine, courgette, poivron, oignon, tomate : chacun à son temps.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Tomate : choisir selon l'usage.</strong> Cœur de bœuf et Marmande pour le cru (texture charnue, peu d'eau). San Marzano (allongée) pour la sauce (peau fine, peu d'eau, équilibre acide-sucré idéal). Roma pour la conserve. Une tomate de serre d'hiver est presque inutilisable telle quelle : ramener au four à 110 °C pendant 2 h avec huile + sel + sucre, elle redevient digne.</p>
+  </div>
+
+  <h3 id="sec-5-8"><span class="h3-num">5.8</span>Alliacées (oignon, ail, poireau, échalote)</h3>
+  <p class="family-intro">L'alliacée est la base d'innombrables plats. Tout dépend de la durée et de la température : oignon sué = transparent et doux ; oignon revenu = doré et sucré ; oignon caramélisé = brun foncé, presque confiture. Trois phases, trois durées, trois usages — il faut juste de la patience, et accepter que l'oignon caramélisé prenne <em>vraiment</em> 45 min à 1 h, pas 10.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Stade / préparation</th><th>Méthode</th><th>Temps</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>Oignon sué (translucide)</td><td>Feu doux + beurre/huile, couvercle, sans coloration</td><td>5-8 min</td><td>Base soupes, sauces blanches, risotto, mirepoix.</td></tr>
+      <tr><td>Oignon revenu (doré)</td><td>Feu moyen + matière grasse</td><td>10-15 min</td><td>Base ragoûts, daubes, currys, bourguignon.</td></tr>
+      <tr><td>Oignon caramélisé (brun foncé)</td><td>Feu doux ininterrompu, en remuant régulièrement, parfois 1 c. à soupe d'eau de récupération</td><td>45 min - 1 h 30</td><td>Soupe à l'oignon, tarte alsacienne, French dip, base biryanis, chutney.</td></tr>
+      <tr><td>Oignon rôti entier</td><td>Four 180 °C, peau gardée, percé</td><td>50-60 min</td><td>Garniture de viande, à éplucher avant service, chair fondante sucrée.</td></tr>
+      <tr><td>Oignons grelots glacés</td><td>Casserole : oignons + eau + beurre + sucre, réduction</td><td>15-20 min</td><td>Garniture classique du bourguignon et du coq au vin.</td></tr>
+      <tr><td>Ail confit dans l'huile</td><td>Casserole 90 °C, gousses pelées immergées dans huile d'olive + thym</td><td>45 min - 1 h</td><td>Conservation 2-3 semaines au frigo (huile parfumée bonus).</td></tr>
+      <tr><td>Ail rôti en tête entière</td><td>Four 180 °C, papillote + huile d'olive + sel</td><td>40-50 min</td><td>Doux, presque sucré, à étaler comme une pâte sur du pain.</td></tr>
+      <tr><td>Poireau fondu (sué)</td><td>Casserole couverte, beurre, feu doux, sans coloration</td><td>20-30 min</td><td>Base vichyssoise, quiche aux poireaux, fondue de poireaux.</td></tr>
+      <tr><td>Poireau vinaigrette (blanchi)</td><td>Eau bouillante salée, ficelé en bottes</td><td>8-12 min selon diamètre</td><td>Bain glacé immédiat puis pressé entre deux torchons.</td></tr>
+      <tr><td>Échalote en chemise</td><td>Four 180 °C, échalotes entières non pelées</td><td>30-40 min</td><td>Pelage à la sortie ; saveur sucrée concentrée, parfaite avec gibier.</td></tr>
+      <tr><td>Échalotes confites au vinaigre</td><td>Casserole basse, vinaigre + sucre + thym</td><td>30-40 min</td><td>Pickle express pour terrines, poissons fumés, fromages.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Brûler l'ail.</strong> L'ail brûle bien plus vite que l'oignon (sucres réducteurs concentrés, peu d'eau). Si on cuit oignon + ail ensemble : <strong>oignon d'abord</strong>, <strong>ail dans les 2-3 dernières minutes</strong>. Sinon : ail brûlé = amertume noire et acide qui contamine tout le plat. Pour un ail haché ajouté en début de cuisson dans un gras chaud, prévoir un liquide rapidement (vin, bouillon) pour stabiliser la température.</p>
+  </div>
+
+  <h3 id="sec-5-9"><span class="h3-num">5.9</span>Champignons — deux logiques opposées</h3>
+  <p>Le champignon contient 88 à 92 % d'eau, mais sa <em>structure</em> change tout. Deux familles, deux gestes :</p>
+  <ul>
+    <li><strong>Champignons "humides" à chair tendre</strong> (champignons de Paris, pleurotes, shiitakes cultivés). 91-92 % d'eau, cellules lâches qui libèrent massivement leur eau dès la chaleur. <strong>Démarrer dans un gras = grosse erreur</strong> : l'eau libérée se mélange à la graisse en émulsion grasse, le champignon bout dans son jus au lieu de saisir — résultat fade, mou, gris. <em>La méthode Kenji López-Alt</em> (Serious Eats) : poêle <strong>très chaude, sans matière grasse</strong>. On jette les champignons, on laisse l'eau s'évaporer (3-5 min), <em>ensuite seulement</em> on ajoute beurre + ail + persil pour la finition.</li>
+    <li><strong>Champignons sauvages à chair dense</strong> (cèpes, girolles, morilles, chanterelles, pieds de mouton). 88-90 % d'eau, chair plus ferme et fibreuse qui retient mieux son eau. Ils supportent — et tirent profit de — une <strong>saisie directe dans un gras chaud</strong> : Maillard immédiate sur la chair épaisse, parfum boisé concentré. C'est la méthode bistrot historique (<em>cèpes à la bordelaise</em> = huile chaude + cèpes + ail + persil en fin). <strong>Condition</strong> : qu'ils soient secs au torchon. Cèpes mouillés (pluie, lavés) ou décongelés → revenir à la méthode Kenji.</li>
+  </ul>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Champignon</th><th>Méthode</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Champignon de Paris</td><td><b>À sec d'abord</b> (Kenji) puis beurre + ail + persil en fin</td><td>5-8 min</td><td>Brossage à sec préférable au lavage (qui les gorge d'eau).</td></tr>
+      <tr><td>Pleurotes, shiitakes cultivés</td><td><b>À sec d'abord</b> puis huile + ail + soja en fin</td><td>5-7 min</td><td>Lambeaux déchirés à la main pour effet "viande".</td></tr>
+      <tr><td>Girolles, chanterelles</td><td><b>Saisie directe</b> poêle vive + beurre, court</td><td>3-5 min</td><td>Fragiles, ne pas surcuire ; finition fleur de sel + persil.</td></tr>
+      <tr><td>Cèpes (poêlés en lamelles, "à la bordelaise")</td><td><b>Saisie directe</b> poêle fumante + huile, lamelles épaisses (chair sèche au torchon)</td><td>3 min/face</td><td>Ajouter beurre + ail haché + persil en finition. Si cèpes mouillés : passer en mode "à sec d'abord".</td></tr>
+      <tr><td>Cèpes (rôtis entiers)</td><td>Four 200 °C, huilés + sel + thym</td><td>15-20 min</td><td>Méthode pour gros sujets de plus de 8 cm, façon "rôti".</td></tr>
+      <tr><td>Pleurotes</td><td>Poêle vive + huile, en lambeaux déchirés à la main</td><td>5-7 min</td><td>Effet "viande" en effiloché, surtout les huîtres royales.</td></tr>
+      <tr><td>Shiitakes</td><td>Poêle vive ou four 200 °C</td><td>5-8 min</td><td>Pied à retirer (dur et fibreux).</td></tr>
+      <tr><td>Morilles fraîches</td><td>Poêle au beurre, après un trempage rapide eau salée pour les vider</td><td>6-8 min</td><td>Crème + ail + jus de viande = sauce reine pour ris de veau.</td></tr>
+      <tr><td>Truffes noires</td><td>Pas de cuisson directe ; chaleur douce 60 °C dans un liquide chaud</td><td>—</td><td>Râpée crue ou tiédie ; jamais bouillie (arômes perdus).</td></tr>
+      <tr><td>Champignons séchés (morilles, cèpes, shiitake)</td><td>Réhydratation 30 min eau tiède, eau réservée pour bouillon</td><td>—</td><td>L'eau de trempage = bouillon umami précieux, à filtrer.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-5-10"><span class="h3-num">5.10</span>Asperges blanches, artichauts, fenouil, endives</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Méthode</th><th>Temps</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Asperges blanches</td><td>Eau bouillante salée + beurre + jus de citron + pincée de sucre</td><td>7-12 min selon calibre</td><td>Pointe du couteau qui glisse sans résistance. Ficeler en bottes.</td></tr>
+      <tr><td>Asperges vertes (rappel)</td><td>Eau bouillante 3-5 min + bain glacé, rôties 220 °C 10-12 min, ou <strong>poêle directe</strong> 4-6 min</td><td>—</td><td>Voir §5.3 pour le détail des quatre méthodes (eau, four, poêle directe, méthode Passard).</td></tr>
+      <tr><td>Artichauts violets (poivrade)</td><td>Vapeur ou eau citronnée</td><td>20-25 min</td><td>Tournés à cru, conserver à l'eau citronnée (oxydation rapide).</td></tr>
+      <tr><td>Artichauts camus (gros)</td><td>Eau bouillante citronnée et salée</td><td>35-45 min selon taille</td><td>Vérifier en arrachant une feuille : doit venir sans résistance.</td></tr>
+      <tr><td>Artichauts à la barigoule</td><td>Cocotte vin blanc + bouillon + huile + aromates</td><td>30-40 min</td><td>Cœurs préparés, étuvés.</td></tr>
+      <tr><td>Fenouil braisé</td><td>Cocotte basse + bouillon + huile, couvercle</td><td>30-40 min</td><td>Découper en quartiers, conserver les frondes pour la finition.</td></tr>
+      <tr><td>Fenouil rôti</td><td>Four 200 °C, quartiers huilés</td><td>30-35 min</td><td>Caramélisation des sucres anisés ; affinité avec poisson et porc.</td></tr>
+      <tr><td>Endives braisées (à blanc)</td><td>Casserole basse + beurre + pincée sucre + jus de citron + cartouche papier</td><td>30-40 min</td><td>La cartouche maintient l'humidité juste suffisante.</td></tr>
+      <tr><td>Endives au gratin</td><td>Pré-braisées 20 min, pressées, roulées dans jambon, béchamel, four 200 °C</td><td>20 min supplémentaires</td><td>Pressage = pas d'eau dans le gratin ; nappage homogène.</td></tr>
+      <tr><td>Cardons à la moelle</td><td>Eau citronnée bouillante puis braisage</td><td>30 min eau + 20 min braise</td><td>Tradition lyonnaise, accompagnement de viande rouge.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 id="sec-5-11"><span class="h3-num">5.11</span>Légumineuses sèches</h3>
+  <p class="family-intro">Haricots secs, lentilles, pois chiches et fèves sèches demandent réhydratation, cuisson longue à frémissement (jamais bouillante : la peau éclate), et un timing très précis du salage et de l'acide.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légumineuse</th><th>Trempage</th><th>Frémissement</th><th>Cocotte minute</th></tr></thead>
+    <tbody>
+      <tr><td>Lentilles vertes du Puy (AOP)</td><td>Aucun</td><td>20-30 min</td><td>10-12 min</td></tr>
+      <tr><td>Lentilles corail</td><td>Aucun</td><td>15-20 min (deviennent en purée)</td><td>5-8 min</td></tr>
+      <tr><td>Lentilles beluga (noires)</td><td>Aucun</td><td>20-25 min (tiennent la forme)</td><td>10 min</td></tr>
+      <tr><td>Pois chiches</td><td>12-24 h + ½ c.c. bicarbonate dans l'eau</td><td>1 h 30 - 2 h</td><td>25-35 min</td></tr>
+      <tr><td>Haricots blancs (cocos, lingots, tarbais)</td><td>12 h</td><td>1 h - 1 h 30</td><td>20-30 min</td></tr>
+      <tr><td>Haricots rouges</td><td>12 h <strong>obligatoire</strong></td><td>1 h - 1 h 30 (toujours dans une nouvelle eau)</td><td>20-25 min</td></tr>
+      <tr><td>Haricots noirs (frijoles)</td><td>12 h</td><td>1 h - 1 h 15</td><td>20 min</td></tr>
+      <tr><td>Flageolets</td><td>12 h</td><td>1 h - 1 h 15</td><td>20-25 min</td></tr>
+      <tr><td>Fèves sèches</td><td>12 h + écossage de la peau extérieure</td><td>1 h 30 - 2 h</td><td>25-30 min</td></tr>
+      <tr><td>Pois cassés</td><td>Aucun</td><td>45 min - 1 h</td><td>15-20 min</td></tr>
+      <tr><td>Edamame (soja immature, congelés)</td><td>—</td><td>Eau bouillante salée 4-5 min</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Saler en début de cuisson</strong> : le sel ralentit l'hydratation des cellules, durcit les peaux. Saler <strong>en fin de cuisson</strong> (15-20 min avant la fin). Idem pour l'<strong>acide</strong> (tomate, vinaigre, citron, vin) qui empêche le ramollissement de la pectine : à ajouter quand les légumineuses sont déjà bien tendres. C'est la raison pour laquelle une cassoulet qui contient tomate et vin doit voir ses haricots <em>pré-cuits</em> à l'eau pure avant l'assemblage final.</p>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Le bicarbonate dans le trempage des pois chiches</strong> (½ cuillère à café pour 1 L d'eau de trempage) accélère l'hydratation, attendrit la peau et donne le crémeux mythique du houmous libanais. À refaire dans l'eau de cuisson avec une autre ½ c.c. pour atteindre la texture "soyeuse". Source : Yotam Ottolenghi, <em>Jérusalem</em>. À utiliser avec modération : trop de bicarbonate = arrière-goût savonneux et perte de saveur.</p>
+  </div>
+
+  <h3 id="sec-5-12"><span class="h3-num">5.12</span>Synthèse — quelle méthode pour quel résultat ?</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Si je veux...</th><th>Méthode</th><th>Légumes types</th></tr></thead>
+    <tbody>
+      <tr><td>Couleur verte vive et croquant</td><td>Blanchir à l'anglaise + bain glacé</td><td>Haricot vert, brocoli, petit pois, asperge verte, blette verte</td></tr>
+      <tr><td>Maximum de saveur sucrée et caramélisée</td><td>Rôtir au four 200-220 °C, plaque chaude, espacés</td><td>Carotte, courge, chou-fleur, brocoli, choux de Bruxelles, betterave, panais</td></tr>
+      <tr><td>Conservation maximale des nutriments</td><td>Vapeur 100 °C, durée juste</td><td>Pomme de terre, brocoli, artichaut, asperge, poisson</td></tr>
+      <tr><td>Fondant intérieur, peau croustillante</td><td>Four + huile généreuse</td><td>Pomme de terre robe des champs, patate douce, courge entière</td></tr>
+      <tr><td>Saveur concentrée (umami)</td><td>Cuisson longue à basse température (110-130 °C)</td><td>Tomate confite, oignon caramélisé, ail confit, tomate semi-séchée</td></tr>
+      <tr><td>Texture al dente standardisée</td><td>Eau bouillante salée chronométrée + bain glacé</td><td>Pâtes, haricots verts, asperges, petits pois</td></tr>
+      <tr><td>Effet "viande" végétal</td><td>Poêle fumante à sec puis gras en finition</td><td>Champignons, chou pointu, aubergine, pleurotes</td></tr>
+      <tr><td>Texture fondante avec couleur préservée</td><td>Sous-vide 85 °C</td><td>Carottes, betteraves, fenouil, racines diverses</td></tr>
+      <tr><td>Concentration aromatique pour soupe / sauce</td><td>Suer doucement à couvert sans coloration</td><td>Oignon, poireau, fenouil, céleri, blanc d'ail</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>La règle universelle pour réussir un légume.</strong> Se poser trois questions avant de cuire : (1) quelle <strong>texture</strong> je vise (croquant, tendre, fondant, croustillant) ? (2) quelle <strong>couleur</strong> je veux préserver ou développer (vert vif, brun caramélisé, rouge profond) ? (3) quelle <strong>saveur</strong> dominante (frais et végétal, concentré et sucré, fumé et grillé) ? Les réponses dictent la méthode. La même betterave peut donner trois plats radicalement différents selon qu'on la cuit en croûte de sel (concentration), bouillie (terreuse douce) ou rôtie en cubes (caramélisée).</p>
+  </div>
+
+  <h3 id="sec-5-13"><span class="h3-num">5.13</span>Braisage et glaçage — deux techniques transverses</h3>
+  <p class="lead">Ces deux techniques s'appliquent aussi bien à la viande qu'au légume. La logique change peu d'un produit à l'autre ; les paramètres oui. À maîtriser comme un seul geste, déclinable.</p>
+
+  <h4>Le braisage</h4>
+  <p>Cuisson mixte : <strong>saisie sèche</strong> au départ, puis <strong>cuisson longue partiellement immergée</strong> à basse température. Vise une transformation lente : pour la viande, conversion du collagène en gélatine ; pour le légume, ramollissement de la cellulose et concentration des sucres dans le bouillon réduit.</p>
+
+  <p><strong>Protocole canonique en six étapes</strong> (voir aussi §2.5 du Pilier II) :</p>
+  <ol>
+    <li><strong>Marquer / colorer</strong> à feu vif dans une cocotte (Maillard, sucs caramélisés).</li>
+    <li><strong>Suer la garniture aromatique</strong> — mirepoix : oignon, carotte, céleri.</li>
+    <li><strong>Déglacer</strong> avec un liquide acide (vin, verjus, vinaigre, bière) qui décolle les sucs.</li>
+    <li><strong>Mouiller</strong> avec un fond ou de l'eau : <strong>à mi-hauteur</strong>, jamais immergé. Ratio classique : 1 part de liquide pour 3 parts de produit.</li>
+    <li><strong>Étuver</strong> : couvercle hermétique, four à <strong>120-150 °C</strong>, ou frémissement très doux sur le piano. <strong>Règle absolue : ne jamais dépasser 95 °C dans le bouillon</strong> — sinon le collagène fond trop vite (viande filandreuse) et la cellulose se délite (légume en bouillie).</li>
+    <li><strong>Durée</strong> : variable selon la pièce ; voir tables ci-dessous.</li>
+  </ol>
+
+  <p><strong>Braisage à brun vs braisage à blanc</strong> :</p>
+  <ul>
+    <li><strong>À brun</strong> — marquage initial fort, liquide foncé (vin rouge, fond brun). Pour viandes rouges, gibier, légumes-racines, chou rouge.</li>
+    <li><strong>À blanc</strong> — pas de marquage (ou très léger), liquide clair (fond blanc + vin blanc + jus de citron + beurre). Pour viandes blanches (blanquette, fricassée, sauté de veau), poissons fermes, et tous les légumes "blancs" (endives, fenouil, laitue, salsifis, céleri-branche).</li>
+  </ul>
+
+  <h4>Braisage — paramètres pour les viandes</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce</th><th>Étuvage</th><th>Durée</th><th>Liquide type</th></tr></thead>
+    <tbody>
+      <tr><td>Paleron de bœuf, macreuse</td><td>Four 130 °C en cocotte fermée</td><td>3-4 h</td><td>Vin rouge + fond brun</td></tr>
+      <tr><td>Joue de bœuf</td><td>Four 120-130 °C</td><td>4-6 h</td><td>Vin rouge corsé + fond + carotte</td></tr>
+      <tr><td>Jarret entier (osso buco-like)</td><td>Four 130-140 °C</td><td>2 h - 2 h 30 (veau), 6-8 h (bœuf)</td><td>Vin blanc (veau), vin rouge (bœuf)</td></tr>
+      <tr><td>Épaule d'agneau "7 heures"</td><td>Four 130 °C</td><td>7 h</td><td>Vin blanc + ail + tomate</td></tr>
+      <tr><td>Souris d'agneau</td><td>Cocotte 140 °C</td><td>3-4 h</td><td>Vin rouge + romarin + ail</td></tr>
+      <tr><td>Échine de porc au lait (Bologne)</td><td>Cocotte 140 °C</td><td>2 h - 2 h 30</td><td>Lait + sauge + zeste citron</td></tr>
+      <tr><td>Coq au vin (cuisses, hauts de cuisse)</td><td>Frémissement piano</td><td>1 h 30 - 2 h</td><td>Vin rouge + lardons + champignons</td></tr>
+      <tr><td>Blanquette de veau (à blanc)</td><td>Frémissement 85 °C, sans marquage</td><td>1 h 30 - 2 h</td><td>Fond blanc + vin blanc + crème en fin</td></tr>
+      <tr><td>Sauté de veau Marengo (à brun)</td><td>Cocotte 140 °C</td><td>1 h 30 - 2 h</td><td>Vin blanc + tomate + champignons</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Braisage — paramètres pour les légumes</h4>
+  <p>Le braisage de légume est l'application la plus négligée par le cuisinier amateur. Trois familles s'y prêtent particulièrement bien : les <strong>légumes amers ou fermes</strong> (endives, fenouil, céleri), les <strong>choux</strong> (rouge, vert frisé, pointu, choucroute), et certains <strong>légumes-feuilles fermes</strong> (laitues entières, sucrines).</p>
+
+  <p>Le protocole se déroule en <strong>trois phases distinctes</strong> que les colonnes du tableau ci-dessous explicitent :</p>
+  <ol>
+    <li><strong>Saisir / suer</strong> dans une <em>matière grasse</em> (beurre, huile d'olive, graisse animale) : sans coloration pour un braisage <em>à blanc</em>, avec coloration légère pour un braisage <em>à brun</em>. C'est aussi le moment où l'on fait suer la garniture aromatique éventuelle.</li>
+    <li><strong>Mouiller</strong> avec un <em>liquide de braisage</em> : bouillon, vin, vinaigre, lait, jus de cuisson — ou un mélange. Le liquide arrive à mi-hauteur du légume, jamais immergé.</li>
+    <li><strong>Étuver</strong> à couvert (ou avec cartouche) à basse température jusqu'à tendreté.</li>
+  </ol>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume</th><th>Saisie / sué (matière grasse)</th><th>Mouillement (liquide)</th><th>Étuvage</th><th>Durée</th></tr></thead>
+    <tbody>
+      <tr><td>Endives à blanc</td><td>Beurre + pincée de sucre, sans coloration</td><td>Un fond d'eau + jus de citron</td><td>Casserole basse couverte ou cartouche, feu doux</td><td>30-40 min</td></tr>
+      <tr><td>Fenouil braisé</td><td>Huile d'olive, suer mirepoix éventuel</td><td>Bouillon de volaille + aromates</td><td>Cocotte couvercle, four 150 °C ou feu doux</td><td>30-40 min</td></tr>
+      <tr><td>Laitue braisée (sucrine entière)</td><td>Beurre, sans coloration</td><td>Bouillon léger</td><td>Cocotte basse, cartouche, feu doux</td><td>25-30 min</td></tr>
+      <tr><td>Petits pois à la française</td><td>Beurre + lardons (option) + oignons grelots</td><td>Un fond d'eau, laitue émincée</td><td>Cocotte couverte, feu doux</td><td>10-15 min frais jeunes / 15-18 min plus mûrs / 5-8 min surgelés</td></tr>
+      <tr><td>Chou rouge braisé</td><td>Beurre ou graisse de canard, suer oignon + pommes</td><td>Vinaigre de vin + vin rouge + sucre + cannelle</td><td>Cocotte couverte, feu doux ou four 140 °C</td><td>1 h - 1 h 30</td></tr>
+      <tr><td>Chou vert frisé (potée, garbure)</td><td>Lard ou couenne fondue</td><td>Bouillon + os à moelle ou jambonneau</td><td>Frémissement</td><td>30-40 min</td></tr>
+      <tr><td>Céleri-branche braisé</td><td>Huile d'olive, suer un oignon</td><td>Bouillon + tomate concassée</td><td>Cocotte four 150 °C</td><td>30-40 min</td></tr>
+      <tr><td>Choucroute alsacienne</td><td>Saindoux ou graisse d'oie, suer oignon + baies de genièvre</td><td>Vin blanc d'Alsace + bouillon</td><td>Cocotte four 150 °C avec viandes par-dessus</td><td>1 h 30 - 2 h</td></tr>
+      <tr><td>Artichauts à la barigoule</td><td>Huile d'olive, suer mirepoix + lardons</td><td>Vin blanc + bouillon</td><td>Cocotte four 150 °C</td><td>30-40 min</td></tr>
+      <tr><td>Poireaux braisés (à blanc)</td><td>Beurre, sans coloration</td><td>Bouillon léger</td><td>Cocotte basse, cartouche</td><td>30-40 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Comment choisir la matière grasse ?</strong> Le beurre apporte de la rondeur, mais brûle vite — privilégier pour les braisages à blanc, courts et doux (endives, laitue, poireaux). L'huile d'olive donne du caractère méditerranéen et tient mieux la chaleur — pour fenouil, céleri, artichaut, courgette. Les graisses animales (lard, saindoux, graisse de canard ou d'oie) ajoutent une profondeur umami et conviennent aux braisages longs avec choux et légumes-racines. Pour les choux à braisage long, démarrer avec une cuillère de graisse animale et terminer avec une noisette de beurre frais en finition.</p>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi le braisage rate à 95 °C et plus ?</strong> Au-delà, le collagène (viande) hydrolyse trop vite : les fibres se relâchent toutes en même temps, le jus s'échappe, la viande devient sèche et filandreuse. Pour le légume, l'eau intracellulaire entre en ébullition : les cellules éclatent, la pectine se dissout brutalement, on obtient une bouillie. À 85-90 °C, les deux processus sont <em>progressifs</em> : la gélatine se forme doucement, la cellulose ramollit en gardant sa structure. C'est exactement la zone visée par le four à 130-150 °C — la température du bouillon dans une cocotte fermée se stabilise alors entre 85 et 95 °C.</p>
+  </div>
+
+  <h4>Le glaçage</h4>
+  <p>Deux applications, même principe physique : <strong>réduction d'un liquide sucré-gras</strong> jusqu'à former un film brillant qui nappe le produit.</p>
+
+  <p><strong>Glaçage de viande au pinceau.</strong> Dans les 20-30 dernières minutes de cuisson, on badigeonne la pièce toutes les 5 min avec un liquide riche : jus réduit, beurre fondu, miel, sirop d'érable, sauce soja, mélange épicé. Trois effets : <strong>brillant laqué</strong>, <strong>concentration des arômes</strong> par évaporation à la surface chaude, <strong>dernière couche de Maillard</strong> sur les sucres ajoutés. Classique du canard laqué, des ribs barbecue, du jambon de Noël, du jarret au four, du carré d'agneau à la moutarde et au miel. Règle : pas avant les 20-30 dernières minutes (sinon le sucre brûle), pas après l'arrêt du feu (ça ne fixe pas).</p>
+
+  <p><strong>Glaçage de légumes.</strong> Petits morceaux uniformes dans une casserole large : <strong>eau à mi-hauteur</strong> + <strong>beurre</strong> + <strong>pincée de sucre</strong> + sel, <strong>sans couvercle</strong> (ou avec cartouche en papier sulfurisé pour démarrer). L'eau s'évapore, le sucre et le beurre se concentrent en sirop qui nappe les légumes. Deux finitions :</p>
+  <ul>
+    <li><strong>À blanc</strong> — arrêt dès que le liquide devient sirupeux et nappe les légumes, <em>sans coloration</em>. Présentation propre, pâle, élégante. Convient aux dressages classiques et aux poissons.</li>
+    <li><strong>À brun</strong> — on continue jusqu'à ce que le sirop brunisse en caramel léger qui enrobe les légumes. Notes caramélisées, parfum doux, brillance dorée. C'est l'archétype des "carottes glacées à brun" servies avec un bourguignon, un coq au vin, un canard rôti.</li>
+  </ul>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Légume (500 g, en petits morceaux)</th><th>Eau</th><th>Beurre</th><th>Sucre</th><th>Durée</th></tr></thead>
+    <tbody>
+      <tr><td>Carottes à brun (rondelles ou bâtonnets)</td><td>200 ml</td><td>30 g</td><td>10-15 g</td><td>15-20 min</td></tr>
+      <tr><td>Carottes à blanc</td><td>200 ml</td><td>30 g</td><td>5 g</td><td>10-12 min</td></tr>
+      <tr><td>Navets en quartiers</td><td>200 ml</td><td>30 g</td><td>10 g</td><td>15-20 min</td></tr>
+      <tr><td>Radis ronds</td><td>200 ml</td><td>30 g</td><td>10 g</td><td>10-12 min</td></tr>
+      <tr><td>Oignons grelots</td><td>150 ml</td><td>30 g</td><td>10 g</td><td>20-25 min</td></tr>
+      <tr><td>Salsifis (déjà pré-cuits)</td><td>200 ml</td><td>30 g</td><td>10 g</td><td>10-15 min</td></tr>
+      <tr><td>Topinambours en cubes</td><td>200 ml</td><td>30 g</td><td>10 g</td><td>15-20 min</td></tr>
+      <tr><td>Châtaignes pelées (glaçage à brun)</td><td>200 ml fond brun</td><td>30 g</td><td>10 g</td><td>20-25 min</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Le rôle de la cartouche en papier sulfurisé</strong> (voir aussi §2.2). Au début du glaçage, on peut poser un disque de sulfurisé directement sur les légumes pour <em>ralentir l'évaporation</em> et garder les morceaux immergés pendant la phase de cuisson. <strong>On la retire pour les 5 dernières minutes</strong> afin de concentrer le sirop et obtenir le film brillant. C'est l'équivalent d'un demi-couvercle qui laisse passer la vapeur mais freine la déperdition de chaleur.</p>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi glacer sans couvercle ?</strong> Avec couvercle hermétique, la vapeur condense et retombe : impossible d'évaporer le liquide et de concentrer un sirop, le sucre n'atteint jamais la phase caramélisation. La cartouche est un compromis : elle ralentit l'évaporation sans la bloquer. À la fin, on découvre totalement pour passer le sirop en phase "nappage" puis "caramel" si on vise un glaçage à brun.</p>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Trois erreurs classiques de glaçage.</strong> (1) Trop de liquide au départ → l'évaporation prend trop de temps, les légumes deviennent mous avant que le sirop se forme. (2) Pas assez de beurre → pas de film gras, pas de brillance, juste un caramel collant. (3) Glacer dans une casserole trop petite, en couche épaisse → les légumes du dessus cuisent à la vapeur, ceux du dessous brûlent. Toujours une <strong>seule couche</strong> dans une casserole large.</p>
+  </div>
+
+  <h3 id="sec-5-14"><span class="h3-num">5.14</span>L'extraction — la science des bouillons et fonds</h3>
+  <p class="lead">Un bouillon est exactement l'opposé d'une cuisson en croûte de sel : au lieu d'enfermer la saveur dans le produit, on cherche à <strong>l'extraire</strong> vers l'eau, sans amertume ni trouble. Trois variables gouvernent l'opération : la <strong>température</strong>, le <strong>temps</strong>, et l'<strong>ordre d'introduction</strong> des ingrédients. Chaque famille cède ses molécules à un rythme différent.</p>
+
+  <h4>Ce qu'on extrait, et à quel rythme</h4>
+  <p>Quatre niveaux de vitesse d'extraction se superposent dans un bouillon :</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Famille de molécules</th><th>Source typique</th><th>Durée d'extraction</th><th>Apport au bouillon</th></tr></thead>
+    <tbody>
+      <tr><td>Arômes volatils (terpènes, esters, aldéhydes)</td><td>Herbes fraîches, écorces, poivre, baies, oignon frais</td><td>2-15 min (évaporation au-delà)</td><td>"Tête" aromatique, parfum frais</td></tr>
+      <tr><td>Glutamates, nucléotides (umami)</td><td>Champignons, tomate concentrée, kombu, parmesan, anchois, viandes maigres rôties</td><td>30-60 min</td><td>Cœur du goût, longueur en bouche</td></tr>
+      <tr><td>Acides aminés, sucres solubles, sels minéraux</td><td>Légumes-racines, oignon, volaille, viande</td><td>1-3 h</td><td>Corps, rondeur, douceur</td></tr>
+      <tr><td>Collagène → gélatine</td><td>Os, cartilages, couennes, pieds, jarrets, ailes, manchons</td><td>6-24 h (à 85-95 °C)</td><td>Nappant, sensation de plénitude, fige à froid</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>La règle d'or : ne jamais bouillir</h4>
+  <p>Au-delà de 100 °C en pleine ébullition, trois phénomènes ruinent le bouillon :</p>
+  <ul>
+    <li>L'agitation forte <strong>émulsionne les graisses et les protéines flottantes</strong>, qui ne décantent plus → bouillon trouble et gras.</li>
+    <li>Les <strong>composés soufrés</strong> des alliacées (oignon, ail, poireau) et des crucifères se transforment en molécules désagréables (méthanethiol, sulfure de diméthyle) après 45-60 min de forte chaleur.</li>
+    <li>Les <strong>arêtes de poisson</strong> libèrent du calcium et des composés azotés en excès → astringence métallique, "goût d'arête".</li>
+  </ul>
+  <p>Le frémissement à <strong>85-95 °C</strong> — petites bulles paresseuses, surface vibrante mais pas turbulente — est la zone d'extraction propre. Au-dessus, on perd ; en-dessous, c'est trop lent.</p>
+
+  <h4>Durées par produit</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Bouillon / fond</th><th>Durée à frémissement</th><th>Notes-clés</th></tr></thead>
+    <tbody>
+      <tr><td>Fond brun de veau ou de bœuf</td><td>8-12 h, jusqu'à 24 h</td><td>Os concassés rôtis au préalable 220 °C / 1 h ; mirepoix coloré ; départ eau froide ; écumage régulier les 30 premières minutes.</td></tr>
+      <tr><td>Fond blanc de volaille</td><td>3-4 h</td><td>Carcasses crues blanchies ou directes ; eau froide ; écumage régulier ; pas de coloration des légumes.</td></tr>
+      <tr><td>Bouillon de poule entière (à servir)</td><td>1 h 30 - 2 h</td><td>Au-delà, chair filandreuse et bouillon "trop cuit". Retirer la poule, prolonger la cuisson des os jusqu'à 4 h si besoin.</td></tr>
+      <tr><td>Bouillon de légumes</td><td>30-45 min strict</td><td>Au-delà : sucres caramélisés deviennent amers, soufrés des alliacées dominent. Ne pas faire mijoter "comme un fond de veau".</td></tr>
+      <tr><td>Fumet de poisson (poissons blancs)</td><td>20-30 min strict</td><td>Arêtes blanchies (pour ôter le sang) ; suer oignon-poireau-céleri au beurre, déglacer vin blanc, mouiller. Au-delà : amertume garantie.</td></tr>
+      <tr><td>Soupe de poissons (bouillabaisse, fumet rouge)</td><td>30-45 min</td><td>Poissons entiers, tomate, fenouil, safran ; cuisson plus longue tolérée car le rouge masque les arêtes.</td></tr>
+      <tr><td>Bouillon de crustacés (bisque, sauce américaine)</td><td>30-45 min</td><td>Carapaces concassées, suées au beurre + cognac flambé ; passer au chinois en pressant.</td></tr>
+      <tr><td>Bouillon de champignons</td><td>30-45 min</td><td>Champignons séchés réhydratés (eau de trempage filtrée incluse) ou frais concassés. Excellent en kombu végétarien.</td></tr>
+      <tr><td>Dashi (kombu + katsuobushi)</td><td>Kombu à froid montée à 60 °C max (1 h), retiré ; katsuobushi infusé 1-2 min</td><td>Extraction des glutamates (kombu) + inosinate (bonite) sans amertume. La logique opposée du fond français — froide, courte, ultra-précise.</td></tr>
+      <tr><td>Bouillon dashi végétarien (kombu + shiitake)</td><td>Kombu froid 1 h + shiitakes 30 min à 60-70 °C</td><td>Mariage glutamate (kombu) + guanylate (shiitake) = synergie umami maximale.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>L'ordre d'introduction</h4>
+  <ol>
+    <li><strong>Os et viandes en eau froide</strong>. La montée progressive en température permet aux protéines hydrosolubles (albumine, globulines) de migrer hors du produit avant de coaguler. Elles forment alors une <strong>écume</strong> en surface qu'on retire à la louche — clé d'un bouillon limpide.</li>
+    <li><strong>Mirepoix</strong> (oignon, carotte, céleri en gros morceaux) ajouté après écumage, à environ 30 min - 1 h selon la durée totale. Pour un fond brun, le mirepoix est rissolé au préalable. Pour un fond blanc, il est cru.</li>
+    <li><strong>Aromates secs et humides</strong> (bouquet garni, poireau, ail, baies de poivre, clous de girofle) dans la dernière heure ou les 30 dernières minutes.</li>
+    <li><strong>Herbes fraîches et zestes</strong> en infusion hors feu, couvercle 10 min avant filtration.</li>
+    <li><strong>Sel</strong> : <em>jamais en cours de cuisson</em>. La réduction concentre dangereusement. Toujours saler après filtration et réduction finale.</li>
+  </ol>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi l'eau froide au départ ?</strong> Démarrer à l'eau froide donne aux protéines hydrosolubles le temps de migrer hors des os et de la viande avant de coaguler vers 55-65 °C. Elles forment une écume à la surface, qu'on retire pour obtenir un bouillon limpide. Si on démarre à l'eau bouillante, ces mêmes protéines coagulent instantanément dans la masse de la viande — elles ne sortent plus, le bouillon est plus pauvre, et la clarification ultérieure est plus difficile. À l'inverse, pour une <em>viande pochée à servir</em> (pot-au-feu où on veut goûter la viande), on démarre à l'eau bouillante : les protéines coagulent dans la viande et y gardent leur saveur. <strong>Bouillon réussi vs viande savoureuse : choisir l'objectif avant de mettre la casserole sur le feu.</strong></p>
+  </div>
+
+  <h4>La clarification — du bouillon au consommé</h4>
+  <p>Pour obtenir un consommé cristallin, on incorpore au bouillon <em>froid</em> un appareil de clarification : blancs d'œufs battus + viande maigre hachée + légumes finement coupés + glace concassée. Remontée lente à 80-85 °C : l'albumine du blanc coagule en piégeant toutes les particules en suspension. La "raft" (radeau) flottante se forme en surface. On laisse mijoter doucement 45 min - 1 h sans remuer, puis on filtre à l'étamine humide. Résultat : un consommé brillant, doré, qu'on peut servir tel quel ou en gelée.</p>
+
+  <h4>Trois techniques modernes d'extraction</h4>
+  <ul>
+    <li><strong>Autocuiseur (pression)</strong>. Sous 1,5 bar de pression, l'eau atteint 115-120 °C. La cinétique d'hydrolyse du collagène est environ <strong>3 à 4 fois plus rapide</strong> qu'à 95 °C. Un fond de veau de 8 h se fait en 2-3 h. Risque : extraction trop rapide aussi de composés indésirables, donc bouillon parfois plus "brut". Excellent pour fonds blancs, bouillons de volaille, lentilles.</li>
+    <li><strong>Sous-vide à 90 °C, 24-36 h</strong>. Aucune évaporation, aucune oxydation, pas de manipulation. Le bouillon est <em>concentré dans son liquide d'origine</em> sans qu'il s'en échappe une goutte. Pratique pour bouillons de précision (Nordic cuisine).</li>
+    <li><strong>Extraction à froid (cold infusion)</strong>. 24-48 h au frigo dans de l'eau froide pour le dashi kombu, certaines infusions de champignons, ou les bouillons "modernist" inspirés de la cuisine japonaise. Aucun composé thermolabile détruit, profil aromatique pur. À filtrer avant usage.</li>
+  </ul>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Le coup du parmesan</strong>. Conserver les croûtes de parmesan dans un bocal au congélateur, et en jeter une dans tout bouillon, soupe ou risotto. Les peptides et glutamates de la croûte se diffusent en 20-30 min, multipliant l'umami du bouillon. Astuce italienne classique (<em>Marcella Hazan</em>), copiée par les Anglo-Saxons et désormais standard au-delà de l'Italie. Idem avec des arêtes de jambon, des couennes, des chapeaux de champignons séchés.</p>
+  </div>
+
+  <h4>Protocole complet — bouillon de légumes parfait, clarifié en consommé</h4>
+  <p>Pour <strong>2 L</strong> de bouillon clarifié — préparation 25 min, cuisson 1 h 15, clarification 1 h 15. À considérer comme la "version pédagogique" que l'on peut décliner ensuite.</p>
+
+  <p><strong>Ingrédients du bouillon</strong> (2,5 L d'eau au départ, pour 2 L après réduction) :</p>
+  <ul>
+    <li>2 oignons moyens (300 g), <em>peau conservée</em> pour une couleur dorée naturelle</li>
+    <li>2 carottes moyennes (200 g), brossées, en gros tronçons</li>
+    <li>1 poireau entier (200 g, blanc + vert clair), fendu en deux dans la longueur</li>
+    <li>2 branches de céleri (200 g) avec les feuilles</li>
+    <li>½ bulbe de fenouil (100 g) avec tiges et fanes</li>
+    <li>1 tête d'ail entière coupée en deux horizontalement (50 g)</li>
+    <li>200 g de champignons de Paris frais brossés <em>OU</em> 30 g de champignons séchés (cèpes, shiitakes) réhydratés dans 200 ml d'eau (eau de trempage incluse, filtrée)</li>
+    <li>1 tomate mûre coupée en deux, ou 2 c. à soupe de concentré de tomate</li>
+    <li>1 morceau de croûte de parmesan 5 × 5 cm <em>(optionnel mais transformateur)</em></li>
+    <li>1 morceau de kombu 5 × 5 cm <em>(optionnel, double l'umami par synergie glutamate-inosinate)</em></li>
+    <li>Bouquet garni : 4-5 branches de thym, 2 feuilles de laurier, 10 queues de persil, 2-3 brins d'estragon</li>
+    <li>8 grains de poivre noir, 1 clou de girofle, 1 anis étoilé <em>(option)</em></li>
+    <li>100 ml de vin blanc sec <em>(option, acidité qui aide l'extraction)</em></li>
+    <li><strong>Pas de sel</strong> — jamais en cours de cuisson</li>
+  </ul>
+
+  <p><strong>Ingrédients pour la clarification</strong> (à préparer à part, juste avant l'étape) :</p>
+  <ul>
+    <li>3 blancs d'œufs</li>
+    <li>50 g de champignons de Paris très finement hachés (presque en pâte)</li>
+    <li>50 g de céleri très finement haché</li>
+    <li>50 g de blanc de poireau très finement haché</li>
+    <li>5-6 glaçons (ou 100 ml d'eau glacée)</li>
+  </ul>
+
+  <p><strong>Déroulé minuté — phase 1 : extraction</strong></p>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Temps</th><th>Étape</th><th>Détail technique</th></tr></thead>
+    <tbody>
+      <tr><td><b>T −25 min</b></td><td>Mise en place</td><td>Légumes lavés, coupés en <em>gros</em> morceaux (la taille préserve les arômes ; trop petit = trop de composés soufrés extraits trop vite). Garder les épluchures propres (peau d'oignon, vert de poireau, fanes de fenouil) — elles donnent couleur et arôme.</td></tr>
+      <tr><td><b>T −10 min</b></td><td>Coloration optionnelle (version "brune")</td><td>Oignons coupés en deux côté coupé sur poêle sèche brûlante : 4-5 min jusqu'à brûlure noire profonde (technique japonaise). Profondeur Maillard sans amertume sucrée. <em>Sauter pour un bouillon clair façon dashi.</em></td></tr>
+      <tr><td><b>T = 0</b></td><td>Mise à l'eau froide</td><td>Dans une grande marmite : eau froide + oignons + ail + carottes + poireau + céleri + fenouil + tomate + concentré + croûte de parmesan + champignons séchés (et leur eau filtrée). Chauffer doucement, montée en 15-20 min.</td></tr>
+      <tr><td><b>T +15 min</b></td><td>Frémissement atteint</td><td>Bulles paresseuses, surface vibrante mais pas turbulente (85-90 °C). <strong>Écumer</strong> la mousse grise à la louche pendant 5 min.</td></tr>
+      <tr><td><b>T +20 min</b></td><td>Vin (optionnel)</td><td>Verser le vin blanc, laisser l'alcool s'évaporer 2-3 min. L'acidité aide à extraire les minéraux et stabilise la limpidité.</td></tr>
+      <tr><td><b>T +25 min</b></td><td>Champignons frais</td><td>Ajouter les champignons frais si on n'a pas utilisé les séchés. Maintenir 85-95 °C. <strong>Ne jamais couvrir</strong> — les volatils indésirables (soufrés des alliacées) doivent s'échapper.</td></tr>
+      <tr><td><b>T +40 min</b></td><td>Aromates secs</td><td>Ajouter le bouquet garni, le kombu, le poivre, le girofle, l'anis étoilé. Frémissement maintenu.</td></tr>
+      <tr><td><b>T +55 min</b></td><td>Hors feu, infusion couverte</td><td>Couper le feu, <strong>couvrir</strong> la marmite, laisser infuser 10 min. Les arômes volatils (terpènes des herbes) fixent dans le liquide sans s'évaporer.</td></tr>
+      <tr><td><b>T +1 h 05</b></td><td>Filtration grossière</td><td>Passer au chinois étamine humide. <strong>Ne pas presser</strong> les légumes (sinon trouble irrécupérable). Goûter ; réduire éventuellement de 20-30 % à feu vif pour concentrer.</td></tr>
+      <tr><td><b>T +1 h 15</b></td><td>Refroidissement <strong>complet</strong></td><td>Pour la clarification, le bouillon doit être <em>froid</em>. Plonger la casserole dans un bain d'eau glacée et remuer, ou laisser au frigo 2 h.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p><strong>Déroulé minuté — phase 2 : clarification en consommé</strong></p>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Temps</th><th>Étape</th><th>Détail technique</th></tr></thead>
+    <tbody>
+      <tr><td><b>T = 0</b></td><td>Préparer la "raft"</td><td>Hacher très finement céleri, poireau, champignons (presque en pâte). Battre les blancs d'œufs en mousse souple (pas en neige ferme). Mélanger blancs + légumes hachés + glaçons. La glace ralentit la coagulation des blancs.</td></tr>
+      <tr><td><b>T +5 min</b></td><td>Incorporation à froid</td><td>Verser la raft dans le bouillon <strong>froid</strong>, mélanger soigneusement avec une spatule pour bien disperser. Mettre sur <strong>feu doux</strong>.</td></tr>
+      <tr><td><b>T +5 à 15 min</b></td><td>Montée en température, remuer doucement</td><td>Remuer doucement au fond pendant les 10 premières min pour éviter que les blancs accrochent et brûlent.</td></tr>
+      <tr><td><b>T +15-20 min</b></td><td>Formation du radeau</td><td>À environ 60-65 °C, <strong>arrêter de remuer</strong>. Les blancs coagulent en piégeant toutes les particules en suspension. Une mousse grise se forme, puis un "radeau" solide en surface.</td></tr>
+      <tr><td><b>T +25 min</b></td><td>Frémissement contrôlé</td><td>À 85 °C, faire un trou au centre du radeau avec une louche (chemin d'évaporation). Frémissement très doux, <strong>jamais ébullition</strong> (sinon le radeau se casse).</td></tr>
+      <tr><td><b>T +25 min à T +1 h 10</b></td><td>Mijotage sans contact</td><td>Laisser mijoter 45 min - 1 h sans rien toucher. Le radeau emprisonne progressivement toutes les impuretés.</td></tr>
+      <tr><td><b>T +1 h 15</b></td><td>Filtration finale</td><td>Avec une petite louche, prélever le consommé <em>par-dessous</em> le radeau à travers une étamine humide bien tendue sur un chinois. Pour cristallinité absolue : seconde filtration à travers un filtre à café placé dans un entonnoir.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>Conservation, finition et usage</h4>
+  <ul>
+    <li><strong>Frais</strong> : 4-5 jours au frigo, dans bocaux stérilisés ou récipient hermétique.</li>
+    <li><strong>Congélation</strong> : 3 mois max. Bacs à glaçons pour portions de 30 ml (idéal pour déglacer, monter une sauce), ou poches plates de 250-500 ml stockées verticalement.</li>
+    <li><strong>Sel</strong> : ajouter <em>à l'utilisation</em>, jamais avant. 5-7 g/L pour un consommé à servir tel quel, moins pour usage en cuisine.</li>
+    <li><strong>Finition</strong> : un trait de vinaigre de Xérès ou de jus de citron en fin de cuisson du plat final réveille la complexité aromatique. Un filet d'huile d'olive crue ou une noisette de beurre noisette en finition apporte la rondeur grasse qui manque structurellement à un bouillon de légumes (à l'inverse d'un fond de viande gélatineux).</li>
+  </ul>
+
+  <h4>Trois variantes du protocole</h4>
+  <ul>
+    <li><strong>Bouillon brun de légumes</strong>. Rôtir <em>tous</em> les légumes-racines au four 220 °C / 25-30 min avant de mouiller à l'eau froide. Profondeur Maillard, couleur acajou, idéal pour soupes d'hiver, sauces, risottos.</li>
+    <li><strong>Bouillon dashi végétarien</strong>. Kombu (10 g) + shiitakes séchés (30 g) en infusion à froid 1 h, puis montée à 60 °C pendant 30 min, retrait. Très peu d'éléments, umami massif par synergie glutamate (kombu) × guanylate (shiitake). Aucune clarification nécessaire — il est cristallin par construction.</li>
+    <li><strong>Bouillon clair sans clarification</strong>. Si l'on accepte un bouillon limpide mais non cristallin, on peut sauter toute la phase de clarification. Le bouillon de base (étape T +1 h 15 filtration grossière) est déjà excellent en cuisine quotidienne, et conserve davantage de corps et de saveur. La clarification est une étape <em>de présentation</em> pour le consommé servi tel quel ; elle prélève au passage un peu d'arôme.</li>
+  </ul>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Les cinq erreurs qui ruinent un bouillon.</strong> (1) <em>Bouillir au lieu de frémir</em> : émulsion grasse, bouillon trouble. (2) <em>Trop d'oignon ou d'ail dans un bouillon long</em> : composés soufrés désagréables après 1 h. (3) <em>Saler en cours de cuisson</em> : la réduction sur-concentre. (4) <em>Cuire un fumet de poisson plus de 30 min</em> : amertume des arêtes. (5) <em>Cuire la volaille destinée à être mangée plus de 2 h dans son bouillon</em> : chair filandreuse, sèche, sans goût (elle a tout donné au liquide).</p>
+  </div>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="viandes.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Viandes — protocoles</span>
+  </a>
+  <a class="pager-link next" href="biblio.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Bibliographie & ressources</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pilier II — Humidité — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link current"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-2-humidite.html#sec-2-1" class="sidebar-sub"><span class="num">2.1</span>La vapeur dans le four</a>
+    <a href="pilier-2-humidite.html#sec-2-2" class="sidebar-sub"><span class="num">2.2</span>Cartouche papier sulfurisé</a>
+    <a href="pilier-2-humidite.html#sec-2-3" class="sidebar-sub"><span class="num">2.3</span>Cuisson en croûte de sel</a>
+    <a href="pilier-2-humidite.html#sec-2-4" class="sidebar-sub"><span class="num">2.4</span>Cuisson en papillote</a>
+    <a href="pilier-2-humidite.html#sec-2-5" class="sidebar-sub"><span class="num">2.5</span>Le braisage</a>
+    <a href="pilier-2-humidite.html#sec-2-6" class="sidebar-sub"><span class="num">2.6</span>Le repos de la viande</a>
+    <a href="pilier-2-humidite.html#sec-2-7" class="sidebar-sub"><span class="num">2.7</span>La saumure</a>
+    <a href="pilier-2-humidite.html#sec-2-8" class="sidebar-sub"><span class="num">2.8</span>Glaçage & nappage</a>
+    <a href="pilier-2-humidite.html#sec-2-9" class="sidebar-sub"><span class="num">2.9</span>Convection / statique</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Pilier II — Humidité</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Pilier deuxième</div>
+  <h1>La gestion de l'<em>humidité</em></h1>
+  <p class="subtitle">Vapeur, papillote, croûte de sel, braisage, saumure — gouverner l'eau</p>
+</div>
+
+<p class="lead">L'eau et la vapeur sont les <strong>vecteurs cachés</strong> de toute cuisson. Maîtriser leur présence — ou leur absence — c'est contrôler la texture finale du produit.</p>
+
+  <div class="chapter-toc">
+    <strong>Sommaire du chapitre</strong>
+    2.1 Vapeur dans le four · 2.2 Cartouche · 2.3 Croûte de sel · 2.4 Papillote · 2.5 Braisage · 2.6 Repos de la viande · 2.7 Saumure · 2.8 Glaçage · 2.9 Convection vs statique
+  </div>
+
+  <h3 id="sec-2-1"><span class="h3-num">2.1</span>La vapeur dans le four — la clé du pain et des viennoiseries</h3>
+  <p>Tous les fours à pain professionnels disposent d'<strong>injecteurs de vapeur</strong>. Pourquoi&nbsp;? Parce que la vapeur&nbsp;:</p>
+  <ul>
+    <li>Maintient la croûte <strong>élastique</strong> les 10 premières minutes (&laquo;&nbsp;coup de buée&nbsp;&raquo;) — la pâte peut s'étirer.</li>
+    <li>Gélatinise l'amidon de surface — croûte <strong>brillante et craquante</strong>.</li>
+    <li>Active la Maillard sur le gluten.</li>
+  </ul>
+
+  <h4>a) La cocotte en fonte (méthode Jim Lahey / Mark Bittman)</h4>
+  <p>La cocotte fermée piège la vapeur dégagée par la pâte. <strong>Méthode reine</strong> du pain sans pétrissage&nbsp;:</p>
+  <ol>
+    <li>Préchauffer la cocotte (avec couvercle) à <strong>240&nbsp;°C pendant 30 min</strong>.</li>
+    <li>Déposer la pâte (sur papier sulfurisé) dans la cocotte brûlante. Couvercle.</li>
+    <li>Cuire 20-30 min couvercle fermé, puis 10-15 min sans couvercle pour dorer.</li>
+  </ol>
+  <p>Voir <a href="https://www.lecreuset.fr/fr_FR/cuire-du-pain-dans-une-cocotte-en-fonte-emaillee--recette-facile/cap0059.html" target="_blank">Le Creuset</a> et <a href="https://www.lepaindepapa.fr/cuire-son-pain-a-la-cocotte/" target="_blank">Le Pain de Papa</a>.</p>
+
+  <h4>b) Glaçon ou lèchefrite d'eau</h4>
+  <p>Posez un plat creux avec quelques glaçons (ou de l'eau bouillante) au fond du four au moment d'enfourner. La vaporisation brutale crée 30 secondes de buée.</p>
+
+  <h4>c) Pulvérisateur</h4>
+  <p>Vaporisez les parois (jamais l'ampoule) 2-3 fois pendant les 8 premières minutes.</p>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p>Ne mettez <strong>jamais</strong> de glaçons sur la sole en émail/verre chaude&nbsp;: choc thermique, fissures garanties. Toujours un récipient en fonte ou acier.</p>
+  </div>
+
+  <h3 id="sec-2-2"><span class="h3-num">2.2</span>La cartouche en papier sulfurisé — l'arme française</h3>
+  <p>Disque de papier sulfurisé posé <strong>directement sur la surface du liquide</strong> dans une casserole. Il ralentit l'évaporation, empêche la peau sur crèmes et bouillons, maintient les légumes immergés pendant le braisage à blanc (endives, fenouil, laitues — méthode du <a href="https://chefsimon.com/articles/lexique-braiser" target="_blank">Chef Simon</a>).</p>
+
+  <h3 id="sec-2-3"><span class="h3-num">2.3</span>Cuisson en croûte de sel</h3>
+  <p>Technique ancestrale méditerranéenne. Le sel forme une coque imperméable qui cuit à l'étouffée dans la propre vapeur du poisson.</p>
+  <p><strong>Recette de référence&nbsp;:</strong> 3,2 kg de gros sel + 15 cl de blancs d'œufs pour un poisson de 1,5-2 kg. Cuisson 180&nbsp;°C, 25-30 min par kg, repos 10 min. Le poisson doit être <strong>vidé mais non écaillé</strong>. Cible à cœur&nbsp;: 60-65&nbsp;°C.</p>
+
+  <blockquote>
+    L'intérêt de la cuisson en croûte de sel&nbsp;? C'est au niveau du goût&nbsp;! On déguste le poisson à son plus naturel, au maximum de sa qualité.
+    <cite>Jonathan Garnier, <a href="http://recettes-de-chefs.ca/jonathan-garnier/poisson-en-croute-de-sel/" target="_blank">Recettes de chefs</a></cite>
+  </blockquote>
+
+  <h3 id="sec-2-4"><span class="h3-num">2.4</span>Cuisson en papillote</h3>
+  <p>Enferme l'aliment dans un contenant hermétique. Sous chaleur, l'eau interne se vaporise, gonfle la papillote et cuit à la vapeur sous légère pression.</p>
+  <p>Idéal&nbsp;: poissons fragiles (cabillaud, sole, saumon), Saint-Jacques, blancs de volaille, légumes émincés. Temps&nbsp;: <strong>12-15 min à 200-210&nbsp;°C</strong> pour un filet de 150 g.</p>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Aluminium ou papier sulfurisé&nbsp;?</strong> Le sulfurisé est préférable pour les aliments acides (tomate, citron) — l'aluminium peut migrer en milieu acide. Pour un effet &laquo;&nbsp;rôti&nbsp;&raquo; léger&nbsp;: sulfurisé à l'intérieur, alu autour.</p>
+  </div>
+
+  <h3 id="sec-2-5"><span class="h3-num">2.5</span>Le braisage — la cuisson mixte par excellence</h3>
+  <p>Le braisage combine conduction (parois) et convection (liquide). Protocole canonique&nbsp;:</p>
+  <ol>
+    <li><strong>Marquage / coloration</strong>&nbsp;: saisir à feu vif (réaction de Maillard, sucs caramélisés).</li>
+    <li><strong>Garniture aromatique</strong>&nbsp;: suer mirepoix (oignon, carotte, céleri).</li>
+    <li><strong>Déglaçage</strong>&nbsp;: liquide acide (vin, verjus).</li>
+    <li><strong>Mouillement</strong>&nbsp;: fond à <strong>mi-hauteur</strong> (jamais immergé). Ratio&nbsp;: 1 part de liquide pour 3 parts de viande.</li>
+    <li><strong>Étuvage</strong>&nbsp;: couvercle hermétique, four à <strong>120-150&nbsp;°C</strong>, ou frémissement (jamais ébullition).</li>
+    <li><strong>Durée</strong>&nbsp;: 2-4 h paleron, 4-6 h joue, 6-8 h jarret.</li>
+  </ol>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi ne pas bouillir&nbsp;?</strong> Au-dessus de 95&nbsp;°C, le collagène se transforme en gélatine <strong>trop rapidement</strong> et la viande devient filandreuse. À 85-90&nbsp;°C, la conversion est progressive, les fibres restent juteuses.</p>
+  </div>
+
+  <h3 id="sec-2-6"><span class="h3-num">2.6</span>Le repos de la viande</h3>
+  <p>Toute viande cuite doit reposer. Les fibres se détendent, les sucs se redistribuent, la température s'équilibre (carry-over).</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce</th><th>Repos</th><th>Couverture</th></tr></thead>
+    <tbody>
+    <tr><td>Steak fin (1-2 cm)</td><td>3-5 min</td><td>Aluminium lâche</td></tr>
+    <tr><td>Côte de bœuf, entrecôte épaisse</td><td>10-15 min</td><td>Aluminium lâche</td></tr>
+    <tr><td>Rôti, gigot</td><td>15-30 min</td><td>Aluminium + torchon</td></tr>
+    <tr><td>Prime rib XXL</td><td>30-45 min</td><td>Aluminium + cloche</td></tr>
+    <tr><td>Brisket, gros braisés</td><td>1-2 h</td><td>Glacière isolée</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p>Emballer <strong>hermétiquement</strong> la viande dans l'aluminium = ramollissement de la croûte par la vapeur piégée. Toujours en papillote <strong>lâche</strong>, en tente.</p>
+  </div>
+
+  <h3 id="sec-2-7"><span class="h3-num">2.7</span>La saumure (brining)</h3>
+  <p>Le sel <strong>dénature les protéines musculaires</strong>, leur permettant de retenir 10-15&nbsp;% d'eau supplémentaire pendant la cuisson.</p>
+
+  <h4>Saumure sèche (dry brining) — la méthode des pros</h4>
+  <p>Sel fin 1&nbsp;% du poids (10&nbsp;g/kg, sel casher préféré), à découvert au frigo&nbsp;:</p>
+  <ul>
+    <li>Steak épais&nbsp;: 1-12 h (idéal&nbsp;: la veille)</li>
+    <li>Poulet entier&nbsp;: 12-24 h</li>
+    <li>Dinde, jambon&nbsp;: 24-72 h</li>
+  </ul>
+  <p>L'eau sort, dissout le sel, puis est <strong>réabsorbée</strong> en saumure naturelle. La surface sèche favorise Maillard.</p>
+
+  <h4>Saumure humide (wet brining)</h4>
+  <p>Solution à 5-8&nbsp;% de sel (50-80&nbsp;g/L)&nbsp;:</p>
+  <ul>
+    <li>Côtes de porc, magrets&nbsp;: 2-4 h</li>
+    <li>Volaille entière&nbsp;: 8-12 h</li>
+    <li>Dinde de Noël&nbsp;: 24-48 h</li>
+  </ul>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour la <strong>peau croustillante du poulet rôti</strong>&nbsp;: saumure sèche 24 h à découvert au frigo (la peau sèche complètement) + four à 220&nbsp;°C sur grille. Méthode validée par Serious Eats.</p>
+  </div>
+
+  <h3 id="sec-2-8"><span class="h3-num">2.8</span>Glaçage et nappage en fin de cuisson</h3>
+  <p>Beurre fondu, jus réduit, miel, sirop d'érable&nbsp;: brillant, concentration des saveurs par réduction, dernière couche de Maillard. Sur un jarret, un canard, un magret&nbsp;: badigeonner toutes les 5 minutes les 20 dernières minutes.</p>
+
+  <h3 id="sec-2-9"><span class="h3-num">2.9</span>Convection / statique / chaleur tournante</h3>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Mode</th><th>Principe</th><th>Quand l'utiliser</th></tr></thead>
+    <tbody>
+    <tr><td><b>Statique</b></td><td>Résistances haut + bas, sans ventilateur.</td><td>Pâtisserie fine, soufflés, génoises, brioches, meringues, pain.</td></tr>
+    <tr><td><b>Chaleur tournante</b></td><td>Ventilateur brasse l'air.</td><td>Plats sur 2 niveaux, gratins, légumes rôtis.</td></tr>
+    <tr><td><b>Chaleur pulsée</b></td><td>Résistance circulaire <b>autour</b> du ventilateur.</td><td>Rôtis dorés, viennoiseries. Asséchant.</td></tr>
+    <tr><td><b>Vapeur / mixte</b></td><td>Injection de vapeur jusqu'à 100&nbsp;°C.</td><td>Poissons, légumes, pain.</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Quand vous passez d'une recette statique à la chaleur tournante&nbsp;: <strong>baissez de 15-20&nbsp;°C</strong> et surveillez 5-10 min plus tôt. <a href="https://www.papillesetpupilles.fr/" target="_blank">Papilles et Pupilles</a>.</p>
+  </div>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="pilier-1-temperature.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Pilier I — Température</span>
+  </a>
+  <a class="pager-link next" href="pilier-3-inertie.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Pilier III — Inertie thermique</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

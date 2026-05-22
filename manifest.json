@@ -1,0 +1,57 @@
+{
+  "name": "Manuel de la cuisson",
+  "short_name": "Cuisson",
+  "description": "Les trois piliers de la maîtrise de la cuisson — température, humidité, inertie, épices, viandes et légumes.",
+  "lang": "fr",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#6B1F1F",
+  "background_color": "#F5EFE0",
+  "categories": ["food", "education", "lifestyle", "books"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Viandes",
+      "short_name": "Viandes",
+      "description": "Protocoles temps-température par viande",
+      "url": "./viandes.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Légumes",
+      "short_name": "Légumes",
+      "description": "Protocoles par famille de légumes",
+      "url": "./legumes.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Épices",
+      "short_name": "Épices",
+      "description": "Atlas par famille botanique",
+      "url": "./epices.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

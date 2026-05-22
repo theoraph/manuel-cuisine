@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Épices — la grammaire — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link current"><span class="num">IV.</span>Épices</a>
+    <a href="epices.html#sec-4-1" class="sidebar-sub"><span class="num">4.1</span>Épice, herbe, aromate</a>
+    <a href="epices.html#sec-4-2" class="sidebar-sub"><span class="num">4.2</span>Chimie & volatilité</a>
+    <a href="epices.html#sec-4-3" class="sidebar-sub"><span class="num">4.3</span>Formes & conservation</a>
+    <a href="epices.html#sec-4-4" class="sidebar-sub"><span class="num">4.4</span>Timing en cuisson</a>
+    <a href="epices.html#sec-4-5" class="sidebar-sub"><span class="num">4.5</span>Techniques d'extraction</a>
+    <a href="epices.html#sec-4-6" class="sidebar-sub"><span class="num">4.6</span>Atlas par famille</a>
+    <a href="epices.html#sec-4-7" class="sidebar-sub"><span class="num">4.7</span>Mélanges canoniques</a>
+    <a href="epices.html#sec-4-8" class="sidebar-sub"><span class="num">4.8</span>Accords épices & produits</a>
+    <a href="epices.html#sec-4-9" class="sidebar-sub"><span class="num">4.9</span>Erreurs fréquentes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Épices — la grammaire</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Chapitre quatrième</div>
+  <h1>La grammaire des <em>épices</em></h1>
+  <p class="subtitle">Molécules, formes, timing, atlas par famille botanique, mélanges canoniques, accords</p>
+</div>
+
+<p class="lead">Les trois piliers précédents gouvernent la <strong>texture</strong> et la <strong>jutosité</strong>. Les épices, elles, dessinent l'<strong>identité aromatique</strong> du plat. Mal employées, elles écrasent&nbsp;; bien dosées, au bon moment et sous la bonne forme, elles ouvrent un quatrième axe de maîtrise — celui du goût pur.</p>
+
+  <div class="chapter-toc">
+    <strong>Sommaire du chapitre</strong>
+    4.1 Définitions et frontières · 4.2 Molécules et volatilité · 4.3 Formes et conservation · 4.4 Le timing en cuisson · 4.5 Techniques d'extraction · 4.6 Atlas par famille botanique · 4.7 Mélanges canoniques · 4.8 Accords épices &amp; produits · 4.9 Erreurs fréquentes
+  </div>
+
+  <h3 id="sec-4-1"><span class="h3-num">4.1</span>Qu'est-ce qu'une épice ? Frontières et vocabulaire</h3>
+  <p>Une <strong>épice</strong> est une partie sèche d'une plante — graine, écorce, bouton floral, rhizome, racine, fruit, noyau — utilisée pour parfumer un mets. Elle s'oppose à l'<strong>herbe aromatique</strong>, constituée des feuilles fraîches ou séchées (thym, basilic, persil, menthe, coriandre fraîche). L'<strong>aromate</strong> englobe les deux familles, plus les bulbes (ail, échalote, oignon) et certains condiments salins.</p>
+
+  <p>Cette distinction n'est pas pédante&nbsp;: parce qu'elles sont séchées, les épices concentrent leurs molécules dans un volume restreint. Une demi-cuillère à café de cumin moulu équivaut, en intensité, à une bonne poignée de feuilles fraîches. Cela impose un dosage précis, une chronologie de cuisson différente, et des techniques d'extraction adaptées.</p>
+
+  <blockquote>
+    Le mot &laquo;&nbsp;épice&nbsp;&raquo; vient du latin <em>species</em>, qui signifie &laquo;&nbsp;sorte, espèce&nbsp;&raquo;. Pour les marchands médiévaux, c'étaient les <em>denrées rares</em> par excellence — du poivre de Malabar au safran du Cachemire. Tout cuisinier qui les utilise sans en connaître la provenance et l'histoire passe à côté de la moitié du plaisir.
+    <cite>Olivier Roellinger, MOF, Maison de Bricourt à Cancale</cite>
+  </blockquote>
+
+  <h3 id="sec-4-2"><span class="h3-num">4.2</span>La chimie du goût — molécules signatures et volatilité</h3>
+  <p>Chaque épice tient son caractère de quelques molécules dominantes, réparties en deux familles&nbsp;:</p>
+  <ul>
+    <li><strong>Composés volatils</strong> (huiles essentielles)&nbsp;: terpènes, esters, aldéhydes, phénols. Légers, ils s'évaporent à la chaleur. Responsables de <em>l'odeur</em>.</li>
+    <li><strong>Composés non-volatils</strong>&nbsp;: alcaloïdes, capsaïcinoïdes, oléorésines. Stables. Responsables des <em>sensations en bouche</em> — piquance, brûlure, anesthésie, amertume.</li>
+  </ul>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Épice</th><th>Molécule signature</th><th>Famille</th><th>Stabilité à la chaleur</th></tr></thead>
+    <tbody>
+    <tr><td><b>Cannelle</b></td><td>Cinnamaldéhyde</td><td>Aldéhyde aromatique</td><td>Modérée — s'évapore vers 180&nbsp;°C</td></tr>
+    <tr><td><b>Clou de girofle</b></td><td>Eugénol</td><td>Phénol</td><td>Stable jusqu'à 250&nbsp;°C</td></tr>
+    <tr><td><b>Safran</b></td><td>Safranal, crocine, picrocrocine</td><td>Aldéhyde + caroténoïdes</td><td>Fragile à sec — infuser en milieu humide</td></tr>
+    <tr><td><b>Poivre noir</b></td><td>Pipérine + terpènes aromatiques</td><td>Alcaloïde + composés volatils</td><td>Piquance stable, arômes très volatils</td></tr>
+    <tr><td><b>Piment</b></td><td>Capsaïcine</td><td>Capsaïcinoïde</td><td>Très stable, &gt; 200&nbsp;°C</td></tr>
+    <tr><td><b>Gingembre frais</b></td><td>Gingerols → zingerone à la cuisson</td><td>Phénols</td><td>Vif à cru, plus doux et sucré cuit</td></tr>
+    <tr><td><b>Curcuma</b></td><td>Curcumine</td><td>Polyphénol jaune <strong>liposoluble</strong></td><td>Stable mais inactif sans gras + chaleur</td></tr>
+    <tr><td><b>Cardamome verte</b></td><td>α-terpinéol, 1,8-cinéole</td><td>Terpènes</td><td>Très volatils — broyer à la minute</td></tr>
+    <tr><td><b>Cumin</b></td><td>Cuminaldéhyde</td><td>Aldéhyde</td><td>S'intensifie au toastage à sec</td></tr>
+    <tr><td><b>Vanille</b></td><td>Vanilline</td><td>Aldéhyde phénolique</td><td>Stable, hydrosoluble — infuser en liquide chaud</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout science">
+    <span class="callout-title"></span>
+    <p><strong>Pourquoi la pipérine et la capsaïcine ne &laquo;&nbsp;brûlent&nbsp;&raquo; pas&nbsp;?</strong> Ce ne sont pas des composés volatils mais des stimulants des récepteurs <em>TRPV1</em> (piment) et <em>TRPA1</em> (poivre). Le cerveau interprète leur activation comme une douleur de chaleur ou d'irritation — c'est une <em>illusion thermique</em>. Aucune molécule à perdre par évaporation&nbsp;: ces molécules survivent à toutes les cuissons. À l'inverse, les <em>arômes</em> du poivre (β-caryophyllène, limonène) sont des terpènes très volatils — d'où la règle du <strong>poivre moulu à la minute, en fin de cuisson</strong>.</p>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour la <strong>curcumine</strong>&nbsp;: faire revenir le curcuma dans le gras chaud <em>avec une pincée de poivre noir</em>. La pipérine bloque la dégradation hépatique de la curcumine et multiplie sa biodisponibilité par 20 (Shoba <em>et al.</em>, 1998). C'est la base scientifique du <em>golden milk</em> indien et de la quasi-totalité des curries.</p>
+  </div>
+
+  <h3 id="sec-4-3"><span class="h3-num">4.3</span>Sous quelle forme ? — entière, moulue, fraîche, en pâte</h3>
+  <p>La même épice, sous quatre formes, n'a ni le même goût, ni la même durée de vie, ni le même mode d'usage.</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Forme</th><th>Conservation</th><th>Intensité</th><th>Usage type</th></tr></thead>
+    <tbody>
+    <tr><td><b>Entière sèche</b> (graines, cosses, bâtons)</td><td>2-4 ans à l'abri lumière/humidité</td><td>Modérée à froid, explosive si toastée</td><td>Infusion, marinade, fumaison, blooming dans le gras chaud</td></tr>
+    <tr><td><b>Moulue</b></td><td><strong>6 mois maximum</strong> (perte ≈ 50&nbsp;% d'arômes/an)</td><td>Immédiate, diffuse rapidement</td><td>Marinades, pâtes, finition, vinaigrettes</td></tr>
+    <tr><td><b>Fraîche</b> (gingembre, curcuma, galanga, citronnelle)</td><td>2-3 sem. au frigo, 6 mois congelée</td><td>Vive, citronnée, plus végétale</td><td>Tartare, infusions, woks, marinades</td></tr>
+    <tr><td><b>En pâte / huile aromatisée</b></td><td>2-3 sem. frigo, plusieurs mois congelée</td><td>Très concentrée</td><td>Curries, harissa, sambals, marinades épaisses</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p>Acheter des épices moulues <em>en grande quantité</em>. Au-delà de 6 mois, il ne reste qu'une poudre grise dépourvue d'arômes volatils. La règle&nbsp;: <strong>acheter entier, moudre à la demande</strong>. Un petit moulin à café électrique dédié aux épices (≤ 30 €) transforme la qualité de toute cuisine.</p>
+  </div>
+
+  <h3 id="sec-4-4"><span class="h3-num">4.4</span>Le timing — quand ajouter une épice ?</h3>
+  <p>C'est le geste le plus négligé du cuisinier amateur. Les composés volatils s'évaporent en cuisson&nbsp;; les composés liposolubles ont besoin de chaleur et de gras pour exprimer leurs arômes&nbsp;; certaines molécules ne se libèrent qu'après mécanique (broyage, mâchage). Quatre fenêtres principales&nbsp;:</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Moment</th><th>Pour quoi</th><th>Exemples typiques</th></tr></thead>
+    <tbody>
+    <tr><td><b>Début de cuisson</b> — dans le gras chaud, avec les aromates</td><td>Activer les composés liposolubles, &laquo;&nbsp;bloomer&nbsp;&raquo;, parfumer le gras qui parfumera ensuite tout le plat</td><td>Curcuma, paprika, graines (cumin, coriandre, moutarde, fenouil), cannelle bâton, badiane, cardamome verte, clou, gingembre frais, ail, oignon</td></tr>
+    <tr><td><b>Milieu de cuisson</b> — avec le liquide</td><td>Infuser sans perte excessive (la cuisson humide plafonne à 100&nbsp;°C, moins agressive que le gras à 180&nbsp;°C)</td><td>Safran (infusé à part), vanille, baies de genièvre, poivres entiers concassés, laurier, bouquet garni, anis étoilé</td></tr>
+    <tr><td><b>Fin de cuisson / hors feu</b></td><td>Préserver les composés volatils fragiles, fixer un parfum frais avant service</td><td>Poivre moulu, garam masala, paprika fumé, piment frais, gingembre râpé, sumac, muscade râpée, cumin moulu, fleurs séchées</td></tr>
+    <tr><td><b>À cru / en finition crue</b></td><td>Texture, piquant pur, contraste aromatique</td><td>Fleur de sel, poivre concassé, baies roses, sésame, sumac, za'atar, nigelle, piment d'Espelette, dukkah</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>La règle d'or des curries indiens</strong>&nbsp;: les épices <em>entières</em> au début (dans le ghee chaud), les épices <em>moulues</em> au milieu (avec les oignons fondus, jamais directement dans le gras nu — elles brûleraient instantanément), le <em>garam masala</em> en finition pour les arômes volatils. Cette chronologie est le secret de la profondeur des plats indiens.</p>
+  </div>
+
+  <h3 id="sec-4-5"><span class="h3-num">4.5</span>Techniques d'extraction — &laquo;&nbsp;réveiller&nbsp;&raquo; une épice</h3>
+
+  <h4><span class="h4-sub">a)</span>Le toastage à sec (<em>dry roasting</em>)</h4>
+  <p>Faire chauffer les épices entières dans une poêle <strong>sans matière grasse</strong>, à feu moyen, en remuant constamment, jusqu'à parfum intense et léger changement de couleur (30 sec à 3 min selon l'épice). Crée des composés Maillard à partir des sucres résiduels des graines et libère les huiles essentielles emprisonnées dans le péricarpe.</p>
+  <p>Indispensable pour&nbsp;: cumin, coriandre, fenouil, fenugrec, sésame, panch phoron, baharat. À éviter pour&nbsp;: cardamome (cosse), clou, cannelle — déjà très aromatiques, ils brûlent vite.</p>
+
+  <h4><span class="h4-sub">b)</span>Le blooming / tempérage (<em>tarka, tadka, chhonk</em>)</h4>
+  <p>Geste fondateur des cuisines indienne, perse, éthiopienne. Chauffer un gras (ghee, huile neutre) jusqu'à ce qu'il chatoie, y plonger les épices entières — graines de moutarde qui pétillent en premier, puis cumin, feuilles de curry, piment sec, asafœtida — pendant 10 à 30 secondes, puis verser <strong>tout le contenu</strong> sur le plat fini ou y faire revenir les aromates. Les composés liposolubles passent dans le gras qui sert ensuite de véhicule.</p>
+
+  <blockquote>
+    The tarka is the soul of Indian cooking. Without it, the food has no temper, no rhythm. With it, even a humble dal becomes a feast.
+    <cite>Madhur Jaffrey, <em>Indian Cookery</em></cite>
+  </blockquote>
+
+  <h4><span class="h4-sub">c)</span>L'infusion en milieu humide</h4>
+  <p>Pour les épices fragiles ou hydrosolubles&nbsp;: safran (eau ou lait tiède, 30 min), vanille (lait chaud, gousse fendue), badiane et cannelle (bouillon long), thé épicé (chai). On laisse libérer les arômes sans les soumettre à la chaleur sèche.</p>
+
+  <h4><span class="h4-sub">d)</span>Le mortier — la friction libère</h4>
+  <p>Un mortier en marbre, granit ou pierre, et un pilon. La friction écrase les cellules végétales et libère les huiles à froid, sans oxydation par la chaleur d'un moulin électrique. Indispensable pour le pesto, les pâtes de curry, les sauces moliennes, les bases d'épices fraîches (citronnelle, gingembre, ail, piment, kaffir).</p>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p>Pour broyer finement les épices sèches&nbsp;: <strong>moulin à café électrique dédié</strong> (≤ 30 €). Pour les pâtes humides (curry pastes, harissa, romescos)&nbsp;: <strong>mortier en granit</strong>. Pour le poivre&nbsp;: moulin manuel à mécanisme céramique réglable. Trois outils, trois géométries de coupe, trois résultats différents.</p>
+  </div>
+
+  <h4><span class="h4-sub">e)</span>L'huile aromatisée et le beurre composé</h4>
+  <p>Infuser à froid (huiles à conserver au frigo pour éviter le botulisme dans les huiles à l'ail) ou à chaud puis filtrer&nbsp;: huile à la truffe, huile au piment de Sichuan, huile au curry, beurre maître d'hôtel, beurre noisette à la sauge, beurre de café.</p>
+
+  <h3 id="sec-4-6"><span class="h3-num">4.6</span>Atlas des épices — par famille botanique</h3>
+  <p>Plutôt qu'un classement alphabétique, ce panorama suit la <strong>partie de la plante</strong> dont chaque épice est issue. C'est la classification de Harold McGee, et la plus utile au cuisinier&nbsp;: deux épices d'une même famille partagent souvent les mêmes techniques d'extraction et les mêmes affinités.</p>
+
+  <!-- 4.6.1 GRAINES -->
+  <h4>4.6.1&nbsp;·&nbsp;Les graines</h4>
+  <p class="spice-family-intro">Les graines concentrent des huiles essentielles dans une enveloppe ligneuse. <strong>Toastage à sec</strong> ou <strong>blooming dans le gras chaud</strong> sont les deux gestes systématiques. Achetées entières, broyées à la minute, elles tiennent 2-3 ans dans un bocal opaque.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Cumin</h5>
+      <span class="latin">Cuminum cyminum — Apiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Vallée du Nil et Méditerranée orientale&nbsp;; cultivé en Iran, Turquie, Inde, Syrie.</dd>
+        <dt>Variétés</dt><dd>Cumin blanc (commun), cumin noir <em>kala jeera</em> (himalayen, plus floral et fumé), à ne pas confondre avec la nigelle souvent appelée &laquo;&nbsp;cumin noir&nbsp;&raquo; à tort.</dd>
+        <dt>Profil aromatique</dt><dd>Chaud, terreux, profondément animal, légèrement amer. Notes de noisette grillée, de pop-corn, de café, de cuir. Au toastage, les aldéhydes explosent en notes de viande grillée et de fumée douce.</dd>
+        <dt>Sensations</dt><dd>Ancre le plat, apporte une sensation de longue cuisson et de fait-maison. Chauffe le palais sans piquer, persistance moyenne légèrement astringente. Amplifie l'umami de l'agneau, des légumineuses et des tomates cuites.</dd>
+        <dt>Forme</dt><dd>Entier (longue conservation), moulu (6 mois max).</dd>
+        <dt>Moment</dt><dd>Toastage à sec ou blooming au début&nbsp;; cumin moulu en finition sur houmous, œufs, fromages frais.</dd>
+        <dt>Cuisson</dt><dd>Adore les cuissons longues à l'eau (couscous, chili) et la chaleur sèche (graines sur les naans).</dd>
+        <dt>Accords</dt><dd>Agneau, courge, carotte, légumineuses, riz pilaf, tomate, cumin et coriandre forment un couple presque universel.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Coriandre (graines)</h5>
+      <span class="latin">Coriandrum sativum — Apiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Bassin méditerranéen et Proche-Orient&nbsp;; cultivée aujourd'hui partout (Maroc, Inde, Bulgarie).</dd>
+        <dt>Variétés</dt><dd>Petites graines &laquo;&nbsp;indiennes&nbsp;&raquo; (citronnées), grosses graines &laquo;&nbsp;marocaines&nbsp;&raquo; (plus florales).</dd>
+        <dt>Profil aromatique</dt><dd>Citronné (linalol), floral, légèrement sucré&nbsp;; notes de sauge, d'orange amère, de cèdre. Plus on toaste, plus elles s'orientent vers la noix grillée et le pain chaud.</dd>
+        <dt>Sensations</dt><dd>Allège et illumine. Équilibre les épices &laquo;&nbsp;lourdes&nbsp;&raquo; (cumin, fenugrec, paprika). Sensation d'ouverture, de fraîcheur en arrière-bouche, presque sucrée. Donne un voile aérien au plat.</dd>
+        <dt>Forme</dt><dd>Entière, toastée puis moulue (idéal). La poudre seule perd vite ses notes citronnées.</dd>
+        <dt>Moment</dt><dd>Avec les aromates au début, en marinade, en finition crue concassée pour le croquant.</dd>
+        <dt>Cuisson</dt><dd>Marinades à cru, blooming, infusion dans les courts-bouillons et fumets.</dd>
+        <dt>Accords</dt><dd>Carotte, agneau, poisson blanc, charcuterie, choucroute alsacienne, légumes-racines.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Fenouil (graines)</h5>
+      <span class="latin">Foeniculum vulgare — Apiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Bassin méditerranéen&nbsp;; cultivé en Italie (Florence), Inde, Égypte.</dd>
+        <dt>Variétés</dt><dd>Fenouil sucré (Italie), fenouil amer (sauvage), <em>lucknow</em> vert clair (Inde, très parfumé).</dd>
+        <dt>Profil aromatique</dt><dd>Anisé, sucré, herbacé&nbsp;; notes de réglisse fraîche, de pastis, d'estragon, légèrement camphré. Plus arrondi et fruité que l'anis vert.</dd>
+        <dt>Sensations</dt><dd>Rafraîchit le palais en finale — d'où le <em>mukhwas</em> indien servi en post-repas. Apporte une douceur réglissée qui contrebalance le gras du porc, des saucisses et des poissons à chair grasse. Sensation digestive, presque détendante.</dd>
+        <dt>Forme</dt><dd>Entier presque toujours, moulu en pâtisserie.</dd>
+        <dt>Moment</dt><dd>Marinades de porc, débuts de cuisson dans le gras, fin pour finition croquante.</dd>
+        <dt>Cuisson</dt><dd>Rôtissage (<em>porchetta</em> italienne), saumure, infusion (tisanes), pain aux figues, ricotta.</dd>
+        <dt>Accords</dt><dd>Porc, saucisses italiennes, poisson grillé, oranges, légumineuses, pain.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Anis vert</h5>
+      <span class="latin">Pimpinella anisum — Apiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Méditerranée orientale, Égypte&nbsp;; cultivé en Turquie, Syrie, Espagne (Andalousie).</dd>
+        <dt>Variétés</dt><dd>Une seule espèce, mais à distinguer de l'<strong>anis étoilé</strong> (<em>Illicium verum</em>, voir &laquo;&nbsp;fruits&nbsp;&raquo;) et de la réglisse.</dd>
+        <dt>Profil aromatique</dt><dd>Réglisse fine et florale (anéthol), bonbon à la violette, pain d'épices, fond légèrement camphré, presque mentholé.</dd>
+        <dt>Sensations</dt><dd>Sensation glacée légère (effet camphré), enveloppe la bouche d'une douceur sucrée sans calories. Évoque le sucre d'orge, le pastis frais, l'enfance. Allonge la finale d'un plat.</dd>
+        <dt>Forme</dt><dd>Graines entières ou moulues.</dd>
+        <dt>Moment</dt><dd>Infusion (pastis, sambuca, ouzo), pâtisserie (pain d'épices, pains anisés du Sud-Ouest), marinades à poissons gras.</dd>
+        <dt>Cuisson</dt><dd>Cuissons douces&nbsp;: trop forte chaleur sèche = amertume.</dd>
+        <dt>Accords</dt><dd>Pomme, figue, poisson, agneau, vins doux, foie gras au pain d'épices.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Carvi</h5>
+      <span class="latin">Carum carvi — Apiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Europe centrale et nord-orientale&nbsp;; Allemagne, Pays-Bas, Hongrie, Tunisie.</dd>
+        <dt>Variétés</dt><dd>Une variété principale&nbsp;; à ne pas confondre avec le cumin (apparenté mais profil très différent — terreux, anisé, vert).</dd>
+        <dt>Profil aromatique</dt><dd>Anisé mais boisé et terreux&nbsp;; notes de pin, d'eucalyptus léger, de menthol, d'écorce d'orange. Plus mâle et rustique que le fenouil.</dd>
+        <dt>Sensations</dt><dd>Apporte structure et profondeur. Sensation aérée, presque mentholée, qui allège la lourdeur de la choucroute et des fromages affinés. Persistance longue, vert frais en finale.</dd>
+        <dt>Forme</dt><dd>Graines entières.</dd>
+        <dt>Moment</dt><dd>Dans la pâte avant cuisson (pains de seigle, choucroute), en marinade à harengs.</dd>
+        <dt>Cuisson</dt><dd>Bouilli, braisé (choucroute), cuit au four (pains scandinaves, bretzels).</dd>
+        <dt>Accords</dt><dd>Choux, pommes de terre, pain de seigle, Munster et Cantal, liqueur de kummel.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Graines de moutarde</h5>
+      <span class="latin">Brassica / Sinapis — Brassicaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Inde et bassin méditerranéen&nbsp;; trois espèces principales.</dd>
+        <dt>Variétés</dt><dd><b>Blanche/jaune</b> (<em>Sinapis alba</em>, moutarde américaine, douce), <b>brune</b> (<em>Brassica juncea</em>, Dijon, vinaigrette), <b>noire</b> (<em>Brassica nigra</em>, la plus piquante, Inde).</dd>
+        <dt>Profil aromatique</dt><dd>À cru, presque sans odeur. Mouillées&nbsp;: piquance végétale franche (sinigrine + myrosinase). Toastées dans le gras&nbsp;: noisette, popcorn, beurre noisette, légèrement chou cuit.</dd>
+        <dt>Sensations</dt><dd>Piquance nasale qui monte brutalement puis disparaît (différente du chili — flash court et propre). Texture craquante quand entière, sous la dent. Joue le rôle d'émulsionnant et de fil conducteur dans les vinaigrettes.</dd>
+        <dt>Forme</dt><dd>Graines entières (tarka indien), broyées (moutardes préparées), poudre.</dd>
+        <dt>Moment</dt><dd>Début de cuisson en blooming jusqu'à ce qu'elles éclatent (Kerala)&nbsp;; broyées dans la vinaigrette à cru.</dd>
+        <dt>Cuisson</dt><dd>Friture rapide à chaud (tarka), vinaigrette à cru. <strong>La piquance ne se développe qu'au contact d'eau froide</strong> (enzyme myrosinase)&nbsp;; trop chaud = enzyme détruite = douceur.</dd>
+        <dt>Accords</dt><dd>Curry de poisson au Kerala, légumes secs, vinaigrettes, lapin moutarde, viandes blanches.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Fenugrec</h5>
+      <span class="latin">Trigonella foenum-graecum — Fabaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Bassin méditerranéen et Asie occidentale&nbsp;; Inde, Égypte, Maroc.</dd>
+        <dt>Variétés</dt><dd>Graines (<em>methi</em>) très amères à cru, et feuilles séchées (<em>kasuri methi</em>) plus douces.</dd>
+        <dt>Profil aromatique</dt><dd>Très singulier — sirop d'érable, caramel brûlé, céleri sec, foin coupé. Toasté&nbsp;: cacao amer, livèche, vin jaune du Jura (même molécule, le sotolone). C'est <em>la</em> signature du curry classique.</dd>
+        <dt>Sensations</dt><dd>À cru, amertume désagréable. Toasté, chaleur ronde et profonde qui persiste, presque sucrée. Sans fenugrec, pas de &laquo;&nbsp;curry powder&nbsp;&raquo;. Effet stomacal apaisant, presque réconfortant.</dd>
+        <dt>Forme</dt><dd>Graines entières (à toaster impérativement) ou germées.</dd>
+        <dt>Moment</dt><dd>Toastage à sec pour ôter l'amertume, puis blooming. Feuilles séchées en finition.</dd>
+        <dt>Cuisson</dt><dd>Curries, panch phoron bengali, mélanges à pain (helba égyptienne, ful medames).</dd>
+        <dt>Accords</dt><dd>Lentilles, poulet (butter chicken — <em>kasuri methi</em> obligatoire), thé yéménite, ful, mafé.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Nigelle</h5>
+      <span class="latin">Nigella sativa — Ranunculaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Méditerranée et Asie occidentale&nbsp;; <em>kalonji</em> en Inde, <em>habba sawda</em> au Maghreb, &laquo;&nbsp;cumin noir&nbsp;&raquo; (à tort).</dd>
+        <dt>Variétés</dt><dd>Une seule espèce alimentaire ; les <em>damascena</em> sont ornementales.</dd>
+        <dt>Profil aromatique</dt><dd>Poivré, oignon-ail discret, notes d'origan, de noix, légèrement amer, presque sésame toasté.</dd>
+        <dt>Sensations</dt><dd>Craquant qui libère sa chaleur sous la dent. Évoque l'oignon grillé sans le poids olfactif. Décoratif (petits points noirs) et savoureux en finition de pains et fromages frais.</dd>
+        <dt>Forme</dt><dd>Graines entières, toujours.</dd>
+        <dt>Moment</dt><dd>En finition crue sur naan, pains turcs, fromages frais, salades.</dd>
+        <dt>Cuisson</dt><dd>Pas de cuisson directe&nbsp;: parsemer sur la pâte avant enfournement, ou en finition.</dd>
+        <dt>Accords</dt><dd>Pains levés, fromages frais (labneh), salades de tomate, légumes rôtis, panch phoron bengali.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Cardamome verte</h5>
+      <span class="latin">Elettaria cardamomum — Zingiberaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Ghâts occidentaux (Kerala, Inde)&nbsp;; aujourd'hui le Guatemala est le premier producteur mondial.</dd>
+        <dt>Variétés</dt><dd><b>Verte</b> (Inde, Guatemala — la plus aromatique), <b>noire/brune</b> (<em>Amomum subulatum</em>, Népal, Sikkim — fumée, séchée au feu), <b>blanche</b> (verte blanchie au soleil, plus douce).</dd>
+        <dt>Profil aromatique</dt><dd>Eucalyptus, citron vert, menthol, camphre, fleur de tilleul, pin, gingembre frais. Une vingtaine de composés terpéniques au minimum&nbsp;: c'est l'épice la plus complexe au monde, après peut-être le safran.</dd>
+        <dt>Sensations</dt><dd>Fraîcheur quasi glaciale en arrière-bouche, &laquo;&nbsp;rince le palais&nbsp;&raquo;. Monte au nez (effet aromathérapeutique). Apporte une noblesse aristocratique au plat — la &laquo;&nbsp;vanille de l'Inde&nbsp;&raquo;.</dd>
+        <dt>Forme</dt><dd>Cosses entières (idéal), graines extraites à la minute, moulu (à éviter — perd en jours).</dd>
+        <dt>Moment</dt><dd>Cosses entières écrasées au début (curries, riz pilaf, café arabe)&nbsp;; graines moulues à la minute en pâtisserie (brioches scandinaves).</dd>
+        <dt>Cuisson</dt><dd>Infusion (lait pour <em>kheer</em>, thé masala), blooming, pâtisserie scandinave (<em>kardemummabullar</em>).</dd>
+        <dt>Accords</dt><dd>Riz basmati, agneau (biryani), café arabe (<em>qahwa</em>), chocolat, brioche, oranges.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- 4.6.2 ÉCORCES -->
+  <h4>4.6.2&nbsp;·&nbsp;Les écorces</h4>
+  <p class="spice-family-intro">Trois écorces aromatiques dominent — toutes cousines, toutes souvent confondues. La distinction est fondamentale en pâtisserie haut de gamme.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Cannelle de Ceylan</h5>
+      <span class="latin">Cinnamomum verum — Lauraceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Sri Lanka exclusivement (Ceylan)&nbsp;; aussi Inde du Sud, Seychelles.</dd>
+        <dt>Caractère</dt><dd>Bâtons fins (1 mm), feuilletés, brun clair, friables. Saveur subtile, florale, douce, complexe.</dd>
+        <dt>Profil aromatique</dt><dd>Floral, miel d'acacia, clémentine, bois précieux (santal), vanillé, fond légèrement boisé chaud. Subtile, presque pudique.</dd>
+        <dt>Sensations</dt><dd>Chaleur douce sans piquant, fond en bouche, persistance moyenne et élégante. Évoque le fait-maison, l'enfance, sans jamais saturer ni écraser les autres saveurs.</dd>
+        <dt>Forme</dt><dd>Bâtons entiers à infuser, moulue à la minute pour la pâtisserie.</dd>
+        <dt>Moment</dt><dd>Infusion (lait, sirop, vin chaud), pâtisserie en poudre, début de cuisson dans les tajines.</dd>
+        <dt>Cuisson</dt><dd>Convient à toutes les cuissons. Reste douce à 180&nbsp;°C.</dd>
+        <dt>Accords</dt><dd>Riz au lait, pommes, tajines, biscuits sablés, chocolat noir, agneau au miel.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Cannelle de Chine (cassia)</h5>
+      <span class="latin">Cinnamomum cassia — Lauraceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Chine du Sud, Vietnam (la plus prisée — &laquo;&nbsp;cannelle de Saïgon&nbsp;&raquo;), Indonésie, Madagascar.</dd>
+        <dt>Caractère</dt><dd>Bâton épais (2-5 mm), brun rouge, dur. Saveur piquante, chaude, &laquo;&nbsp;chewing-gum cannelle&nbsp;&raquo;. <strong>C'est la cannelle vendue en supermarché.</strong></dd>
+        <dt>Profil aromatique</dt><dd>Mordante, piquante, presque alcoolisée&nbsp;; notes de chewing-gum cannelle (Big Red), de bois résineux, de terre humide chaude.</dd>
+        <dt>Sensations</dt><dd>Chaleur franche, piquante au fond du palais. Sucré-épicé qui persiste très longtemps. Robuste, presque agressive — idéale pour cuisson longue où elle tient sa note pendant des heures.</dd>
+        <dt>Forme</dt><dd>Bâton ou moulu.</dd>
+        <dt>Moment</dt><dd>Plats salés relevés (5 épices chinois, pho), boulangerie de force, marinades barbecue.</dd>
+        <dt>Cuisson</dt><dd>Robuste — supporte les longues cuissons (braisés chinois, pho 4 h).</dd>
+        <dt>Accords</dt><dd>Pho, ragoûts chinois, café, churros, sucre roux, ribs barbecue. <strong>Note santé</strong>&nbsp;: riche en coumarine — l'EFSA recommande &lt; 0,1 mg/kg de poids corporel/jour.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Cannelle de Saïgon &amp; autres</h5>
+      <span class="latin">Cinnamomum loureiroi, C. burmannii</span>
+      <dl>
+        <dt>Origine</dt><dd>Vietnam (Saïgon — la plus puissante en cinnamaldéhyde, jusqu'à 5&nbsp;%), Indonésie (Korintje).</dd>
+        <dt>Profil aromatique</dt><dd>Cinnamaldéhyde concentré jusqu'à 5&nbsp;%, intensité presque liquoreuse&nbsp;; fond de prune, de cèdre, de clou très discret.</dd>
+        <dt>Sensations</dt><dd>Coup direct, chaud, presque pétillant. Réservée aux pâtisseries qui ont besoin d'une signature gourmande explosive (cinnamon roll, snickerdoodle, sablés).</dd>
+        <dt>Usage</dt><dd>Pâtisserie professionnelle, glaces, sirops, <em>cinnamon rolls</em>. La cannelle de Saïgon est l'arme secrète des pâtissiers cherchant la saveur la plus &laquo;&nbsp;explosive&nbsp;&raquo;.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Reconnaître la cannelle de Ceylan&nbsp;:</strong> bâton clair, mince, feuilleté en plusieurs couches comme un cigare. La cassia est un seul tube épais et sombre. À la dégustation à cru, la Ceylan est florale et délicate&nbsp;; la cassia mord la langue. Le surcoût de la Ceylan est justifié en pâtisserie fine&nbsp;; en braisage chinois ou marinade barbecue, la cassia est meilleure.</p>
+  </div>
+
+  <!-- 4.6.3 FLEURS / BOUTONS -->
+  <h4>4.6.3&nbsp;·&nbsp;Boutons floraux, pistils et fleurs</h4>
+  <p class="spice-family-intro">Les fleurs concentrent les huiles essentielles les plus délicates de la plante. À manipuler avec précaution&nbsp;: ne jamais brûler dans un gras nu.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Clou de girofle</h5>
+      <span class="latin">Syzygium aromaticum — Myrtaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Îles Moluques (Indonésie) historiquement&nbsp;; aujourd'hui Madagascar, Zanzibar, Sri Lanka, Indonésie.</dd>
+        <dt>Caractère</dt><dd>Bouton floral séché&nbsp;; riche en eugénol (jusqu'à 80&nbsp;% de l'huile), parfum anesthésiant.</dd>
+        <dt>Profil aromatique</dt><dd>Médicinal (dentifrice, eugénol), bois sombre, fruits noirs séchés (pruneau, raisin sec), champignon, fond légèrement narcotique.</dd>
+        <dt>Sensations</dt><dd><strong>Anesthésiant léger</strong> — engourdit subtilement le palais (l'eugénol est un antalgique local utilisé en dentisterie). Chaleur profonde qui persiste très longtemps. &laquo;&nbsp;Vieillit&nbsp;&raquo; instantanément un plat, lui donne une gravité automnale.</dd>
+        <dt>Forme</dt><dd>Entier presque toujours (puissant, dosage à l'unité). Moulu dans le quatre-épices et le ras-el-hanout.</dd>
+        <dt>Moment</dt><dd>Piquer dans un oignon (bouillon, pot-au-feu), début de cuisson dans les tajines, garam masala en finition.</dd>
+        <dt>Cuisson</dt><dd>Robuste — supporte 8&nbsp;h de braisage. <strong>Sous-doser</strong>&nbsp;: 2-3 clous suffisent pour un pot-au-feu.</dd>
+        <dt>Accords</dt><dd>Pomme, jambon, vin chaud, choucroute, oignon piqué, tajines, charcuteries fumées.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Safran</h5>
+      <span class="latin">Crocus sativus — Iridaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Iran (90&nbsp;% production mondiale), Cachemire, Espagne (La Mancha — DOP), Maroc (Taliouine), France (Gâtinais, Quercy).</dd>
+        <dt>Variétés</dt><dd><b>Sargol</b> iranien (pistils sans pied jaune, le plus pur), <b>Negin</b> (épais, puissant), <b>Coupe</b> espagnole, <b>Mongra</b> du Cachemire (le plus rare et aromatique).</dd>
+        <dt>Profil aromatique</dt><dd>Foin fraîchement coupé, miel de châtaignier, métal noble, iode marin, cuir doux, tabac blond, fond légèrement amer (picrocrocine).</dd>
+        <dt>Sensations</dt><dd>Imprègne d'une couleur or solaire. Sensation de luxe, d'Orient, de fête. Amertume noble en arrière-bouche qui équilibre les sucres et les graisses. Persistance lente à mi-palais.</dd>
+        <dt>Forme</dt><dd>Pistils entiers exclusivement. Le safran moulu vendu bon marché est fraudé (curcuma, paprika, fil de safranum) dans 90&nbsp;% des cas.</dd>
+        <dt>Moment</dt><dd><strong>Toujours infusé</strong>&nbsp;: 5-10 pistils écrasés au mortier, infusés 20-30 min dans 2 c. à soupe de liquide tiède (eau, lait, bouillon). On ajoute le bain coloré <strong>en fin de cuisson</strong>.</dd>
+        <dt>Cuisson</dt><dd>Jamais jeté à sec dans un gras chaud (composés détruits). Risotto, paella, bouillabaisse, biryani&nbsp;: infusion + ajout final.</dd>
+        <dt>Accords</dt><dd>Riz (risotto milanais, paella, biryani), poissons et crustacés (bouillabaisse), lait (<em>kheer</em>), agneau (tajines), poire pochée.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Câpre</h5>
+      <span class="latin">Capparis spinosa — Capparaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Bassin méditerranéen&nbsp;; Pantelleria (Sicile), Salina, Lipari, Maroc.</dd>
+        <dt>Profil aromatique</dt><dd>Vinaigré (au vinaigre), salin et iodé (au sel sec), herbacé, légèrement moutardé, citronné, marin.</dd>
+        <dt>Sensations</dt><dd>Punch acide qui réveille instantanément. Petites bombes salées qui explosent sous la dent. Net, vif, tranchant. Allège et structure les sauces grasses et les viandes blanches.</dd>
+        <dt>Forme</dt><dd>Bouton floral, conservé au <strong>sel sec</strong> (préférer) ou à la saumure. Plus le calibre est petit (<em>nonpareille</em>), plus l'arôme est intense.</dd>
+        <dt>Moment</dt><dd>Toujours <strong>en fin de cuisson</strong> ou crue. Rincer rapidement à l'eau si conservée en sel.</dd>
+        <dt>Cuisson</dt><dd>Sauces (tartare, gribiche, ravigote), pâtes (puttanesca), poissons au beurre noir.</dd>
+        <dt>Accords</dt><dd>Saumon, raie au beurre noir, pâtes à l'aubergine, vitello tonnato, agneau aux anchois.</dd>
+      </dl>
+    </div>
+  </div>
+
+  <!-- 4.6.4 FRUITS / BAIES -->
+  <h4>4.6.4&nbsp;·&nbsp;Fruits, baies et drupes</h4>
+  <p class="spice-family-intro">Les épices &laquo;&nbsp;fruit&nbsp;&raquo; couvrent l'éventail le plus large — du poivre noir (drupe d'une liane d'Inde) au piment (capsule de <em>Capsicum</em>), en passant par la vanille (gousse d'orchidée). Diversité totale de techniques.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Poivre noir</h5>
+      <span class="latin">Piper nigrum — Piperaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Côte de Malabar (Kerala, Inde)&nbsp;; cultivé au Vietnam (premier producteur), Indonésie, Sri Lanka, Madagascar, Brésil, Cambodge (Kampot — IGP).</dd>
+        <dt>Crus à connaître</dt><dd><b>Tellichery</b> (gros calibre, Inde), <b>Malabar</b>, <b>Kampot</b> rouge/noir/blanc (Cambodge), <b>Penja</b> (Cameroun — terreux), <b>Sarawak</b> (Bornéo), <b>Voatsiperifery</b> (Madagascar — sauvage, citronné).</dd>
+        <dt>Vert, noir, blanc ?</dt><dd>Même fruit, stades différents&nbsp;: <b>vert</b> immature (séché ou saumure), <b>noir</b> mature séché avec péricarpe, <b>blanc</b> mature fermenté débarrassé du péricarpe, <b>rouge</b> ultra-mûr (rare, Kampot).</dd>
+        <dt>Profil aromatique</dt><dd>Selon le cru&nbsp;: citronné et résineux (Voatsiperifery), terreux-cacaoté (Penja), floral et fruité rouge (Kampot rouge), boisé chaud (Tellichery), camphré (Sarawak), agrumes vifs (Malabar). C'est l'épice qui se déguste comme un grand vin.</dd>
+        <dt>Sensations</dt><dd>Piquance logée au fond de la gorge (pipérine — différente du chili, plus profonde, plus brève). <strong>Amplificateur d'umami</strong>&nbsp;: réveille toutes les autres saveurs du plat. Chaleur sèche, persistance moyenne.</dd>
+        <dt>Forme</dt><dd>Toujours entier, moulu à la minute. Le poivre prémoulu perd 70&nbsp;% de ses terpènes en 3 mois.</dd>
+        <dt>Moment</dt><dd><strong>En finition</strong> pour les arômes volatils. En infusion (béarnaise, jus de viande) pour la piquance et la profondeur.</dd>
+        <dt>Cuisson</dt><dd>Concassé au mortier dans une sauce poivre, mignonnette à l'huître, sur un steak juste avant service.</dd>
+        <dt>Accords</dt><dd>Bœuf, fromages, chocolat noir, fraise (très chic), cabillaud, foie gras.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Poivre de Sichuan</h5>
+      <span class="latin">Zanthoxylum bungeanum — Rutaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Province du Sichuan (Chine)&nbsp;; appelé <em>fagara</em>, <em>sanshō</em> au Japon (espèce voisine).</dd>
+        <dt>Caractère</dt><dd>Pas un vrai poivre — péricarpe d'une baie de rutacée. <strong>Anesthésiant</strong> par l'hydroxy-α-sanshool qui provoque un picotement &laquo;&nbsp;rafraîchissant&nbsp;&raquo;. Notes citronnées, florales.</dd>
+        <dt>Profil aromatique</dt><dd>Mandarine confite, eau de rose, cèdre, citron vert, mousse de chêne, fond légèrement savonneux et floral.</dd>
+        <dt>Sensations</dt><dd><strong>Engourdissement vibrant</strong> — la lèvre picote, frémit, &laquo;&nbsp;pétille&nbsp;&raquo; comme du soda. Fourmillements rafraîchissants qui durent 10 à 30 secondes. Rafraîchit le palais entre deux bouchées brûlantes (combinaison <em>málà</em> = engourdissant + brûlant).</dd>
+        <dt>Forme</dt><dd>Cosses entières, débarrassées des graines noires (amères). Toaster légèrement et concasser à la minute.</dd>
+        <dt>Moment</dt><dd>Toastage rapide + ajout en fin de cuisson, ou écrasé en finition (<em>mapo tofu</em>, <em>kung pao</em>).</dd>
+        <dt>Cuisson</dt><dd>Wok, marinades, infusions d'huiles, plats au piment (mariage indissociable&nbsp;: <em>málà</em> = engourdissant + brûlant).</dd>
+        <dt>Accords</dt><dd>Canard, agneau, tofu, gambas, huile de chili, chocolat noir, fraise.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Baies roses</h5>
+      <span class="latin">Schinus terebinthifolia — Anacardiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Amérique du Sud (Brésil), Île de la Réunion. <strong>Pas un vrai poivre.</strong></dd>
+        <dt>Caractère</dt><dd>Notes résineuses, sucrées, fruitées, légèrement piquantes. Couleur décorative remarquable.</dd>
+        <dt>Profil aromatique</dt><dd>Résine de pin doux, poivron rouge confit, térébenthine adoucie, baie de genièvre fruitée, fond légèrement sucré.</dd>
+        <dt>Sensations</dt><dd>Craquant qui éclate sous la dent puis libère une douceur sucrée et une piquance très légère. Effet décoratif majeur (rose vif). Sensation aérienne, festive, presque pétillante.</dd>
+        <dt>Forme</dt><dd>Entières, à concasser légèrement à la minute.</dd>
+        <dt>Moment</dt><dd>Finition crue, marinades de poissons et magrets, sauces crémeuses.</dd>
+        <dt>Cuisson</dt><dd>Aucune cuisson directe — la chaleur prolongée détruit leurs notes résineuses fragiles. Concassage à la minute, ajout en toute fin de plat ou à cru en décoration.</dd>
+        <dt>Accords</dt><dd>Poissons crus et marinés (saumon, daurade), foie gras, magret, fromages frais (chèvre, ricotta), fraise, betterave, panna cotta salée.</dd>
+      </dl>
+    </div>
+
+  </div><!-- /spice-grid 4.6.4 -->
+
+    <!-- 4.6.5 RHIZOMES & RACINES -->
+  <h4>4.6.5&nbsp;·&nbsp;Rhizomes &amp; racines</h4>
+  <p class="spice-family-intro">Les rhizomes (tiges souterraines renflées) et les racines concentrent des composés <strong>liposolubles</strong> et des huiles essentielles <strong>volatiles à chaud</strong>. Frais, ils s'utilisent crus ou en sué doux&nbsp;; séchés et moulus, ils exigent une <strong>cuisson dans un gras tiède</strong> (50-150&nbsp;°C) pour libérer leurs pigments — jamais dans un gras fumant, qui les brûle en quelques secondes.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Gingembre</h5>
+      <span class="latin">Zingiber officinale — Zingiberaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Asie du Sud-Est (probablement Inde du Sud)&nbsp;; cultivé au Sri Lanka, en Chine, en Australie, au Nigéria, au Pérou.</dd>
+        <dt>Variétés</dt><dd>Gingembre frais (jaune pâle, juteux), gingembre séché entier &laquo;&nbsp;rhizome ridé&nbsp;&raquo;, gingembre confit, gingembre fermenté (<em>beni shōga</em>, <em>gari</em> japonais).</dd>
+        <dt>Caractère</dt><dd>Pique &laquo;&nbsp;chaud&nbsp;&raquo; et frais à la fois. <strong>Gingérol</strong> à cru (piquant net, mordant), qui se transforme en <strong>zingérone</strong> et en <strong>shogaol</strong> à la cuisson (chaleur plus ronde, presque sucrée, persistance longue).</dd>
+        <dt>Profil aromatique</dt><dd>Citron vert, savon doux, poivre frais, eucalyptus, citronnelle, terre humide après la pluie. Notes vives quand frais&nbsp;; arrondi vers le sucre et la résine quand séché ou cuit longtemps.</dd>
+        <dt>Sensations</dt><dd>Réchauffe la gorge et l'estomac, &laquo;&nbsp;ouvre&nbsp;&raquo; les sinus, salive abondante. Pic en bouche puis traînée chaude qui s'installe.</dd>
+        <dt>Forme</dt><dd>Frais (râpé Microplane, sans peler — le contenu cellulaire est sous l'épiderme), confit, en poudre (vieillit vite — 6 mois), en pâte (sceller à l'huile au frais).</dd>
+        <dt>Moment</dt><dd>Frais&nbsp;: en marinade, dans une vinaigrette, à la fin d'une soupe asiatique. Séché&nbsp;: avec les épices entières en début de cuisson. Confit&nbsp;: pâtisserie, finition.</dd>
+        <dt>Cuisson</dt><dd>Sué quelques minutes dans un gras tiède avec ail et oignon — base de mille curries. Évite la chaleur sèche prolongée seule&nbsp;: l'arôme s'éteint en 30-40 min.</dd>
+        <dt>Accords</dt><dd>Carotte, citron, miel, poire, chocolat noir, agrumes, porc, poisson blanc, crevette, coriandre, ail, citronnelle, sauce soja.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Curcuma</h5>
+      <span class="latin">Curcuma longa — Zingiberaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Inde (75% de la production mondiale, dont le célèbre <em>Alleppey</em> du Kerala, riche en curcumine 5-6%), aussi cultivé en Indonésie, Madagascar, Vietnam.</dd>
+        <dt>Caractère</dt><dd>Discret mais structurant. <strong>Curcumine</strong> = pigment jaune-orange puissant, liposoluble, anti-inflammatoire, peu volatil. Légère amertume terreuse, note de mandarine séchée.</dd>
+        <dt>Profil aromatique</dt><dd>Terre fraîche, gingembre adouci, écorce d'orange séchée, foin, bois de santal, fond ambré et résineux. À l'arrière&nbsp;: pointe iodée presque marine.</dd>
+        <dt>Sensations</dt><dd>Tapisse le palais d'un arrière-goût terreux long. Donne au plat une <strong>plénitude de fond</strong> que peu d'épices apportent — souvent imperceptible isolément mais sa présence se voit quand on l'enlève.</dd>
+        <dt>Forme</dt><dd>Frais (rhizome orange vif, à râper)&nbsp;; séché en poudre (la forme dominante). Achat en sachets opaques&nbsp;; <strong>évite les sachets transparents</strong> — la lumière dégrade la curcumine en quelques semaines.</dd>
+        <dt>Moment</dt><dd>Avec les autres épices moulues en milieu de cuisson, jamais directement dans un gras fumant (carbonisation immédiate, goût de carton).</dd>
+        <dt>Cuisson</dt><dd>Dans un gras tiède 100-130&nbsp;°C, 30 sec à 1 min max avant d'ajouter un liquide ou des oignons. Pour potentialiser&nbsp;: associer à du <strong>poivre noir</strong> (la pipérine multiplie par 20 la biodisponibilité de la curcumine) et à un corps gras (la curcumine est liposoluble).</dd>
+        <dt>Accords</dt><dd>Coco, lentilles, riz, chou-fleur, œuf, gingembre, ail, citron vert, lait fermenté, agneau, poisson blanc.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Galanga</h5>
+      <span class="latin">Alpinia galanga — Zingiberaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Thaïlande, Indonésie, Malaisie. Présent depuis le Moyen Âge dans les apothicaireries européennes, redécouvert dans les années 1990 avec la mode thaï.</dd>
+        <dt>Variétés</dt><dd>Grand galanga (<em>A. galanga</em>, dur, fibreux, le plus courant) et petit galanga (<em>A. officinarum</em>, plus piquant). À ne pas confondre avec le gingembre&nbsp;: chair plus claire, presque ivoire, et anneaux ligneux visibles à la coupe.</dd>
+        <dt>Caractère</dt><dd>Plus boisé, plus camphré, plus pin que le gingembre. Pique moins, mais persiste davantage.</dd>
+        <dt>Profil aromatique</dt><dd>Pin, savon de Marseille, eucalyptus, écorce de citron, cardamome verte. Fond presque mentholé.</dd>
+        <dt>Sensations</dt><dd>Rafraîchit la bouche, donne le &laquo;&nbsp;coup de blanc&nbsp;&raquo; vert et résineux du Tom Kha Gai (soupe coco-poulet thaï) ou du Rendang indonésien.</dd>
+        <dt>Forme</dt><dd>Frais (en tranches fines), congelé (très acceptable), séché en lamelles (à réhydrater 20 min dans un bouillon tiède), en poudre (qualité variable, vieillit vite).</dd>
+        <dt>Moment</dt><dd>En tranches dans le bouillon dès le début, à laisser infuser longuement&nbsp;; le galanga supporte 2 h de mijotage sans s'effacer.</dd>
+        <dt>Cuisson</dt><dd>Infusion dans un liquide aromatique (lait de coco, bouillon de volaille). En pâte de curry, broyé au mortier avec citronnelle, ail, échalote.</dd>
+        <dt>Accords</dt><dd>Lait de coco, citronnelle, citron kaffir, piment thaï, coriandre, crevettes, poulet, basilic thaï, sauce poisson.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Raifort</h5>
+      <span class="latin">Armoracia rusticana — Brassicaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Europe centrale et de l'Est (Alsace, Allemagne, Pologne, Hongrie). Botaniquement une crucifère — apparenté à la moutarde et au chou — pas un vrai rhizome au sens des Zingibéracées, mais traité comme tel en cuisine.</dd>
+        <dt>Caractère</dt><dd>Piquance <strong>volatile</strong>, mordante, qui prend le nez avant le palais. Composés soufrés (<em>allyl-isothiocyanates</em>) libérés à la râpe&nbsp;: piquant maximal dans les 30 minutes après, puis perte rapide.</dd>
+        <dt>Profil aromatique</dt><dd>Moutarde verte, terre vive, sinus dégagés, citron râpé. Pas vraiment aromatique au nez à cru&nbsp;: l'effet est rétro-nasal et sensoriel.</dd>
+        <dt>Sensations</dt><dd>Pic dans le nez, larmes possibles, ouverture des sinus, picotement de la pointe de la langue. <strong>Très différent du piment</strong>&nbsp;: bref, non rémanent, presque vaporeux.</dd>
+        <dt>Forme</dt><dd>Racine fraîche (peler et râper au moment de servir), crème prête (acceptable, à choisir sans amidon ajouté), en poudre lyophilisée (à réhydrater au lait ou à la crème).</dd>
+        <dt>Moment</dt><dd><strong>Toujours à cru</strong> ou en finition à froid. La chaleur détruit les isothiocyanates en moins de 2 min.</dd>
+        <dt>Cuisson</dt><dd>Aucune. Râper à la minute dans une crème fraîche ou monter en émulsion froide. À servir aussitôt.</dd>
+        <dt>Accords</dt><dd>Bœuf bouilli (sauce au raifort autrichienne), saumon fumé, betterave, pomme verte, hareng, viandes froides, huître crue.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Wasabi</h5>
+      <span class="latin">Eutrema japonicum — Brassicaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Cours d'eau froids et purs des montagnes japonaises (Shizuoka, Izu). Culture lente (1,5 à 2 ans) et coûteuse — <strong>la quasi-totalité du &laquo;&nbsp;wasabi&nbsp;&raquo; vendu hors Japon est en réalité un mélange de raifort, moutarde et colorant vert</strong>.</dd>
+        <dt>Caractère</dt><dd>Cousin botanique du raifort, mais plus complexe&nbsp;: piquance <strong>plus brève, plus parfumée</strong>, avec une douceur végétale en fin de bouche.</dd>
+        <dt>Profil aromatique</dt><dd>Cresson, moutarde douce, fraîcheur d'herbe coupée, légère pointe iodée. La pâte fraîche râpée est presque sucrée.</dd>
+        <dt>Sensations</dt><dd>Chaleur courte au nez (8-10 secondes), puis disparition nette — au contraire du piment qui s'installe. Permet d'enchaîner plusieurs bouchées sans saturation.</dd>
+        <dt>Forme</dt><dd>Rhizome frais à râper sur une peau de requin <em>oroshi</em> (idéal) ou Microplane. À défaut&nbsp;: pâte 100% wasabi en tube — rare et chère, mais authentique.</dd>
+        <dt>Moment</dt><dd>À la minute. La pâte perd 50% de son punch après 15 min.</dd>
+        <dt>Cuisson</dt><dd>Aucune — toujours à cru, en finition.</dd>
+        <dt>Accords</dt><dd>Sashimi, sushi, soba, bœuf cru (carpaccio), avocat, huile de sésame, ponzu, viande grillée maigre.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Réglisse</h5>
+      <span class="latin">Glycyrrhiza glabra — Fabaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Bassin méditerranéen, Asie centrale, Iran. Racine récoltée sur des plants de 3-4 ans.</dd>
+        <dt>Caractère</dt><dd><strong>Glycyrrhizine</strong>&nbsp;: 50 fois plus sucrée que le saccharose, avec une amertume résiduelle. <strong>Anéthol</strong>&nbsp;: la même molécule que dans l'anis et le fenouil — d'où le proche cousinage aromatique.</dd>
+        <dt>Profil aromatique</dt><dd>Anis profond, mélasse, encens, bois humide, terre fraîche, cuir de Cordoue. Sucré-amer.</dd>
+        <dt>Sensations</dt><dd>Sucré net, suivi d'une amertume tannique en fin de bouche, et d'une fraîcheur quasi mentholée. Très persistante (15-20 secondes).</dd>
+        <dt>Forme</dt><dd>Bâtons à mâcher ou à râper, poudre, extrait (sirop, pâte noire concentrée).</dd>
+        <dt>Moment</dt><dd>En infusion dans un liquide (bouillon, sauce courte, dessert lacté), à doser à la pointe du couteau — l'amertume monte vite.</dd>
+        <dt>Cuisson</dt><dd>Infusion dans un bouillon chaud (5-10 min suffisent). Très souvent associé à un poisson noble en cuisine contemporaine française (Marc Veyrat, Olivier Roellinger).</dd>
+        <dt>Accords</dt><dd>Saint-Jacques, lotte, agneau, betterave, chocolat noir, fenouil, anis étoilé, lait, framboise, café.</dd>
+      </dl>
+    </div>
+
+  </div><!-- /spice-grid 4.6.5 -->
+
+  <!-- 4.6.6 FEUILLES SÉCHÉES -->
+  <h4>4.6.6&nbsp;·&nbsp;Feuilles aromatiques séchées</h4>
+  <p class="spice-family-intro">Les feuilles séchées appartiennent au monde des épices (et non des herbes fraîches), parce qu'elles ont perdu leurs molécules les plus fragiles et concentré leurs composés résistants. Elles libèrent leur parfum <strong>par infusion longue dans un liquide chaud</strong>, jamais par simple saupoudrage final. Conserver entières (l'émiettage accélère l'oxydation) et froisser entre les doigts à l'instant de l'usage.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Laurier</h5>
+      <span class="latin">Laurus nobilis — Lauraceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Pourtour méditerranéen. Le <em>laurus nobilis</em>, celui des couronnes romaines et de la cuisine, est à distinguer rigoureusement du laurier-rose (toxique) et du laurier-cerise (toxique aussi). La feuille noble est ovale, coriace, vert mat.</dd>
+        <dt>Caractère</dt><dd>Discret mais essentiel — comme le curcuma, on ne le sent pas, on remarque son absence. Eucalyptol et linalol dominent.</dd>
+        <dt>Profil aromatique</dt><dd>Eucalyptus très doux, thé noir, écorce d'orange séchée, feuille de tabac, sous-bois. Note camphrée en arrière.</dd>
+        <dt>Sensations</dt><dd>Allonge le palais, donne de la profondeur, &laquo;&nbsp;ouvre&nbsp;&raquo; les bouillons et les sauces longues. Une seule feuille pour 1 L de liquide&nbsp;; trois feuilles = amertume médicamenteuse.</dd>
+        <dt>Forme</dt><dd>Entière séchée (la seule forme utile). Idéalement de l'année précédente — la feuille fraîche est trop âcre, celle de plus de 2 ans est plate.</dd>
+        <dt>Moment</dt><dd>Du début à la fin de toute cuisson longue (court-bouillon, fond, marinade, civet, daube). Toujours retirer avant service.</dd>
+        <dt>Cuisson</dt><dd>Infusion 30 min minimum dans un liquide chaud. Inutile dans un plat de moins de 20 min.</dd>
+        <dt>Accords</dt><dd>Bouillons, légumineuses, riz au lait, marinades, daubes, lapin, court-bouillon de poisson, panna cotta, crème pâtissière (oui).</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Feuilles de combava</h5>
+      <span class="latin">Citrus hystrix — Rutaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Asie du Sud-Est (Thaïlande, Indonésie, Malaisie, Cambodge). Le combava (ou makrut, ou &laquo;&nbsp;kaffir lime&nbsp;&raquo; — terme à éviter) est un agrume à la peau bosselée, peu juteux mais aux feuilles et au zeste extraordinairement parfumés.</dd>
+        <dt>Caractère</dt><dd>L'un des arômes les plus puissants de la cuisine&nbsp;: <strong>citronellal</strong> à des taux record. Trois fois plus intense que la citronnelle pour la note &laquo;&nbsp;citron vert sauvage&nbsp;&raquo;.</dd>
+        <dt>Profil aromatique</dt><dd>Citron vert intense, jasmin, eucalyptus, fleur d'oranger, herbe coupée. Une seule feuille parfume un plat complet.</dd>
+        <dt>Sensations</dt><dd>Tape franc au nez, laisse la bouche fraîche. Indispensable au Tom Yum thaï et au Rendang.</dd>
+        <dt>Forme</dt><dd>Fraîches (les meilleures), congelées (excellent — perte minime), séchées (à réhydrater 10 min). Toujours <strong>retirer la nervure centrale</strong> avant de ciseler en chiffonnade.</dd>
+        <dt>Moment</dt><dd>Entières dans un bouillon long&nbsp;; ciselées en chiffonnade fine en finition.</dd>
+        <dt>Cuisson</dt><dd>Infusion ou ajout cru en chiffonnade. Sublime juste fendues à la main dans un curry vert juste avant de servir.</dd>
+        <dt>Accords</dt><dd>Lait de coco, galanga, citronnelle, gambas, lotte, poulet, basilic thaï, piment vert, ananas, mangue verte.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Feuilles de curry</h5>
+      <span class="latin">Murraya koenigii — Rutaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Inde du Sud, Sri Lanka. Aucun rapport avec la poudre de curry — ce sont les feuilles d'un petit arbre tropical, utilisées entières.</dd>
+        <dt>Caractère</dt><dd>Arôme unique, intraduisible — entre la mandarine, l'asafœtida et la noix grillée. Disparaît si séché plus de 3 mois.</dd>
+        <dt>Profil aromatique</dt><dd>Mandarine confite, beurre noisette, poivre vert, anis très doux. À cru&nbsp;: presque savonné&nbsp;; cuit dans le ghee&nbsp;: explose en notes grillées.</dd>
+        <dt>Sensations</dt><dd>Profondeur d'un curry du Sud, &laquo;&nbsp;tarka&nbsp;&raquo; sublime du dal indien. Sans elles, une recette tamoule ou keralaise est méconnaissable.</dd>
+        <dt>Forme</dt><dd>Fraîches (épicerie indienne), congelées (le plus pratique en Europe), séchées (à oublier au-delà de 3 mois).</dd>
+        <dt>Moment</dt><dd>En <em>tarka</em>&nbsp;: jetées entières dans le ghee chaud avec graines de moutarde et asafœtida, &laquo;&nbsp;crépitent&nbsp;&raquo; quelques secondes, puis le tout est versé sur le plat fini.</dd>
+        <dt>Cuisson</dt><dd>Toujours sautées vives dans un gras chaud (15-30 sec).</dd>
+        <dt>Accords</dt><dd>Lentilles (dal), riz basmati, noix de coco râpée, tamarin, asafœtida, gingembre, piment vert, poulet, crevettes.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Origan séché</h5>
+      <span class="latin">Origanum vulgare — Lamiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Méditerranée orientale (Grèce, Turquie, Sicile). Les variétés grecques et turques sont les plus puissantes (<em>Origanum vulgare hirtum</em>).</dd>
+        <dt>Caractère</dt><dd>L'une des rares herbes qui <strong>gagne en séchant</strong>&nbsp;: l'eau partie, les phénols (<strong>carvacrol</strong>, <strong>thymol</strong>) se concentrent. La feuille fraîche est presque insipide en comparaison.</dd>
+        <dt>Profil aromatique</dt><dd>Foin chaud, terre cuite, herbe de garrigue, poivre, légère menthe.</dd>
+        <dt>Sensations</dt><dd>Tonique, légèrement astringent. Apporte une sensation de chaleur sèche en bouche.</dd>
+        <dt>Forme</dt><dd>Feuilles entières séchées — éviter la poudre, déjà éventée. Mexicain (<em>Lippia graveolens</em>, plus citronné) à connaître pour les tacos.</dd>
+        <dt>Moment</dt><dd>Frotté entre les paumes au-dessus du plat juste avant cuisson (libère les huiles essentielles) ou en finition sur la pizza.</dd>
+        <dt>Cuisson</dt><dd>Supporte une chaleur de 200&nbsp;°C (four, gril) sans s'effacer — exception parmi les feuilles séchées.</dd>
+        <dt>Accords</dt><dd>Tomate, poivron, agneau, fromage de chèvre, citron, ail, anchois, olive noire, courgette, féta.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Marjolaine séchée</h5>
+      <span class="latin">Origanum majorana — Lamiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Méditerranée, Égypte. Cousine de l'origan, plus douce et plus florale.</dd>
+        <dt>Caractère</dt><dd>Plus sabin et plus citronné que l'origan, moins poivré. Le carvacrol cède la place au <strong>terpinène</strong> et au <strong>sabinène</strong>.</dd>
+        <dt>Profil aromatique</dt><dd>Herbe douce, citron léger, pin frais, miel d'acacia, fond de menthe verte.</dd>
+        <dt>Sensations</dt><dd>Plus rafraîchissante et plus &laquo;&nbsp;sucrée&nbsp;&raquo; en bouche que l'origan. Adoucit les sauces tomate sans les écraser.</dd>
+        <dt>Forme</dt><dd>Feuilles entières séchées — la marjolaine fraîche est ravissante mais s'efface très vite à la cuisson.</dd>
+        <dt>Moment</dt><dd>Vers la fin d'une cuisson moyenne, ou en finition à cru sur des œufs brouillés, une omelette, une salade tiède de pommes de terre.</dd>
+        <dt>Cuisson</dt><dd>Tolère mal les hautes températures&nbsp;: 15 min max en mijotage doux. À ajouter en fin de plat pour préserver la note florale.</dd>
+        <dt>Accords</dt><dd>Œuf, pomme de terre, poulet rôti, carotte, courge, fromage frais, vinaigrette de saison, lapin, civet de cèpes.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Sarriette</h5>
+      <span class="latin">Satureja montana / S. hortensis — Lamiaceae</span>
+      <dl>
+        <dt>Origine</dt><dd>Provence, Italie, Balkans. <em>Pebre d'ase</em> en provençal — &laquo;&nbsp;poivre d'âne&nbsp;&raquo;.</dd>
+        <dt>Caractère</dt><dd>Beaucoup plus chaude et résineuse que le thym, légèrement piquante. <strong>Carvacrol</strong> dominant, comme l'origan, mais avec une assise pinède plus marquée.</dd>
+        <dt>Profil aromatique</dt><dd>Thym poivré, sarriette, écorce de pin, romarin doux, garrigue chaude.</dd>
+        <dt>Sensations</dt><dd>Réchauffe et &laquo;&nbsp;ramone&nbsp;&raquo;. Aide les légumineuses à passer&nbsp;: tradition provençale du haricot blanc à la sarriette.</dd>
+        <dt>Forme</dt><dd>Sommités séchées — fraîche en été (Sud), séchée tout le reste de l'année.</dd>
+        <dt>Moment</dt><dd>Avec les légumineuses (haricot, fève), les viandes blanches rôties, les fromages frais de chèvre.</dd>
+        <dt>Cuisson</dt><dd>Supporte 1 h de mijotage. À l'inverse, fragile en finition crue.</dd>
+        <dt>Accords</dt><dd>Haricot blanc, fève, lapin, agneau, chèvre frais, courgette, fromage Banon, miel d'arbousier.</dd>
+      </dl>
+    </div>
+
+  </div><!-- /spice-grid 4.6.6 -->
+
+  <!-- 4.7 MÉLANGES CANONIQUES -->
+  <h3 id="sec-4-7"><span class="h3-num">4.7</span>Mélanges canoniques — la signature des cuisines du monde</h3>
+  <p>Aucun cuisinier sérieux n'achète de mélange tout prêt&nbsp;: leur durée de vie est inférieure à celle des épices entières, et la recette est généralement composée d'épices déjà éventées. <strong>On compose à la maison, en petites quantités</strong> (l'équivalent de deux semaines d'usage), à partir d'épices entières toastées et moulues à la minute. Voici les neuf mélanges qui structurent neuf grandes cuisines.</p>
+
+  <div class="spice-grid">
+
+    <div class="spice-card">
+      <h5>Curry indien <em>(masala)</em></h5>
+      <span class="latin">Composition variable — Indien du Nord ou du Sud</span>
+      <dl>
+        <dt>Origine</dt><dd>Le mot &laquo;&nbsp;curry&nbsp;&raquo; est une invention britannique pour désigner les milliers de mélanges régionaux indiens. En Inde, on parle de <em>masala</em>, et chaque famille a le sien.</dd>
+        <dt>Base classique du Nord</dt><dd>Coriandre (40-50%), cumin (15%), curcuma (10%), fenugrec (5%), gingembre sec (5%), cardamome verte (5%), poivre noir (5%), cannelle (5%), clou de girofle, piment doux. Toastés à sec puis moulus.</dd>
+        <dt>Variante du Sud (Madras)</dt><dd>Plus de piment, de curcuma et de feuilles de curry&nbsp;; moins de cardamome. Profil plus chaud, plus jaune, plus tropical.</dd>
+        <dt>Profil aromatique</dt><dd>Coriandre dominante (note citronnée terreuse), arrière de cumin grillé, fond chaud de cannelle et de clou. Couleur ocre orangé.</dd>
+        <dt>Usage</dt><dd>En milieu de cuisson, après les épices entières et les oignons fondus, avec un peu d'eau pour ne pas brûler.</dd>
+        <dt>Erreur fréquente</dt><dd>Jeter le masala dans un gras nu et chaud&nbsp;: il brûle en 10 secondes. <strong>Toujours avec un liquide ou des aromates frais.</strong></dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Garam masala</h5>
+      <span class="latin">Inde du Nord — épices &laquo;&nbsp;chaudes&nbsp;&raquo;</span>
+      <dl>
+        <dt>Origine</dt><dd>Le &laquo;&nbsp;mélange chaud&nbsp;&raquo; — pas piquant, mais &laquo;&nbsp;réchauffant&nbsp;&raquo; au sens ayurvédique. Mélange de finition par excellence.</dd>
+        <dt>Composition</dt><dd>Cardamome verte (25%), cannelle (20%), clou de girofle (10%), poivre noir (15%), cumin (15%), coriandre (10%), muscade ou macis (5%). Ratios très variables selon les régions.</dd>
+        <dt>Profil aromatique</dt><dd>Cardamome dominante (mentholée, florale), assise chaude de cannelle, profondeur du clou. Légère poivre persistant. Sucré-épicé.</dd>
+        <dt>Usage</dt><dd><strong>En finition uniquement</strong>&nbsp;: 1/2 cuillère à café par portion, saupoudrée 1 min avant de servir, ou ajoutée à un yaourt monté en sauce froide.</dd>
+        <dt>Erreur fréquente</dt><dd>Cuire un garam masala&nbsp;: les arômes volatils (cardamome, muscade) s'évaporent et il ne reste que le poivre et le clou.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Ras el-hanout</h5>
+      <span class="latin">Maghreb — &laquo;&nbsp;la tête de l'épicerie&nbsp;&raquo;</span>
+      <dl>
+        <dt>Origine</dt><dd>Maroc, Algérie, Tunisie. Littéralement &laquo;&nbsp;le sommet de la boutique&nbsp;&raquo; — l'épicier compose son plus beau mélange avec 20 à 50 épices. Recette signature de chaque maison.</dd>
+        <dt>Composition</dt><dd>Cumin, coriandre, cannelle, gingembre, curcuma, poivre noir, cardamome, clou, muscade, macis, lavande, boutons de rose séchés, paprika doux, piment, fenugrec, anis vert, baies de carvi, nigelle. Plus rarement&nbsp;: galanga, cubèbe, mastic.</dd>
+        <dt>Profil aromatique</dt><dd>Floral (rose, lavande), épicé chaud (cannelle, clou), fond terreux (cumin, coriandre). Caractère oriental complexe et long en bouche.</dd>
+        <dt>Usage</dt><dd>En frottement sec sur un agneau ou un poulet (24 h au frigo), ou en début de tajine, ou en pluie sur le couscous fini. Toujours combiné à de la matière grasse (huile d'olive ou beurre clarifié) pour révéler les notes liposolubles.</dd>
+        <dt>Accords</dt><dd>Agneau, mouton, pruneau, abricot sec, amande, semoule, poivron rouge, oignon caramélisé, citron confit.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Baharat</h5>
+      <span class="latin">Levant et golfe Persique</span>
+      <dl>
+        <dt>Origine</dt><dd>Liban, Syrie, Jordanie, Irak, Émirats. Le &laquo;&nbsp;baharat&nbsp;&raquo; (qui signifie simplement &laquo;&nbsp;épices&nbsp;&raquo; en arabe) est un cousin proche du ras el-hanout, en plus simple et plus poivré.</dd>
+        <dt>Composition</dt><dd>Poivre noir (30%), piment doux (15%), cumin (15%), coriandre (15%), cardamome (10%), cannelle (5%), clou (5%), muscade (5%). Version du Golfe&nbsp;: ajout de loomi (citron noir séché) pour la note acide.</dd>
+        <dt>Profil aromatique</dt><dd>Poivre dominant, fond chaud de cannelle et clou, note citronnée si loomi.</dd>
+        <dt>Usage</dt><dd>Sur agneau, kefta, riz pilaf, légumes farcis (<em>mahshi</em>). En finition après la sortie du four.</dd>
+        <dt>Accords</dt><dd>Agneau haché, riz, aubergine, courgette, tomate, yaourt grec, pain pita, mélasse de grenade.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Dukkah</h5>
+      <span class="latin">Égypte — mélange à croquer</span>
+      <dl>
+        <dt>Origine</dt><dd>Égypte. &laquo;&nbsp;Dakka&nbsp;&raquo; = &laquo;&nbsp;piler&nbsp;&raquo; en arabe. Particularité&nbsp;: contient des <strong>fruits secs grillés</strong>, ce qui en fait autant un condiment qu'une épice.</dd>
+        <dt>Composition</dt><dd>Noisettes ou pistaches grillées (40%), graines de sésame toastées (20%), coriandre (15%), cumin (10%), sel (5%), poivre (5%), thym ou origan séché (5%). Concasser au mortier&nbsp;— jamais au mixeur, qui transforme en pâte.</dd>
+        <dt>Profil aromatique</dt><dd>Noisette grillée, sésame, coriandre toastée, fond terreux de cumin. Texture craquante essentielle.</dd>
+        <dt>Usage</dt><dd>Tremper du pain dans de l'huile d'olive, puis dans le dukkah. Saupoudrer sur œufs durs, légumes rôtis, salades de céréales, halloumi grillé.</dd>
+        <dt>Accords</dt><dd>Œuf dur, halloumi, courge rôtie, betterave, salade de roquette, labneh, pain plat, huile d'olive nouvelle.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Za'atar</h5>
+      <span class="latin">Levant — herbe et sumac</span>
+      <dl>
+        <dt>Origine</dt><dd>Liban, Palestine, Syrie, Jordanie. À la fois le nom d'une herbe sauvage (<em>thymbra spicata</em>) et celui d'un mélange.</dd>
+        <dt>Composition</dt><dd>Thym ou origan séché (40%), graines de sésame toastées (25%), sumac moulu (25%), sel (5-10%). Variante&nbsp;: ajout d'un peu de cumin.</dd>
+        <dt>Profil aromatique</dt><dd>Acidité fruitée du sumac, thym puissant, fond grillé de sésame. Salin léger.</dd>
+        <dt>Usage</dt><dd>Mélangé à de l'huile d'olive sur du pain plat (<em>manakish</em>), saupoudré sur labneh, œufs au plat, légumes rôtis, salades. Pas une épice de cuisson — un assaisonnement de finition.</dd>
+        <dt>Accords</dt><dd>Yaourt épais, huile d'olive, tomate, concombre, halloumi, agneau grillé, œufs, pain pita.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Cinq-épices chinois</h5>
+      <span class="latin">Chine — <em>wǔxiāng fěn</em></span>
+      <dl>
+        <dt>Origine</dt><dd>Chine, codification taoïste des cinq saveurs (sucré-amer-acide-piquant-salé). Mélange équilibré, jamais piquant.</dd>
+        <dt>Composition</dt><dd>Anis étoilé (badiane) — 30%, fenouil — 20%, cannelle de Chine (casse) — 20%, clou de girofle — 15%, poivre de Sichuan — 15%. Tous toastés à sec avant broyage.</dd>
+        <dt>Profil aromatique</dt><dd>Anisé dominant (badiane), assise chaude (cannelle, clou), picotement final du Sichuan. Sucré-épicé, profond, presque réglissé.</dd>
+        <dt>Usage</dt><dd>Frottement à sec sur canard laqué, porc charsiu, travers&nbsp;; dans une marinade soja-miel&nbsp;; dans la sauce d'un &laquo;&nbsp;red-cooked pork&nbsp;&raquo; (porc braisé au soja).</dd>
+        <dt>Accords</dt><dd>Canard, porc, soja, sucre brun, gingembre, ail, anis, mandarine, vin de Shaoxing.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Shichimi togarashi</h5>
+      <span class="latin">Japon — &laquo;&nbsp;sept-parfums au piment&nbsp;&raquo;</span>
+      <dl>
+        <dt>Origine</dt><dd>Japon, Tokyo XVIIᵉ siècle. Mélange de finition typique des soba, udon, gyūdon.</dd>
+        <dt>Composition</dt><dd>Piment rouge séché (40%), zeste d'orange ou de mandarine séché (15%), graines de sésame blanc et noir (15%), graines de pavot ou de chanvre (10%), nori (5%), sansho (poivre japonais, 10%), gingembre séché (5%).</dd>
+        <dt>Profil aromatique</dt><dd>Piment chaud, agrume séché, sésame grillé, fond iodé du nori, picotement final du sansho.</dd>
+        <dt>Usage</dt><dd>Finition uniquement, jamais cuit. Saupoudrer sur ramen, riz, légumes vapeur, œufs au plat, edamame.</dd>
+        <dt>Accords</dt><dd>Ramen, soba, riz, dashi, soja, mirin, edamame, brocoli vapeur, œuf mollet.</dd>
+      </dl>
+    </div>
+
+    <div class="spice-card">
+      <h5>Quatre-épices</h5>
+      <span class="latin">France — charcuterie et gibier</span>
+      <dl>
+        <dt>Origine</dt><dd>France, fin du XIXᵉ siècle. Mélange codifié de la charcuterie française.</dd>
+        <dt>Composition</dt><dd>Poivre noir (50%), clou de girofle (15%), muscade (15%), gingembre sec (10%) ou cannelle (10%). Très simple, doit toujours être moulu fin.</dd>
+        <dt>Profil aromatique</dt><dd>Poivré dominant, fond chaud de clou et muscade. &laquo;&nbsp;Profondeur de pâté&nbsp;&raquo; — l'arôme reconnaissable du pâté en croûte, de la terrine, du saucisson sec.</dd>
+        <dt>Usage</dt><dd>Dans toute charcuterie maison, pâté, terrine, marinade de gibier, civet, daube. 1 cuillère à café par kg de viande.</dd>
+        <dt>Accords</dt><dd>Porc, foie, lapin, lièvre, chevreuil, vin rouge tannique, oignon, échalote, baie de genièvre.</dd>
+      </dl>
+    </div>
+
+  </div><!-- /spice-grid 4.7 -->
+
+  <!-- 4.8 ACCORDS ÉPICES & PRODUITS -->
+  <h3 id="sec-4-8"><span class="h3-num">4.8</span>Accords épices &amp; produits — la grammaire des combinaisons</h3>
+  <p>Une épice seule fonctionne rarement. Trois principes structurent les accords classiques&nbsp;: <strong>équilibre entre épices &laquo;&nbsp;chaudes&nbsp;&raquo; et &laquo;&nbsp;fraîches&nbsp;&raquo;</strong> (cumin/coriandre, cannelle/cardamome)&nbsp;; <strong>présence d'un agent de transport gras ou acide</strong> (la liposolubilité du curcuma, la fixation tannique du clou)&nbsp;; <strong>pyramide aromatique</strong> avec un dominant (1), deux soutiens (2-3) et des notes de finition (4-5).</p>
+
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Produit</th><th>Accord classique</th><th>Accord moderne</th><th>À éviter</th></tr></thead>
+    <tbody>
+      <tr><td><b>Bœuf rouge</b></td><td>Poivre noir, laurier, thym, échalote, genièvre</td><td>Poivre long, café, miso, poivre de Sichuan, tonka</td><td>Cannelle, cardamome (écrasent le goût naturel)</td></tr>
+      <tr><td><b>Agneau</b></td><td>Romarin, ail, cumin, coriandre, menthe</td><td>Ras el-hanout, sumac, baharat, harissa, anis</td><td>Clou en quantité (devient médicamenteux)</td></tr>
+      <tr><td><b>Porc</b></td><td>Sauge, fenouil, baies de genièvre, quatre-épices</td><td>Cinq-épices, anis étoilé, miel-soja, kombu</td><td>Cumin lourd (sauf si marinade longue)</td></tr>
+      <tr><td><b>Volaille rôtie</b></td><td>Thym, laurier, ail, estragon, citron</td><td>Sumac, za'atar, gingembre, citronnelle, miso</td><td>Cannelle seule (étouffe les jus)</td></tr>
+      <tr><td><b>Canard</b></td><td>Orange, baies roses, poivre, cardamome verte</td><td>Cinq-épices, poivre de Sichuan, hibiscus, sansho</td><td>Cumin (incompatible avec la note ferreuse)</td></tr>
+      <tr><td><b>Gibier</b></td><td>Genièvre, poivre, clou, laurier, thym</td><td>Café, cacao, poivre long, sansho, sapin</td><td>Anis vert (trop sucré sur viande forte)</td></tr>
+      <tr><td><b>Poisson blanc</b></td><td>Aneth, fenouil, citron, persil, poivre blanc</td><td>Yuzu, combava, gingembre, dashi, vadouvan</td><td>Cumin lourd, paprika fumé (écrasent la chair)</td></tr>
+      <tr><td><b>Saumon</b></td><td>Aneth, citron, poivre rose, moutarde</td><td>Wasabi, sésame, miso blanc, baies de Timut</td><td>Cannelle, clou (incompatibles)</td></tr>
+      <tr><td><b>Crustacés</b></td><td>Fenouil, safran, estragon, piment d'Espelette</td><td>Combava, citronnelle, galanga, vanille (sic)</td><td>Cumin terreux (sauf accord asiatique)</td></tr>
+      <tr><td><b>Lentilles &amp; pois</b></td><td>Cumin, coriandre, curcuma, gingembre, asafœtida</td><td>Tarka feuille de curry, dukkah, harissa</td><td>Cannelle pure (cherche un fond chaud autre)</td></tr>
+      <tr><td><b>Tomate cuite</b></td><td>Basilic, origan, ail, piment, fenouil</td><td>Cumin, baharat, sumac, harissa, café (oui)</td><td>Curcuma seul (lui donne un fond grisâtre)</td></tr>
+      <tr><td><b>Courge / potiron</b></td><td>Muscade, gingembre, cannelle, sauge</td><td>Cumin, ras el-hanout, harissa, tonka, miso</td><td>Anis vert (devient écœurant)</td></tr>
+      <tr><td><b>Chou (rôti)</b></td><td>Cumin, carvi, moutarde, poivre noir</td><td>Curry de Madras, gochujang, miso, dukkah</td><td>Vanille, cardamome (ne tiennent pas)</td></tr>
+      <tr><td><b>Chocolat noir</b></td><td>Cannelle, vanille, piment, fleur de sel</td><td>Sichuan, Sarawak, tonka, sumac, café, miso</td><td>Cumin, clou (déséquilibrent l'amertume)</td></tr>
+      <tr><td><b>Fruits rouges</b></td><td>Poivre noir, basilic, menthe, vanille</td><td>Sichuan, baies roses, sumac, hibiscus, tonka</td><td>Curcuma (terreux), cumin</td></tr>
+      <tr><td><b>Fromages</b></td><td>Poivre, cumin (sur munster), carvi (sur tomme)</td><td>Sumac, za'atar, baies roses, miel-truffe</td><td>Mélanges complexes — préférer une épice seule</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Tester un accord à blanc.</strong> Avant de l'engager dans un plat, frotter une pincée de l'épice (ou du mélange) entre les paumes, sentir, puis goûter en la croquant. Si elle te paraît seule trop forte, agressive ou plate, elle le sera aussi dans le plat — multiplie par dix au cours d'une réduction. Un bon accord se sent <em>déjà</em> à la dégustation à blanc.</p>
+  </div>
+
+<h3 id="sec-4-9"><span class="h3-num">4.9</span>Erreurs fréquentes &amp; gestes du quotidien</h3>
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Acheter en supermarché des bocaux de 80 g de poudre, oubliés un an dans le placard au-dessus des plaques.</strong> Chaleur + lumière + humidité de la hotte = dégradation totale en 4-6 mois. Acheter petites quantités (10-30 g), en bocaux opaques, dans un placard frais et sec, <strong>loin du piano</strong>.</p>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Jeter le poivre dans un bouillon en début de cuisson.</strong> Les terpènes aromatiques s'évaporent en 30 minutes&nbsp;; il ne reste que la pipérine (piquance brute, désagréable). Le poivre noir s'ajoute <strong>en finition</strong>, moulu à la minute. Pour la cuisson longue&nbsp;: grains entiers à infuser, puis filtrer.</p>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Brûler le curcuma ou le paprika.</strong> Au-delà de 30 secondes dans un gras très chaud, les pigments caroténoïdes se dégradent et donnent un goût amer et carton. Toujours dans un gras tiède (huile à 130-150&nbsp;°C max), avec aussitôt un liquide ou des oignons pour stabiliser.</p>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Ajouter le safran moulu en poudre dans un risotto.</strong> Le safran exige une infusion préalable de 20-30 min dans un liquide tiède pour libérer crocine (couleur) et safranal (arôme). Jeté à sec, il colore à peine et son arôme est masqué par le gras.</p>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Le carnet d'épices.</strong> Tenir un cahier où l'on note&nbsp;: provenance et date d'achat de chaque épice, accord testé, dosage, résultat. Au bout d'un an, on dispose de sa propre bibliothèque sensorielle&nbsp;— l'équivalent du carnet de dégustation du sommelier.</p>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>L'équipement de base d'un cuisinier d'épices&nbsp;:</strong> un moulin à café électrique <em>dédié</em> (broie graines et bâtons en 10 sec), un mortier en granit (pour les pâtes humides), un moulin à poivre manuel à mécanisme céramique réglable, une microplane (muscade, tonka, gingembre frais), une dizaine de petits bocaux opaques teintés à fermeture mécanique (Le Parfait, Weck), une étagère <strong>loin</strong> du piano de cuisson.</p>
+  </div>
+
+  <blockquote>
+    L'épice est à la cuisine ce que la couleur est au peintre&nbsp;: un moyen d'expression. Mais comme la couleur, elle n'a de sens que par sa relation aux autres&nbsp;; il n'y a pas de bonne épice, il n'y a que de bons accords.
+    <cite>Olivier Roellinger</cite>
+  </blockquote>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="pilier-3-inertie.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Pilier III — Inertie thermique</span>
+  </a>
+  <a class="pager-link next" href="viandes.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Viandes — protocoles</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

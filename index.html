@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manuel — Accueil — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link current"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+
+<div class="page-hero">
+  <div class="eyebrow">Manuel technique du cuisinier ambitieux</div>
+  <h1>Les trois piliers<br>de la <em>maîtrise</em> de la cuisson</h1>
+  <p class="subtitle">Température · Humidité · Inertie thermique — épices, viandes & légumes</p>
+</div>
+
+<p class="intro-lead">La cuisine n'est pas un art de l'à-peu-près. C'est une discipline scientifique au service du goût. Tout chef étoilé vous le dira&nbsp;: la différence entre un plat médiocre et un plat d'exception se mesure souvent en degrés Celsius et en minutes.</p>
+
+  <blockquote>
+    Lorsqu'on décide de faire de la cuisine et que l'on aspire à devenir chef, on commence par les bases qui sont à la cuisine ce que le solfège est à la musique. Pour exercer sereinement cet art, il faut comprendre et connaître les produits, <strong>maîtriser les cuissons</strong>, les assaisonnements, appréhender les techniques. C'est un apprentissage perpétuel et le chef a le devoir de se remettre quotidiennement en question.
+    <cite>Joël Robuchon, MOF 1976, &laquo;&nbsp;Chef du siècle&nbsp;&raquo; 1990 — <a href="https://hrimag.com/Quelques-citations-instructives-du-chef-restaurateur-Joel-Robuchon-l-homme-le" target="_blank">HRImag</a></cite>
+  </blockquote>
+
+  <blockquote>
+    Soit on sait, soit on ne sait pas faire&nbsp;: une stricte sélection du produit, une juste préparation, <strong>un juste assaisonnement, une juste cuisson, une juste réduction</strong>. C'est une boîte à outils, comme un solfège qui permet de faire des recettes et de savoir cuire, réduire, assaisonner, dresser.
+    <cite>Alain Ducasse, <em>Une vie de goûts et de passions</em></cite>
+  </blockquote>
+
+  <p>Les trois piliers développés dans ce manuel — <strong>température</strong>, <strong>humidité</strong>, <strong>inertie thermique</strong> — sont les trois leviers physico-chimiques sur lesquels agit toute cuisson. Les maîtriser, c'est passer du statut d'exécutant à celui d'artisan du goût.</p>
+
+<div class="home-grid">
+  <a class="home-card" href="pilier-1-temperature.html">
+    <span class="roman">Pilier I</span>
+    <h3>Température</h3>
+    <p>Thermomètre, températures à cœur, basse température, reverse sear, réaction de Maillard, coagulation des protéines.</p>
+  </a>
+  <a class="home-card" href="pilier-2-humidite.html">
+    <span class="roman">Pilier II</span>
+    <h3>Humidité</h3>
+    <p>Vapeur, cocotte, papillote, croûte de sel, braisage, saumure, cartouche, repos sous aluminium.</p>
+  </a>
+  <a class="home-card" href="pilier-3-inertie.html">
+    <span class="roman">Pilier III</span>
+    <h3>Inertie thermique</h3>
+    <p>Conductivité des matériaux, masse, préchauffage, carry-over cooking, tempérage, choc thermique.</p>
+  </a>
+  <a class="home-card" href="epices.html">
+    <span class="roman">Chapitre IV</span>
+    <h3>Épices</h3>
+    <p>Molécules volatiles, formes (entière, moulue, fraîche, en pâte), timing, atlas par famille botanique, accords.</p>
+  </a>
+  <a class="home-card" href="viandes.html">
+    <span class="roman">Chapitre V</span>
+    <h3>Viandes</h3>
+    <p>Protocoles temps-température pour bœuf, veau, agneau, porc, volaille, gibier et poissons.</p>
+  </a>
+  <a class="home-card" href="legumes.html">
+    <span class="roman">Chapitre VI</span>
+    <h3>Légumes</h3>
+    <p>Sept méthodes, dix familles, cellulose et pectine, braisage-glaçage, bouillons et fonds.</p>
+  </a>
+</div>
+
+<p style="margin-top:2rem;font-style:italic;color:var(--ink-soft);font-size:1.05rem">Les trois piliers gouvernent la <strong>texture</strong> et la <strong>jutosité</strong> du produit. Le chapitre IV traite de la <strong>grammaire des épices</strong> — quatrième axe de maîtrise, celui du goût pur. Les chapitres V et VI rassemblent les <strong>protocoles pratiques</strong> par produit.</p>
+
+<nav class="pager" aria-label="Pagination">
+  <span></span>
+  <a class="pager-link next" href="pilier-1-temperature.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Pilier I — Température</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viandes — protocoles — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link current"><span class="num">V.</span>Viandes</a>
+    <a href="viandes.html#sec-v-boeuf" class="sidebar-sub"><span class="num">·</span>Bœuf</a>
+    <a href="viandes.html#sec-v-veau" class="sidebar-sub"><span class="num">·</span>Veau</a>
+    <a href="viandes.html#sec-v-agneau" class="sidebar-sub"><span class="num">·</span>Agneau</a>
+    <a href="viandes.html#sec-v-porc" class="sidebar-sub"><span class="num">·</span>Porc</a>
+    <a href="viandes.html#sec-v-volaille" class="sidebar-sub"><span class="num">·</span>Volaille</a>
+    <a href="viandes.html#sec-v-gibier" class="sidebar-sub"><span class="num">·</span>Canard, oie, gibier</a>
+    <a href="viandes.html#sec-v-poisson" class="sidebar-sub"><span class="num">·</span>Poissons & fruits de mer</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Viandes — protocoles</span>
+</nav>
+<div class="page-hero">
+  <div class="eyebrow">Chapitre cinquième</div>
+  <h1>Protocoles de cuisson par <em>viande</em></h1>
+  <p class="subtitle">Bœuf, veau, agneau, porc, volaille, gibier, poissons — temps, températures, méthodes</p>
+</div>
+
+<p class="lead">Pour chaque type de viande, les principales méthodes avec couples temps/température et cible à cœur. À combiner avec le carry-over (Pilier III, §3.6) : retirer 2 à 8 °C en-dessous de la cible selon l'épaisseur de la pièce et la température du four.</p>
+
+  <div class="chapter-toc">
+    <strong>Sommaire</strong>
+    Bœuf · Veau · Agneau · Porc · Volaille · Canard, oie, gibier · Poissons & fruits de mer · Règles générales
+  </div>
+
+  <h4 id="sec-v-boeuf">Bœuf</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Steak fin 1,5-2 cm — poêle classique</td><td>poêle fonte/acier fumante 230 °C</td><td>1-1,5 min/face</td><td>54 °C saignant</td></tr>
+      <tr><td>Steak épais 3-5 cm — <b>reverse sear</b></td><td>four 100-130 °C puis poêle fumante</td><td>30-45 min + 45 s/face</td><td>52 °C avant saisie</td></tr>
+      <tr><td>Côte de bœuf (4-5 cm, 1 kg)</td><td>four 130 °C puis poêle/grill</td><td>1 h 30 - 2 h + saisie</td><td>52-54 °C avant repos</td></tr>
+      <tr><td>Steak / filet — sous-vide</td><td>54 °C</td><td>1-3 h</td><td>54 °C</td></tr>
+      <tr><td>Rôti de filet, faux-filet (1-1,5 kg)</td><td>four 220 °C 15 min puis 160 °C</td><td>15-20 min/kg ensuite</td><td>52-54 °C</td></tr>
+      <tr><td>Rôti — basse température lente</td><td>four 80-90 °C</td><td>2-4 h pour 1,5 kg</td><td>54 °C, saisie finale 1 min/face</td></tr>
+      <tr><td>Joue, paleron, jarret — braisé</td><td>four en cocotte 120-150 °C</td><td>3-6 h</td><td>fibres effilées (cible 85-90 °C interne)</td></tr>
+      <tr><td>Joue de bœuf — sous-vide</td><td>72-74 °C</td><td>24-36 h</td><td>texture confite, rosée</td></tr>
+      <tr><td>Brisket (poitrine) — fumoir / low &amp; slow</td><td>110-120 °C indirect</td><td>10-14 h pour 4-5 kg</td><td>92-95 °C interne, "probe tender"</td></tr>
+      <tr><td>Tartare / carpaccio</td><td>cru</td><td>—</td><td>découpe à la minute, viande très fraîche</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="sec-v-veau">Veau</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Escalope, foie, ris</td><td>poêle 180 °C, beurre clarifié</td><td>1-2 min/face</td><td>60 °C</td></tr>
+      <tr><td>Côte de veau épaisse (3 cm)</td><td>poêle fumante puis four 160 °C</td><td>3 min/face + 8-10 min</td><td>60-62 °C</td></tr>
+      <tr><td>Rôti de veau (longe, quasi)</td><td>four 150 °C, arrosage régulier</td><td>30 min/kg</td><td>60 °C</td></tr>
+      <tr><td>Quasi, longe — sous-vide</td><td>57 °C</td><td>2-4 h</td><td>57 °C rosé, saisie finale</td></tr>
+      <tr><td>Tendron, jarret — blanquette</td><td>frémissement 85-90 °C</td><td>1 h 30 - 2 h</td><td>fibres fondantes</td></tr>
+      <tr><td>Osso buco (jarret braisé)</td><td>cocotte four 140 °C</td><td>2 h - 2 h 30</td><td>moelle fondue, collagène nappant</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="sec-v-agneau">Agneau</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Côtelette, carré rôti</td><td>poêle fumante puis four 180 °C</td><td>1-2 min/face + 5-8 min</td><td>54-58 °C rosé</td></tr>
+      <tr><td>Selle / filet — poêlé puis four</td><td>poêle puis four 180 °C</td><td>3 min/face + 6-8 min</td><td>54-56 °C</td></tr>
+      <tr><td>Gigot (2 kg) — four chaud</td><td>220 °C 20 min puis 160 °C</td><td>13-15 min/kg ensuite</td><td>54-58 °C, repos 20 min sous alu</td></tr>
+      <tr><td>Gigot — slow roast (méthode anglo-saxonne)</td><td>four 130 °C</td><td>3-4 h pour 2 kg</td><td>54 °C cœur, peau finie sous gril</td></tr>
+      <tr><td>Épaule d'agneau "7 heures"</td><td>cocotte four 130 °C</td><td>7 h</td><td>fibres effilées à la fourchette</td></tr>
+      <tr><td>Souris d'agneau, jarret</td><td>cocotte 140 °C</td><td>3-4 h</td><td>collagène fondu, viande qui se détache</td></tr>
+      <tr><td>Selle, filet — sous-vide</td><td>56 °C</td><td>2 h</td><td>56 °C</td></tr>
+      <tr><td>Tajine d'agneau</td><td>frémissement 85-95 °C</td><td>2 h - 2 h 30</td><td>fondant, jus réduit</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="sec-v-porc">Porc</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Filet mignon entier (400 g)</td><td>poêle saisie puis four 200 °C</td><td>3 min saisie + 10-15 min</td><td>63 °C rosé, 70 °C bien cuit</td></tr>
+      <tr><td>Côte de porc épaisse (2,5 cm)</td><td>poêle 180 °C</td><td>3-4 min/face</td><td>63-65 °C</td></tr>
+      <tr><td>Filet — sous-vide</td><td>60-62 °C</td><td>1-2 h</td><td>60-62 °C, saisie finale</td></tr>
+      <tr><td>Rôti de porc dans le filet (1 kg)</td><td>four 160 °C</td><td>25-30 min/kg</td><td>65 °C, repos 15 min</td></tr>
+      <tr><td>Échine / palette pour effiloché (<em>pulled pork</em>)</td><td>four ou fumoir 110-120 °C</td><td>6-10 h pour 2-3 kg</td><td>92 °C interne</td></tr>
+      <tr><td>Travers / ribs (BBQ)</td><td>four/fumoir 110 °C indirect, marinade sèche</td><td>4-6 h, glaçage sucré 30 min avant la fin</td><td>92-95 °C, "bend test"</td></tr>
+      <tr><td>Poitrine confite ou laquée</td><td>110 °C en cocotte fermée</td><td>3-4 h + glaçage final 200 °C 10 min</td><td>fondante, peau craquante</td></tr>
+      <tr><td>Joue de porc braisée</td><td>cocotte 130-150 °C</td><td>3-4 h</td><td>fibres tendres</td></tr>
+      <tr><td>Échine en cocotte au lait</td><td>cocotte 140 °C frémissement</td><td>2 h - 2 h 30</td><td>moelleux, sauce ivoire</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="sec-v-volaille">Volaille (poulet, dinde, pintade)</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Filet / suprême — poêle</td><td>poêle 180 °C, peau d'abord</td><td>5 min peau + 3-4 min chair</td><td><b>74 °C</b> impératif</td></tr>
+      <tr><td>Filet — sous-vide (texture la plus juteuse)</td><td>62-64 °C</td><td>45 min - 1 h</td><td>62-64 °C (équivalent pasteurisation)</td></tr>
+      <tr><td>Poulet entier (1,5 kg) — méthode classique</td><td>four 200 °C sur grille</td><td>1 h - 1 h 15</td><td>74 °C filet / 82 °C cuisse</td></tr>
+      <tr><td>Poulet entier — méthode haute température (Bittman / Keller)</td><td>four 230-240 °C</td><td>45-55 min sans arrosage</td><td>idem, peau plus craquante</td></tr>
+      <tr><td>Poulet en crapaudine (<em>spatchcock</em>)</td><td>four 220 °C sur plaque</td><td>40-50 min</td><td>74 °C / 82 °C ; cuisson plus homogène</td></tr>
+      <tr><td>Cuisses, hauts de cuisse — four</td><td>180-200 °C</td><td>35-45 min</td><td>82 °C (collagène fondu)</td></tr>
+      <tr><td>Cuisse confite dans graisse</td><td>80-85 °C, immergée</td><td>6-12 h</td><td>fibres effilochées à la fourchette</td></tr>
+      <tr><td>Pintade entière (1,2 kg)</td><td>four 180 °C, bardée</td><td>50-60 min</td><td>74 °C / 82 °C (chair plus sèche que poulet → bardage utile)</td></tr>
+      <tr><td>Dinde entière (5-6 kg)</td><td>four 160 °C après saumure 24-48 h</td><td>40 min/kg env. (3 h - 3 h 30)</td><td>74 °C filet / 82 °C cuisse</td></tr>
+      <tr><td>Caille entière</td><td>four 220 °C ou poêle + four</td><td>15-20 min</td><td>filet rosé toléré (65 °C, élevage)</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Poulet rôti à la peau croustillante</strong> (Serious Eats) : saumure sèche 24 h à découvert au frigo (la peau se déshydrate complètement), badigeon léger d'huile, four 220 °C sur grille. La peau atteint Maillard sans humidité parasite. Pour les volailles entières, sortir 1 h avant cuisson et placer une cuillerée de beurre sous la peau du filet pour ralentir la cuisson de la partie la plus fine.</p>
+  </div>
+
+  <h4 id="sec-v-gibier">Canard, oie, gibier</h4>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Magret — poêle, peau d'abord, départ à froid</td><td>feu doux peau / feu moyen chair</td><td>6-8 min peau + 2-3 min chair</td><td>55-58 °C rosé</td></tr>
+      <tr><td>Magret — sous-vide puis saisie peau</td><td>57 °C + poêle fumante</td><td>1 h 30 + 1 min saisie peau</td><td>57 °C, peau craquante</td></tr>
+      <tr><td>Cuisse de canard confite (graisse)</td><td>80 °C dans graisse de canard</td><td>8-12 h</td><td>fibres détachées, à griller croustillant avant service</td></tr>
+      <tr><td>Cuisse de canard — sous-vide</td><td>76-80 °C</td><td>12-24 h</td><td>texture confite identique sans graisse</td></tr>
+      <tr><td>Canard entier rôti (2-2,5 kg)</td><td>four 180-200 °C, plusieurs piqûres de la peau</td><td>1 h 30 - 2 h</td><td>filet 60 °C, cuisse 82 °C</td></tr>
+      <tr><td>Oie rôtie (4-5 kg)</td><td>four 160 °C après salage 24 h</td><td>3 h - 3 h 30, écoulement régulier de la graisse</td><td>74 °C / 82 °C</td></tr>
+      <tr><td>Filet de chevreuil / sanglier (élevage)</td><td>poêle fumante puis four 160 °C</td><td>2 min/face + 5-8 min</td><td>54-58 °C</td></tr>
+      <tr><td>Cuissot de chevreuil rôti (1,5 kg)</td><td>four 200 °C puis 160 °C</td><td>15 min/kg total</td><td>54-58 °C, repos 20 min</td></tr>
+      <tr><td>Civet (épaule, collier, cou)</td><td>cocotte four 130-150 °C dans vin rouge</td><td>3-5 h</td><td>fibres effilées</td></tr>
+      <tr><td>Pigeon entier rôti</td><td>poêle puis four 220 °C</td><td>2 min/face + 6-8 min</td><td>filet rosé 55-58 °C</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="sec-v-poisson">Poissons & fruits de mer</h4>
+  <p>Les températures à cœur sont récapitulées au §1.3 du manuel principal. Voici les protocoles pratiques :</p>
+  <div class="table-wrapper">
+  <table>
+    <thead><tr><th>Pièce / méthode</th><th>Température outil</th><th>Durée</th><th>Cible à cœur</th></tr></thead>
+    <tbody>
+      <tr><td>Pavé de saumon — poêle peau croustillante</td><td>poêle 170 °C, peau d'abord, pressée à la spatule</td><td>4-5 min peau + 1-2 min chair</td><td>49-52 °C rosé</td></tr>
+      <tr><td>Saumon — sous-vide</td><td>46-49 °C</td><td>30 min</td><td>46-49 °C nacré</td></tr>
+      <tr><td>Saumon entier ou pavé épais — four lent</td><td>110-120 °C</td><td>30-40 min</td><td>50 °C, chair lamellaire</td></tr>
+      <tr><td>Saumon gravlax (cru salé)</td><td>cru, sel + sucre + aneth + presse</td><td>24-48 h frigo</td><td>—</td></tr>
+      <tr><td>Bar / dorade entiers — four</td><td>200 °C sur lit de fenouil/oignons</td><td>20-25 min/kg</td><td>55 °C arête centrale</td></tr>
+      <tr><td>Poisson en croûte de sel</td><td>180 °C, 3,2 kg sel + 15 cl blanc d'œuf / 1,5 kg</td><td>25-30 min/kg + repos 10 min</td><td>60-65 °C</td></tr>
+      <tr><td>Cabillaud, lieu, lotte — poêle + four</td><td>poêle peau / four 180 °C</td><td>2 min poêle + 5-7 min four</td><td>52-55 °C nacré</td></tr>
+      <tr><td>Sole meunière</td><td>poêle beurre clarifié 170 °C</td><td>3-4 min/face</td><td>55 °C</td></tr>
+      <tr><td>Turbot poché en court-bouillon</td><td>court-bouillon frémissant 80-85 °C</td><td>10-12 min/kg</td><td>55-58 °C</td></tr>
+      <tr><td>Thon (steak) — bleu / saignant</td><td>poêle fumante 240 °C, sans matière grasse</td><td>30-45 s/face</td><td>38-43 °C à cœur</td></tr>
+      <tr><td>Saint-Jacques — poêle</td><td>poêle fumante + un filet d'huile</td><td>1 min - 1 min 30/face</td><td>47-50 °C rosé, caramélisation forte</td></tr>
+      <tr><td>Homard / langouste pochés</td><td>court-bouillon 70-75 °C</td><td>5 min/100 g de queue après remise en chaleur</td><td>52-55 °C</td></tr>
+      <tr><td>Crevettes / gambas</td><td>poêle fumante ou plancha</td><td>1 min/face décortiquées, 2 min/face en carapace</td><td>50-55 °C, juste opaques</td></tr>
+      <tr><td>Moules / palourdes marinière</td><td>cocotte couverte feu vif</td><td>3-5 min jusqu'à ouverture totale</td><td>—</td></tr>
+      <tr><td>Calamar / poulpe</td><td>soit très court (1-2 min) soit très long (45 min - 1 h 30)</td><td>règle "tout sauf entre 5 et 30 min" = caoutchouc</td><td>—</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="callout astuce">
+    <span class="callout-title"></span>
+    <p><strong>Règle des trois familles de viande.</strong> (1) <em>Pièces nobles</em> (filets, magrets, côtes, gigots, suprêmes) : viser <strong>la précision à cœur</strong> au thermomètre, combiner cuisson douce (basse T° ou sous-vide) avec saisie courte à la fin. (2) <em>Pièces "à griller"</em> (steaks fins, escalopes) : poêle <strong>très chaude</strong>, courte, repos minimal. (3) <em>Pièces "à braiser"</em> (joues, jarrets, paleron, épaule d'agneau, échine de porc) : oublier la cible à cœur, viser la <strong>transformation du collagène en gélatine</strong> — temps + chaleur humide modérée (130-150 °C ou 85-90 °C en sous-vide, plusieurs heures).</p>
+  </div>
+
+  <div class="callout erreur">
+    <span class="callout-title"></span>
+    <p><strong>Sur-cuire la volaille</strong> en pensant "sécurité". La salmonelle et le <em>Campylobacter</em> sont détruits dès <strong>74 °C atteints à cœur</strong>, ou par une <em>pasteurisation logarithmique</em> à plus basse température (par exemple 62 °C pendant 35 min — voir Douglas Baldwin). Cuire un blanc de poulet à 80-85 °C à cœur en pensant être plus prudent ne fait que dessécher la viande : la sécurité est déjà acquise à 74 °C instantané, ou bien avant si la cuisson est suffisamment longue à plus basse température.</p>
+  </div>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="epices.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Épices — la grammaire</span>
+  </a>
+  <a class="pager-link next" href="legumes.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Légumes — protocoles</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('menuToggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('sidebarBackdrop');
+  if(!toggle || !sidebar) return;
+  function open(){
+    sidebar.classList.add('open');
+    backdrop && backdrop.classList.add('open');
+    toggle.setAttribute('aria-expanded','true');
+    document.body.style.overflow='hidden';
+  }
+  function close(){
+    sidebar.classList.remove('open');
+    backdrop && backdrop.classList.remove('open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+  toggle.addEventListener('click', function(){
+    if(sidebar.classList.contains('open')) close(); else open();
+  });
+  backdrop && backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
+  });
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>
