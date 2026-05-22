@@ -58,6 +58,7 @@
     <div class="sidebar-section-title">Protocoles</div>
     <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
     <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+    <a href="conservation.html" class="sidebar-link"><span class="num">VII.</span>Conservation</a>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-section-title">Ressources</div>
@@ -176,9 +177,9 @@
   </div>
 
 <nav class="pager" aria-label="Pagination">
-  <a class="pager-link prev" href="legumes.html">
+  <a class="pager-link prev" href="conservation.html">
     <span class="pager-dir">Précédent</span>
-    <span class="pager-title">Légumes — protocoles</span>
+    <span class="pager-title">Conservation des produits</span>
   </a>
   <span></span>
 </nav>
@@ -190,33 +191,7 @@
   Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
 </footer>
 
-<script>
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var sidebar = document.getElementById('sidebar');
-  var backdrop = document.getElementById('sidebarBackdrop');
-  if(!toggle || !sidebar) return;
-  function open(){
-    sidebar.classList.add('open');
-    backdrop && backdrop.classList.add('open');
-    toggle.setAttribute('aria-expanded','true');
-    document.body.style.overflow='hidden';
-  }
-  function close(){
-    sidebar.classList.remove('open');
-    backdrop && backdrop.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false');
-    document.body.style.overflow='';
-  }
-  toggle.addEventListener('click', function(){
-    if(sidebar.classList.contains('open')) close(); else open();
-  });
-  backdrop && backdrop.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
-  });
-})();
-</script>
+<script src="assets/sidebar.js"></script>
 
 <script>
 if ('serviceWorker' in navigator) {

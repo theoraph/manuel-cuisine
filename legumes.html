@@ -686,33 +686,7 @@
   Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
 </footer>
 
-<script>
-(function(){
-  var toggle = document.getElementById('menuToggle');
-  var sidebar = document.getElementById('sidebar');
-  var backdrop = document.getElementById('sidebarBackdrop');
-  if(!toggle || !sidebar) return;
-  function open(){
-    sidebar.classList.add('open');
-    backdrop && backdrop.classList.add('open');
-    toggle.setAttribute('aria-expanded','true');
-    document.body.style.overflow='hidden';
-  }
-  function close(){
-    sidebar.classList.remove('open');
-    backdrop && backdrop.classList.remove('open');
-    toggle.setAttribute('aria-expanded','false');
-    document.body.style.overflow='';
-  }
-  toggle.addEventListener('click', function(){
-    if(sidebar.classList.contains('open')) close(); else open();
-  });
-  backdrop && backdrop.addEventListener('click', close);
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && sidebar.classList.contains('open')) close();
-  });
-})();
-</script>
+<script src="assets/sidebar.js"></script>
 
 <script src="assets/toc.js"></script>
 
