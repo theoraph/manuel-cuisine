@@ -6,7 +6,7 @@
  * Bump CACHE_VERSION when shipping content updates.
  */
 
-const CACHE_VERSION = 'manuel-cuisson-v2';
+const CACHE_VERSION = 'manuel-cuisson-v3';
 const APP_SHELL = [
   './',
   './index.html',
@@ -17,6 +17,7 @@ const APP_SHELL = [
   './viandes.html',
   './legumes.html',
   './biblio.html',
+  './conservation.html',
   './404.html',
   './manifest.json',
   './assets/style.css',

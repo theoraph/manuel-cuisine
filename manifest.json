@@ -10,7 +10,12 @@
   "orientation": "portrait-primary",
   "theme_color": "#6B1F1F",
   "background_color": "#F5EFE0",
-  "categories": ["food", "education", "lifestyle", "books"],
+  "categories": [
+    "food",
+    "education",
+    "lifestyle",
+    "books"
+  ],
   "icons": [
     {
       "src": "assets/icon-192.png",
@@ -33,25 +38,52 @@
   ],
   "shortcuts": [
     {
+      "name": "Conservation",
+      "short_name": "Conservation",
+      "description": "Durées et méthodes par famille de produits",
+      "url": "./conservation.html",
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
       "name": "Viandes",
       "short_name": "Viandes",
       "description": "Protocoles temps-température par viande",
       "url": "./viandes.html",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Légumes",
       "short_name": "Légumes",
       "description": "Protocoles par famille de légumes",
       "url": "./legumes.html",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Épices",
       "short_name": "Épices",
       "description": "Atlas par famille botanique",
       "url": "./epices.html",
-      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "assets/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

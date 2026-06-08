@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liaisons des sauces — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+    <a href="conservation.html" class="sidebar-link"><span class="num">VII.</span>Conservation</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Sauces</div>
+    <a href="liaisons.html" class="sidebar-link current"><span class="num">VIII.</span>Liaisons des sauces</a>
+    <a href="liaisons.html#sec-8-1" class="sidebar-sub"><span class="num">8.1</span>Quatre mécanismes</a>
+    <a href="liaisons.html#sec-8-2" class="sidebar-sub"><span class="num">8.2</span>Liaisons par les amidons</a>
+    <a href="liaisons.html#sec-8-3" class="sidebar-sub"><span class="num">8.3</span>Liaisons protéiques</a>
+    <a href="liaisons.html#sec-8-4" class="sidebar-sub"><span class="num">8.4</span>Liaisons par émulsion</a>
+    <a href="liaisons.html#sec-8-5" class="sidebar-sub"><span class="num">8.5</span>Liaisons par réduction</a>
+    <a href="liaisons.html#sec-8-6" class="sidebar-sub"><span class="num">8.6</span>Gélifiants</a>
+    <a href="liaisons.html#sec-8-7" class="sidebar-sub"><span class="num">8.7</span>Hydrocolloides modernes</a>
+    <a href="liaisons.html#sec-8-8" class="sidebar-sub"><span class="num">8.8</span>Synthèse</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Liaisons des sauces</span>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Chapitre huitième</div>
+  <h1>Les <em>liaisons</em> des sauces</h1>
+  <p class="subtitle">Amidons · Protéines · Émulsions · Réduction · Gélifiants · Hydrocolloides</p>
+</div>
+
+<p class="lead">Une sauce n'est jamais qu'un liquide aromatisé&nbsp;: c'est un <strong>système physico-chimique contrôlé</strong>. La liaison est le mécanisme par lequel ce système acquiert sa viscosité, sa texture et sa tenue. Comprendre chaque type de liaison dans ses rouages moléculaires, c'est passer de l'exécutant qui suit une recette au cuisinier qui <em>choisit</em> sa liaison selon le résultat voulu — et qui sait la réparer quand elle faillit.</p>
+
+<div class="chapter-toc">
+  <strong>Sommaire du chapitre</strong>
+  8.1 Quatre mécanismes fondamentaux · 8.2 Liaisons par les amidons · 8.3 Liaisons protéiques · 8.4 Liaisons par émulsion · 8.5 Liaisons par réduction · 8.6 Gélifiants naturels · 8.7 Hydrocolloides modernes · 8.8 Synthèse — quelle liaison pour quel résultat&nbsp;?
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-1"><span class="h3-num">8.1</span>Quatre mécanismes fondamentaux</h3>
+
+<p>Toute liaison augmente la viscosité d'un liquide selon l'un de ces quatre principes, souvent combinés&nbsp;:</p>
+
+<ol>
+  <li><strong>Suspension d'amidon gélatinisé</strong> — des granules d'amidon gonflent dans l'eau chaude et libèrent des chaînes de polymères qui piègent les molécules d'eau entre elles. C'est le mécanisme des roux et des fécules.</li>
+  <li><strong>Émulsion</strong> — des gouttelettes d'une phase (huile ou eau) sont dispersées dans l'autre grâce à un émulsifiant tensio-actif (lécithine, caséines). Le résultat n'est pas plus "épais" au sens chimique, mais optiquement opaque et texturalement crémeux.</li>
+  <li><strong>Réseau protéique ou polysaccharidique</strong> — des macromolécules (protéines dénaturées, gélatine, agar-agar) forment un réseau tridimensionnel qui immobilise l'eau libre. La texture va du velouté au gel selon la concentration.</li>
+  <li><strong>Concentration par évaporation</strong> — l'eau s'évapore et les molécules restantes (sucres, protéines, gélatine de collagène) se retrouvent plus proches les unes des autres&nbsp;: la viscosité augmente sans aucun ajout extérieur.</li>
+</ol>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Viscosité dynamique vs. viscosité perçue.</strong> La viscosité mesurée (en mPa·s) et la viscosité <em>perçue en bouche</em> ne sont pas identiques. Un gel d'agar-agar peut être très visqueux sur un viscosimètre mais paraître ferme et cassant en bouche. Une sauce montée au beurre est peu visqueuse mais enrobe parfaitement le palais. La <strong>thixotropie</strong> (certains gels se fluidifient sous cisaillement — la gomme xanthane par exemple) joue aussi un rôle&nbsp;: la cuillère qui tourne dans la sauce "casse" temporairement le réseau, ce qui explique qu'une sauce qui semble épaisse en pot soit très fluide sur l'assiette.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-2"><span class="h3-num">8.2</span>Liaisons par les amidons</h3>
+
+<p class="family-intro">C'est la famille de liaisons la plus ancienne et la plus répandue en cuisine classique. Elle repose sur la <strong>gélatinisation</strong> : les granules d'amidon, insolubles à froid, absorbent l'eau, gonflent, puis éclatent entre 58 et 75&nbsp;°C (selon l'origine botanique) en libérant leurs chaînes de polymères — amylose et amylopectine — qui forment un réseau visqueux.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Amylose vs. amylopectine&nbsp;: deux comportements opposés.</strong> L'amidon est composé de deux polymères de glucose&nbsp;: l'<strong>amylose</strong> (chaînes linéaires, 20–30&nbsp;% selon la source) et l'<strong>amylopectine</strong> (chaînes très ramifiées, 70–80&nbsp;%). Après gélatinisation&nbsp;:</p>
+  <p>→ L'<strong>amylose</strong> est responsable de la <em>rétrogradation</em>&nbsp;: en refroidissant, ses chaînes linéaires se réassocient et cristallisent, formant un gel ferme voire granuleux (la sauce qui "prend" au frigo et "rend de l'eau" en réchauffant).</p>
+  <p>→ L'<strong>amylopectine</strong> est très ramifiée, donc peu sujette à la rétrogradation. Une fécule riche en amylopectine (pomme de terre, tapioca) donne une sauce plus stable à la conservation au froid.</p>
+  <p>La fécule de pomme de terre contient quasi 100&nbsp;% d'amylopectine — c'est pourquoi elle ne gélifie presque pas en refroidissant. La fécule de maïs classique contient ~25&nbsp;% d'amylose — elle gélifie bien, idéale pour les nappages froids.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Agent liant</th>
+      <th>Gélatinisation</th>
+      <th>Ratio nappant</th>
+      <th>Translucidité</th>
+      <th>Tenue au froid</th>
+      <th>Résiste à la surgélation</th>
+      <th>Usages typiques</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Roux blanc</b> (farine + beurre 1:1, cuit 2 min)</td>
+      <td>73–75&nbsp;°C</td>
+      <td>40&nbsp;g/L</td>
+      <td>Opaque, blanc</td>
+      <td>Oui</td>
+      <td>Oui (résistant)</td>
+      <td>Béchamel, velouté, soufflé, croque</td>
+    </tr>
+    <tr>
+      <td><b>Roux blond</b> (cuit 5–7 min, couleur sable)</td>
+      <td>73–75&nbsp;°C</td>
+      <td>45&nbsp;g/L</td>
+      <td>Opaque, noisette</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Velouté de volaille, sauce suprême</td>
+    </tr>
+    <tr>
+      <td><b>Roux brun</b> (cuit 12–20 min, couleur acajou)</td>
+      <td>73–75&nbsp;°C</td>
+      <td>55&nbsp;g/L</td>
+      <td>Opaque, brun</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Sauce espagnole, demi-glace classique, gumbo</td>
+    </tr>
+    <tr>
+      <td><b>Fécule de maïs</b> (Maïzena)</td>
+      <td>62–72&nbsp;°C</td>
+      <td>10–15&nbsp;g/L</td>
+      <td>Semi-translucide</td>
+      <td>Gélifie fort</td>
+      <td>Médiocre (granuleuse)</td>
+      <td>Sauces asiatiques, nappages, veloutés light</td>
+    </tr>
+    <tr>
+      <td><b>Fécule de pomme de terre</b></td>
+      <td>58–65&nbsp;°C</td>
+      <td>8–12&nbsp;g/L</td>
+      <td>Translucide</td>
+      <td>Stable (peu rétrograde)</td>
+      <td>Correcte</td>
+      <td>Sauces légères, vichyssoise, plats nordiques</td>
+    </tr>
+    <tr>
+      <td><b>Arrow-root</b> (marante arundinacée)</td>
+      <td>65–70&nbsp;°C</td>
+      <td>8–12&nbsp;g/L</td>
+      <td>Très transparente</td>
+      <td>Médiocre</td>
+      <td>Non (se liquéfie)</td>
+      <td>Sauces claires, nappages brillants servis chauds</td>
+    </tr>
+    <tr>
+      <td><b>Farine de riz</b></td>
+      <td>65–75&nbsp;°C</td>
+      <td>12–18&nbsp;g/L</td>
+      <td>Légèrement opaque</td>
+      <td>Oui</td>
+      <td>Meilleure que maïzena</td>
+      <td>Sans gluten, soupes asiatiques, sauces légères</td>
+    </tr>
+    <tr>
+      <td><b>Beurre manié</b> (farine + beurre crus, 1:1, en billes)</td>
+      <td>73–75&nbsp;°C (incorporé dans sauce frémissante)</td>
+      <td>30–40&nbsp;g/L</td>
+      <td>Opaque</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Correction de viscosité en cours de service, sauces de dernière minute</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Ne jamais verser une fécule sèche dans un liquide chaud.</strong> Les granules d'amidon gonflent instantanément en surface et forment une croûte imperméable — ce sont les grumeaux. Protocole systématique&nbsp;: délayer la fécule dans 2× son volume d'eau froide (ou de liquide froid) pour former un "slurry" homogène, puis verser en filet dans le liquide frémissant en remuant en continu.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Roux&nbsp;: la règle des températures opposées.</strong> Pour éviter les grumeaux sans passer par le slurry, jouer sur les températures opposées&nbsp;: <em>roux chaud + liquide froid</em> (béchamel à la farine versée sur roux bouillant, puis lait froid ajouté d'un coup en fouettant) ou <em>roux froid + liquide chaud</em>. L'écart de température ralentit momentanément la gélatinisation et donne le temps au fouet de disperser les granules avant qu'ils ne coalescent.</p>
+  <p><strong>Beurre manié</strong>&nbsp;: plus pratique que le roux pour les corrections de dernière minute — on incorpore de petites noix directement dans la sauce frémissante hors du feu direct, en fouettant entre chaque ajout. L'amidon de la farine se gélatinise progressivement sans risque de grumeaux.</p>
+</div>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Pourquoi le roux brun lie moins bien qu'un roux blanc.</strong> En chauffant longtemps la farine dans le beurre, une partie des chaînes d'amidon se dégradent par réaction de Maillard et de caramélisation. Ces chaînes fragmentées ont moins de capacité à former un réseau visqueux — d'où la dose plus élevée de roux brun pour le même pouvoir liant. En contrepartie, le roux brun apporte des arômes de noisette et une couleur profonde introuvables avec la fécule.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-3"><span class="h3-num">8.3</span>Liaisons protéiques</h3>
+
+<p class="family-intro">Les protéines — qu'elles viennent du jaune d'œuf, du sang ou de la crème — peuvent lier une sauce par <strong>dénaturation partielle et coagulation thermique</strong>. La clé est le contrôle précis de la température&nbsp;: trop basse, la liaison ne prend pas&nbsp;; trop haute, les protéines coagulent en masse et la sauce "tourne" en omelette ou en flocons.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Le jaune d'œuf&nbsp;: émulsifiant ET coagulant.</strong> Le jaune est un système colloïdal complexe. Sa <strong>lécithine</strong> (phosphatidylcholine, ~1,2&nbsp;% du poids du jaune) est un phospholipide tensio-actif&nbsp;: sa tête hydrophile se tourne vers l'eau, sa queue lipophile vers les graisses. C'est l'émulsifiant qui stabilise les hollandaises et les mayonnaises.</p>
+  <p>Ses <strong>lipoprotéines et protéines</strong> (ovalbumine, conalbumine, lysozyme dans le blanc — lipovitelline, phosvitine dans le jaune) se dénaturent et coagulent entre 63&nbsp;°C et 88&nbsp;°C selon la protéine et la dilution. Dans une sauce diluée, la fenêtre de coagulation s'élargit légèrement. Dans un jaune pur (crème brûlée), elle est plus serrée.</p>
+  <p>Entre 65 et 82&nbsp;°C, les protéines partiellement dénaturées forment un réseau lâche qui nappe sans cailler&nbsp;: c'est la fenêtre de la liaison. Au-delà de 83–85&nbsp;°C, la coagulation est totale et irréversible.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Agent liant</th>
+      <th>Température fenêtre</th>
+      <th>Ratio indicatif</th>
+      <th>Texture obtenue</th>
+      <th>Usages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Jaune d'œuf seul</b></td>
+      <td>63–82&nbsp;°C</td>
+      <td>2–3 jaunes / 500&nbsp;mL</td>
+      <td>Veloutée, légèrement nappante, brillante</td>
+      <td>Crème anglaise, sauce au vin blanc, sauce suprême finition, carbonara</td>
+    </tr>
+    <tr>
+      <td><b>Jaune d'œuf + crème</b> (liaison classique)</td>
+      <td>75–82&nbsp;°C</td>
+      <td>2 jaunes + 80–100&nbsp;mL crème / 500&nbsp;mL</td>
+      <td>Riche, nappante, dorée</td>
+      <td>Veloutés normande, aurore, financière, sauces fines de la cuisine classique</td>
+    </tr>
+    <tr>
+      <td><b>Crème liquide réduite seule</b></td>
+      <td>—</td>
+      <td>Réduire de 40–60&nbsp;%</td>
+      <td>Nappante, légèrement caramélisée</td>
+      <td>Sauces crème express, réductions à la crème pour poissons et volailles</td>
+    </tr>
+    <tr>
+      <td><b>Liaison au sang</b></td>
+      <td>&lt; 70&nbsp;°C</td>
+      <td>50–80&nbsp;mL / 500&nbsp;mL</td>
+      <td>Foncée, lisse, intense, veloutée</td>
+      <td>Civet de lièvre, lapin au sang, canard au sang (style Tour d'Argent)</td>
+    </tr>
+    <tr>
+      <td><b>Foie (volaille, foie gras)</b></td>
+      <td>&lt; 80&nbsp;°C</td>
+      <td>50–80&nbsp;g mixés / 500&nbsp;mL</td>
+      <td>Onctueuse, beurreuse, légèrement granuleuse si trop cuite</td>
+      <td>Civet, sauce périgueux enrichie, sauces de gibier</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Tempérer le jaune avant incorporation&nbsp;: protocole obligatoire.</strong> Ne jamais verser un jaune d'œuf directement dans une sauce à 80&nbsp;°C&nbsp;: le choc thermique coagule instantanément les protéines de surface du jaune en grumeaux. Protocole&nbsp;: (1) fouetter les jaunes dans un bol, (2) verser progressivement 2–3 louches de sauce chaude sur les jaunes en fouettant (=&nbsp;tempérage), (3) seulement alors, reverser l'ensemble dans la casserole à feu doux en remuant. La température du mélange monte graduellement sans dépasser la fenêtre de coagulation.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Liaison au sang&nbsp;: ne jamais faire bouillir.</strong> L'hémoglobine coagule à environ 70&nbsp;°C&nbsp;: une ébullition transformerait la sauce en bouillie noire granuleuse. Le sang s'incorpore hors du feu ou à très faible frémissement, en remuant constamment. Pour le conserver jusqu'au service, maintenir entre 60 et 65&nbsp;°C au bain-marie. Si la sauce doit être réchauffée, ne jamais dépasser 70&nbsp;°C.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-4"><span class="h3-num">8.4</span>Liaisons par émulsion</h3>
+
+<p class="family-intro">Une émulsion est une dispersion stable de deux liquides immiscibles (huile et eau) l'un dans l'autre. Sa formation exige une <strong>énergie de cisaillement</strong> (fouet, mixeur) pour fragmenter une phase en gouttelettes microscopiques, et un <strong>émulsifiant</strong> (molécule tensio-active) pour stabiliser ces gouttelettes en s'interposant à leur interface et en empêchant leur coalescence.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>La structure d'une émulsion H/E (huile dans eau).</strong> Dans la mayonnaise, l'hollandaise ou la béarnaise, des gouttelettes d'huile ou de beurre clarifié (phase dispersée) sont emprisonnées dans une phase aqueuse (phase continue). L'émulsifiant — la <strong>lécithine du jaune d'œuf</strong> — est une molécule <em>amphiphile</em>&nbsp;: sa tête polaire (phosphocholine) pointe vers l'eau, sa queue apolaire (acides gras) pointe vers l'huile. Elle "coiffe" chaque gouttelette et crée une barrière mécanique contre la fusion.</p>
+  <p>La taille des gouttelettes détermine la texture&nbsp;: plus elles sont petites (mixeur haute vitesse), plus l'émulsion est stable et crémeuse. Une mayonnaise maison fouettée à la main présente des gouttelettes 3–5× plus grandes qu'une mayo industrielle mixée — d'où sa texture plus "cassante" et sa sensibilité à la température.</p>
+  <p><strong>Pourquoi le beurre blanc est une émulsion fragile.</strong> Le beurre ne contient pas de lécithine libre en quantité suffisante — ce sont les <strong>caséines et protéines du lait</strong> qui jouent le rôle d'émulsifiant, et elles sont bien moins puissantes que la lécithine du jaune. D'où la fenêtre de température étroite (55–65&nbsp;°C) et la fragilité des sauces montées au beurre.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Type d'émulsion</th>
+      <th>Émulsifiant principal</th>
+      <th>Température</th>
+      <th>Stabilité</th>
+      <th>Texture</th>
+      <th>Exemples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Vinaigrette simple</b></td>
+      <td>Moutarde (partiellement), aucun fort</td>
+      <td>Froide</td>
+      <td>Instable — sépare en 5–15 min</td>
+      <td>Légère, fluide</td>
+      <td>Toutes vinaigrettes classiques</td>
+    </tr>
+    <tr>
+      <td><b>Vinaigrette stabilisée</b></td>
+      <td>Moutarde (mucilages) + jaune ou xanthane</td>
+      <td>Froide</td>
+      <td>Stable 24–48&nbsp;h</td>
+      <td>Légèrement crémeuse</td>
+      <td>Vinaigrettes de restaurant, vinaigrette César</td>
+    </tr>
+    <tr>
+      <td><b>Mayonnaise</b></td>
+      <td>Lécithine du jaune d'œuf</td>
+      <td>Froide (15–20&nbsp;°C idéal)</td>
+      <td>Très stable</td>
+      <td>Épaisse, crémeuse</td>
+      <td>Mayo, rémoulade, tartare, aïoli à l'huile, sauce cocktail</td>
+    </tr>
+    <tr>
+      <td><b>Aïoli pur ail</b></td>
+      <td>Mucilages de l'ail (sans jaune)</td>
+      <td>Froide</td>
+      <td>Modérée, très technique</td>
+      <td>Dense, collante</td>
+      <td>Aïoli provençal traditionnel</td>
+    </tr>
+    <tr>
+      <td><b>Hollandaise</b></td>
+      <td>Lécithine jaune d'œuf chauffé (sabayon)</td>
+      <td>Chaude, 60–65&nbsp;°C</td>
+      <td>Modérée (2–3&nbsp;h max au bain-marie)</td>
+      <td>Crémeuse, légèrement aérée</td>
+      <td>Hollandaise, mousseline (+ crème fouettée)</td>
+    </tr>
+    <tr>
+      <td><b>Béarnaise</b></td>
+      <td>Lécithine jaune d'œuf chauffé</td>
+      <td>Chaude, 60–65&nbsp;°C</td>
+      <td>Modérée</td>
+      <td>Épaisse, aromatique</td>
+      <td>Béarnaise, choron (+ tomate), foyot (+ glace de viande)</td>
+    </tr>
+    <tr>
+      <td><b>Beurre blanc</b></td>
+      <td>Caséines et protéines du beurre</td>
+      <td>55–65&nbsp;°C (jamais &gt; 68&nbsp;°C)</td>
+      <td>Fragile</td>
+      <td>Légère, nacrée, brillante</td>
+      <td>Beurre blanc nantais, beurre rouge (vin rouge), beurre à l'estragon</td>
+    </tr>
+    <tr>
+      <td><b>Beurre monté</b> (sauce émulsionnée)</td>
+      <td>Caséines du beurre</td>
+      <td>55–68&nbsp;°C</td>
+      <td>Fragile</td>
+      <td>Fluide, brillante, enrobante</td>
+      <td>Finitions de sauces, pasta all'emulsione, sauce "glacée"</td>
+    </tr>
+    <tr>
+      <td><b>Espuma / sauce mousseuse</b></td>
+      <td>Lécithine de soja + mixeur plongeant</td>
+      <td>Chaude ou froide</td>
+      <td>Éphémère (15–30 min)</td>
+      <td>Mousseuse, aérienne</td>
+      <td>Espuma de parmesan, mousse de beurre blanc, sauces légères contemporaines</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Les trois ennemis de l'émulsion chaude&nbsp;:</strong></p>
+  <p>(1) <strong>La chaleur excessive</strong> (&gt; 68–70&nbsp;°C) — coagule les protéines et détruit l'émulsifiant. Hollandaise et beurre blanc ne supportent jamais l'ébullition.</p>
+  <p>(2) <strong>Le ratio huile/eau trop élevé</strong> — au-delà de ~75&nbsp;% de phase grasse, l'émulsion inverse (H/E → E/H) et la sauce tranche. Pour la mayo&nbsp;: ne jamais dépasser 200&nbsp;mL d'huile par jaune au-delà de ce seuil sans ajouter un peu d'eau ou de citron.</p>
+  <p>(3) <strong>Le choc froid brutal</strong> — pour le beurre blanc et le beurre monté&nbsp;: ne jamais poser la casserole sur un plan de travail froid. La contraction brutale des globules gras brise l'émulsion. Maintenir à température au bain-marie ou sur diffuseur.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Rattraper une hollandaise ou une béarnaise tranchée.</strong> Méthode&nbsp;: dans un bol propre, fouetter 1 c.s. d'eau tiède (ou 1 c.c. de jus de citron froid). Ajouter la sauce tranchée goutte à goutte en fouettant vivement — la nouvelle phase aqueuse sert de "noyau" pour reformer l'émulsion. Alterner la sauce tranchée et quelques gouttes d'eau si nécessaire.</p>
+  <p><strong>Beurre blanc stabilisé.</strong> Ajouter 1–2 c.s. de crème liquide dans la réduction avant d'incorporer le beurre. Les caséines de la crème renforcent le pouvoir émulsifiant et élargissent la fenêtre de température à 55–72&nbsp;°C.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-5"><span class="h3-num">8.5</span>Liaisons par réduction</h3>
+
+<p class="family-intro">La liaison la plus fondamentale et la plus pure — aucun ajout, seulement <strong>l'évaporation de l'eau</strong>. En réduisant, on concentre les sucres, les acides, les arômes, et surtout la <strong>gélatine naturelle</strong> dissoute dans tout fond issu d'os et de tissu conjonctif. C'est cette gélatine qui donne aux jus réduits leur texture "enrobante" caractéristique, celle qui "colle aux lèvres".</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Le collagène, source de liaison naturelle.</strong> Le collagène est la protéine structurale du tissu conjonctif (tendons, cartilages, peau, abattis). Sous l'effet d'une chaleur prolongée (&gt; 70&nbsp;°C dans un liquide), ses triples hélices se déroulent et se fragmentent en <strong>gélatine</strong> — un polypeptide soluble. La gélatine dissoute dans le fond est invisible au chaud&nbsp;; au froid (&lt; 35&nbsp;°C), elle forme un réseau et le fond "prend" en gelée ferme.</p>
+  <p>Un fond de veau de qualité gèle dans le frigo comme un bloc — c'est le signe d'une teneur élevée en gélatine (~10–20&nbsp;g/L). En réduisant ce fond, la concentration en gélatine augmente proportionnellement. La <strong>demi-glace</strong> (~10× concentrée) nappe à 60&nbsp;°C. La <strong>glace de viande</strong> (~20× concentrée) est solide à température ambiante.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Type de réduction</th>
+      <th>Temps</th>
+      <th>Rapport volumique</th>
+      <th>Texture à chaud</th>
+      <th>Texture au froid</th>
+      <th>Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Fumet de poisson</b></td>
+      <td>25–35 min (jamais plus)</td>
+      <td>3&nbsp;→&nbsp;1</td>
+      <td>Légèrement sirupeuse</td>
+      <td>Légèrement gélatineuse</td>
+      <td>Base sauces poisson, beurre blanc, nage</td>
+    </tr>
+    <tr>
+      <td><b>Fond blanc de volaille</b></td>
+      <td>3–4&nbsp;h</td>
+      <td>5&nbsp;→&nbsp;1</td>
+      <td>Limpide, légèrement nappante</td>
+      <td>Gélatineuse (prend partiellement)</td>
+      <td>Veloutés, sauces à la crème, blanquette</td>
+    </tr>
+    <tr>
+      <td><b>Fond brun de veau</b></td>
+      <td>6–8&nbsp;h</td>
+      <td>8&nbsp;→&nbsp;1</td>
+      <td>Nappante</td>
+      <td>Gel ferme</td>
+      <td>Demi-glace, jus de veau, sauces brunes</td>
+    </tr>
+    <tr>
+      <td><b>Demi-glace</b> (fond brun réduit + sauce espagnole)</td>
+      <td>2–4&nbsp;h supplémentaires</td>
+      <td>10&nbsp;→&nbsp;1</td>
+      <td>Très nappante, brillante</td>
+      <td>Gel très ferme</td>
+      <td>Sauce poivrade, bordelaise, périgourdine, Robert</td>
+    </tr>
+    <tr>
+      <td><b>Glace de viande</b></td>
+      <td>8–12&nbsp;h total</td>
+      <td>20&nbsp;→&nbsp;1</td>
+      <td>Sirupeuse, colle au doigt</td>
+      <td>Solide, comme de la colle forte</td>
+      <td>Enrichissement, nappage brillant, cubes de concentration</td>
+    </tr>
+    <tr>
+      <td><b>Jus de cuisson déglacé + réduit</b></td>
+      <td>5–15 min</td>
+      <td>3–5&nbsp;→&nbsp;1</td>
+      <td>Variable selon fond de départ</td>
+      <td>Variable</td>
+      <td>Sauces "à la minute", jus de rôti, sauces poêle</td>
+    </tr>
+    <tr>
+      <td><b>Réduction de crème</b></td>
+      <td>5–10 min à feu vif</td>
+      <td>2&nbsp;→&nbsp;1</td>
+      <td>Nappante, légèrement caramélisée</td>
+      <td>Épaisse, tend à figer</td>
+      <td>Sauces crème rapides, finitions</td>
+    </tr>
+    <tr>
+      <td><b>Réduction vin rouge</b></td>
+      <td>10–20 min</td>
+      <td>4&nbsp;→&nbsp;1</td>
+      <td>Sirupeuse, acide</td>
+      <td>Gel léger si avec fond</td>
+      <td>Base bordelaise, sauce au vin, meurette</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Le "test de la nappe".</strong> Pour évaluer la liaison d'un fond en réduction&nbsp;: tremper le dos d'une cuillère dans la sauce à 60&nbsp;°C, tracer un trait horizontal avec le doigt. Si le trait tient sans que la sauce ne le recouvre, la sauce est "nappante" — prête. Plus opérationnel qu'un thermomètre pour les sauces brunes.</p>
+  <p><strong>Glace de viande&nbsp;: le piège de la sur-réduction.</strong> Au-delà du stade "glace de viande", la sauce cuit les sucres jusqu'à caramélisation puis carbonisation — elle devient amère. Surveiller en fin de réduction sur feu minimum, dès que la sauce commence à faire des bulles lentes et brillantes.</p>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Fumet de poisson&nbsp;: les 20 minutes maximum.</strong> Contrairement aux fonds de viande qui s'améliorent avec le temps, le fumet de poisson développe des <strong>arêtes amères</strong> après 20–25 min d'ébullition — les protéines et minéraux des arêtes se dégradent en composés glutamatiques puis amers. Règle absolue&nbsp;: 20 min à frémissement doux, jamais en ébullition vive, puis passer immédiatement.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-6"><span class="h3-num">8.6</span>Gélifiants naturels</h3>
+
+<p class="family-intro">Contrairement aux amidons qui épaississent par suspension, les gélifiants créent un <strong>réseau moléculaire tridimensionnel</strong> qui immobilise l'eau et donne une texture de gel. La différence fondamentale avec une simple sauce liée&nbsp;: un gel peut tenir à froid sans réduction, être coulé dans un moule, tranché, et présenter des formes impossibles autrement.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Gélifiant</th>
+      <th>Origine</th>
+      <th>Dose gel ferme</th>
+      <th>Gèle en dessous de</th>
+      <th>Fond au-dessus de</th>
+      <th>Texture</th>
+      <th>Résiste à la chaleur</th>
+      <th>Usage culinaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Gélatine</b> (feuilles or/argent ou poudre)</td>
+      <td>Collagène animal (porc ou bœuf)</td>
+      <td>20–30&nbsp;g/L</td>
+      <td>15–20&nbsp;°C</td>
+      <td>30–35&nbsp;°C</td>
+      <td>Élastique, fondant en bouche, transparent</td>
+      <td>Non</td>
+      <td>Aspics, bavarois, panna cotta, mousses, nappages, bouillons en gelée</td>
+    </tr>
+    <tr>
+      <td><b>Agar-agar</b></td>
+      <td>Algues rouges (<em>Gelidium</em>, <em>Gracilaria</em>)</td>
+      <td>2–8&nbsp;g/L</td>
+      <td>38–42&nbsp;°C</td>
+      <td>80–90&nbsp;°C</td>
+      <td>Ferme, cassant, opaque légèrement</td>
+      <td>Oui</td>
+      <td>Aspics végans, gels "chauds", confiture sans sucre ajouté, spaghettis de saveur</td>
+    </tr>
+    <tr>
+      <td><b>Pectine LM</b> (low methoxyl)</td>
+      <td>Peaux de fruits (pomme, citron, betterave)</td>
+      <td>5–15&nbsp;g/L + Ca²⁺</td>
+      <td>35–40&nbsp;°C</td>
+      <td>65–75&nbsp;°C</td>
+      <td>Légèrement élastique, peu brillant</td>
+      <td>Partielle</td>
+      <td>Confitures allégées, gelées de fruit, sauces de fruits liées</td>
+    </tr>
+    <tr>
+      <td><b>Pectine HM</b> (high methoxyl)</td>
+      <td>Peaux de fruits</td>
+      <td>5–20&nbsp;g/L + sucre + acidité</td>
+      <td>40–50&nbsp;°C</td>
+      <td>70–80&nbsp;°C</td>
+      <td>Élastique, brillant</td>
+      <td>Partielle</td>
+      <td>Confitures classiques, nappages pâtisserie, gelées de pomme</td>
+    </tr>
+    <tr>
+      <td><b>Carraghénane κ (kappa)</b></td>
+      <td>Algues rouges (<em>Kappaphycus</em>)</td>
+      <td>2–5&nbsp;g/L</td>
+      <td>40–50&nbsp;°C</td>
+      <td>60–70&nbsp;°C</td>
+      <td>Ferme, cassant, cassure nette</td>
+      <td>Oui</td>
+      <td>Gels fermes, produits laitiers substitués, préparations fromagères véganes</td>
+    </tr>
+    <tr>
+      <td><b>Carraghénane ι (iota)</b></td>
+      <td>Algues rouges (<em>Eucheuma</em>)</td>
+      <td>4–8&nbsp;g/L</td>
+      <td>35–45&nbsp;°C</td>
+      <td>55–65&nbsp;°C</td>
+      <td>Souple, thixotrope, élastique</td>
+      <td>Oui</td>
+      <td>Gels mous, crèmes à texture, flans légers, desserts lacto-végétaux</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Pourquoi la gélatine "fond en bouche" et l'agar ne fond pas.</strong> La gélatine est extraite du collagène animal et ses chaînes peptidiques forment un réseau par liaisons hydrogènes qui se rompent à 30–35&nbsp;°C — soit exactement la <strong>température buccale</strong>. D'où cette sensation de "fondre" dans la bouche, perçue comme un marqueur de qualité et de luxe dans les aspics et les mousses fines.</p>
+  <p>L'agar-agar, lui, est un polysaccharide (agarose + agaropectine). Ses liaisons sont bien plus robustes&nbsp;: il faut 80–90&nbsp;°C pour le faire fondre. En bouche à 37&nbsp;°C, il reste ferme et libère une sensation plus "cassante" et moins fondue. Avantages en contrepartie&nbsp;: il permet des gels chauds (servis fumants), résiste à la pièce sans réfrigération prolongée, et ne dépend pas de matières animales.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Gélatine&nbsp;: protocole en 3 étapes.</strong> (1) <em>Hydrater</em>&nbsp;: immerger les feuilles dans eau froide 5–10 min (elles gonflent et deviennent molles). (2) <em>Essorer</em>&nbsp;: presser pour éliminer l'eau d'hydratation. (3) <em>Dissoudre</em>&nbsp;: ajouter dans le liquide chaud (60–80&nbsp;°C) — jamais bouillant, la chaleur excessive dégrade les liaisons peptidiques et affaiblit le gel. Ne jamais incorporer dans un liquide froid&nbsp;: la gélatine coagule en filaments visibles.</p>
+  <p><strong>Astuce "gel-test"&nbsp;:</strong> pour vérifier la prise avant service, déposer 1 c.s. du mélange fini sur une assiette froide au frigo 5 min. Si elle prend, le gel est bon. Si elle reste liquide, ajouter 10–20&nbsp;% de gélatine supplémentaire.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-7"><span class="h3-num">8.7</span>Hydrocolloides modernes</h3>
+
+<p class="family-intro">Les hydrocolloides sont des polysaccharides ou protéines d'origines naturelles (bactériennes, végétales, algales) utilisés en cuisine contemporaine pour des propriétés impossibles à obtenir avec les liaisons classiques&nbsp;: viscosité à froid sans chauffage, gélification thermoreversible inverse, émulsification puissante, espumas stables. Ils sont tous naturels — certains existent dans l'alimentation courante depuis des siècles.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Hydrocolloides</th>
+      <th>Origine</th>
+      <th>Dose efficace</th>
+      <th>Particularité clé</th>
+      <th>Usage culinaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Gomme xanthane</b></td>
+      <td>Fermentation bactérienne (<em>Xanthomonas campestris</em>)</td>
+      <td>0,1–0,5&nbsp;%</td>
+      <td>Épaissit à froid ET à chaud&nbsp;; très stable&nbsp;; fortement <em>thixotrope</em> (fluidifie sous cisaillement)</td>
+      <td>Vinaigrettes stables, sauces sans cuisson, coulis épaissis, émulsions froides stables, cuisine sans gluten</td>
+    </tr>
+    <tr>
+      <td><b>Gomme de guar</b></td>
+      <td>Guar (<em>Cyamopsis tetragonoloba</em>)</td>
+      <td>0,1–0,3&nbsp;%</td>
+      <td>Très efficace à froid, synergique avec xanthane (mélange 1:1 démultiplie la viscosité), peu stable à chaud</td>
+      <td>Crèmes glacées (réduit les cristaux de glace), smoothies, sauces froides épaissies sans cuisson</td>
+    </tr>
+    <tr>
+      <td><b>Lécithine de soja</b></td>
+      <td>Soja (phosphatidylcholine extraite)</td>
+      <td>0,3–0,5&nbsp;% pour espuma</td>
+      <td>Émulsifiant puissant, crée des mousses aériennes avec mixeur plongeant incliné à la surface</td>
+      <td>Espumas de parmesan, cappuccino de sauces, vinaigrettes émulsifiées stables, substitut partiel de jaune d'œuf</td>
+    </tr>
+    <tr>
+      <td><b>Méthylcellulose</b></td>
+      <td>Cellulose végétale modifiée (méthylation)</td>
+      <td>1–2&nbsp;%</td>
+      <td><em>Thermogélification inverse</em>&nbsp;: gèle au chaud (50–60&nbsp;°C), fond au froid — le seul agent qui se comporte ainsi</td>
+      <td>Nouilles chaudes qui fondent en refroidissant, sauces qui "tiennent" uniquement au service chaud, chocolat chaud à texture gel</td>
+    </tr>
+    <tr>
+      <td><b>Alginate de sodium</b></td>
+      <td>Algues brunes (<em>Macrocystis pyrifera</em>)</td>
+      <td>0,5–1&nbsp;% + bain Ca²⁺ (0,5&nbsp;%)</td>
+      <td>Gélification instantanée et irréversible au contact du calcium — permet la <em>sphérification</em></td>
+      <td>Sphérification directe (caviar de fruits, billes de jus), sphérification inversée (sphères de yaourt, foie gras), ravioles liquides</td>
+    </tr>
+    <tr>
+      <td><b>Gomme de caroube</b> (LBG)</td>
+      <td>Graines du caroubier (<em>Ceratonia siliqua</em>)</td>
+      <td>0,1–0,5&nbsp;%</td>
+      <td>Synergique avec xanthane et carraghénane κ (réduction des doses), améliore la texture "courte" des gels</td>
+      <td>Crèmes glacées, stabilisation de sauces complexes, produits laitiers</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>La thixotropie de la gomme xanthane.</strong> La xanthane forme à faible concentration un réseau de polymères qui donne une viscosité élevée au repos. Mais sous <strong>cisaillement</strong> (remuer, verser, mâcher), ce réseau se défait temporairement et la sauce devient fluide — puis se reforme en quelques secondes. Conséquence pratique&nbsp;: une vinaigrette à la xanthane semble épaisse dans le flacon, coule facilement sur la salade quand on l'agite ou la verse, puis se "tient" sur les feuilles sans ruisseler. Elle ne se sépare jamais en deux phases.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Disperser la xanthane sans grumeaux.</strong> La xanthane est hydrophile et forme des grumeaux tenaces si elle s'hydrate inégalement. Deux techniques&nbsp;: (1) la mélanger d'abord à sec avec d'autres poudres (sel, sucre) avant d'ajouter le liquide&nbsp;; (2) la disperser dans un corps gras (huile, jaune) avant émulsification avec la phase aqueuse. Un mixeur plongeant à vitesse maximale dissout les derniers grumeaux en 30 secondes.</p>
+  <p><strong>Sphérification&nbsp;: règle des 30 min maximum.</strong> Dans la sphérification directe (alginate dans le produit, bain calcium), la membrane de gel continue de s'épaissir tant que la sphère reste dans le bain calcique. Au-delà de 2–3 min, la sphère gélifie en son cœur et perd son effet "pop" liquide. Rincer immédiatement dans de l'eau claire après sortie du bain.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-8-8"><span class="h3-num">8.8</span>Synthèse — quelle liaison pour quel résultat&nbsp;?</h3>
+
+<p>Tableau de décision&nbsp;: choisir sa liaison selon les contraintes du service et le résultat voulu.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Contrainte / Résultat souhaité</th>
+      <th>Liaison recommandée</th>
+      <th>Alternative</th>
+      <th>À éviter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Sauce classique blanche (béchamel, velouté)</b></td>
+      <td>Roux blanc + liquide chaud</td>
+      <td>Fécule de maïs pour version light</td>
+      <td>Agar (texture cassante), gélatine (fond en service chaud)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce brune brillante et nappante</b></td>
+      <td>Réduction de fond brun + monter au beurre</td>
+      <td>Demi-glace + roux brun de correction</td>
+      <td>Fécule seule (aspect brillant mais plat en goût)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce émulsionnée chaude (hollandaise, beurre blanc)</b></td>
+      <td>Jaune d'œuf sabayon / beurre + caséines</td>
+      <td>Beurre blanc stabilisé à la crème</td>
+      <td>Amidon (texture pâteuse incompatible avec la légèreté)</td>
+    </tr>
+    <tr>
+      <td><b>Vinaigrette stable (ne sépare pas)</b></td>
+      <td>Gomme xanthane (0,15&nbsp;%)</td>
+      <td>Moutarde + jaune d'œuf pour mayo allégée</td>
+      <td>Gélatine (gélifie au frigo)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce servie à chaud sans dernière minute</b></td>
+      <td>Roux + fond (tient 2–3&nbsp;h au bain-marie)</td>
+      <td>Réduction crémeuse</td>
+      <td>Liaison jaune d'œuf seul (sensible à la chaleur prolongée)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce vegane (sans produits animaux)</b></td>
+      <td>Agar-agar, xanthane, ou réduction végétale</td>
+      <td>Fécule, arrow-root, pectine</td>
+      <td>Gélatine, jaune d'œuf, sang, foie</td>
+    </tr>
+    <tr>
+      <td><b>Sauce sans gluten</b></td>
+      <td>Fécule de maïs, fécule de pomme de terre, arrow-root</td>
+      <td>Agar, xanthane, farine de riz</td>
+      <td>Roux à la farine de blé</td>
+    </tr>
+    <tr>
+      <td><b>Nappage froid (aspic, gelée)</b></td>
+      <td>Gélatine (fondant en bouche)</td>
+      <td>Agar-agar si service à température ambiante chaude</td>
+      <td>Amidon (texture pâteuse au froid)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce servie chaude avec texture de gel (technique)</b></td>
+      <td>Agar-agar (gel stable à chaud)</td>
+      <td>Méthylcellulose (gélifie chaud, fond froid)</td>
+      <td>Gélatine (fond à 35&nbsp;°C)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce mousseuse / espuma légère</b></td>
+      <td>Lécithine de soja + mixeur plongeant</td>
+      <td>Crème montée incorporée à la dernière minute</td>
+      <td>Amidon (poids, perd la légèreté aérienne)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce avec maximum de goût concentré (viande)</b></td>
+      <td>Réduction de fond + glace de viande + beurre monté</td>
+      <td>Demi-glace + roux brun très léger</td>
+      <td>Fécule seule (dilue la perception des arômes Maillard)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce stabilisée pour service en saucière (restaurant)</b></td>
+      <td>Roux + fond OR réduction + crème + roux de correction</td>
+      <td>Xanthane à 0,1&nbsp;% pour sauces froides</td>
+      <td>Émulsions au beurre (instables au-delà de 45 min)</td>
+    </tr>
+    <tr>
+      <td><b>Sauce froide très veloutée (coulis, gazpacho lié)</b></td>
+      <td>Xanthane 0,1–0,2&nbsp;% + mixeur</td>
+      <td>Fécule de pomme de terre diluée à froid puis chauffée puis refroidie</td>
+      <td>Agar ou gélatine (texture cassante)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+  La sauce est la partie la plus difficile et la plus honorable de la cuisine. Elle exige du goût, de l'expérience et un palais exercé. Une bonne sauce peut racheter un mauvais plat&nbsp;; une mauvaise sauce peut tuer un bon.
+  <cite>Auguste Escoffier, <em>Le Guide Culinaire</em>, 1903</cite>
+</blockquote>
+
+<p>La maîtrise des liaisons, c'est en définitive la maîtrise de la <em>texture</em> — ce troisième axe de la cuisine professionnelle, après le goût et les arômes, que le palais du convive ressent avant même de l'analyser. Un cuisinier qui comprend pourquoi sa sauce lie peut choisir librement, adapter, improviser&nbsp;: il n'est plus contraint par la recette, mais guidé par la physique.</p>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="conservation.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Conservation des produits</span>
+  </a>
+  <a class="pager-link next" href="biblio.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Bibliographie &amp; ressources</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script src="assets/sidebar.js"></script>
+
+<script src="assets/toc.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>
