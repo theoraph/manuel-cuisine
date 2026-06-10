@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuisson du poisson — Manuel de la cuisson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- PWA meta -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#6B1F1F">
+<meta name="application-name" content="Manuel de la cuisson">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cuisson">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="shortcut icon" href="assets/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">M</span>
+    <span class="brand-text">
+      Les trois <em>piliers</em>
+      <small>Manuel de la cuisson</small>
+    </span>
+  </a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le sommaire" aria-expanded="false" aria-controls="sidebar">☰</button>
+</header>
+
+<div class="sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
+
+<div class="layout">
+
+<aside class="sidebar" id="sidebar" aria-label="Sommaire du manuel">
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Le manuel</div>
+    <a href="index.html" class="sidebar-link"><span class="num">i.</span>Accueil</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Les trois piliers</div>
+    <a href="pilier-1-temperature.html" class="sidebar-link"><span class="num">I.</span>Température</a>
+    <a href="pilier-2-humidite.html" class="sidebar-link"><span class="num">II.</span>Humidité</a>
+    <a href="pilier-3-inertie.html" class="sidebar-link"><span class="num">III.</span>Inertie thermique</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Atlas du goût</div>
+    <a href="epices.html" class="sidebar-link"><span class="num">IV.</span>Épices</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Protocoles</div>
+    <a href="viandes.html" class="sidebar-link"><span class="num">V.</span>Viandes</a>
+    <a href="legumes.html" class="sidebar-link"><span class="num">VI.</span>Légumes</a>
+    <a href="conservation.html" class="sidebar-link"><span class="num">VII.</span>Conservation</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Sauces</div>
+    <a href="liaisons.html" class="sidebar-link"><span class="num">VIII.</span>Liaisons des sauces</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Poissons &amp; fruits de mer</div>
+    <a href="poisson.html" class="sidebar-link current"><span class="num">IX.</span>Cuisson du poisson</a>
+    <a href="poisson.html#sec-9-1" class="sidebar-sub"><span class="num">9.1</span>Une physique différente</a>
+    <a href="poisson.html#sec-9-2" class="sidebar-sub"><span class="num">9.2</span>Températures à cœur</a>
+    <a href="poisson.html#sec-9-3" class="sidebar-sub"><span class="num">9.3</span>Peau croustillante</a>
+    <a href="poisson.html#sec-9-4" class="sidebar-sub"><span class="num">9.4</span>Cuissons humides</a>
+    <a href="poisson.html#sec-9-5" class="sidebar-sub"><span class="num">9.5</span>Four &amp; gril</a>
+    <a href="poisson.html#sec-9-6" class="sidebar-sub"><span class="num">9.6</span>Basse température</a>
+    <a href="poisson.html#sec-9-7" class="sidebar-sub"><span class="num">9.7</span>Crustacés</a>
+    <a href="poisson.html#sec-9-8" class="sidebar-sub"><span class="num">9.8</span>Mollusques &amp; céphalopodes</a>
+    <a href="poisson.html#sec-9-9" class="sidebar-sub"><span class="num">9.9</span>Cuissons sans chaleur</a>
+    <a href="poisson.html#sec-9-10" class="sidebar-sub"><span class="num">9.10</span>Synthèse par espèce</a>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-section-title">Ressources</div>
+    <a href="biblio.html" class="sidebar-link"><span class="num">vii.</span>Bibliographie</a>
+  </div>
+</aside>
+
+<main class="content">
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <a href="index.html">Manuel de la cuisson</a>
+  <span class="sep">›</span>
+  <span class="current">Cuisson du poisson</span>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">Chapitre neuvième</div>
+  <h1>Cuisson du <em>poisson</em></h1>
+  <p class="subtitle">Chair · Températures · Peau · Cuissons humides · Four &amp; gril · Basse température · Crustacés · Mollusques · Ceviche &amp; gravlax</p>
+</div>
+
+<p class="lead">Le poisson est le produit qui pardonne le moins l'à-peu-près thermique. Là où un bœuf supporte dix degrés de marge, un filet de bar a une fenêtre de cuisson parfaite de <strong>trois à cinq degrés</strong>. Comprendre la physique particulière de la chair de poisson — sa structure, sa teneur en eau, son quasi-absence de collagène — c'est se donner les outils pour ne plus jamais servir un poisson sec, caoutchouteux ou cru.</p>
+
+<div class="chapter-toc">
+  <strong>Sommaire du chapitre</strong>
+  9.1 Une physique différente · 9.2 Températures à cœur · 9.3 Peau croustillante · 9.4 Cuissons humides · 9.5 Four &amp; gril · 9.6 Basse température &amp; sous-vide · 9.7 Crustacés · 9.8 Mollusques &amp; céphalopodes · 9.9 Cuissons sans chaleur · 9.10 Synthèse par espèce
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-1"><span class="h3-num">9.1</span>La chair du poisson — une physique radicalement différente</h3>
+
+<p class="family-intro">La viande de bœuf est organisée en longues fibres musculaires entourées de gaines de collagène épais qui demandent des heures de cuisson pour se convertir en gélatine. La chair de poisson est radicalement différente&nbsp;: elle est organisée en <strong>myotomes</strong> — des blocs musculaires courts en forme de W imbriqués les uns dans les autres — séparés par des feuillets de tissu conjonctif ultraminces appelés <strong>myoseptes</strong>. Cette architecture explique tout ce qui distingue la cuisson du poisson de celle de la viande.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Myotomes, myoseptes et effeuillage.</strong> Les myotomes du poisson sont des segments musculaires courts (souvent moins de 1&nbsp;cm d'épaisseur) maintenus ensemble par les myoseptes — des lamelles de collagène très peu réticulé. Quand le poisson est parfaitement cuit, ces lamelles se gélatinisent légèrement et les myotomes se séparent en feuillets nacrés&nbsp;: c'est la texture «&nbsp;feuilletée&nbsp;» ou «&nbsp;qui s'effeuille&nbsp;» recherchée chez un cabillaud ou un bar. Quand le poisson est surcuit, les myotomes se contractent et expulsent leur eau intracellulaire, ce qui donne une texture cotonneuse et sèche.</p>
+  <p><strong>Quasi-absence de collagène dur.</strong> La plupart des poissons contiennent 3 à 5&nbsp;fois moins de collagène que les muscles d'un bœuf, et ce collagène est bien moins réticulé (lié). Il se gélatinise dès 40–45&nbsp;°C — bien avant que les fibres musculaires ne coagulent. En pratique&nbsp;: il n'y a <em>pas</em> de phase "attendrissage par longue cuisson" pour le poisson comme pour un joue de bœuf. Le collagène sera gélatinisé avant que les protéines myofibrillaires ne soient pleinement coagulées.</p>
+  <p><strong>Teneur en eau.</strong> La chair de poisson contient 70 à 80&nbsp;% d'eau (contre 65–75&nbsp;% pour le bœuf). Cette eau est maintenue dans les fibres musculaires par des protéines solubles (myosine, actine). Dès que la température dépasse la fenêtre de cuisson, ces protéines se contractent et expulsent cette eau sous forme de "jus blanc" visible à la surface — signe de surcuisson.</p>
+</div>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Poissons maigres vs. poissons gras&nbsp;: deux comportements thermiques.</strong> La distinction fondamentale n'est pas esthétique mais physico-chimique.</p>
+  <p>Les <strong>poissons maigres</strong> (bar, dorade, cabillaud, sole, turbot, lieu, merlu — teneur en lipides &lt; 5&nbsp;%) stockent leurs réserves d'énergie dans le foie, non dans les muscles. Leur chair est blanche, très délicate, et tolère une fenêtre de cuisson encore plus étroite. Sans matière grasse intramusculaire pour "lubrifier" la fibre, toute surcuisson est immédiatement perçue comme sèche.</p>
+  <p>Les <strong>poissons gras</strong> (saumon, truite, thon, maquereau, sardine, anguille, hareng — teneur en lipides &gt; 10&nbsp;%) distribuent leurs graisses (triglycérides et oméga-3) dans les fibres musculaires sous forme de petites gouttelettes intracellulaires. Cette graisse intramusculaire joue le même rôle que le persillage dans le bœuf&nbsp;: elle lubrifie la fibre, apporte des arômes liposolubles et tampon contre la sécheresse. Ces poissons supportent une légère surcuisson mieux que les maigres — mais pas indéfiniment.</p>
+  <p><strong>Les oméga-3 et la chaleur.</strong> Les acides gras polyinsaturés (EPA, DHA) des poissons gras sont stables jusqu'à ~140&nbsp;°C environ. Une cuisson à la poêle à 180–200&nbsp;°C côté peau ne les détruit pas pourvu que le cœur du filet ne dépasse pas 52–55&nbsp;°C. La friture profonde à 180&nbsp;°C commence à les oxyder, d'où un léger goût rance si le poisson gras est frit longtemps.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Caractéristique</th>
+      <th>Poissons maigres</th>
+      <th>Poissons gras</th>
+      <th>Crustacés &amp; mollusques</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Teneur en lipides</b></td>
+      <td>&lt; 5&nbsp;% (1–3&nbsp;% pour sole, cabillaud)</td>
+      <td>&gt; 8–10&nbsp;% (saumon 13–14&nbsp;%, anguille ~25&nbsp;%)</td>
+      <td>Très faible (&lt; 2&nbsp;%)</td>
+    </tr>
+    <tr>
+      <td><b>Couleur de la chair</b></td>
+      <td>Blanche à nacrée</td>
+      <td>Rose-orange (saumon), rouge (thon), grise (maquereau)</td>
+      <td>Variable — devient opaque à la cuisson</td>
+    </tr>
+    <tr>
+      <td><b>Sensibilité à la surcuisson</b></td>
+      <td>Très élevée — dessèchement rapide</td>
+      <td>Modérée — la graisse tampon</td>
+      <td>Très élevée — devient caoutchouteux</td>
+    </tr>
+    <tr>
+      <td><b>Fenêtre de cuisson idéale</b></td>
+      <td>48–54&nbsp;°C à cœur</td>
+      <td>45–52&nbsp;°C à cœur</td>
+      <td>Variable (voir §&nbsp;9.7 et 9.8)</td>
+    </tr>
+    <tr>
+      <td><b>Exemples</b></td>
+      <td>Bar, dorade, sole, turbot, cabillaud, lieu, merlu, saint-pierre, pageot, daurade</td>
+      <td>Saumon, truite, thon, maquereau, sardine, hareng, anchois, anguille</td>
+      <td>Homard, langoustine, crevette, crabe, Saint-Jacques, moule, calmar, poulpe</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-2"><span class="h3-num">9.2</span>Températures à cœur — fenêtres de cuisson</h3>
+
+<p class="family-intro">Contrairement à la viande rouge où l'on distingue "bleu / saignant / à point / bien cuit" sur une amplitude de 20&nbsp;°C, le poisson se joue sur une <strong>amplitude de 4 à 8&nbsp;°C</strong>. Un thermomètre à sonde fine (idéalement à lecture instantanée) n'est pas un luxe pour les poissons — c'est l'outil décisif.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Ce qui se passe degré par degré.</strong></p>
+  <p><strong>40–45&nbsp;°C</strong> — Les myoseptes commencent à se gélatiniser. Les protéines solubles du sarcoplasme (cytochrome C, myoglobine) commencent à coaguler. Le poisson est encore très translucide et "cru" au sens organoleptique — texture glissante, goût de mer très présent. C'est la zone ceviche/gravlax de la cuisson thermique.</p>
+  <p><strong>45–50&nbsp;°C</strong> — La myosine (protéine contractile majoritaire) commence à se dénaturer. Le poisson passe de translucide à légèrement opaque. Texture soyeuse, feuilletée, jus abondant. C'est la zone <em>rosée</em> ou <em>nacrée</em> — le summum pour les poissons gras (saumon, truite, thon).</p>
+  <p><strong>50–56&nbsp;°C</strong> — L'actine (deuxième protéine contractile) commence à coaguler. Le poisson devient totalement opaque. Les myotomes se séparent nettement en feuillets&nbsp;: c'est la texture idéale pour la majorité des poissons blancs. La fermeté augmente progressivement.</p>
+  <p><strong>57–60&nbsp;°C</strong> — Coagulation avancée de l'actine. Les fibres se contractent fortement et expulsent l'eau — apparition du "jus blanc" (albumine coagulée à la surface des saumons et poissons gras, albumine translucide pour les poissons blancs). La texture devient ferme, voire cotonneuse.</p>
+  <p><strong>&gt; 62&nbsp;°C</strong> — Surcuisson nette. Les fibres perdent leur eau libre, la texture devient sèche et caoutchouteuse. Irréversible.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Espèce / Famille</th>
+      <th>Cœur nacré (légèrement cru)</th>
+      <th>Cœur parfait (nappe)</th>
+      <th>Cœur bien cuit (ferme mais juteux)</th>
+      <th>Surcuisson (à éviter)</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Saumon</b></td>
+      <td>43–47&nbsp;°C</td>
+      <td>48–52&nbsp;°C</td>
+      <td>53–56&nbsp;°C</td>
+      <td>&gt; 57&nbsp;°C</td>
+      <td>À 48&nbsp;°C, la chair reste translucide en son centre — texture beurrée, fondante</td>
+    </tr>
+    <tr>
+      <td><b>Truite</b></td>
+      <td>44–48&nbsp;°C</td>
+      <td>49–53&nbsp;°C</td>
+      <td>54–57&nbsp;°C</td>
+      <td>&gt; 58&nbsp;°C</td>
+      <td>La peau lâche à 54&nbsp;°C — idéal si servie entière</td>
+    </tr>
+    <tr>
+      <td><b>Thon</b></td>
+      <td>30–40&nbsp;°C (saignant, rouge)</td>
+      <td>42–48&nbsp;°C (rosé)</td>
+      <td>50–54&nbsp;°C (beige)</td>
+      <td>&gt; 55&nbsp;°C</td>
+      <td>Le thon rouge se sert généralement saignant/mi-saignant. Tataki à 35&nbsp;°C cœur</td>
+    </tr>
+    <tr>
+      <td><b>Bar / loup de mer</b></td>
+      <td>46–50&nbsp;°C</td>
+      <td>51–55&nbsp;°C</td>
+      <td>56–60&nbsp;°C</td>
+      <td>&gt; 61&nbsp;°C</td>
+      <td>Chair très fine — viser 52–54&nbsp;°C pour un service parfait</td>
+    </tr>
+    <tr>
+      <td><b>Dorade royale</b></td>
+      <td>47–51&nbsp;°C</td>
+      <td>52–56&nbsp;°C</td>
+      <td>57–61&nbsp;°C</td>
+      <td>&gt; 62&nbsp;°C</td>
+      <td>Chair plus dense que le bar, supporte mieux la cuisson sur peau</td>
+    </tr>
+    <tr>
+      <td><b>Cabillaud / morue fraîche</b></td>
+      <td>48–52&nbsp;°C</td>
+      <td>53–57&nbsp;°C</td>
+      <td>58–62&nbsp;°C</td>
+      <td>&gt; 63&nbsp;°C</td>
+      <td>La chair épaisse demande une gestion de cuisson en plusieurs temps (voir §&nbsp;9.5)</td>
+    </tr>
+    <tr>
+      <td><b>Turbot / flétan</b></td>
+      <td>45–49&nbsp;°C</td>
+      <td>50–54&nbsp;°C</td>
+      <td>55–58&nbsp;°C</td>
+      <td>&gt; 59&nbsp;°C</td>
+      <td>Poisson noble — viser 50–52&nbsp;°C pour un feuilleté parfait. Carry-over important</td>
+    </tr>
+    <tr>
+      <td><b>Sole</b></td>
+      <td>—</td>
+      <td>50–56&nbsp;°C</td>
+      <td>57–62&nbsp;°C</td>
+      <td>&gt; 63&nbsp;°C</td>
+      <td>La sole se sert rarement "rosée" — mais elle sèche vite, cuisson meunière rapide à surveiller</td>
+    </tr>
+    <tr>
+      <td><b>Maquereau</b></td>
+      <td>44–48&nbsp;°C</td>
+      <td>49–54&nbsp;°C</td>
+      <td>55–60&nbsp;°C</td>
+      <td>&gt; 61&nbsp;°C</td>
+      <td>Très gras — excellente tolérance à la cuisson à feu vif côté peau (peau délicieuse grillée)</td>
+    </tr>
+    <tr>
+      <td><b>Lieu noir / lieu jaune</b></td>
+      <td>48–52&nbsp;°C</td>
+      <td>53–56&nbsp;°C</td>
+      <td>57–61&nbsp;°C</td>
+      <td>&gt; 62&nbsp;°C</td>
+      <td>Chair tendre, peu onéreuse — idéale pour la basse température</td>
+    </tr>
+    <tr>
+      <td><b>Saint-Pierre</b></td>
+      <td>46–50&nbsp;°C</td>
+      <td>51–55&nbsp;°C</td>
+      <td>56–59&nbsp;°C</td>
+      <td>&gt; 60&nbsp;°C</td>
+      <td>Poisson noble à la chair très blanche et ferme — cuisson vapeur ou poêle recommandée</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Carry-over pour le poisson&nbsp;: plus court mais crucial.</strong> Un filet de poisson de 3&nbsp;cm d'épaisseur continue de monter de 3 à 5&nbsp;°C hors du feu (contre 8–12&nbsp;°C pour un rôti). Pour un filet de bar visant 52&nbsp;°C, retirer à 47–48&nbsp;°C et laisser reposer 1–2 minutes sur une grille chaude (jamais dans la poêle — le métal continue de cuire). Pour un poisson entier, le carry-over peut atteindre 6–8&nbsp;°C selon l'épaisseur.</p>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Tester sans thermomètre — la règle de l'aiguille.</strong> Planter une aiguille fine (ou une brochette métallique) au centre du poisson pendant 5 secondes, puis la poser sur la lèvre supérieure&nbsp;: froide = cru&nbsp;; tiède = nacré (45–50&nbsp;°C)&nbsp;; chaude mais supportable = parfait (50–55&nbsp;°C)&nbsp;; brûlante = surcuit. Cette méthode, utilisée en brigade depuis des décennies, est remarquablement fiable pour les filets épais.</p>
+  <p><strong>Lecture visuelle&nbsp;: la ligne de translucidité.</strong> Sur un filet épais (saumon, cabillaud), on peut lire la cuisson latéralement&nbsp;: une ligne visible sépare la chair cuite (opaque) de la chair encore translucide. Retirer du feu quand cette ligne a progressé jusqu'à 3–5&nbsp;mm du centre — le carry-over fera le reste.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-3"><span class="h3-num">9.3</span>Saisir côté peau — la technique de la peau croustillante</h3>
+
+<p class="family-intro">La peau croustillante est l'une des textures les plus recherchées en cuisine de poisson — et l'une des plus souvent ratées. Elle exige de comprendre <strong>pourquoi la peau rétrécit</strong>, <strong>comment neutraliser ce réflexe</strong>, et <strong>à quelle température et dans quel corps gras travailler</strong>. Une peau rentrée et molle est l'indice d'une technique incorrecte, pas d'un poisson de mauvaise qualité.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Pourquoi la peau rétrécit et bombe.</strong> La peau du poisson est composée d'une couche externe (épiderme + écailles) et d'une couche interne (derme) principalement constituée de collagène dermique. Ce collagène, en contact avec la chaleur, <strong>se contracte brusquement</strong> — exactement comme un collier de couenne de porc qui se recroqueville à la cuisson. Cette contraction fait bomber le filet et empêche la peau de rester en contact uniforme avec la poêle, créant des zones qui restent molles et des zones qui brûlent.</p>
+  <p><strong>La solution&nbsp;: incision des bords + pression constante.</strong> Inciser la peau tous les 2–3&nbsp;cm sur les bords réduit la tension longitudinale. Maintenir le filet en contact plat avec une spatule ou un poids pendant les 30 premières secondes empêche le bombement le temps que le collagène se gélatinise et se stabilise à plat.</p>
+  <p><strong>Condition préalable — séchage absolu.</strong> L'eau est l'ennemi de la réaction de Maillard. Une peau humide fait baisser la température de la poêle sous le seuil de 140&nbsp;°C (le minimum pour la réaction de Maillard) et crée de la vapeur qui ramollit la peau. Sécher le poisson (côté peau uniquement) avec un papier absorbant, puis laisser 15–30 minutes à découvert au réfrigérateur si possible — la peau forme un film sec quasi-mat.</p>
+</div>
+
+<p><strong>Protocole complet de la peau croustillante à la poêle&nbsp;:</strong></p>
+
+<ol>
+  <li><strong>Sécher</strong> — papier absorbant côté peau, puis 15 min au frigo à découvert si le temps le permet.</li>
+  <li><strong>Inciser</strong> — 3 à 5 incisions diagonales dans la peau (sans traverser la chair) pour relâcher la tension du collagène dermique.</li>
+  <li><strong>Chauffer la poêle à vide</strong> — poêle inox ou inox non-adhésive à feu vif, 1 à 2 min. Test&nbsp;: une goutte d'eau doit "biller" (effet Leidenfrost) et s'évaporer en moins de 3 secondes.</li>
+  <li><strong>Corps gras à haute résistance thermique</strong> — huile de pépins de raisin, huile d'arachide, ou ghee (beurre clarifié). Jamais de beurre entier en première intention — ses protéines brûlent avant que la peau soit croustillante. Verser l'huile, attendre qu'elle ondule légèrement (180–190&nbsp;°C).</li>
+  <li><strong>Déposer côté peau</strong> — geste décidé, en posant d'abord l'extrémité éloignée pour éviter les éclaboussures. Appuyer immédiatement avec une spatule plate pendant 30 secondes — maintenir une pression ferme et uniforme.</li>
+  <li><strong>Ne pas toucher</strong> — laisser cuire côté peau 70 à 80&nbsp;% du temps total (3–5 min pour un filet de 2 cm, selon l'épaisseur).</li>
+  <li><strong>Retourner une seule fois</strong> — la peau se détache d'elle-même quand elle est croustillante. Forcer avant = peau qui reste dans la poêle.</li>
+  <li><strong>Finir côté chair 30 à 90 secondes</strong> selon l'épaisseur, puis retirer à 3–4&nbsp;°C sous la température cible.</li>
+</ol>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Beurre en fin de cuisson — arroser côté chair.</strong> Dès le retournement, ajouter une noix de beurre dans la poêle et incliner pour arroser (basting) le côté chair avec le beurre moussant aromatisé (thym, ail écrasé en chemise). Le beurre apporte des arômes de noisette et une chaleur douce sur la chair sans agresser la peau côté contact. Le côté peau reste sur la surface chaude de la poêle et continue de croustiller.</p>
+  <p><strong>Poêle inox vs. anti-adhésive&nbsp;:</strong> l'inox favorise le fond de cuisson (sucs) qui sert ensuite de base pour une sauce minute — et permet d'atteindre des températures plus élevées. L'anti-adhésive est plus indulgente (moins de risque d'accrochage) mais limite la température de surface (~220&nbsp;°C max) et ne permet pas le même niveau de coloration. Pour un service professionnel&nbsp;: inox. Pour débuter&nbsp;: anti-adhésive.</p>
+  <p><strong>La règle 70/30.</strong> Pour tout filet de poisson à peau saisie, cuire 70&nbsp;% du temps côté peau et 30&nbsp;% côté chair. La peau conduit moins bien la chaleur que la chair nue — elle a besoin de plus de temps pour atteindre la même température à l'interface peau/chair.</p>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Erreurs classiques et leurs causes.</strong></p>
+  <p>(1) <strong>La peau colle et reste dans la poêle</strong> — poêle insuffisamment chaude avant dépôt du poisson, ou corps gras ajouté dans une poêle froide. La liaison peau-métal se forme avant que la réaction de Maillard ne crée la "croûte" protectrice.</p>
+  <p>(2) <strong>La peau est molle</strong> — poisson trop humide, poêle trop chargée (baisse de température), ou corps gras qui a fumé et brûlé avant que la peau ne soit croustillante.</p>
+  <p>(3) <strong>La peau se rétracte et bombe</strong> — incisions insuffisantes, ou pression non maintenue pendant les premières secondes.</p>
+  <p>(4) <strong>Le poisson est surcuit alors que la peau est parfaite</strong> — feu trop fort en fin de cuisson, ou oubli du carry-over. Solution&nbsp;: finir la cuisson au four à 120&nbsp;°C côté peau après la coloration, pour un contrôle de température plus fin.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-4"><span class="h3-num">9.4</span>Cuissons humides — vapeur, pochage, beurre, papillote</h3>
+
+<p class="family-intro">Les cuissons humides sont les plus <strong>indulgentes thermiquement</strong> pour le poisson&nbsp;: l'eau (sous forme liquide ou vapeur) ne peut dépasser 100&nbsp;°C, ce qui élimine tout risque de surchauffe de surface. Elles préservent la jutosité, révèlent la finesse naturelle du poisson, et se prêtent aux sauces délicates. Leur défaut&nbsp;: elles ne créent aucune réaction de Maillard — pas de croûte, pas de coloration, pas de saveur rôtie.</p>
+
+<h4>Cuisson à la vapeur</h4>
+
+<p>La vapeur d'eau à 100&nbsp;°C transfère la chaleur par condensation sur la surface froide du poisson — un transfert très efficace mais <em>doux</em> car la température maximale reste 100&nbsp;°C. La vapeur est la cuisson la plus respectueuse des arômes naturels du poisson, car aucun suc ne se perd dans l'eau de pochage.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Poisson</th>
+      <th>Épaisseur</th>
+      <th>Temps vapeur à 100&nbsp;°C</th>
+      <th>Température cœur visée</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Filet de bar ou dorade (sans peau)</td>
+      <td>2&nbsp;cm</td>
+      <td>5–7 min</td>
+      <td>52–54&nbsp;°C</td>
+      <td>Aromatiser le panier vapeur avec du fenouil, citron, verveine</td>
+    </tr>
+    <tr>
+      <td>Pavé de saumon</td>
+      <td>3&nbsp;cm</td>
+      <td>6–9 min</td>
+      <td>48–52&nbsp;°C</td>
+      <td>Retirer dès que la surface devient légèrement opaque</td>
+    </tr>
+    <tr>
+      <td>Filet de cabillaud épais</td>
+      <td>4&nbsp;cm</td>
+      <td>10–14 min</td>
+      <td>53–56&nbsp;°C</td>
+      <td>Vérifier au thermomètre — l'épaisseur varie beaucoup selon la découpe</td>
+    </tr>
+    <tr>
+      <td>Turbot entier (600–800&nbsp;g)</td>
+      <td>—</td>
+      <td>18–22 min</td>
+      <td>50–54&nbsp;°C cœur</td>
+      <td>Vapeur parfumée au fumet, algues wakamé, côté blanc dessus</td>
+    </tr>
+    <tr>
+      <td>Poisson entier (daurade 400&nbsp;g)</td>
+      <td>—</td>
+      <td>14–18 min</td>
+      <td>52–55&nbsp;°C cœur</td>
+      <td>Inciser le flanc jusqu'à l'arête pour faciliter la diffusion de chaleur</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Vapeur aromatisée.</strong> Ajouter dans l'eau du panier vapeur&nbsp;: algues séchées (wakamé, kombu), tiges de coriandre, citron vert, citronnelle, gingembre frais. La vapeur se charge de ces arômes volatils et les dépose en couche infime sur la chair. Technique utilisée dans la cuisine cantonaise et vietnamienne pour les poissons entiers à la vapeur (清蒸魚).</p>
+  <p><strong>Beurrer avant vapeur.</strong> Badigeonner le poisson de beurre pommade (ou beurre composé aux herbes) avant la vapeur crée une film protecteur qui retient les sucs et infuse les arômes du beurre dans la chair. Pas de Maillard — mais une tendreté exceptionnelle.</p>
+</div>
+
+<h4>Pochage au court-bouillon</h4>
+
+<p>Le <strong>court-bouillon</strong> est un bouillon léger (eau, vin blanc, aromates, vinaigre) servant de milieu de cuisson pour le poisson. Le terme "court" réfère à la durée de cuisson du bouillon lui-même, pas du poisson. Deux méthodes s'opposent&nbsp;:</p>
+
+<ul>
+  <li><strong>Pochage à chaud (départ dans liquide frémissant)</strong> — le poisson est plongé dans un court-bouillon frémissant (~85&nbsp;°C). La surface coagule rapidement et scelle les sucs. Idéal pour les poissons gras et les poissons entiers qui bénéficient d'une légère fermeté de surface.</li>
+  <li><strong>Pochage à froid (départ dans liquide froid)</strong> — le poisson est placé dans un court-bouillon froid que l'on chauffe progressivement. La montée en température est très douce et uniforme. Idéal pour les poissons blancs délicats (saint-pierre, turbot, sole) et les grosses pièces entières. La chair reste plus soyeuse car les protéines coagulent progressivement de l'extérieur vers l'intérieur sans choc thermique.</li>
+</ul>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Composant</th>
+      <th>Proportion (pour 2&nbsp;L)</th>
+      <th>Rôle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Eau</td>
+      <td>1,5&nbsp;L</td>
+      <td>Milieu de cuisson neutre</td>
+    </tr>
+    <tr>
+      <td>Vin blanc sec</td>
+      <td>500&nbsp;mL</td>
+      <td>Arômes, légère acidité qui resserre les protéines superficielles</td>
+    </tr>
+    <tr>
+      <td>Oignon émincé</td>
+      <td>1 oignon moyen</td>
+      <td>Fond aromatique sucré</td>
+    </tr>
+    <tr>
+      <td>Carottes en rondelles</td>
+      <td>1 carotte</td>
+      <td>Sucrosité, couleur</td>
+    </tr>
+    <tr>
+      <td>Bouquet garni</td>
+      <td>Thym, laurier, persil</td>
+      <td>Arômes herbacés</td>
+    </tr>
+    <tr>
+      <td>Grains de poivre blanc</td>
+      <td>10 grains</td>
+      <td>Légère chaleur sans masquer le poisson</td>
+    </tr>
+    <tr>
+      <td>Sel</td>
+      <td>10&nbsp;g/L</td>
+      <td>Assaisonnement, osmose légère</td>
+    </tr>
+    <tr>
+      <td>Vinaigre blanc (optionnel)</td>
+      <td>2 c.s.</td>
+      <td>Raffermit légèrement la peau et la surface — pour truites entières notamment</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Ne jamais pocher à ébullition vive.</strong> L'ébullition (100&nbsp;°C) brise mécaniquement les myotomes — le poisson se défait en flocons informes et perd sa texture feuilletée. Le court-bouillon doit frémir doucement (<em>frissonnant</em>, ~85–90&nbsp;°C) — des bulles se forment au fond mais ne remontent pas toutes en surface. Si l'ébullition démarre, baisser immédiatement le feu ou ajouter un peu d'eau froide.</p>
+</div>
+
+<h4>Confit au beurre / pochage au beurre</h4>
+
+<p>Le "confit au beurre" consiste à cuire le poisson immergé dans du beurre clarifié (ou du beurre entier) à basse température (50–65&nbsp;°C). Le beurre conduit la chaleur beaucoup plus uniformément que l'air d'un four — et infuse ses arômes directement dans la chair. C'est l'une des cuissons les plus soyeuses qui existent pour le saumon, la truite, et les poissons gras.</p>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Protocole confit au beurre.</strong> Clarifier 300–400&nbsp;g de beurre (ou utiliser du ghee). Chauffer dans une petite casserole à feu très doux jusqu'à 55–60&nbsp;°C (thermomètre indispensable). Immerger les pavés de saumon ou les filets. Maintenir à 58&nbsp;°C pendant 12–18 min selon l'épaisseur (2–3&nbsp;cm). La chair reste d'un rosé nacré et d'une texture impossible à obtenir à la poêle. Égoutter, saler et poivrer au moment. Le beurre de cuisson, filtré, peut être réutilisé comme base de sauce ou pour arroser au service.</p>
+  <p><strong>Variante&nbsp;: huile d'olive.</strong> Même principe avec une huile d'olive extra-vierge de qualité à 55–60&nbsp;°C. Ajouter dans l'huile&nbsp;: thym, ail en chemise, zeste de citron. Idéal pour les poissons méditerranéens (dorade, bar, loup).</p>
+</div>
+
+<h4>Cuisson en papillote</h4>
+
+<p>La papillote crée un <strong>micro-milieu fermé</strong> où le poisson cuit simultanément dans sa propre vapeur et dans les arômes des ingrédients qui l'accompagnent (légumes, herbes, vin, citron). La pression de vapeur dans la papillote monte progressivement, ce qui accélère légèrement la cuisson et concentre les arômes.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Support</th>
+      <th>Température four</th>
+      <th>Temps (filet 2–3&nbsp;cm)</th>
+      <th>Avantages</th>
+      <th>Inconvénients</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Papier sulfurisé</b></td>
+      <td>180–200&nbsp;°C</td>
+      <td>12–18 min</td>
+      <td>Traditionnel, jolie présentation à l'ouverture, zéro contact métal</td>
+      <td>Fragile, s'ouvre parfois si mal plié</td>
+    </tr>
+    <tr>
+      <td><b>Aluminium</b></td>
+      <td>200–220&nbsp;°C</td>
+      <td>10–15 min</td>
+      <td>Très étanche, cuisson uniforme, conductivité thermique élevée</td>
+      <td>Ne pas utiliser avec les acides forts (citron, tomate) — réaction aluminique</td>
+    </tr>
+    <tr>
+      <td><b>Feuille de bananier</b></td>
+      <td>180–200&nbsp;°C ou gril direct</td>
+      <td>12–18 min</td>
+      <td>Arôme végétal délicat (chlorophylle), esthétique, cuisine tropicale</td>
+      <td>Disponibilité limitée</td>
+    </tr>
+    <tr>
+      <td><b>Croûte de sel</b></td>
+      <td>200–220&nbsp;°C</td>
+      <td>Voir §&nbsp;9.5</td>
+      <td>Protection thermique maximale, humidité parfaite, cuisson totalement uniforme</td>
+      <td>Technique avancée, opercule à briser au service</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-5"><span class="h3-num">9.5</span>Cuissons au four et au gril</h3>
+
+<p class="family-intro">Le four et le gril apportent ce que les cuissons humides ne peuvent donner&nbsp;: la <strong>réaction de Maillard</strong> en surface, les arômes rôtis, la coloration. Mais l'air chaud est un mauvais conducteur de chaleur — le four est lent et crée des gradients importants entre la surface et le cœur. La gestion de cette inégalité thermique est le défi central de la cuisson du poisson au four.</p>
+
+<h4>Four traditionnel</h4>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Four à haute vs. basse température pour le poisson.</strong></p>
+  <p><strong>Four à haute température (200–240&nbsp;°C)</strong> — le gradient thermique est maximal. La surface atteint rapidement 140&nbsp;°C+ (Maillard) mais le cœur monte lentement. Pour les filets minces (2&nbsp;cm) ou les poissons entiers de petite taille (400–500&nbsp;g), la surface dore avant que le cœur ne soit surcuit. Idéal pour dorade, bar, ou maquereau entier.</p>
+  <p><strong>Four à basse température (100–140&nbsp;°C)</strong> — la cuisson est homogène et très précise, sans gradient brutal. La surface ne dore pas (pas de Maillard sous 140&nbsp;°C). La technique classique de restaurant&nbsp;: coloration à la poêle d'abord, puis finition au four à 120–140&nbsp;°C pour atteindre la cible à cœur sans risque de surcuisson. C'est la méthode la plus fiable pour les grosses pièces (turbot entier, filet épais de cabillaud).</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Méthode four</th>
+      <th>Température</th>
+      <th>Temps indicatif</th>
+      <th>Poissons recommandés</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Rôtissage haute température</b></td>
+      <td>200–220&nbsp;°C</td>
+      <td>10–15 min / 500&nbsp;g (entier)</td>
+      <td>Dorade, bar, maquereau entier</td>
+      <td>Inciser le flanc, huiler, sel. Chaleur tournante. Arroser en cours si peau visible</td>
+    </tr>
+    <tr>
+      <td><b>Finition four après poêle (reverse sear poisson)</b></td>
+      <td>120–140&nbsp;°C</td>
+      <td>3–8 min selon épaisseur</td>
+      <td>Turbot, saint-pierre, pavé épais de cabillaud ou saumon</td>
+      <td>Saisir côté peau 3 min, retourner 30 s, passer au four. Thermomètre indispensable</td>
+    </tr>
+    <tr>
+      <td><b>Unilatéral four (côté peau)</b></td>
+      <td>180°C chaleur sole</td>
+      <td>8–12 min</td>
+      <td>Filets fins de sole, de limande</td>
+      <td>Cuisson uniquement côté peau, jamais retourné. Cuisson très douce et uniforme</td>
+    </tr>
+    <tr>
+      <td><b>Croûte de sel</b></td>
+      <td>200–220&nbsp;°C</td>
+      <td>20–30 min (poisson entier 600&nbsp;g)</td>
+      <td>Bar, dorade, loup — poissons à peau épaisse</td>
+      <td>Sel de mer + blanc d'œuf + aromates. Briser la croûte au service. Aucun sel ne pénètre</td>
+    </tr>
+    <tr>
+      <td><b>Papillote four</b></td>
+      <td>180–200&nbsp;°C</td>
+      <td>12–18 min</td>
+      <td>Tous poissons — voir §&nbsp;9.4</td>
+      <td>Voir §&nbsp;9.4 pour les détails</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Croûte de sel — protocole.</strong> Mélanger 1&nbsp;kg de gros sel de mer avec 2 blancs d'œufs et les aromates de votre choix (fenouil en branche, thym, laurier, zeste de citron, algues). La pâte doit être humide et compacte, comme du sable mouillé. Étaler une couche de 1&nbsp;cm sur la plaque, poser le poisson entier (non écaillé — les écailles protègent la chair), couvrir totalement d'une couche de 2&nbsp;cm. Enfourner à 200&nbsp;°C&nbsp;: compter 18 min pour 600&nbsp;g, 22 min pour 800&nbsp;g. Briser la croûte au service avec un petit marteau — le poisson s'écaille facilement et la chair est d'une humidité parfaite.</p>
+</div>
+
+<h4>Gril, plancha et barbecue</h4>
+
+<p>La cuisson sur gril ou plancha expose le poisson à des températures de surface de <strong>200 à 300&nbsp;°C</strong> par rayonnement et conduction directe. Le risque principal est la surcuisson très rapide du côté en contact et l'accrochage. La règle fondamentale&nbsp;: <strong>un poisson bien grillagé ne colle pas</strong> — il se détache naturellement quand la surface est suffisamment colorée et caramélisée.</p>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Empêcher l'accrochage sur le gril.</strong> (1) Préchauffer le gril à fond — un gril tiède colle toujours. (2) Huiler le poisson (pas le gril). (3) Poser côté peau en premier — la peau est plus résistante que la chair nue. (4) Ne jamais bouger le poisson avant qu'il se détache spontanément — forcer = chair qui reste sur la grille. (5) Pour les poissons sans peau ou fragiles (sole, saint-pierre), utiliser un panier à poisson métallique huilé.</p>
+  <p><strong>Maquereau et sardine au gril.</strong> Ces poissons gras sont les rois du barbecue&nbsp;: leur graisse intramusculaire fond et brûle légèrement sur les braises, créant des arômes fumés caractéristiques. Cuisson directe à haute chaleur, 3–4 min par côté. La peau doit être légèrement carbonisée — c'est voulu et délicieux. Assaisonner uniquement après cuisson pour ne pas brûler le sel en surface.</p>
+  <p><strong>Plancha.</strong> La plancha (plaque de fonte ou inox épaisse) chauffe uniformément et retient très bien la chaleur. Idéale pour les filets sans peau (bar, cabillaud) car elle saisit toute la surface en contact simultanément. Huiler légèrement la plancha, déposer le poisson côté chair, ne pas retourner avant 2–3 min.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-6"><span class="h3-num">9.6</span>Basse température et sous-vide</h3>
+
+<p class="family-intro">La cuisson basse température (CBT) — et sa version en milieu liquide contrôlé, le sous-vide — est particulièrement adaptée au poisson&nbsp;: elle permet de maintenir <strong>précisément</strong> la température de l'eau au niveau de la cible à cœur, supprimant tout carry-over et toute incertitude. Le résultat est une texture rigoureusement impossible à obtenir autrement — une consistance de "beurre" ou de gelée souple, que les grands restaurants appliquent systématiquement pour les poissons nobles.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Pourquoi le sous-vide change la texture.</strong> Dans une cuisson classique, le gradient de température entre la surface et le cœur est important — la surface est nécessairement surcuite pour que le cœur soit parfait. En sous-vide, le bain thermostaté est réglé à la <em>température cible</em>&nbsp;: la surface ne dépasse jamais cette température. Toute la chair est cuite à la même température, du bord au cœur. Le collagène gélatinise à 42&nbsp;°C, les protéines coagulent progressivement — mais aucun mécanisme ne "sèche" la chair. Le résultat est une texture presque impossible à décrire à quelqu'un qui ne l'a jamais goûtée&nbsp;: soyeuse, fondante, d'une jutosité extrême.</p>
+  <p><strong>Sécurité bactérienne.</strong> Les recommandations de sécurité alimentaire (HACCP) pour le poisson varient selon les pays. En France, le règlement CE n°853/2004 impose pour les poissons destinés à être consommés crus ou peu cuits une congélation préalable (−20&nbsp;°C pendant 24&nbsp;h minimum ou −35&nbsp;°C pendant 15&nbsp;h) pour éliminer les larves d'Anisakis. Les cuissons basse température à moins de 55&nbsp;°C doivent donc être réservées à des poissons préalablement surgelés ou dont l'origine exclut ce parasite (poissons d'élevage certifiés).</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Poisson</th>
+      <th>Température bain</th>
+      <th>Durée (filet 2–3&nbsp;cm)</th>
+      <th>Texture résultante</th>
+      <th>Finition recommandée</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Saumon — nacré</b></td>
+      <td>47&nbsp;°C</td>
+      <td>25–35 min</td>
+      <td>Translucide au centre, beurrée, fondante</td>
+      <td>Coloration rapide côté peau à la poêle 30 s</td>
+    </tr>
+    <tr>
+      <td><b>Saumon — bien cuit mais juteux</b></td>
+      <td>52&nbsp;°C</td>
+      <td>25–35 min</td>
+      <td>Opaque, soyeuse, aucune albumine blanche</td>
+      <td>Coloration côté peau 45 s, beurre noisette</td>
+    </tr>
+    <tr>
+      <td><b>Bar / dorade</b></td>
+      <td>52–54&nbsp;°C</td>
+      <td>20–30 min</td>
+      <td>Nacrée, feuillets bien définis, très juteux</td>
+      <td>Poêle côté peau 1–2 min pour colorer</td>
+    </tr>
+    <tr>
+      <td><b>Turbot / saint-pierre</b></td>
+      <td>50–52&nbsp;°C</td>
+      <td>20–25 min</td>
+      <td>Soyeuse et ferme, effeuillage exceptionnel</td>
+      <td>Beurre noisette au service, vapeur d'aromates</td>
+    </tr>
+    <tr>
+      <td><b>Cabillaud / lieu</b></td>
+      <td>52–55&nbsp;°C</td>
+      <td>25–35 min</td>
+      <td>Flocons nacres, chair très tendre</td>
+      <td>Coloration rapide, ou nature avec sauce beurre blanc</td>
+    </tr>
+    <tr>
+      <td><b>Thon rouge — mi-saignant</b></td>
+      <td>44&nbsp;°C</td>
+      <td>20–30 min</td>
+      <td>Rouge-rosé cœur, surfaces très légèrement grises</td>
+      <td>Saisir 15 s par face à poêle très chaude (tataki)</td>
+    </tr>
+    <tr>
+      <td><b>Maquereau</b></td>
+      <td>50–52&nbsp;°C</td>
+      <td>20–25 min</td>
+      <td>Chair grasse et fondante, peau ramollie</td>
+      <td>Peau coloration séparée, poêle ou salamandre</td>
+    </tr>
+    <tr>
+      <td><b>Homard (queue)</b></td>
+      <td>58&nbsp;°C</td>
+      <td>15–20 min</td>
+      <td>Ferme, nacrée, légèrement translucide</td>
+      <td>Beurre noisette, finition 30 s poêle côté carapace</td>
+    </tr>
+    <tr>
+      <td><b>Coquille Saint-Jacques</b></td>
+      <td>46&nbsp;°C</td>
+      <td>20–25 min</td>
+      <td>Extrêmement soyeuse, transparente au centre</td>
+      <td>Coloration rapide 30 s par face à poêle très chaude</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Durée maximale en bain sous-vide.</strong> Le poisson est plus fragile que la viande face aux cuissons longues à basse température. Au-delà de la durée recommandée, les enzymes protéolytiques naturellement présentes dans la chair (cathepsines) continuent leur action même sous la coagulation des protéines — la chair peut devenir "mushy" (pâteuse, qui se défait) plutôt que feuilletée. Respecter les durées maximales&nbsp;: jamais plus de 45 min pour un filet de 2–3&nbsp;cm en basse température poisson.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-7"><span class="h3-num">9.7</span>Crustacés — homard, langoustine, crevette, crabe</h3>
+
+<p class="family-intro">Les crustacés sont construits à l'inverse des poissons&nbsp;: leur "viande" est protégée par une carapace rigide en chitine. Cette carapace joue un rôle d'isolant thermique important et conduit la chaleur très lentement. La chair, elle, est essentiellement constituée de protéines musculaires proches de celles du poisson — très sensibles à la surcuisson, avec une fenêtre de perfection encore plus étroite pour les espèces nobles.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Le rouge de la carapace — la réaction des caroténoïdes.</strong> La couleur verte, grise ou bleu-brun des crustacés vivants vient de complexes protéine-astaxanthine (caroténoïde rouge) maintenus dans un état non-actif par les protéines. Sous l'effet de la chaleur, ces protéines se dénaturent et libèrent l'astaxanthine — qui retrouve sa couleur rouge vif naturelle. Le rouge de la langoustine cuite n'est donc pas une couleur "ajoutée" — c'est la couleur propre de l'astaxanthine que la protéine masquait à l'état vivant. Cette réaction est irréversible et commence dès 60&nbsp;°C.</p>
+  <p><strong>Fenêtre de cuisson.</strong> La chair de homard ou de langoustine commence à coaguler à 55&nbsp;°C et devient caoutchouteuse au-delà de 65&nbsp;°C. La carapace ralentit fortement la montée en température — d'où des temps de cuisson trompeurs&nbsp;: une queue de homard peut sembler "cuite" extérieurement alors que le cœur n'a pas encore atteint 55&nbsp;°C. Le thermomètre reste l'outil décisif.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Crustacé</th>
+      <th>Méthode</th>
+      <th>Température ou temps</th>
+      <th>Température cœur cible</th>
+      <th>Signes visuels</th>
+      <th>Notes critiques</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Homard entier (500–600&nbsp;g)</b></td>
+      <td>Court-bouillon ébullition</td>
+      <td>8–10 min</td>
+      <td>60–63&nbsp;°C</td>
+      <td>Carapace rouge vif, queue arquée mais souple</td>
+      <td>Commencer à compter dès la reprise de l'ébullition. La queue doit se recourber sans être rigide</td>
+    </tr>
+    <tr>
+      <td><b>Homard entier (500–600&nbsp;g)</b></td>
+      <td>Poêle + four basse T°</td>
+      <td>4 min poêle + 6–8 min four 160&nbsp;°C</td>
+      <td>60–63&nbsp;°C</td>
+      <td>Idem</td>
+      <td>Couper en 2 dans la longueur. Saisir côté carapace, finir au four côté chair huilée</td>
+    </tr>
+    <tr>
+      <td><b>Queue de homard seule</b></td>
+      <td>Sous-vide + poêle</td>
+      <td>58&nbsp;°C — 20 min sous-vide</td>
+      <td>58–60&nbsp;°C</td>
+      <td>Chair nacrée, légèrement translucide</td>
+      <td>Meilleure texture possible pour un homard — chair incroyablement soyeuse</td>
+    </tr>
+    <tr>
+      <td><b>Langoustine (fraîche, calibre 8/12)</b></td>
+      <td>Poêle côté carapace</td>
+      <td>2–3 min par côté à feu vif</td>
+      <td>55–60&nbsp;°C</td>
+      <td>Queue qui se raidit légèrement, carapace rouge, chair blanche</td>
+      <td>Ne jamais surcuire — la chair devient caoutchouteuse en 30 secondes de trop. Décortiquer avant si possible</td>
+    </tr>
+    <tr>
+      <td><b>Langoustine (fraîche)</b></td>
+      <td>Gril ou plancha haute chaleur</td>
+      <td>2 min côté carapace, 1 min côté chair</td>
+      <td>55–60&nbsp;°C</td>
+      <td>Idem</td>
+      <td>La carapace protège — ne pas retourner trop tôt</td>
+    </tr>
+    <tr>
+      <td><b>Crevette tigrée (crue)</b></td>
+      <td>Poêle / gril</td>
+      <td>1–2 min par côté à feu vif</td>
+      <td>60&nbsp;°C</td>
+      <td>Chair rose-blanc opaque, queue enroulée</td>
+      <td>La crevette est cuite quand elle forme un "C" — surcuite quand elle forme un "O" (trop enroulée)</td>
+    </tr>
+    <tr>
+      <td><b>Crabe (entier, 500&nbsp;g)</b></td>
+      <td>Court-bouillon ébullition</td>
+      <td>12–15 min</td>
+      <td>65&nbsp;°C (chair pattes)</td>
+      <td>Carapace rouge uniforme</td>
+      <td>Plonger dans l'eau glacée immédiatement après cuisson pour stopper la cuisson et faciliter le décorticage</td>
+    </tr>
+    <tr>
+      <td><b>Gambas / grosses crevettes</b></td>
+      <td>Plancha / poêle</td>
+      <td>2–3 min par côté</td>
+      <td>60–65&nbsp;°C</td>
+      <td>Chair opaque et ferme</td>
+      <td>Cuire avec carapace pour plus de saveur (rôtissage de la carapace = arômes bisque)</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Homard vivant — méthode d'euthanasie.</strong> La méthode la plus rapide et la plus humaine est de placer le homard au congélateur 20–30 min (anesthésie par le froid) puis de sectionner rapidement la tête en deux dans le sens longitudinal avec un couteau lourd bien affûté. Ne jamais plonger un homard vivant directement dans l'eau bouillante sans étape préalable.</p>
+  <p><strong>Fumet de carapaces.</strong> Les carapaces de crustacés (homard, langoustine, crevette) sont une source extraordinaire d'arômes. Les rôtir à 200&nbsp;°C pendant 20 min (carapaces + oignon + carotte + concentré de tomate), puis mouiller et cuire 30–40 min pour obtenir un bisque-base. Filtrer, réduire&nbsp;: arôme de mer incomparable pour une sauce au beurre, une sauce américaine ou une soupe de poisson.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-8"><span class="h3-num">9.8</span>Mollusques bivalves et céphalopodes</h3>
+
+<p class="family-intro">Les mollusques constituent deux familles radicalement distinctes du point de vue culinaire&nbsp;: les <strong>bivalves</strong> (moules, palourdes, huîtres, coques, coquilles Saint-Jacques) dont la chair est délicate et cuit en quelques secondes ou minutes&nbsp;; et les <strong>céphalopodes</strong> (poulpe, calmar, seiche) qui possèdent une musculature riche en collagène et proposent une alternative singulière&nbsp;: soit une cuisson ultra-rapide (&lt; 2 min) avant coagulation, soit une cuisson longue (&gt; 1&nbsp;h) après gélatinisation totale du collagène.</p>
+
+<h4>Bivalves</h4>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Mollusque</th>
+      <th>Méthode</th>
+      <th>Temps / température</th>
+      <th>Signe de cuisson</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Coquille Saint-Jacques (noix seule)</b></td>
+      <td>Poêle inox très chaude</td>
+      <td>1 min 30 s – 2 min par face</td>
+      <td>Croûte dorée sur 1/3 de la hauteur de chaque côté, cœur nacré</td>
+      <td>Sécher impeccablement avant cuisson. Sel uniquement après cuisson (le sel tire l'eau). Beurre noisette au retournement. Ne jamais poser plus de 4 noix par poêle — baisse de température</td>
+    </tr>
+    <tr>
+      <td><b>Coquille Saint-Jacques</b></td>
+      <td>Sous-vide</td>
+      <td>46&nbsp;°C — 20–25 min</td>
+      <td>Chair translucide, texte gel souple</td>
+      <td>Finition poêle 30 s par face impérative pour la croûte. Texture incomparable</td>
+    </tr>
+    <tr>
+      <td><b>Moules</b></td>
+      <td>Marinière (vapeur dans casserole)</td>
+      <td>3–5 min à couvert feu vif</td>
+      <td>Ouverture des coquilles</td>
+      <td>Jeter les moules fermées après cuisson. Ne pas cuire plus de 5 min — la chair se rétrécit et devient caoutchouteuse. Vin blanc + échalotes + beurre + persil</td>
+    </tr>
+    <tr>
+      <td><b>Palourdes / coques</b></td>
+      <td>Vapeur / poêle</td>
+      <td>2–4 min</td>
+      <td>Ouverture des coquilles</td>
+      <td>Même principe que les moules. Déglacer avec vin blanc ou jus de citron</td>
+    </tr>
+    <tr>
+      <td><b>Huîtres chaudes</b></td>
+      <td>Gril / salamandre</td>
+      <td>3–5 min</td>
+      <td>Bords qui se rétractent légèrement, surface qui frémit</td>
+      <td>Huîtres creuses sur plaque à gros sel pour les stabiliser. Ne jamais cuire complètement — elles doivent rester légèrement translucides et tremblantes</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout erreur">
+  <span class="callout-title"></span>
+  <p><strong>Coquilles Saint-Jacques&nbsp;: le sel avant cuisson.</strong> Le sel est hygroscopique — il attire l'eau en surface de la noix de Saint-Jacques avant qu'elle ne touche la poêle. Cette eau s'évapore et fait chuter la température de la poêle sous 140&nbsp;°C (fin de la réaction de Maillard). Résultat&nbsp;: la Saint-Jacques "bouille" dans sa propre eau au lieu de se saisir. Saler et poivrer <em>après</em> le retournement ou au service — jamais avant.</p>
+  <p><strong>Surcharge de la poêle.</strong> Cuire trop de Saint-Jacques (ou de noix de mer) en même temps fait chuter la température de la poêle. La réaction de Maillard s'arrête et la chair libère son eau. Maximum 4 noix de Saint-Jacques par poêle de 28&nbsp;cm en fonte ou inox.</p>
+</div>
+
+<h4>Céphalopodes — la règle des deux fenêtres</h4>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>La règle des deux fenêtres du calmar et du poulpe.</strong> Les céphalopodes sont riches en collagène musculaire réticulé — bien plus que le poisson. Leur comportement culinaire obéit à un phénomène en deux temps&nbsp;:</p>
+  <p><strong>Fenêtre 1 — Cuisson ultra-courte (&lt; 2 min à chaleur vive)</strong>&nbsp;: la surface se saisit et colore (Maillard), le cœur reste très tendre car le collagène n'a pas le temps de se contracter. Texture croquante à l'extérieur, fondante à l'intérieur. C'est la cuisson des tentacules de calmar à la plancha, des anneaux de calmar frits, de la seiche à la poêle.</p>
+  <p><strong>Entre 2 et 45 min</strong>&nbsp;: zone à éviter absolument. Le collagène s'est contracté et durci, mais n'a pas encore gélatinisé. Texture&nbsp;: semelle de caoutchouc. C'est le "bord de la zone grise" — la fenêtre de la surcuisson.</p>
+  <p><strong>Fenêtre 2 — Longue cuisson (&gt; 45 min à 80–90&nbsp;°C)</strong>&nbsp;: le collagène se convertit en gélatine, les fibres se ramollissent. À partir de 1&nbsp;h, le poulpe devient fondant&nbsp;; après 2–3&nbsp;h, il atteint une texture beurrée et gélatineuse. C'est la cuisson à la galicienne, le poulpe braisé, le calmar rôti longuement.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Céphalopode</th>
+      <th>Méthode rapide (&lt; 2 min)</th>
+      <th>Méthode longue (&gt; 45 min)</th>
+      <th>Zone à éviter</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Calmar (encornet)</b></td>
+      <td>Plancha / gril / friture — 1 à 2 min à feu très vif</td>
+      <td>Braisage 45 min à 80&nbsp;°C dans sauce tomate</td>
+      <td>3–40 min</td>
+      <td>Inciser le tube en croix pour éviter l'enroulement. Cuire les tentacules séparément (plus fin, cuisson plus courte)</td>
+    </tr>
+    <tr>
+      <td><b>Seiche</b></td>
+      <td>Poêle 1–2 min par face, feu très vif</td>
+      <td>Braisage 1–1,5&nbsp;h (encre, tomate, oignons)</td>
+      <td>3–50 min</td>
+      <td>La seiche est plus épaisse que le calmar — attention à la zone intermédiaire</td>
+    </tr>
+    <tr>
+      <td><b>Poulpe (entier 1–1,5&nbsp;kg)</b></td>
+      <td>Non applicable (trop épais)</td>
+      <td>Court-bouillon 1&nbsp;h – 1&nbsp;h30 à frémissement (85–90&nbsp;°C)</td>
+      <td>Toute cuisson courte</td>
+      <td>Tester la tendreté avec une brochette&nbsp;: doit s'enfoncer sans résistance. Terminer à la poêle/gril pour la coloration</td>
+    </tr>
+    <tr>
+      <td><b>Poulpe (tronçons)</b></td>
+      <td>Non applicable</td>
+      <td>Sous-vide 77&nbsp;°C — 5&nbsp;h</td>
+      <td>—</td>
+      <td>Résultat parfait&nbsp;: tendre, gélatineux, juteux. Finir à la plancha très chaude pour la coloration</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Attendrir le poulpe.</strong> Trois méthodes d'attendrissage avant cuisson longue&nbsp;: (1) <em>Congélation</em> — congeler le poulpe 48&nbsp;h, puis décongeler lentement au réfrigérateur. La cristallisation de l'eau rompt mécaniquement les fibres musculaires et réduit le temps de cuisson de 20–30&nbsp;%. (2) <em>Massage contre une surface rugueuse</em> — méthode traditionnelle grecque et méditerranéenne (frapper contre un rocher — ou une casserole en inox) pendant 5–10 min. (3) <em>Addition d'un bouchon de liège</em> dans l'eau de cuisson — méthode traditionnelle dont l'efficacité est controversée scientifiquement, mais anecdotiquement plébiscitée par les cuisiniers.</p>
+  <p><strong>Poulpe à la galicienne (pulpo a la gallega).</strong> Cuire le poulpe entier dans l'eau bouillante en le "plongeant-sortant" trois fois avant immersion définitive (méthode traditionnelle pour attendrir et fixer la peau). Cuire 45 min à 1&nbsp;h selon la taille. Trancher, déposer sur pommes de terre vapeur, huiler généreusement à l'huile d'olive, saupoudrer de pimentón fumé et de sel marin épais. Servir immédiatement.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-9"><span class="h3-num">9.9</span>Cuissons sans chaleur — ceviche, gravlax, tartare</h3>
+
+<p class="family-intro">La "cuisson" sans chaleur est l'un des sujets les plus fascinants de la physico-chimie culinaire&nbsp;: certaines préparations transforment la texture et l'aspect du poisson cru de manière analogue à la cuisson thermique, sans jamais dépasser la température ambiante. Ces préparations ne sont pas de la même catégorie — elles ne coagulent pas les protéines de la même façon — mais elles offrent des résultats organoleptiques distincts et recherchés.</p>
+
+<div class="callout science">
+  <span class="callout-title"></span>
+  <p><strong>Ceviche — la "cuisson acide" démystifiée.</strong> Le terme "cuire" le poisson dans du citron vert est une métaphore inexacte mais utile. Ce qui se passe réellement&nbsp;: l'acide citrique (pH ~2–2,5) <strong>dénature partiellement les protéines</strong> de surface du poisson par modification du pH — les chaînes protéiques se déplient (dénaturation acide) et se reaggrègent différemment. La chair devient plus opaque et plus ferme en surface. Mais la dénaturation acide est <em>différente</em> de la dénaturation thermique&nbsp;: les protéines ne coagulent pas complètement de la même manière, et surtout, les pathogènes et parasites (Anisakis) ne sont <em>pas</em> tués par l'acide dans les délais habituels d'un ceviche (15–45 min). C'est pourquoi la sécurité alimentaire du ceviche repose sur la qualité et la fraîcheur du poisson, et non sur l'action acide.</p>
+  <p><strong>Le "leche de tigre".</strong> Le jus qui se forme pendant la macination du ceviche est appelé "leche de tigre" (lait de tigre)&nbsp;: il est composé du liquide tissulaire libéré par le poisson (protéines, acides aminés libres, oméga-3), du jus de citron, et des arômes des aromates (ail, gingembre, piment). C'est un véritable fond de mer concentré et acide — il se boit en shot au Pérou.</p>
+  <p><strong>Gravlax — la cuisson osmotique.</strong> Le gravlax n'utilise ni chaleur ni acide — il repose sur l'<strong>osmose</strong>. Le mélange sel-sucre crée une pression osmotique qui attire l'eau hors des cellules du saumon, concentre les protéines en surface et modifie la texture. Le résultat est un saumon plus ferme, plus sec, et aux saveurs concentrées — mais dont les protéines internes n'ont pas subi de dénaturation thermique. Le poisson reste "cru" au sens biologique mais "préservé" au sens culinaire.</p>
+</div>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Préparation</th>
+      <th>Mécanisme</th>
+      <th>Durée</th>
+      <th>Texture résultante</th>
+      <th>Poissons typiques</th>
+      <th>Sécurité</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Ceviche classique</b></td>
+      <td>Acide (jus de citron vert pH 2–2,5) — dénaturation acide de surface</td>
+      <td>10–20 min ("express") ou 1–2&nbsp;h (traditionnel)</td>
+      <td>Opaque en surface, tendre et nacré à cœur, firme</td>
+      <td>Bar, dorade, sole, saumon, crevette crue, poulpe cuit</td>
+      <td>Congélation préalable recommandée (Anisakis). Poisson ultra-frais de 1er choix</td>
+    </tr>
+    <tr>
+      <td><b>Tiradito (péruvien)</b></td>
+      <td>Acide pur, sans macération prolongée</td>
+      <td>2–5 min (très express)</td>
+      <td>Quasi cru, très nacré, sauce acide versée au service</td>
+      <td>Daurade, saumon, thon, saint-pierre</td>
+      <td>Idem ceviche — congélation préalable recommandée</td>
+    </tr>
+    <tr>
+      <td><b>Gravlax</b></td>
+      <td>Osmose (sel + sucre + aromates) — déshydratation partielle</td>
+      <td>24–72&nbsp;h au réfrigérateur</td>
+      <td>Ferme, légèrement translucide, texture proche saumon fumé sans fumée</td>
+      <td>Saumon (idéal), truite arc-en-ciel, maquereau</td>
+      <td>Congélation préalable obligatoire (réglementation française pour Anisakis)</td>
+    </tr>
+    <tr>
+      <td><b>Tartare de poisson</b></td>
+      <td>Aucune — poisson cru haché et assaisonné</td>
+      <td>0 (service immédiat)</td>
+      <td>Crue, tendre, fraîche</td>
+      <td>Thon, saumon, bar, dorade, saint-pierre</td>
+      <td>Congélation préalable. Préparer à la commande et servir immédiatement (jamais plus de 30 min)</td>
+    </tr>
+    <tr>
+      <td><b>Tataki de thon</b></td>
+      <td>Cuisson thermique ultra-courte — 15–20 s par face à poêle très chaude</td>
+      <td>30–40 s total</td>
+      <td>Croûte mince saisie, cœur totalement cru et rouge</td>
+      <td>Thon rouge (maguro), bonite</td>
+      <td>Thon de qualité sashimi. Congélation préalable recommandée</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="callout astuce">
+  <span class="callout-title"></span>
+  <p><strong>Protocole gravlax.</strong> Pour 1&nbsp;kg de saumon (peau laissée, arêtes retirées à la pince)&nbsp;: mélanger 80&nbsp;g de gros sel + 60&nbsp;g de sucre + 30&nbsp;g d'aneth haché (+ zeste de citron, baies de coriandre concassées selon les versions). Couvrir le filet côté chair du mélange, filmer très serré, poser un poids (planche + boîtes de conserve), réfrigérer 36–48&nbsp;h en retournant deux fois. Rincer abondamment, sécher, trancher très finement en biais. Conserver au réfrigérateur 5 jours maximum.</p>
+  <p><strong>Ceviche ultra-express (10 min).</strong> Couper le poisson en dés de 1&nbsp;cm maximum (plus petits = pénétration acide plus rapide). Mélanger avec jus de citron vert (couvrir juste les dés), oignon rouge émincé très finement, piment (ají amarillo au Pérou), sel. Laisser 8–12 min. Ajouter coriandre fraîche et poivre au dernier moment. Servir immédiatement — la macération continue et au-delà de 20 min, le poisson durcit.</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<h3 id="sec-9-10"><span class="h3-num">9.10</span>Synthèse — quelle méthode pour quel poisson&nbsp;?</h3>
+
+<p>Tableau de décision par espèce et objectif&nbsp;: méthode recommandée, alternative, et points d'attention spécifiques.</p>
+
+<div class="table-wrapper">
+<table>
+  <thead>
+    <tr>
+      <th>Espèce</th>
+      <th>Méthode idéale</th>
+      <th>Bonne alternative</th>
+      <th>À éviter</th>
+      <th>Température cœur cible</th>
+      <th>Particularité clé</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>Bar (loup)</b></td>
+      <td>Poêle côté peau (70/30)</td>
+      <td>Vapeur aromatisée, croûte de sel</td>
+      <td>Cuisson trop longue au four sec</td>
+      <td>52–54&nbsp;°C</td>
+      <td>Chair très fine — ne supporte pas la surcuisson. Peau excellente si croustillante</td>
+    </tr>
+    <tr>
+      <td><b>Dorade royale</b></td>
+      <td>Four entier 200&nbsp;°C ou poêle</td>
+      <td>Gril entier, papillote</td>
+      <td>Pochage (perd beaucoup de saveur)</td>
+      <td>52–56&nbsp;°C</td>
+      <td>Arêtes nombreuses — servir entière et lever les filets en salle ou en cuisine après cuisson</td>
+    </tr>
+    <tr>
+      <td><b>Turbot</b></td>
+      <td>Poêle + finition four 120&nbsp;°C ou sous-vide 50&nbsp;°C</td>
+      <td>Vapeur, court-bouillon à froid</td>
+      <td>Gril (chair trop fine pour haute chaleur directe)</td>
+      <td>50–53&nbsp;°C</td>
+      <td>Poisson noble — carry-over de 4–5&nbsp;°C. Ne jamais dépasser 55&nbsp;°C à cœur</td>
+    </tr>
+    <tr>
+      <td><b>Saint-Pierre</b></td>
+      <td>Vapeur ou poêle doux</td>
+      <td>Court-bouillon à froid, sous-vide 52&nbsp;°C</td>
+      <td>Gril (chair fragile)</td>
+      <td>51–55&nbsp;°C</td>
+      <td>Chair très blanche et serrée — parfaite pour les sauces crémeuses au beurre blanc</td>
+    </tr>
+    <tr>
+      <td><b>Sole</b></td>
+      <td>Meunière (poêle beurre noisette, rapide)</td>
+      <td>Vapeur, four unilatéral côté peau</td>
+      <td>Gril direct, pochage long</td>
+      <td>50–56&nbsp;°C</td>
+      <td>Chair très mince — cuisson en 3–4 min totales. Sécher avant cuisson</td>
+    </tr>
+    <tr>
+      <td><b>Cabillaud / morue fraîche</b></td>
+      <td>Poêle + four 120&nbsp;°C, ou sous-vide 54&nbsp;°C</td>
+      <td>Vapeur, court-bouillon</td>
+      <td>Gril (s'effondre)</td>
+      <td>53–57&nbsp;°C</td>
+      <td>Chair épaisse et fragile — s'effeuille facilement. Idéal pour les brandades et les parmentiers</td>
+    </tr>
+    <tr>
+      <td><b>Saumon</b></td>
+      <td>Sous-vide 47–52&nbsp;°C + coloration poêle</td>
+      <td>Poêle côté peau, confit beurre/huile</td>
+      <td>Four à haute chaleur sans surveillance (sèche vite)</td>
+      <td>48–52&nbsp;°C</td>
+      <td>Albumine blanche = surcuisson. Éviter à tout prix dès 57&nbsp;°C</td>
+    </tr>
+    <tr>
+      <td><b>Thon rouge</b></td>
+      <td>Tataki (poêle très chaude, 15 s/face) ou sashimi</td>
+      <td>Sous-vide 44&nbsp;°C, snacké gril</td>
+      <td>Cuisson complète (perd toute la valeur gustative)</td>
+      <td>35–45&nbsp;°C (mi-saignant)</td>
+      <td>Se sert saignant ou mi-saignant. Qualité sashimi recommandée. Congélation préalable obligatoire</td>
+    </tr>
+    <tr>
+      <td><b>Maquereau</b></td>
+      <td>Gril ou plancha côté peau (peau délicieuse)</td>
+      <td>Four entier, poêle rapide</td>
+      <td>Pochage (trop gras, saveur envahissante)</td>
+      <td>49–54&nbsp;°C</td>
+      <td>Poisson gras — parfait à la braise. Excellent mariné vinaigre + sel avant grillade (escabèche)</td>
+    </tr>
+    <tr>
+      <td><b>Sardine</b></td>
+      <td>Gril braises / barbecue entière</td>
+      <td>Poêle, four entier</td>
+      <td>Vapeur, pochage (sans intérêt)</td>
+      <td>54–60&nbsp;°C</td>
+      <td>Servir entière avec peau légèrement carbonisée. Le gras protège, la peau croustille</td>
+    </tr>
+    <tr>
+      <td><b>Langoustine</b></td>
+      <td>Poêle très chaude côté carapace, 2 min/côté</td>
+      <td>Sous-vide 55&nbsp;°C, gril</td>
+      <td>Court-bouillon long (sur-cuisson garantie)</td>
+      <td>55–60&nbsp;°C</td>
+      <td>La langoustine pardonne 30 s de surcuisson — pas plus. Décortiquer avant si possible</td>
+    </tr>
+    <tr>
+      <td><b>Homard</b></td>
+      <td>Sous-vide 58&nbsp;°C (queue) + coloration</td>
+      <td>Court-bouillon 8–10 min, poêle + four</td>
+      <td>Court-bouillon trop long (&gt; 12 min pour 500&nbsp;g)</td>
+      <td>60–63&nbsp;°C</td>
+      <td>Carapace = isolant thermique trompeur. Toujours vérifier à la sonde</td>
+    </tr>
+    <tr>
+      <td><b>Coquille Saint-Jacques</b></td>
+      <td>Poêle inox très chaude, 1'30–2 min/face</td>
+      <td>Sous-vide 46&nbsp;°C + coloration</td>
+      <td>Vapeur (aucune croûte, texture fade)</td>
+      <td>45–50&nbsp;°C cœur (translucide)</td>
+      <td>Saler uniquement après retournement. Maximum 4 noix par poêle</td>
+    </tr>
+    <tr>
+      <td><b>Calmar / seiche</b></td>
+      <td>Plancha très chaude &lt; 2 min</td>
+      <td>Braisage long 45 min+</td>
+      <td>3 à 40 min (caoutchouc garanti)</td>
+      <td>&lt; 2 min ou &gt; 45 min (deux fenêtres)</td>
+      <td>Règle des deux fenêtres — aucune zone intermédiaire</td>
+    </tr>
+    <tr>
+      <td><b>Poulpe</b></td>
+      <td>Court-bouillon 1–1,5&nbsp;h à frémissement</td>
+      <td>Sous-vide 77&nbsp;°C — 5&nbsp;h</td>
+      <td>Toute cuisson courte</td>
+      <td>Chair fondante (test brochette)</td>
+      <td>Congélation préalable = attendrissage. Finir à la plancha pour la coloration</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<blockquote>
+  La cuisson du poisson est un acte de précision et de respect. Le poisson a déjà donné sa vie&nbsp;: la moindre des choses est de ne pas le massacrer par excès de chaleur ou de négligence. Deux degrés de trop, c'est la différence entre la poésie et le coton.
+  <cite>Joël Robuchon, propos recueillis lors d'une masterclass, Paris, 1994</cite>
+</blockquote>
+
+<p>Le poisson exige une rigueur thermique que peu de produits demandent autant. Mais en contrepartie, il récompense le cuisinier attentif d'une manière unique&nbsp;: une texture soyeuse, une jutosité que rien d'autre n'égale, et des arômes marins qui n'existent qu'à la condition d'avoir respecté sa fenêtre. Maîtriser la cuisson du poisson, c'est comprendre que le luxe en cuisine n'est pas toujours dans la complexité — c'est parfois dans la précision d'un degré, d'une minute, d'un geste.</p>
+
+<nav class="pager" aria-label="Pagination">
+  <a class="pager-link prev" href="liaisons.html">
+    <span class="pager-dir">Précédent</span>
+    <span class="pager-title">Liaisons des sauces</span>
+  </a>
+  <a class="pager-link next" href="biblio.html">
+    <span class="pager-dir">Suivant</span>
+    <span class="pager-title">Bibliographie &amp; ressources</span>
+  </a>
+</nav>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  Manuel technique compilé à partir des sources citées · <a href="biblio.html">Bibliographie</a> · Tous droits aux auteurs respectifs
+</footer>
+
+<script src="assets/sidebar.js"></script>
+
+<script src="assets/toc.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (err) {
+      console.warn('SW registration failed:', err);
+    });
+  });
+}
+</script>
+</body>
+</html>

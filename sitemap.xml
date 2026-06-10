@@ -8,5 +8,6 @@
   <url><loc>/viandes.html</loc><priority>0.85</priority><changefreq>monthly</changefreq></url>
   <url><loc>/legumes.html</loc><priority>0.85</priority><changefreq>monthly</changefreq></url>
   <url><loc>/conservation.html</loc><priority>0.85</priority><changefreq>monthly</changefreq></url>
+  <url><loc>/poisson.html</loc><priority>0.85</priority><changefreq>monthly</changefreq></url>
   <url><loc>/biblio.html</loc><priority>0.60</priority><changefreq>monthly</changefreq></url>
 </urlset>
