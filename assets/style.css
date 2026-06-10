@@ -153,15 +153,11 @@ header.site-header .brand {
 }
 
 header.site-header .brand-mark {
-  width: 30px; height: 30px;
-  display: flex; align-items: center; justify-content: center;
-  border: 1px solid rgba(244,242,235,0.30);
-  font-family: 'Recia', serif;
-  font-weight: 600;
-  font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1;
-  color: var(--cream);
+  width: 28px; height: 28px;
+  display: block;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
 }
 
 header.site-header .brand-text {

@@ -4,7 +4,22 @@
       "Bash(gh auth *)",
       "Bash(git init *)",
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Read(//Users/raphaeltheolade/.ssh/**)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(ssh-add ~/.ssh/id_ed25519)",
+      "Bash(git pull *)",
+      "Bash(git checkout *)",
+      "Bash(git commit *)",
+      "Bash(python3 -)",
+      "Bash(git -C /Users/raphaeltheolade/Documents/perso/cuisine/manuel-cuisson status)",
+      "Bash(git -C /Users/raphaeltheolade/Documents/perso/cuisine/manuel-cuisson add liaisons.html biblio.html conservation.html epices.html index.html legumes.html pilier-1-temperature.html pilier-2-humidite.html pilier-3-inertie.html viandes.html manifest.json service-worker.js sitemap.xml)",
+      "Bash(git -C /Users/raphaeltheolade/Documents/perso/cuisine/manuel-cuisson commit -m ' *)",
+      "Bash(git -C /Users/raphaeltheolade/Documents/perso/cuisine/manuel-cuisson push)",
+      "Bash(file assets/*.png assets/*.jpg assets/*.jpeg assets/*.webp)",
+      "Bash(sips -g pixelWidth -g pixelHeight assets/chef.png)"
     ]
   }
 }
